@@ -1,27 +1,19 @@
 import React, { useState } from "react";
 import hero from "../assets/hero.png";
 import Mybutton from "../components/Mybutton";
+import { Modal } from "../components/Modal";
 const Landing = () => {
   const [showModal, setshowModal] = useState(false);
+  function closemodal() {
+    setshowModal(false);
+  }
+  function openmodal() {
+    setshowModal(true);
+  }
   return (
     // hero section
     <>
-      {showModal && (
-        <div className="  flex items-center justify-center h-screen w-full  fixed bg-white/20 mx-auto ">
-          <div className=" flex flex-col items-center justify-center  p-6">
-            <p className="w-2/3  mx-auto  md:text-xl mt-8">
-              dfh fhweuh s hdhfue fhd huweh dfhsd hushfuwehf usjf hhfuweah uhrfu
-              hfuheru huewrfhu
-            </p>
-            <div className=" ">
-              <Mybutton background={" p-2  m-2"}>Sign Up</Mybutton>
-              <Mybutton background={"bg-indigo-700 p-2 rounded-lg m-3"}>
-                Sign in{" "}
-              </Mybutton>
-            </div>
-          </div>
-        </div>
-      )}
+      {showModal && <Modal closewin={closemodal} />}
       <div className="flex justify-between ">
         {/* //leftside text */}
         <div className="w-1/2 flex items-center flex-col justify-center md:mx-10">
@@ -41,7 +33,7 @@ const Landing = () => {
           {/* //for the  pop up text */}
 
           {/* //button component */}
-          <div className="mt-20" onClick={(e) => setshowModal(true)}>
+          <div className="mt-20" onClick={openmodal}>
             <Mybutton background={"bg-indigo-600 text-2xl p-3 rounded-lg "}>
               {" "}
               Post Your Projects
