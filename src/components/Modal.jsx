@@ -1,10 +1,11 @@
 import React from "react";
 import Mybutton from "./Mybutton";
+import { createPortal } from "react-dom";
 export const Modal = ({ closewin }) => {
-  return (
-    <div className="  flex items-center justify-center h-screen w-full  fixed bg-white/20 mx-auto ">
-      <div className=" flex flex-col items-center justify-center  p-6">
-        <p className="w-2/3  mx-auto  md:text-xl mt-8">
+  return createPortal(
+    <div className="  flex items-center justify-center h-screen w-full fixed mx-auto bg-stone-900/60 z-10 ">
+      <div className=" flex flex-col items-center justify-center py-5  bg-white rounded-lg shadow-lg">
+        <p className="w-2/3  mx-auto  md:text-xl ">
           dfh fhweuh s hdhfue fhd huweh dfhsd hushfuwehf usjf hhfuweah uhrfu
           hfuheru huewrfhu
         </p>
@@ -20,6 +21,7 @@ export const Modal = ({ closewin }) => {
           </Mybutton>
         </div>
       </div>
-    </div>
+    </div>,
+    document.getElementById("modal")
   );
 };

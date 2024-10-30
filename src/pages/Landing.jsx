@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import hero from "../assets/hero.png";
 import Mybutton from "../components/Mybutton";
 import { Modal } from "../components/Modal";
+import Tags from "../components/Tags";
+import Postedjobs from "../components/Postedjobs";
 const Landing = () => {
   const [showModal, setshowModal] = useState(false);
   function closemodal() {
@@ -10,12 +12,11 @@ const Landing = () => {
   function openmodal() {
     setshowModal(true);
   }
-  return (
-    // hero section
-    <>
-      {showModal && <Modal closewin={closemodal} />}
-      <div className="flex justify-between ">
-        {/* //leftside text */}
+
+  //left side component
+  const leftsidecontents = () => {
+    return (
+      <>
         <div className="w-1/2 flex items-center flex-col justify-center md:mx-10">
           <h1 className="font-semibold md:text-5xl mx-10">
             Recurit{" "}
@@ -40,12 +41,35 @@ const Landing = () => {
             </Mybutton>
           </div>
         </div>
+      </>
+    );
+  };
 
-        {/* //right sie image */}
+  //right side component
+  const rightsidecontent = () => {
+    return (
+      <>
         <div className="w-1/2 h-auto ">
           <img src={hero} alt="...loading image  " />
         </div>
+      </>
+    );
+  };
+  return (
+    // hero section
+    <>
+      {showModal && <Modal closewin={closemodal} />}
+      <div className="flex justify-between ">
+        {/* leftside text */}
+        {leftsidecontents()}
+
+        {/* right side image */}
+        {rightsidecontent()}
+
+        {/* display tags here  */}
       </div>
+      <Tags />
+      <Postedjobs />
     </>
   );
 };
