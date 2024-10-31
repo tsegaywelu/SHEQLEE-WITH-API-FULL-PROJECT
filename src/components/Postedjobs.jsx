@@ -104,4 +104,4 @@ const Postedjobs = () => {
   );
 };
 
-export default Postedjobs;
+export default React.memo(Postedjobs);

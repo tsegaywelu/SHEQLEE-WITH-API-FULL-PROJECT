@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import hero from "../assets/hero.png";
 import Mybutton from "../components/Mybutton";
 import { Modal } from "../components/Modal";
@@ -6,12 +6,15 @@ import Tags from "../components/Tags";
 import Postedjobs from "../components/Postedjobs";
 const Landing = () => {
   const [showModal, setshowModal] = useState(false);
-  function closemodal() {
-    setshowModal(false);
-  }
-  function openmodal() {
-    setshowModal(true);
-  }
+  // function closemodal() {
+  //   setshowModal(false);
+  // }
+  // function openmodal() {
+  //   setshowModal(true);
+  // }
+  //this is the best because if no change on showModal no rerender will occur
+  const closemodal = useCallback(() => setshowModal(false), []);
+  const openmodal = useCallback(() => setshowModal(true), []);
 
   //left side component
   const leftsidecontents = () => {

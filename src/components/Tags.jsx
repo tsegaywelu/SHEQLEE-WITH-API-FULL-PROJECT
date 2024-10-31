@@ -11,9 +11,12 @@ const Tags = () => {
         </div>
         {/* //display the tags  */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {Totaltags.map((tag) => {
+          {Totaltags.map((tag, index) => {
             return (
-              <div className=" bg-gray-400 p-5 rounded-xl border-l-[15px] border-l-black ">
+              <div
+                key={tag.tagname + index}
+                className=" bg-gray-400 p-5 rounded-xl border-l-[15px] border-l-black "
+              >
                 <div className="font-semibold text-2xl">{tag.tagname}</div>
                 <div>
                   {tag.numberofjobs} jobs . {tag.numberofsubscribers}{" "}
@@ -28,4 +31,4 @@ const Tags = () => {
   );
 };
 
-export default Tags;
+export default React.memo(Tags);

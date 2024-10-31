@@ -59,5 +59,5 @@ const Header = () => {
     </>
   );
 };
-
-export default Header;
+//this is in the app component and changing the other componnets will no rerender this 
+export default React.memo(Header);
