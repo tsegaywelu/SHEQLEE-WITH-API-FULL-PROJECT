@@ -61,6 +61,7 @@ const Landing = () => {
   return (
     // hero section
     <>
+      {showModal && <h1 className="text-end text-3xl p-3">X</h1>}
       {showModal && <Modal closewin={closemodal} />}
       <div className="flex justify-between ">
         {/* leftside text */}

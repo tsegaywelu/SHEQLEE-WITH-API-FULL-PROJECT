@@ -1,13 +1,13 @@
 import React from "react";
 import logo from "../assets/logoblack.png";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaTelegram,
-  FaLinkedin,
-  FaYoutube,
-} from "react-icons/fa";
+// import {
+//   FaFacebook,
+//   FaTwitter,
+//   FaInstagram,
+//   FaTelegram,
+//   FaLinkedin,
+//   FaYoutube,
+// } from "react-icons/fa";
 
 const Footer = () => {
   return (
