@@ -1,4 +1,4 @@
-export const Totaltags = [
+Totaltags: [
   {
     tagname: "javascript",
     numberofjobs: 345,
