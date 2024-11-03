@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Jobs } from "../data/Postedjobs";
+import { Jobs } from "../../data/Postedjobs";
 const Postedjobs = () => {
-  const [loading, setloading] = useState(true);
+  const [loading, setloading] = useState(false);
   return (
     <>
       {loading ? (
-        <div className="mx-20 py-12">
+        <div className=" py-3 md:py-6 lg:py-12">
           <h3 className="text-2xl font-semibold mb-6">latest job posts </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             {/* ///////////////////// */}
@@ -33,14 +33,19 @@ const Postedjobs = () => {
           </div>
         </div>
       ) : (
-        <div className="mx-20 py-12">
-          <h3 className="text-2xl font-semibold mb-6">latest job posts </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div className="py-4 md:py-8 lg:py-12">
+          <h3 className="md:text-2xl font-semibold md:mb-6">
+            latest job posts{" "}
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-7">
             {/* ///////////////////// */}
 
             {Jobs.map((jobsall) => {
               return (
-                <div className=" bg-slate-100 rounded-2xl p-5">
+                <div
+                  className=" bg-slate-100 rounded-2xl md:p-5 "
+                  key={jobsall.title + Math.random()}
+                >
                   <div className="text-xl font-semibold">{jobsall.title}</div>
                   <p className="text-sm ">{jobsall.descreiption}</p>
                   <div className="">

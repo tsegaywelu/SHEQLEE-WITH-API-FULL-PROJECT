@@ -1,18 +1,19 @@
 import React from "react";
-import logo from "../assets/logoblack.png";
-// import {
-//   FaFacebook,
-//   FaTwitter,
-//   FaInstagram,
-//   FaTelegram,
-//   FaLinkedin,
-//   FaYoutube,
-// } from "react-icons/fa";
+import logo from "../../assets/logoblack.png";
+
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaTelegram,
+  FaLinkedin,
+  FaYoutube,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black text-white mx-20 px-8 py-8">
+      <footer className="bg-black text-white px-2 md:px-4 lg:px-8 py-2 md:py-3 lg:py-8">
         <div className="container mx-auto flex flex-wrap justify-between">
           {/* Address Section */}
           <div className="w-full sm:w-1/4 text-center sm:text-left mb-6 sm:mb-0">
@@ -119,22 +120,22 @@ const Footer = () => {
           </p>
           <div className="flex space-x-4">
             <a href="#">
-              <i className="fab fa-facebook"></i>
+              <FaFacebook size={24} />
             </a>
             <a href="#">
-              <i className="fab fa-twitter"></i>
+              <FaTwitter size={24} />
             </a>
             <a href="#">
-              <i className="fab fa-instagram"></i>
+              <FaInstagram size={24} />
             </a>
             <a href="#">
-              <i className="fab fa-telegram"></i>
+              <FaTelegram size={24} />
             </a>
             <a href="#">
-              <i className="fab fa-linkedin"></i>
+              <FaLinkedin size={24} />
             </a>
             <a href="#">
-              <i className="fab fa-youtube"></i>
+              <FaYoutube size={24} />
             </a>
           </div>
         </div>

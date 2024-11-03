@@ -1,17 +1,23 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
 import Landing from "./pages/Landing";
-import Footer from "./components/Footer";
+import Footer from "./components/onetimecmponent/Footer";
+import Alljobs from "./pages/Alljobs";
+import Lost from "./components/onetimecmponent/Lost";
+import Header from "./components/onetimecmponent/Header";
 const App = () => {
   console.log("<App/> rendered");
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Landing />} />
-      </Routes>
-      <Footer />
+      <div className="mx-5 md:mx-10 lg:mx-20 ">
+        <Header />
+        <Routes>
+          <Route path="/sheqlee" element={<Landing />} />
+          <Route path="/sheqlee/alljobs" element={<Alljobs />} />
+          <Route path="*" element={<Lost />}></Route>
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 };

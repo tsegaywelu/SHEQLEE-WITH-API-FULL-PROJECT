@@ -1,9 +1,11 @@
 import React, { useState, useCallback } from "react";
 import hero from "../assets/hero.png";
-import Mybutton from "../components/Mybutton";
-import { Modal } from "../components/Modal";
-import Tags from "../components/Tags";
-import Postedjobs from "../components/Postedjobs";
+import Mybutton from "../components/basecomponents/Mybutton";
+import { Modal } from "../components/basecomponents/Modal";
+import Tags from "../components/basecomponents/Tags";
+import Postedjobs from "../components/basecomponents/Postedjobs";
+import { useLocation } from "react-router-dom";
+import Platformstatus from "../components/onetimecmponent/Platformstatus";
 const Landing = () => {
   const [showModal, setshowModal] = useState(false);
   // function closemodal() {
@@ -20,8 +22,11 @@ const Landing = () => {
   const leftsidecontents = () => {
     return (
       <>
-        <div className="w-1/2 flex items-center flex-col justify-center md:mx-10">
-          <h1 className="font-semibold md:text-5xl mx-10">
+        <h1 className=" absolute right-10 top-3 px-2 text-2xl font-bold border-4 border-white rounded-full text-white z-50 ">
+          &times;
+        </h1>
+        <div className="md:w-1/2 flex items-center flex-col justify-center md:mx-10">
+          <h1 className="font-semibold text-xl md:text-3xl lg:text-5xl mx-2 md:mx-5 lg:mx-10">
             Recurit{" "}
             <span style={{ color: "indigo" }}>
               affordable & skilled ethiopian
@@ -29,7 +34,7 @@ const Landing = () => {
             <br />
             proffetionals.
           </h1>
-          <p className="md:mx-10 text-wrap md:text-xl">
+          <p className="mx-2 md:text-5 lg:mx-10 text-wrap text-sm md:text-xl">
             and they let you protect passwords, download videos, find deals,
             block annoying ads, change how your browser looks, and much mor e.
             These small software programs are often developed b
@@ -37,8 +42,12 @@ const Landing = () => {
           {/* //for the  pop up text */}
 
           {/* //button component */}
-          <div className="mt-20" onClick={openmodal}>
-            <Mybutton background={"bg-indigo-600 text-2xl p-3 rounded-lg "}>
+          <div className=" mt-5 md:mt-10 lg:mt-20" onClick={openmodal}>
+            <Mybutton
+              background={
+                "bg-indigo-600 text-sm md:text-xl lg:text-2xl p-1 md:p-2 g;p-3 rounded-lg "
+              }
+            >
               {" "}
               Post Your Projects
             </Mybutton>
@@ -52,7 +61,7 @@ const Landing = () => {
   const rightsidecontent = () => {
     return (
       <>
-        <div className="w-1/2 h-auto ">
+        <div className="lg:w-1/2 h-auto ">
           <img src={hero} alt="...loading image  " />
         </div>
       </>
@@ -61,9 +70,8 @@ const Landing = () => {
   return (
     // hero section
     <>
-      {showModal && <h1 className="text-end text-3xl p-3">X</h1>}
       {showModal && <Modal closewin={closemodal} />}
-      <div className="flex justify-between ">
+      <div className="flex  flex-col md:flex-row justify-between ">
         {/* leftside text */}
         {leftsidecontents()}
 
@@ -74,6 +82,7 @@ const Landing = () => {
       </div>
       <Tags />
       <Postedjobs />
+      <Platformstatus />
     </>
   );
 };
