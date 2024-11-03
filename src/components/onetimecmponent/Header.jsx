@@ -54,13 +54,15 @@ const Header = () => {
           </div>
 
           {/* Category Dropdown */}
-          <div>
-            <Select
-              options={options}
-              placeholder="Categories"
-              className="bg-slate-600"
-            />
-          </div>
+          <Link to={"/sheqlee/catagoris"}>
+            <div>
+              <Select
+                options={options}
+                placeholder="Categories"
+                className="bg-slate-600"
+              />
+            </div>
+          </Link>
           <div className="mt-1 p-1 md:p-2 lg:p-3 lg:font-semibold text-sm lg:text-xl">
             Clients
           </div>

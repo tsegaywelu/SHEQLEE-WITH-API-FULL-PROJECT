@@ -1,12 +1,31 @@
-import React, { useState } from "react";
-import { Totaltags } from "../../data/Tags";
+import React, { useEffect, useState } from "react";
+//import { Totaltags } from "../../data/Tags";
+const emptyRectangles = [{}, {}, {}, {}, {}, {}, {}, {}, {}];
 const Tags = () => {
-  const [loading, setloading] = useState(false);
+  const [loading, setloading] = useState(true);
+  const [Totaltags, setTotaltags] = useState(new Array(8));
+  useEffect(() => {
+    async function fetchtags() {
+      try {
+        setloading(true);
+        const response = await fetch("http://localhost:3000/tags");
+        if (!response.ok) {
+          throw new Error("Failed to fetch jobs");
+        }
+        const result = await response.json();
+        setTotaltags(result);
+        setloading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchtags();
+  }, []);
   return (
     <>
       {loading ? (
         // page in a loading situation
-        <div className=" bg-gray-200 mx-3 md:mx-10 lg:mx-20 px-3 md:px-6 lg:px-12 py-1 md:py-2 lg:py-5">
+        <div className=" bg-gray-200  px-3 md:px-6 lg:px-12 py-1 md:py-2 lg:py-5">
           {/* top texsts */}
           <div className="flex justify-between">
             <h4 className="text-sm md:text-xl lg:text-2xl">Popular Tags</h4>
@@ -14,7 +33,7 @@ const Tags = () => {
           </div>
           {/* //display the tags  */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {Totaltags.map((tag) => {
+            {emptyRectangles.map((tag) => {
               return (
                 <div
                   key={tag.id}
