@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 //import { Totaltags } from "../../data/Tags";
 const emptyRectangles = [{}, {}, {}, {}, {}, {}, {}, {}, {}];
 const Tags = () => {
+  const fakeid = "tag detail";
   const [loading, setloading] = useState(true);
   const [Totaltags, setTotaltags] = useState(new Array(8));
   useEffect(() => {
@@ -58,16 +60,18 @@ const Tags = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {Totaltags.map((tag) => {
               return (
-                <div
-                  key={tag.id}
-                  className=" bg-gray-400 p-5 rounded-xl border-l-[15px] border-l-black "
-                >
-                  <div className="font-semibold text-2xl">{tag.tagname}</div>
-                  <div>
-                    {tag.numberofjobs} jobs . {tag.numberofsubscribers}{" "}
-                    subscribers
+                <Link to={`/sheqlee/tag/${fakeid}`}>
+                  <div
+                    key={tag.id}
+                    className=" bg-gray-400 p-5 rounded-xl border-l-[15px] border-l-black "
+                  >
+                    <div className="font-semibold text-2xl">{tag.tagname}</div>
+                    <div>
+                      {tag.numberofjobs} jobs . {tag.numberofsubscribers}{" "}
+                      subscribers
+                    </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

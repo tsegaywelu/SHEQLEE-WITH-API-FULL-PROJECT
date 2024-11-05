@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import {
   FaGlobe,
   FaDatabase,
@@ -93,6 +93,7 @@ const categories = [
 ];
 
 const Catagoris = () => {
+  const fakeid = "catagorydetail";
   return (
     <div>
       <Location />
@@ -110,17 +111,19 @@ const Catagoris = () => {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-xl p-3">
-          {categories.map((category) => (
-            <CatagoriesCard
-              key={category.title}
-              title={category.title}
-              jobs={category.jobs}
-              subscribers={category.subscribers}
-              icon={category.icon}
-            />
-          ))}
-        </div>
+        <Link to={`/sheqle/catagory/${fakeid}`}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-xl p-3">
+            {categories.map((category) => (
+              <CatagoriesCard
+                key={category.title}
+                title={category.title}
+                jobs={category.jobs}
+                subscribers={category.subscribers}
+                icon={category.icon}
+              />
+            ))}
+          </div>
+        </Link>
       </div>
     </div>
   );
