@@ -6,7 +6,7 @@ import Alljobs from "./pages/Alljobs";
 import Lost from "./components/onetimecmponent/Lost";
 import Header from "./components/onetimecmponent/Header";
 import Catagoris from "./pages/Catagoris";
-import Clints from "./pages/Clints";
+import Clients from "./pages/Clients";
 import Jobdetail from "./pages/Jobdetail";
 import Catagprydetail from "./pages/Catagprydetail";
 import Alltags from "./pages/Alltags";
@@ -32,6 +32,8 @@ const App = () => {
             element={<Catagprydetail />}
           />
           <Route path="/sheqlee/tag/:theidtodisplay" element={<Tagdetail />} />
+          <Route path="/sheqlee/client" element={<Clients />} />
+
           <Route path="*" element={<Lost />}></Route>
         </Routes>
         <Footer />

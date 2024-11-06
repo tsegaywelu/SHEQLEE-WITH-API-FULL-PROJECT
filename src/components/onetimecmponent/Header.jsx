@@ -63,14 +63,19 @@ const Header = () => {
               />
             </div>
           </Link>
-          <div className="mt-1 p-1 md:p-2 lg:p-3 lg:font-semibold text-sm lg:text-xl">
-            Clients
-          </div>
+          <Link to={"/sheqlee/client"}>
+            <div className="mt-1 p-1 md:p-2 lg:p-3 lg:font-semibold text-sm lg:text-xl ">
+              {/* border-b-4 border-blue-600 lg:pb-10 self-end bg-red-500 */}
+              Clients
+            </div>
+          </Link>
 
           {/* Buttons */}
-          <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:lg-3 lg:gap-4">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-3 lg:gap-6">
             <Mybutton
-              background={"bg-indigo-500    rounded-lg p-1 md:p-2 lg:p-3"}
+              background={
+                "border-4 border-indigo-700 rounded-lg py-1 md:py-2 px-2 md:px-5  "
+              }
             >
               Log in
             </Mybutton>

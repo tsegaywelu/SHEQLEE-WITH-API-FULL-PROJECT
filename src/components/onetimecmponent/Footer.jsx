@@ -13,8 +13,8 @@ import {
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black text-white px-2 md:px-4 lg:px-8 py-2 md:py-3 lg:py-8">
-        <div className="container mx-auto flex flex-wrap justify-between">
+      <footer className="bg-black text-white px-2 md:px-2 lg:px-4 py-2 md:py-3 lg:py-8">
+        <div className="container mx-auto flex flex-wrap lg:flex-nowrap justify-between">
           {/* Address Section */}
           <div className="w-full sm:w-1/4 text-center sm:text-left mb-6 sm:mb-0">
             <div className="flex items-center justify-center sm:justify-start mb-4">
