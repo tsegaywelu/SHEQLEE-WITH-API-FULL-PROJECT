@@ -11,6 +11,9 @@ import Jobdetail from "./pages/Jobdetail";
 import Catagprydetail from "./pages/Catagprydetail";
 import Alltags from "./pages/Alltags";
 import Tagdetail from "./pages/Tagditail";
+import Companys from "./pages/Companys";
+import Contact from "./pages/Contact";
+import FAQ1 from "./pages/FAQ1";
 const App = () => {
   console.log("<App/> rendered");
   return (
@@ -33,6 +36,9 @@ const App = () => {
           />
           <Route path="/sheqlee/tag/:theidtodisplay" element={<Tagdetail />} />
           <Route path="/sheqlee/client" element={<Clients />} />
+          <Route path="/sheqlee/company" element={<Companys />} />
+          <Route path="/sheqlee/contact" element={<Contact />} />
+          <Route path="/sheqlee/FAQ" element={<FAQ1 />} />
 
           <Route path="*" element={<Lost />}></Route>
         </Routes>

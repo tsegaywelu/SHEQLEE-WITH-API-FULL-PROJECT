@@ -13,8 +13,8 @@ import {
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black text-white px-2 md:px-2 lg:px-4 py-2 md:py-3 lg:py-8">
-        <div className="container mx-auto flex flex-wrap lg:flex-nowrap justify-between">
+      <footer className="bg-black text-white px-2 md:px-8 lg:px-16 py-2 md:py-8 lg:py-16">
+        <div className="container mx-auto flex flex-wrap lg:flex-nowrap justify-between gap-10">
           {/* Address Section */}
           <div className="w-full sm:w-1/4 text-center sm:text-left mb-6 sm:mb-0">
             <div className="flex items-center justify-center sm:justify-start mb-4">
@@ -26,7 +26,9 @@ const Footer = () => {
 
           {/* Links Section */}
           <div className="w-full sm:w-1/4 mb-6 sm:mb-0">
-            <h3 className="text-lg font-semibold mb-2">Links</h3>
+            <h3 className="text-lg font-semibold mb-2 border-b-2 border-white pr-5 max-sm:w-fit ">
+              Links
+            </h3>
             <ul>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white ">
@@ -47,8 +49,10 @@ const Footer = () => {
           </div>
 
           {/* Company Section */}
-          <div className="w-full sm:w-1/4 mb-6 sm:mb-0">
-            <h3 className="text-lg font-semibold mb-2">Company</h3>
+          <div className="w-full sm:w-1/4 mb-6 sm:mb-0 ">
+            <h3 className="text-lg font-semibold mb-2  border-b-2 border-white pr-5 max-sm:w-fit ">
+              Company
+            </h3>
             <ul>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
@@ -70,7 +74,9 @@ const Footer = () => {
 
           {/* Support Section */}
           <div className="w-full sm:w-1/4 mb-6 sm:mb-0">
-            <h3 className="text-lg font-semibold mb-2">Support</h3>
+            <h3 className="text-lg font-semibold mb-2 border-b-2 border-white pr-5 max-sm:w-fit ">
+              Support
+            </h3>
             <ul>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
@@ -92,7 +98,9 @@ const Footer = () => {
 
           {/* Legal Section */}
           <div className="w-full sm:w-1/4 mb-6 sm:mb-0">
-            <h3 className="text-lg font-semibold mb-2">Legal</h3>
+            <h3 className="text-lg font-semibold mb-2 border-b-2 border-white pr-5 max-sm:w-fit ">
+              Legal
+            </h3>
             <ul>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">

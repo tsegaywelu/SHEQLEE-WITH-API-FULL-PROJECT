@@ -35,10 +35,12 @@ const Clients = () => {
               discriptiondetail={
                 "we have been deliverd about 30000000 notifications about new remotejobs to job seekers since the website launched"
               }
-              cssproperty="flex  justify-center text-start  w-3/4 mt-3 md:mt-10 mb-16 bg-black"
+              cssproperty="flex  justify-center text-start  w-3/4 mt-3 md:mt-10 mb-16 "
+              rounded="rounded-l-3xl"
             />
           </div>
           <div className="flex justify-end">
+            {/* //i have to change this to loop bcause data is not only 4 */}
             <Info
               subscribers={"49.7K+"}
               title={"Telegram channel subscriber"}
@@ -46,6 +48,7 @@ const Clients = () => {
                 "we have telegram channel with 49.716+ real subscribers our channel posts have 29.5 k views per day on average "
               }
               cssproperty="flex  justify-center text-end  flex-row-reverse w-3/4 mt-3 md:mt-10 mb-16 bg-red-700"
+              rounded="rounded-r-3xl"
             />
           </div>
           <div className="flex justify-start">
@@ -55,7 +58,8 @@ const Clients = () => {
               discriptiondetail={
                 "we have been deliverd about 30000000 notifications about new remotejobs to job seekers since the website launched"
               }
-              cssproperty="flex  justify-center text-start  w-3/4 mt-3 md:mt-10 mb-16 bg-black"
+              cssproperty="flex  justify-center text-start  w-3/4 mt-3 md:mt-10 mb-16 "
+              rounded="rounded-l-3xl"
             />
           </div>
           <div className="flex justify-end">
@@ -66,6 +70,7 @@ const Clients = () => {
                 "we have telegram channel with 49.716+ real subscribers our channel posts have 29.5 k views per day on average "
               }
               cssproperty="flex  justify-center text-end  flex-row-reverse w-3/4 mt-3 md:mt-10 mb-16 bg-red-700"
+              rounded="rounded-r-3xl"
             />
           </div>
         </div>
