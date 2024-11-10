@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
+import tsegay from "../../assets/tsegay.jpg";
 import Mybutton from "../basecomponents/Mybutton";
-import Select from "react-select";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Dropdown from "../basecomponents/Dropdown";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  //this is using the react-select modul to list te drop downs
-  const options = [
-    { value: "python", label: "Python" },
-    { value: "javascript", label: "JavaScript" },
-    { value: "java", label: "Java" },
-    { value: "phpofthegreate", label: "phpofthegreate" },
-  ];
+
+  const state = "logedin";
+  const state1 = "notlogin";
 
   // left component
   const leftsidecontent = () => {
@@ -31,7 +28,7 @@ const Header = () => {
   // right component
   const rightsidecontent = () => {
     return (
-      <div className=" p-1 md:p-2 lg:p-3">
+      <div className=" p-1 md:p-2 lg:p-3 ">
         {isMenuOpen ? (
           <FaTimes
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -45,23 +42,27 @@ const Header = () => {
         )}
         {/* Right section: Navigation and buttons */}
         <div
-          className={`flex-grow flex items-center justify-center  md:flex lg:justify-evenly md:flex-row  ${
+          className={`flex-grow-0 flex items-center justify-center  gap-4   md:flex lg:justify-between md:flex-row  ${
             isMenuOpen ? "flex flex-col gap-2 " : "hidden "
           }`}
         >
-          <div className=" mt-1 p-1 md:p-2 lg:p-3 lg:font-semibold text-sm lg:text-xl  ">
-            <Link to={"/sheqlee/alljobs"}>alljobs</Link>
+          <div className=" mt-1 p-1 md:p-2 lg:p-3  text-sm lg:text-xl font-semibold ">
+            <Link to={"/sheqlee/alljobs"}>all jobs</Link>
           </div>
 
           {/* Category Dropdown */}
           <Link to={"/sheqlee/catagoris"}>
-            <div>
-              <Select
-                options={options}
-                placeholder="Categories"
-                className="bg-slate-600"
-              />
-            </div>
+            <Dropdown
+              categories={[
+                "Front-End",
+                "Back-End",
+                "Mobile App",
+                "UI/UX",
+                "Machine Learning",
+                "Security",
+                "Database",
+              ]}
+            />
           </Link>
           <Link to={"/sheqlee/client"}>
             <div className="mt-1 p-1 md:p-2 lg:p-3 lg:font-semibold text-sm lg:text-xl ">
@@ -71,18 +72,47 @@ const Header = () => {
           </Link>
 
           {/* Buttons */}
-          <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-3 lg:gap-6">
-            <Mybutton
-              background={
-                "border-4 border-indigo-700 rounded-lg py-1 md:py-2 px-2 md:px-5  "
-              }
-            >
-              Log in
-            </Mybutton>
-            <Mybutton background={"bg-green-900 rounded-lg p-1 md:p-2 lg:p-3"}>
-              Sign Up
-            </Mybutton>
-          </div>
+          {state === "logedinw" ? (
+            <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-3 lg:gap-6">
+              <Link to={"/sheqlee/login"}>
+                <Mybutton
+                  background={
+                    "border-4 border-indigo-700 rounded-lg py-1 md:py-2 px-2 md:px-5  "
+                  }
+                >
+                  Log in
+                </Mybutton>
+              </Link>
+
+              {/* here rederect user to componay sign up page or user sign up page */}
+              <Link to={"/sheqlee/companysignup"}>
+                <Mybutton
+                  background={"bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3"}
+                >
+                  Sign Up
+                </Mybutton>
+              </Link>
+            </div>
+          ) : (
+            <div className="flex  max-sm:flex-col justify-center items-center gap-5 ">
+              <Mybutton
+                background={"bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3"}
+              >
+                Post a job
+              </Mybutton>
+              <div className="flex  ">
+                <img src={tsegay} alt="" className="w-10 h-10 rounded-full" />
+                <Dropdown
+                  categories={[
+                    "dashboared",
+                    "company profile",
+                    "account setting ",
+                    "Logout",
+                  ]}
+                />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     );

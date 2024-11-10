@@ -13,7 +13,7 @@ import {
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black text-white px-2 md:px-8 lg:px-16 py-2 md:py-8 lg:py-16">
+      <footer className="bg-black text-white px-2 md:px-8 lg:px-16 py-2 md:py-8 lg:py-16 mt-5">
         <div className="container mx-auto flex flex-wrap lg:flex-nowrap justify-between gap-10">
           {/* Address Section */}
           <div className="w-full sm:w-1/4 text-center sm:text-left mb-6 sm:mb-0">

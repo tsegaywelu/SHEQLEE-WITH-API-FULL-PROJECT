@@ -14,6 +14,10 @@ import Tagdetail from "./pages/Tagditail";
 import Companys from "./pages/Companys";
 import Contact from "./pages/Contact";
 import FAQ1 from "./pages/FAQ1";
+import Companysignup from "./pages/authpages/Companysignup";
+import Employersignup from "./pages/authpages/Employersignup";
+import Login from "./pages/authpages/Login";
+import Vacancy from "./components/privatepages/Vacancy";
 const App = () => {
   console.log("<App/> rendered");
   return (
@@ -39,7 +43,13 @@ const App = () => {
           <Route path="/sheqlee/company" element={<Companys />} />
           <Route path="/sheqlee/contact" element={<Contact />} />
           <Route path="/sheqlee/FAQ" element={<FAQ1 />} />
+          {/* /////auth pages  */}
+          <Route path="/sheqlee/companysignup" element={<Companysignup />} />
+          <Route path="/sheqlee/employersignup" element={<Employersignup />} />
+          <Route path="/sheqlee/login" element={<Login />} />
+          {/* below are all the private routes  */}
 
+          <Route path="/sheqlee/vacancy" element={<Vacancy />} />
           <Route path="*" element={<Lost />}></Route>
         </Routes>
         <Footer />
