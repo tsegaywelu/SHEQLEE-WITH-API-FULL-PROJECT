@@ -46,13 +46,14 @@ const Header = () => {
             isMenuOpen ? "flex flex-col gap-2 " : "hidden "
           }`}
         >
-          <div className=" mt-1 p-1 md:p-2 lg:p-3  text-sm lg:text-xl font-semibold ">
+          <div className=" mt-1 p-1 md:p-2 lg:p-3  text-base ">
             <Link to={"/sheqlee/alljobs"}>all jobs</Link>
           </div>
 
           {/* Category Dropdown */}
           <Link to={"/sheqlee/catagoris"}>
             <Dropdown
+              dropdowntitle={"catagory"}
               categories={[
                 "Front-End",
                 "Back-End",
@@ -65,7 +66,7 @@ const Header = () => {
             />
           </Link>
           <Link to={"/sheqlee/client"}>
-            <div className="mt-1 p-1 md:p-2 lg:p-3 lg:font-semibold text-sm lg:text-xl ">
+            <div className="mt-1 p-1 md:p-2 lg:p-3 lg:font-semibold text-sm lg:text-base ">
               {/* border-b-4 border-blue-600 lg:pb-10 self-end bg-red-500 */}
               Clients
             </div>
@@ -96,13 +97,16 @@ const Header = () => {
           ) : (
             <div className="flex  max-sm:flex-col justify-center items-center gap-5 ">
               <Mybutton
-                background={"bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3"}
+                background={
+                  "bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3 text-sm"
+                }
               >
                 Post a job
               </Mybutton>
               <div className="flex  ">
                 <img src={tsegay} alt="" className="w-10 h-10 rounded-full" />
                 <Dropdown
+                  dropdowntitle={"user profile"}
                   categories={[
                     "dashboared",
                     "company profile",

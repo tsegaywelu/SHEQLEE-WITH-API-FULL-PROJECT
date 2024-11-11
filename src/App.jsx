@@ -22,7 +22,7 @@ const App = () => {
   console.log("<App/> rendered");
   return (
     <BrowserRouter>
-      <div className="mx-5 md:mx-10 lg:mx-20 ">
+      <div className="mx-3 md:mx-6 lg:mx-12 ">
         <Header />
         <Routes>
           <Route path="/sheqlee" element={<Landing />} />

@@ -9,6 +9,7 @@ import {
   FaLinkedin,
   FaYoutube,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -31,19 +32,29 @@ const Footer = () => {
             </h3>
             <ul>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white ">
+                <Link
+                  to={"/sheqlee/company"}
+                  className="text-gray-400 hover:text-white "
+                >
                   Companies
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <Link
+                  to={"/sheqlee/catagoris"}
+                  href="#"
+                  className="text-gray-400 hover:text-white"
+                >
                   Categories
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <Link
+                  to={"/sheqlee/tags"}
+                  className="text-gray-400 hover:text-white"
+                >
                   Tags
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -84,14 +95,20 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <Link
+                  to={"/sheqlee/contact"}
+                  className="text-gray-400 hover:text-white"
+                >
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <Link
+                  to={"/sheqlee/FAQ"}
+                  className="text-gray-400 hover:text-white"
+                >
                   FAQ
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

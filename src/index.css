@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ql-toolbar {
+  background-color: rgb(58, 51, 51); /* Replace with your desired color */
+  border-radius: 14px 14px 0 0;
+  text-align: left;
+}
+
+button svg {
+  fill: white !important; /* Replace #FF5722 with your desired color */
+}
+
+button svg {
+  stroke: white !important;
+}
