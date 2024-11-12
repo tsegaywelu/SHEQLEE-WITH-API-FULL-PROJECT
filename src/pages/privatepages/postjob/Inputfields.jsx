@@ -1,15 +1,14 @@
 import React from "react";
-import Location from "../basecomponents/Location";
+import Location from "../../../components/basecomponents/Location";
 import { FaReact } from "react-icons/fa";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import Reatchtext from "../basecomponents/Reatchtext";
-import Dropdown from "../basecomponents/Dropdown";
-import Mybutton from "../basecomponents/Mybutton";
-const Vacancy = () => {
+import Reatchtext from "../../../components/basecomponents/Reatchtext";
+import Dropdown from "../../../components/basecomponents/Dropdown";
+import Mybutton from "../../../components/basecomponents/Mybutton";
+const Inputfields = ({ formData, updateFormData, onPreview }) => {
   return (
     <div>
-      <Location />
       <div className="relative  max-w-2xl  px-4 py-7 my-4 md:my-16 bg-slate-100 mx-auto">
         <FaReact
           size={48}
@@ -47,6 +46,8 @@ const Vacancy = () => {
               type="text"
               placeholder="siniour mobile app developer"
               className="bg-slate-200 rounded-lg  h-full outline-none p-3  w-full text-xl"
+              value={formData.jobTitle}
+              onChange={(e) => updateFormData("jobTitle", e.target.value)}
             />
           </div>
           {/* //botto input parts  */}
@@ -61,6 +62,8 @@ const Vacancy = () => {
                   className="bg-slate-200  rounded-lg pl-16 h-full outline-none p-3 w-full text-xl"
                   id="companyname"
                   placeholder="full-time"
+                  value={formData.catagory}
+                  onChange={(e) => updateFormData("category", e.target.value)}
                 />
               </div>
             </div>
@@ -73,6 +76,8 @@ const Vacancy = () => {
                   type="text"
                   className="bg-slate-200 rounded-lg  h-full outline-none p-3  w-full "
                   placeholder="fornt-end "
+                  value={formData.jobType}
+                  onChange={(e) => updateFormData("jobType", e.target.value)}
                 />
               </div>
             </div>
@@ -88,6 +93,8 @@ const Vacancy = () => {
                   className="bg-slate-200  rounded-lg pl-16 h-full outline-none p-3 w-full text-xl"
                   id="companyname"
                   placeholder="intermidiate"
+                  value={formData.skillLevel}
+                  onChange={(e) => updateFormData("skillLevel", e.target.value)}
                 />
               </div>
             </div>
@@ -102,6 +109,8 @@ const Vacancy = () => {
                   id="email"
                   className="bg-slate-200 rounded-lg  h-full outline-none p-3  w-full text-xl"
                   placeholder="salary"
+                  value={formData.salary}
+                  onChange={(e) => updateFormData("salary", e.target.value)}
                 />
               </div>
             </div>
@@ -119,6 +128,10 @@ const Vacancy = () => {
               placeholder="we are looking for fluter developer with 2 year experience..."
               rows={3}
               className="bg-slate-200 w-full rounded-lg p-4  outline-none text-2xl m-3 "
+              value={formData.shortdescription}
+              onChange={(e) =>
+                updateFormData("shortdescription", e.target.value)
+              }
             ></textarea>
             <span className="absolute right-3  bottom-16 lg:bottom-10 ">
               0/128
@@ -130,10 +143,22 @@ const Vacancy = () => {
           </div>
           {/* //requirements part  */}
 
-          <Reatchtext showtext={"requrenments"} />
+          <Reatchtext
+            showtext={"requrenments"}
+            value={formData.requirements}
+            onChange={(content) => updateFormData("requirements", content)}
+          />
 
-          <Reatchtext showtext={"description"} />
-          <Reatchtext showtext={"how to apply"} />
+          <Reatchtext
+            showtext={"description"}
+            value={formData.jobDescription}
+            onChange={(content) => updateFormData("jobDescription", content)}
+          />
+          <Reatchtext
+            showtext={"how to apply"}
+            value={formData.applyInstructions}
+            onChange={(content) => updateFormData("applyInstructions", content)}
+          />
           <div className="mt-5">
             <h1 className="text-start text-2xl ">
               skills <span className="text-sm">technology names </span>
@@ -142,8 +167,12 @@ const Vacancy = () => {
             <input
               type="text"
               className="bg-slate-200 rounded-lg  h-full outline-none p-3  w-full text-xl"
+              value={formData.skills}
+              onChange={(e) => updateFormData("skills", e.target.value)}
             />
           </div>
+          {/* //check box part */}
+
           <div className="mt-5">
             <h1 className="text-start text-2xl ">
               Apply link
@@ -152,7 +181,15 @@ const Vacancy = () => {
             <input
               type="text"
               className="bg-slate-200 rounded-lg  h-full outline-none p-3  w-full text-xl"
+              value={formData.applyLink}
+              onChange={(e) => updateFormData(" applyLink", e.target.value)}
             />
+          </div>
+          <div className="text-start  m-3">
+            <input type="checkbox" />
+            <span className="text-sm">
+              i want my company name to exclude fro this vacancy{" "}
+            </span>
           </div>
           <div className="flex justify-end gap-10 mt-16 ">
             <Mybutton
@@ -163,7 +200,7 @@ const Vacancy = () => {
               save draft
             </Mybutton>
             <Mybutton background={"bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3"}>
-              <h1 className="text-2xl">
+              <h1 className="text-2xl" onClick={onPreview}>
                 Next <span className="text-sm">[preview and confirm]</span>
               </h1>
             </Mybutton>
@@ -174,4 +211,4 @@ const Vacancy = () => {
   );
 };
 
-export default Vacancy;
+export default Inputfields;

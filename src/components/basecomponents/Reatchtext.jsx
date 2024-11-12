@@ -2,7 +2,7 @@ import React from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
-const RichText = ({ showtext }) => {
+const RichText = ({ showtext, value, onChange }) => {
   return (
     <div className="mt-20 mb-20">
       <h2 className="text-2xl font-semibold text-start">
@@ -27,6 +27,8 @@ const RichText = ({ showtext }) => {
             borderRadius: "5px",
             height: "130px",
           }}
+          value={value}
+          onChange={(content) => onChange(content)}
         />
       </div>
     </div>
