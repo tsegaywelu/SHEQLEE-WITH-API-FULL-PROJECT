@@ -7,7 +7,10 @@
   border-radius: 14px 14px 0 0;
   text-align: left;
 }
-
+.ql-editor {
+  min-height: 180px;
+  outline: none;
+}
 button svg {
   fill: white !important; /* Replace #FF5722 with your desired color */
 }

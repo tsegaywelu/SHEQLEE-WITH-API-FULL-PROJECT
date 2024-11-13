@@ -8,8 +8,9 @@ import Dropdown from "../basecomponents/Dropdown";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const state = "logedin";
-  const state1 = "notlogin";
+  //const state = "guest";
+  const state = "company";
+  //const state = "frelancer";
 
   // left component
   const leftsidecontent = () => {
@@ -46,7 +47,7 @@ const Header = () => {
             isMenuOpen ? "flex flex-col gap-2 " : "hidden "
           }`}
         >
-          <div className=" mt-1 p-1 md:p-2 lg:p-3  text-base ">
+          <div className=" mt-1 p-1 md:p-2 lg:p-3  text-base font-bold ">
             <Link to={"/sheqlee/alljobs"}>all jobs</Link>
           </div>
 
@@ -73,12 +74,12 @@ const Header = () => {
           </Link>
 
           {/* Buttons */}
-          {state === "logedinw" ? (
+          {state === "guest" ? (
             <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-3 lg:gap-6">
               <Link to={"/sheqlee/login"}>
                 <Mybutton
                   background={
-                    "border-4 border-indigo-700 rounded-lg py-1 md:py-2 px-2 md:px-5  "
+                    "border-4 border-indigo-700 rounded-lg py-1 md:py-2 px-2 md:px-4 text-base font-bold "
                   }
                 >
                   Log in
@@ -88,7 +89,9 @@ const Header = () => {
               {/* here rederect user to componay sign up page or user sign up page */}
               <Link to={"/sheqlee/companysignup"}>
                 <Mybutton
-                  background={"bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3"}
+                  background={
+                    "bg-purple-600 rounded-xl lg:px-3 md:p-2 lg:py-3 text-base font-bold text-white"
+                  }
                 >
                   Sign Up
                 </Mybutton>

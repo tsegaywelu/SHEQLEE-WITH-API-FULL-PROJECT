@@ -15,8 +15,11 @@ const Dashboaredcompany = () => {
       <div className=" flex  flex-col  items-center  gap-5 justify-center my-5 md:my-10 ">
         <Dashboaredtitle
           text={
-            " you have not posted any job yet. get started by posting a job"
+            job
+              ? "all the jobs you have posted and are about to post"
+              : " you have not posted any job yet. get started by posting a job"
           }
+          heading={"Dashboared"}
         >
           <IoGridOutline size={66} className="text-purple-600" />
         </Dashboaredtitle>

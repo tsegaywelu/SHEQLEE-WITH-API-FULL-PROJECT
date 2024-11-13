@@ -1,10 +1,7 @@
 import React from "react";
-import Location from "../../../components/basecomponents/Location";
 import { CiGrid31 } from "react-icons/ci";
-import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import Reatchtext from "../../../components/basecomponents/Reatchtext";
-import Dropdown from "../../../components/basecomponents/Dropdown";
 import Mybutton from "../../../components/basecomponents/Mybutton";
 const Inputfields = ({ formData, updateFormData, onPreview }) => {
   return (
@@ -143,22 +140,26 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
           </div>
           {/* //requirements part  */}
 
-          <Reatchtext
-            showtext={"requrenments"}
-            value={formData.requirements}
-            onChange={(content) => updateFormData("requirements", content)}
-          />
+          <div className="space-y-20 my-20">
+            <Reatchtext
+              showtext={"requrenments"}
+              value={formData.requirements}
+              onChange={(content) => updateFormData("requirements", content)}
+            />
 
-          <Reatchtext
-            showtext={"description"}
-            value={formData.jobDescription}
-            onChange={(content) => updateFormData("jobDescription", content)}
-          />
-          <Reatchtext
-            showtext={"how to apply"}
-            value={formData.applyInstructions}
-            onChange={(content) => updateFormData("applyInstructions", content)}
-          />
+            <Reatchtext
+              showtext={"description"}
+              value={formData.jobDescription}
+              onChange={(content) => updateFormData("jobDescription", content)}
+            />
+            <Reatchtext
+              showtext={"how to apply"}
+              value={formData.applyInstructions}
+              onChange={(content) =>
+                updateFormData("applyInstructions", content)
+              }
+            />
+          </div>
           <div className="mt-5">
             <h1 className="text-start text-2xl ">
               skills <span className="text-sm">technology names </span>

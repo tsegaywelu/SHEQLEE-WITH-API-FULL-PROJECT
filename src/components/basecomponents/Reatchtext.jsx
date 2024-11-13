@@ -4,7 +4,7 @@ import "react-quill/dist/quill.snow.css";
 
 const RichText = ({ showtext, value, onChange }) => {
   return (
-    <div className="mt-20 mb-20">
+    <div>
       <h2 className="text-2xl font-semibold text-start">
         {showtext} <span className="text-red-700">*</span>
       </h2>
@@ -13,6 +13,7 @@ const RichText = ({ showtext, value, onChange }) => {
           theme="snow"
           modules={{
             toolbar: [
+              [{ header: "1" }, { header: "2" }],
               ["bold", "italic", "strike"], // Bold, italic, strikethrough
               [{ list: "ordered" }, { list: "bullet" }], // Ordered and unordered lists
               [{ align: [] }], // Alignment options
@@ -25,7 +26,8 @@ const RichText = ({ showtext, value, onChange }) => {
           style={{
             backgroundColor: "#f1f1f1",
             borderRadius: "5px",
-            height: "130px",
+            minHeight: "180px",
+            padding: "10px",
           }}
           value={value}
           onChange={(content) => onChange(content)}
