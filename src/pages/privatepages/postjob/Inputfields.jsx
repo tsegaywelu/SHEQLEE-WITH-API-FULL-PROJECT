@@ -1,6 +1,6 @@
 import React from "react";
 import Location from "../../../components/basecomponents/Location";
-import { FaReact } from "react-icons/fa";
+import { CiGrid31 } from "react-icons/ci";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import Reatchtext from "../../../components/basecomponents/Reatchtext";
@@ -10,7 +10,7 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
   return (
     <div>
       <div className="relative  max-w-2xl  px-4 py-7 my-4 md:my-16 bg-slate-100 mx-auto">
-        <FaReact
+        <CiGrid31
           size={48}
           className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-3 w-20"
         />

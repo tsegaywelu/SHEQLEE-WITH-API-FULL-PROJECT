@@ -1,65 +1,119 @@
 import React from "react";
+import Mybutton from "../../../components/basecomponents/Mybutton";
+import { CiGrid31 } from "react-icons/ci";
+import Divider from "../../../components/basecomponents/Divider";
+import { FaGears } from "react-icons/fa6";
 
 const Preview = ({ formData, onBack }) => {
   return (
     <div className="max-w-3xl mx-auto mt-10">
-      <h1 className="text-2xl font-bold text-center mb-4">Preview Vacancy</h1>
+      <div>
+        <div className="relative  max-w-2xl  px-4 py-7 my-4 md:my-16 bg-slate-100 mx-auto">
+          <CiGrid31
+            size={48}
+            className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-3 w-20"
+          />
+          <h2 className="  rounded-lg pl-20 h-full   w-full text-sm ">
+            to speed up the process of posting a job try using {"  "}
+            <button className=" border-b-2 border-purple-400 font-bold px-1">
+              JOB templates
+            </button>{" "}
+            page
+          </h2>
+        </div>
+      </div>
 
-      <p>
-        <strong>Job Title:</strong> {formData.jobTitle}
-      </p>
-      <p>
-        <strong>Category:</strong> {formData.category}
-      </p>
-      <p>
-        <strong>Job Type:</strong> {formData.jobType}
-      </p>
-      <p>
-        <strong>Skill Level:</strong> {formData.skillLevel}
-      </p>
-      <p>
-        <strong>Salary:</strong> {formData.salary}
-      </p>
+      {/* //text part  */}
+      <div className="max-w-3xl mx-auto  text-center  ">
+        <div className="flex flex-col   gap-1 md:gap-3">
+          <div className="flex justify-center items-center gap-x-2">
+            {" "}
+            <h1 className="text-xl  md:text-3xl lg:text-4xl font-extrabold">
+              Review and Publish
+            </h1>
+            <span className="text-2xl">[2/2]</span>
+          </div>
+          <p className="text-sm md:text-2xl">
+            Review job detail before pusblishing !!
+          </p>
+        </div>
+        {/* //buttons part */}
+        <div className="flex justify-center gap-10 mt-16 ">
+          <Mybutton
+            background={
+              "border-4 border-indigo-700 rounded-lg py-1 md:py-2 px-2 md:px-5 text-2xl  "
+            }
+          >
+            Edit
+          </Mybutton>
+          <Mybutton background={"bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3"}>
+            <h1 className="text-2xl">Publish job</h1>
+          </Mybutton>
+        </div>
 
-      <h3>Requirements</h3>
-      <div dangerouslySetInnerHTML={{ __html: formData.requirements }} />
-      <h3>shortdescription</h3>
-      <div dangerouslySetInnerHTML={{ __html: formData.shortdescription }} />
-      <h3>jobDescription</h3>
-      <div dangerouslySetInnerHTML={{ __html: formData.jobDescription }} />
+        <Divider>VACANCY PREVIEW</Divider>
+        {/* //below devider part  */}
+        <div>
+          <div className="flex justify-center items-center gap-8">
+            <FaGears size={48} />{" "}
+            <span className=" text-sm md:text-3xl ">{formData.jobTitle}</span>
+          </div>
+          <div
+            className=" 
+          flex gap-10 items-center justify-center mt-5"
+          >
+            <p>
+              <strong>Job Type:</strong> {formData.jobType}
+            </p>
+            <p>
+              <strong>Skill Level:</strong> {formData.skillLevel}
+            </p>
+            <p>
+              <strong>Salary:</strong> {formData.salary}
+            </p>
+          </div>
+        </div>
 
-      <h3>applyInstructions</h3>
-      <div dangerouslySetInnerHTML={{ __html: formData.applyInstructions }} />
+        <div className="bg-slate-50 text-start pl-10">
+          {/* //edit this part plase and leave three divs */}
+          <p>
+            <strong>Category:</strong> {formData.category}
+          </p>
 
-      <p>
-        <strong>Skills:</strong> {formData.skills}
-      </p>
+          <h3>Requirements</h3>
+          <div dangerouslySetInnerHTML={{ __html: formData.requirements }} />
 
-      <p>
-        <strong>applyLink:</strong> {formData.applyLink}
-      </p>
+          <h3>shortdescription</h3>
+          <div
+            dangerouslySetInnerHTML={{ __html: formData.shortdescription }}
+          />
+          <h3>jobDescription</h3>
+          <div dangerouslySetInnerHTML={{ __html: formData.jobDescription }} />
 
-      <button
-        type="button"
-        onClick={onBack}
-        className="bg-gray-400 rounded-lg p-2 mt-4"
-      >
-        Back to Edit
-      </button>
+          <h3>applyInstructions</h3>
+          <div
+            dangerouslySetInnerHTML={{ __html: formData.applyInstructions }}
+          />
+
+          <p>
+            <strong>Skills:</strong> {formData.skills}
+          </p>
+
+          <p>
+            <strong>applyLink:</strong> {formData.applyLink}
+          </p>
+
+          <button
+            type="button"
+            onClick={onBack}
+            className="bg-gray-400 rounded-lg p-2 mt-4"
+          >
+            Back to Edit
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default Preview;
-
-// jobTitle: "",
-// category: "",
-// jobType: "",
-// skillLevel: "",
-// salary: "",
-// shortdescription: "",
-// requirements: "",
-// jobDescription: "",
-// applyInstructions: "",
-// skills: "",
-// applyLink: "",

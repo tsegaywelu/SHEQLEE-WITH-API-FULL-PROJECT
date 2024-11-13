@@ -18,6 +18,8 @@ import Companysignup from "./pages/authpages/Companysignup";
 import Employersignup from "./pages/authpages/Employersignup";
 import Login from "./pages/authpages/Login";
 import Inputfields from "./pages/privatepages/postjob/Vacancyform";
+import Private from "./pages/privatepages/Private";
+import Dashboaredcompany from "./pages/privatepages/Dashboaredcompany";
 const App = () => {
   console.log("<App/> rendered");
   return (
@@ -49,7 +51,24 @@ const App = () => {
           <Route path="/sheqlee/login" element={<Login />} />
           {/* below are all the private routes  */}
 
-          <Route path="/sheqlee/vacancy" element={<Inputfields />} />
+          <Route
+            path="/sheqlee/vacancy"
+            element={
+              <Private>
+                <Inputfields />
+              </Private>
+            }
+          ></Route>
+
+          <Route
+            path="/sheqlee/dashboared"
+            element={
+              <Private>
+                <Dashboaredcompany />
+              </Private>
+            }
+          ></Route>
+
           <Route path="*" element={<Lost />}></Route>
         </Routes>
         <Footer />

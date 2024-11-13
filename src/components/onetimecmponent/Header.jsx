@@ -96,13 +96,15 @@ const Header = () => {
             </div>
           ) : (
             <div className="flex  max-sm:flex-col justify-center items-center gap-5 ">
-              <Mybutton
-                background={
-                  "bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3 text-sm"
-                }
-              >
-                Post a job
-              </Mybutton>
+              <Link to={"sheqlee/vacancy"}>
+                <Mybutton
+                  background={
+                    "bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3 text-sm"
+                  }
+                >
+                  Post a job
+                </Mybutton>
+              </Link>
               <div className="flex  ">
                 <img src={tsegay} alt="" className="w-10 h-10 rounded-full" />
                 <Dropdown
