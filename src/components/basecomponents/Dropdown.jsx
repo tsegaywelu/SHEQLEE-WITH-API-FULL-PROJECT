@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { createPortal } from "react-dom";
-function Dropdown({ categories }) {
+function Dropdown({ categories, dropdowntitle }) {
   const [isOpen, setIsOpen] = useState(false);
 
   // List of categories to display
@@ -18,7 +18,7 @@ function Dropdown({ categories }) {
         // onMouseLeave={() => setIsOpen(false)}
         className="inline-flex justify-center w-full rounded-md  shadow-sm px-6 py-2 bg-slate-100 text-base  text-black font-bold  "
       >
-        Categories
+        {dropdowntitle}
         <span>
           {" "}
           <FaAngleDown
@@ -30,7 +30,7 @@ function Dropdown({ categories }) {
 
       {/* Dropdown menu */}
       {isOpen && (
-        <div className="h-screen w-screen bg-stone-900/60">
+        <div className=" bg-stone-900/60">
           <div className="absolute     mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 ">
             <div className="py-1">
               {categories.map((category) => (

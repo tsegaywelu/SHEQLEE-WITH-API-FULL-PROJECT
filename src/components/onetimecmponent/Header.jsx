@@ -8,8 +8,8 @@ import Dropdown from "../basecomponents/Dropdown";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  //const state = "guest";
-  const state = "company";
+  const state = "guest";
+  //const state = "company";
   //const state = "frelancer";
 
   // left component
@@ -97,7 +97,7 @@ const Header = () => {
                 </Mybutton>
               </Link>
             </div>
-          ) : (
+          ) : state === "company" ? (
             <div className="flex  max-sm:flex-col justify-center items-center gap-5 ">
               <Link to={"sheqlee/vacancy"}>
                 <Mybutton
@@ -111,13 +111,32 @@ const Header = () => {
               <div className="flex  ">
                 <img src={tsegay} alt="" className="w-10 h-10 rounded-full" />
                 <Dropdown
-                  dropdowntitle={"user profile"}
+                  dropdowntitle={"Microsoft"}
                   categories={[
                     "dashboared",
                     "company profile",
                     "account setting ",
                     "Logout",
                   ]}
+                />
+              </div>
+            </div>
+          ) : (
+            <div className="flex  max-sm:flex-col justify-center items-center gap-5 ">
+              <Link to={"sheqlee/vacancy"}>
+                <Mybutton
+                  background={
+                    "bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3 text-sm"
+                  }
+                >
+                  Edit profile
+                </Mybutton>
+              </Link>
+              <div className="flex  ">
+                <img src={tsegay} alt="" className="w-10 h-10 rounded-full" />
+                <Dropdown
+                  dropdowntitle={"jon deo"}
+                  categories={["dashboared", "account setting ", "Logout"]}
                 />
               </div>
             </div>

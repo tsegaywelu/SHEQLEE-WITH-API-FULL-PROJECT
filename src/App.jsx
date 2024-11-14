@@ -22,6 +22,7 @@ import Private from "./pages/privatepages/Private";
 import Dashboaredcompany from "./pages/privatepages/Dashboaredcompany";
 import Companyprofile from "./pages/privatepages/Companyprofile";
 import { Companyprofilesetting } from "./pages/privatepages/Companyprofilesetting";
+import Userdashboared from "./pages/privatepages/client/Userdashboared";
 const App = () => {
   console.log("<App/> rendered");
   return (
@@ -87,7 +88,15 @@ const App = () => {
               </Private>
             }
           ></Route>
-
+          {/* //frelancer pages  */}
+          <Route
+            path="/sheqlee/userdashboared"
+            element={
+              <Private>
+                <Userdashboared />
+              </Private>
+            }
+          ></Route>
           <Route path="*" element={<Lost />}></Route>
         </Routes>
         <Footer />
