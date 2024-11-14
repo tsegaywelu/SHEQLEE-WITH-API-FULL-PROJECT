@@ -3,7 +3,7 @@ import React from "react";
 import Mybutton from "../components/basecomponents/Mybutton";
 import Postedjobs from "../components/basecomponents/Postedjobs";
 import Location from "../components/basecomponents/Location";
-// import Noresult from "../components/basecomponents/Noresult";
+import Noresult from "../components/basecomponents/Noresult";
 const Alljobs = () => {
   return (
     <>

@@ -79,7 +79,7 @@ const Header = () => {
               <Link to={"/sheqlee/login"}>
                 <Mybutton
                   background={
-                    "border-4 border-indigo-700 rounded-lg py-1 md:py-2 px-2 md:px-4 text-base font-bold "
+                    "border-4 border-custom-purple rounded-lg py-1 md:py-2 px-2 md:px-4 text-base font-bold "
                   }
                 >
                   Log in
@@ -90,7 +90,7 @@ const Header = () => {
               <Link to={"/sheqlee/companysignup"}>
                 <Mybutton
                   background={
-                    "bg-purple-600 rounded-xl lg:px-3 md:p-2 lg:py-3 text-base font-bold text-white"
+                    "bg-custom-purple rounded-xl lg:px-3 md:p-2 lg:py-3 text-base font-bold text-white"
                   }
                 >
                   Sign Up
