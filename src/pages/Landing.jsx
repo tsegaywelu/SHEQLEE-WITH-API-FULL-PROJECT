@@ -24,15 +24,16 @@ const Landing = () => {
         <div className="md:w-1/2 flex items-center  justify-center flex-col  md:mx-10 md:px-10 ">
           <h1 className="font-bold text-xl md:text-3xl lg:text-5xl mx-2 md:mx-5 lg:mx-10">
             Recurit{" "}
-            <span style={{ color: "indigo" }}>
+            <span style={{ color: "#8967B3" }}>
               affordable & skilled ethiopian
             </span>{" "}
             <br />
             proffetionals.
           </h1>
           <p className=" lg:my-7 text-wrap text-sm md:text-xl  mx-2 md:mx-5 lg:mx-10">
-            web front-end,mobile app,backend,database full-stack,datasince,UI/UX
-            and product design project managment,scrum mster etc
+            Web frontend, mobile app, backend, database, full-stack, data
+            science, UI/UX & product design, project management, scrum master,
+            etc.
           </p>
           {/* //for the  pop up text */}
 
@@ -41,7 +42,7 @@ const Landing = () => {
             <div className=" mx-2 md:mx-5 lg:mx-10">
               <Mybutton
                 background={
-                  "bg-indigo-600 text-sm md:text-xl lg:text-2xl py-1 md:py-2 lg:py-4 px-5 md:px-10 lg:px-16 rounded-lg "
+                  "bg-custom-purple  text-sm md:text-xl lg:text-2xl py-1 md:py-2 lg:py-4 px-5 md:px-10 lg:px-16 rounded-lg "
                 }
               >
                 {" "}

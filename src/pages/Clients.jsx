@@ -47,7 +47,7 @@ const Clients = () => {
               discriptiondetail={
                 "we have telegram channel with 49.716+ real subscribers our channel posts have 29.5 k views per day on average "
               }
-              cssproperty="flex  justify-center text-end  flex-row-reverse w-3/4 mt-3 md:mt-10 mb-16 bg-red-700"
+              cssproperty="flex  justify-center text-end  flex-row-reverse w-3/4 mt-3 md:mt-10 mb-16 "
               rounded="rounded-r-3xl"
             />
           </div>
@@ -69,7 +69,7 @@ const Clients = () => {
               discriptiondetail={
                 "we have telegram channel with 49.716+ real subscribers our channel posts have 29.5 k views per day on average "
               }
-              cssproperty="flex  justify-center text-end  flex-row-reverse w-3/4 mt-3 md:mt-10 mb-16 bg-red-700"
+              cssproperty="flex  justify-center text-end  flex-row-reverse w-3/4 mt-3 md:mt-10 mb-16 "
               rounded="rounded-r-3xl"
             />
           </div>

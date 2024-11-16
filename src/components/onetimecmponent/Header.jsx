@@ -8,8 +8,8 @@ import Dropdown from "../basecomponents/Dropdown";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const state = "guest";
-  //const state = "company";
+  //const state = "guest";
+  const state = "company";
   //const state = "frelancer";
 
   // left component
@@ -47,7 +47,7 @@ const Header = () => {
             isMenuOpen ? "flex flex-col gap-2 " : "hidden "
           }`}
         >
-          <div className=" mt-1 p-1 md:p-2 lg:p-3  text-base font-bold ">
+          <div className=" mt-1 p-1 md:p-2 lg:p-3  text-#000000 font-bold ">
             <Link to={"/sheqlee/alljobs"}>all jobs</Link>
           </div>
 
@@ -102,7 +102,7 @@ const Header = () => {
               <Link to={"sheqlee/vacancy"}>
                 <Mybutton
                   background={
-                    "bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3 text-sm"
+                    "bg-custom-purple rounded-lg p-1 md:p-2 lg:p-3 text-sm"
                   }
                 >
                   Post a job
@@ -126,7 +126,7 @@ const Header = () => {
               <Link to={"sheqlee/vacancy"}>
                 <Mybutton
                   background={
-                    "bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3 text-sm"
+                    "bg-custom-purple  rounded-lg p-1 md:p-2 lg:p-3 text-sm"
                   }
                 >
                   Edit profile
@@ -149,7 +149,7 @@ const Header = () => {
   return (
     <>
       {/* Main container */}
-      <div className="bg-slate-100 flex  justify-between items-center py-1 md:py-2  lg:py-4 px-2 md:px-5 lg:px-10   lg:rounded-lg">
+      <div className="bg-custom-slate  flex  justify-between items-center py-1 md:py-2  lg:py-4 px-2 md:px-5 lg:px-10   lg:rounded-lg">
         {/* left side part */}
         {leftsidecontent()}
 

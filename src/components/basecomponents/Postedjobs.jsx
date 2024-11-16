@@ -72,7 +72,7 @@ const Postedjobs = () => {
               {Jobs.map((jobsall) => {
                 return (
                   <div
-                    className=" bg-slate-100 rounded-2xl md:p-5 "
+                    className=" bg-custom-slate rounded-2xl md:p-5 "
                     key={jobsall.title + Math.random()}
                   >
                     <div className="text-xl font-semibold flex gap-4">

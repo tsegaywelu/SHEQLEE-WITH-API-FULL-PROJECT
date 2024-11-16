@@ -27,7 +27,7 @@ const Tags = () => {
     <>
       {loading ? (
         // page in a loading situation
-        <div className=" bg-gray-200  px-3 md:px-6 lg:px-12 py-1 md:py-2 lg:py-5">
+        <div className=" bg-custom-slate  px-3 md:px-6 lg:px-12 py-1 md:py-2 lg:py-5">
           {/* top texsts */}
           <div className="flex justify-between">
             <h4 className="text-sm md:text-xl lg:text-2xl">Popular Tags</h4>
@@ -39,7 +39,7 @@ const Tags = () => {
               return (
                 <div
                   key={tag.id}
-                  className=" bg-gray-400 p-4 md:p-8 lg:p-10 rounded-xl border-l-[5px] md:border-l-[10px] lg: border-l-black "
+                  className=" bg-custom-tags p-4 md:p-8 lg:p-10 rounded-xl border-l-[5px] md:border-l-[10px] lg: border-l-black "
                 >
                   <div className="font-semibold text-2xl"></div>
                   <div></div>
