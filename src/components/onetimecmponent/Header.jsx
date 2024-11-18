@@ -8,8 +8,8 @@ import Dropdown from "../basecomponents/Dropdown";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  //const state = "guest";
-  const state = "company";
+  const state = "guest";
+  // const state = "company";
   //const state = "frelancer";
 
   // left component
