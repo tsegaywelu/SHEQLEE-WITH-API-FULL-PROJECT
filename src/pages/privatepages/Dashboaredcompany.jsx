@@ -6,7 +6,7 @@ import { IoGridOutline } from "react-icons/io5";
 import Dashboaredtitle from "../../components/onetimecmponent/Dashboaredtitle";
 import Jobdetail from "../../components/onetimecmponent/Jobdetail";
 const Dashboaredcompany = () => {
-  const job = true;
+  const job = false;
   return (
     <div>
       <div className="my-5">
@@ -30,7 +30,7 @@ const Dashboaredcompany = () => {
             <Link to={"/sheqlee/vacancy"}>
               <Mybutton
                 background={
-                  "bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3 text-sm md:text-2xl font-extrabold text-white"
+                  "bg-custom-purple rounded-lg p-1 md:p-2 lg:p-3 text-sm md:text-2xl font-extrabold text-white"
                 }
               >
                 Post your first job

@@ -7,6 +7,12 @@ export default {
         "custom-purple": "#8967B3",
         "custom-slate": "#F7F7F7",
         "custom-tags": "#DFDFDF",
+        "custom-black": "#000000",
+        "custom-load": "#C9C9C9",
+      },
+      fontFamily: {
+        recoleta: ["Recoleta", "sans-serif"],
+        kantumruy: ["Kantumruy Pro", "sans-serif"],
       },
     },
   },

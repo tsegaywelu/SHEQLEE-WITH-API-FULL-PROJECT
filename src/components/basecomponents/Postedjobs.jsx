@@ -3,6 +3,7 @@ import { FaUserTie, FaRegClock, FaDollarSign } from "react-icons/fa";
 import { BiBuilding, BiBriefcase } from "react-icons/bi";
 import Mybutton from "./Mybutton";
 import { Link } from "react-router-dom";
+import Rightarrow from "../../assets/SVG/Right.svg";
 const emptyRectangles = [{}, {}, {}, {}, {}, {}, {}, {}, {}];
 const Postedjobs = () => {
   const [loading, setloading] = useState(true);
@@ -32,27 +33,64 @@ const Postedjobs = () => {
   return (
     <>
       {loading ? (
-        <div className=" py-3 md:py-6 lg:py-12">
-          <h3 className="text-2xl font-semibold mb-6">latest job posts </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 ">
+        <div className=" py-3 md:py-6 lg:py-12 ">
+          <div className="flex justify-between">
+            <h4 className="text-[50px] font-kantumruy my-3">
+              latest job posts{" "}
+            </h4>
+            <div className="flex justify-center items-center gap-2 relative ">
+              <div className="w-24 h-4 bg-custom-tags  "></div>
+              <div className=" absolute  w-1/2 h-[7px] bg-custom-purple left-0 bottom-6"></div>
+              <img src={Rightarrow} alt="" width={8} height={12} />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 ">
             {/* ///////////////////// */}
             {emptyRectangles.map((jobsall, index) => {
               return (
                 <div
-                  className=" bg-slate-100 rounded-2xl md:p-5 lg:p-10 "
+                  className=" bg-custom-slate rounded-2xl md:p-3 lg:pr-10  lg:pt-5  "
                   key={index}
                 >
-                  <div className="text-xl font-semibold">{jobsall.title}</div>
-                  <p className="text-sm ">{jobsall.descreiption}</p>
-                  <div className="">
+                  <div className="flex  justify-center items-center gap-5">
+                    <div className=" w-7 h-7 rounded-full bg-custom-tags "></div>
+                    <div className="h-4 w-full bg-custom-tags"></div>
+                  </div>
+                  <div>
+                    <p className="h-2 w-full bg-custom-tags mt-10"></p>
+                    <p className="h-2 w-1/2 bg-custom-tags mt-2"></p>
+                  </div>
+
+                  <div className="mt-10">
                     <div className="flex  justify-between">
-                      <div className="px-2 py-3">{jobsall.level}</div>
-                      <div className="px-2 py-3">{jobsall.time}</div>
-                      <div className="px-2 py-3"> {jobsall.companyname}</div>
+                      <div className="flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1">
+                        <div className=" w-4 h-4 rounded-full bg-custom-load "></div>
+                        <div className="h-2 w-16 flex-grow bg-custom-load"></div>
+                      </div>
+                      {/* /////////////// */}
+                      <div className="flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1">
+                        <div className=" w-4 h-4 rounded-full bg-custom-load "></div>
+                        <div className="h-2 w-16 flex-grow bg-custom-load"></div>
+                      </div>
+                      {/* /////////////// */}
+                      <div className="flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1">
+                        <div className=" w-4 h-4 rounded-full bg-custom-load "></div>
+                        <div className="h-2 w-16 flex-grow bg-custom-load"></div>
+                      </div>
                     </div>
-                    <div className="flex justify-between">
-                      <div className="px-2 py-3">{jobsall.work}</div>
-                      <div className="px-2 py-3">{jobsall.salary}</div>
+
+                    <div className="flex  justify-between">
+                      <div className=" flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1">
+                        <div className=" w-4 h-4 rounded-full bg-custom-load "></div>
+                        <div className="h-2 w-16 flex-grow bg-custom-load"></div>
+                      </div>
+                      {/* /////////////// */}
+                      <div className="flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1">
+                        <div className=" w-4 h-4 rounded-full bg-custom-load "></div>
+                        <div className="h-2 w-16 flex-grow bg-custom-load"></div>
+                      </div>
+                      {/* /////////////// */}
+                      <div className="h-5 w-1/4 flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1 border-8 border-custom-purple"></div>
                     </div>
                   </div>
                 </div>

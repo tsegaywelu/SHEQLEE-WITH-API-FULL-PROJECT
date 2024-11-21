@@ -2,8 +2,8 @@ import React from "react";
 
 const Platformstatus = () => {
   return (
-    <section className="flex flex-col items-center py-10 bg-gray-50">
-      <h2 className="text-xl md:text-3xl font-bold mb-6">Platform stats</h2>
+    <section className="flex flex-col items-center py-10  ">
+      <h2 className="text-xl md:text-3xl font-bold mb-6">Platform status</h2>
       <div className="flex flex-wrap justify-center gap-20">
         {/* for hand shake */}
         <div className="flex flex-col items-center text-center">

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+import Rightarrow from "../../assets/SVG/Right.svg";
 import { Link } from "react-router-dom";
 //import { Totaltags } from "../../data/Tags";
-const emptyRectangles = [{}, {}, {}, {}, {}, {}, {}, {}, {}];
+const emptyRectangles = [{}, {}, {}, {}, {}, {}];
 const Tags = () => {
   const fakeid = "tag detail";
   const [loading, setloading] = useState(true);
@@ -30,19 +31,30 @@ const Tags = () => {
         <div className=" bg-custom-slate  px-3 md:px-6 lg:px-12 py-1 md:py-2 lg:py-5">
           {/* top texsts */}
           <div className="flex justify-between">
-            <h4 className="text-sm md:text-xl lg:text-2xl">Popular Tags</h4>
-            <div> &gt;</div>
+            <h4 className="text-[50px] font-kantumruy my-3">Popular Tags</h4>
+            <div className="flex justify-center items-center gap-2 relative ">
+              <div className="w-24 h-4 bg-custom-tags  "></div>
+              <div className=" absolute  w-1/2 h-[7px] bg-custom-purple left-0 bottom-6"></div>
+              <img src={Rightarrow} alt="" width={8} height={12} />
+            </div>
           </div>
           {/* //display the tags  */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {emptyRectangles.map((tag) => {
               return (
                 <div
                   key={tag.id}
-                  className=" bg-custom-tags p-4 md:p-8 lg:p-10 rounded-xl border-l-[5px] md:border-l-[10px] lg: border-l-black "
+                  className=" bg-custom-tags p-4 md:p-3 lg:p-6 rounded-xl border-l-[5px] md:border-l-[20px] lg: border-l-black "
                 >
-                  <div className="font-semibold text-2xl"></div>
-                  <div></div>
+                  <div className="font-semibold text-2xl w-1/2 h-5 bg-custom-load mb-4 rounded-lg"></div>
+                  <div className=" flex justify-center gap-5 w-1/2">
+                    {" "}
+                    <span className="w-1/2 h-3 bg-custom-load rounded-lg"></span>
+                    <span className="w-fit h-2  flex justify-center items-end text-3xl ">
+                      .
+                    </span>
+                    <span className="w-1/2 h-3 bg-custom-load rounded-lg"></span>{" "}
+                  </div>
                 </div>
               );
             })}
@@ -50,20 +62,23 @@ const Tags = () => {
         </div>
       ) : (
         // if the page is loaded
-        <div className=" bg-gray-200 px-2 md:px-5 lg:px-12 py-1 md:py-3 lg:py-5">
+        <div className=" bg-custom-slate px-2 md:px-5 lg:px-12 py-1 md:py-3 lg:py-5">
           {/* top texsts */}
           <div className="flex justify-between">
-            <h4 className="text-2xl">Popular Tags</h4>
-            <div>73+ more tags &gt;</div>
+            <h4 className="text-[50px] font-kantumruy my-3">Popular Tags</h4>
+            <div className="flex justify-center items-center gap-2">
+              <p className="text-xs">745+ more tags </p>
+              <img src={Rightarrow} alt="" width={8} height={12} />
+            </div>
           </div>
           {/* //display the tags  */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {Totaltags.map((tag) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {Totaltags.slice(0, 6).map((tag) => {
               return (
                 <Link to={`/sheqlee/tag/${fakeid}`}>
                   <div
                     key={tag.id}
-                    className=" bg-gray-400 p-5 rounded-xl border-l-[15px] border-l-black "
+                    className=" bg-custom-tags  p-5 rounded-xl border-l-[15px] border-l-black "
                   >
                     <div className="font-semibold text-2xl">{tag.tagname}</div>
                     <div>

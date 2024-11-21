@@ -57,7 +57,7 @@ const Jobdetail = () => {
             <td className=" px-6">part time </td>
             <td className=" px-6">Lead</td>
             <td className=" px-6">
-              <div className=" rounded border-2 border-green-500 p-[1px] w-10 h-fit flex justify-end">
+              <div className=" rounded border-2 border-green-500 p-[1px] w-10 h-fit flex justify-center">
                 <div className="min-w-3 w-3 min-h-3 h-3 rounded bg-green-500 "></div>
               </div>
             </td>

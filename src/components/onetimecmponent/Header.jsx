@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import logo from "../../assets/logo.png";
 import tsegay from "../../assets/tsegay.jpg";
 import Mybutton from "../basecomponents/Mybutton";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Dropdown from "../basecomponents/Dropdown";
+import mysvg from "../../assets/SVG/logo.svg";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const state = "guest";
-  // const state = "company";
+  //const state = "company";
   //const state = "frelancer";
 
   // left component
@@ -17,9 +17,9 @@ const Header = () => {
     return (
       <>
         {/* Left section: Logo and title */}
-        <div className="flex flex-col md:flex-row  mx-3  md:mx-5 lg:mx-10 ">
-          <img src={logo} alt="Logo loading..." className=" h-10 md:h-20" />
-          <h1 className="text-sm md:text-xl font-bold  flex justify-center items-center">
+        <div className="flex flex-col md:flex-row  mx-3  md:mx-5 lg:mx-10 gap-5 ">
+          <img src={mysvg} alt="Logo loading..." className=" h-[50px]" />
+          <h1 className="text-sm md:text-2xl font-extrabold  flex justify-center items-center font-recoleta">
             Sheqlee
           </h1>
         </div>
@@ -47,7 +47,7 @@ const Header = () => {
             isMenuOpen ? "flex flex-col gap-2 " : "hidden "
           }`}
         >
-          <div className=" mt-1 p-1 md:p-2 lg:p-3  text-#000000 font-bold ">
+          <div className=" mt-1 p-1 md:p-2 lg:p-3  text-custom-black font-  font-kantumruy">
             <Link to={"/sheqlee/alljobs"}>all jobs</Link>
           </div>
 
@@ -79,7 +79,7 @@ const Header = () => {
               <Link to={"/sheqlee/login"}>
                 <Mybutton
                   background={
-                    "border-4 border-custom-purple rounded-lg py-1 md:py-2 px-2 md:px-4 text-base font-bold "
+                    "border-[4px] border-custom-purple rounded-lg py-1 md:py-2 px-2 md:px-4 text-base font-bold "
                   }
                 >
                   Log in

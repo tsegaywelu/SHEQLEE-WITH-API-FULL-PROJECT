@@ -23,6 +23,7 @@ import Dashboaredcompany from "./pages/privatepages/Dashboaredcompany";
 import Companyprofile from "./pages/privatepages/Companyprofile";
 import { Companyprofilesetting } from "./pages/privatepages/Companyprofilesetting";
 import Userdashboared from "./pages/privatepages/client/Userdashboared";
+import Twoinput from "./components/basecomponents/Twoinput";
 const App = () => {
   console.log("<App/> rendered");
   return (
@@ -31,6 +32,8 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/sheqlee" element={<Landing />} />
+          <Route path="/game" element={<Twoinput />} />
+
           <Route path="/sheqlee/alljobs" element={<Alljobs />} />
 
           <Route path="/sheqlee/catagoris" element={<Catagoris />} />
