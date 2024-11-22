@@ -4,6 +4,7 @@ import { BiBuilding, BiBriefcase } from "react-icons/bi";
 import Mybutton from "./Mybutton";
 import { Link } from "react-router-dom";
 import Rightarrow from "../../assets/SVG/Right.svg";
+import devops from "../../assets/SVG/devops.svg";
 const emptyRectangles = [{}, {}, {}, {}, {}, {}, {}, {}, {}];
 const Postedjobs = () => {
   const [loading, setloading] = useState(true);
@@ -104,35 +105,39 @@ const Postedjobs = () => {
             <h3 className="md:text-2xl font-semibold md:mb-6">
               latest job posts{" "}
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-7">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-5 ">
               {/* ///////////////////// */}
 
               {Jobs.map((jobsall) => {
                 return (
                   <div
-                    className=" bg-custom-slate rounded-2xl md:p-5 "
+                    className=" bg-custom-slate rounded-2xl md:pr-5 p-2 "
                     key={jobsall.title + Math.random()}
                   >
-                    <div className="text-xl font-semibold flex gap-4">
-                      {" "}
-                      <FaUserTie size={24} />
-                      {jobsall.title}
+                    <div className=" flex gap-5">
+                      <img src={devops} alt="" />
+                      <p className="text-3xl font-semibold font-kantumruy">
+                        {jobsall.title}
+                      </p>
                     </div>
-                    <p className="text-sm ">{jobsall.descreiption}</p>
-                    <div className="">
-                      <div className="flex  justify-between">
-                        <div className="px-2 py-3 flex justify-start items-center text-sm">
+                    <p className="text-sm mt-10 font-kantumruy ">
+                      {jobsall.descreiption}
+                    </p>
+                    <div className="mt-5 ">
+                      <div className="flex  justify-between  mb-3 ">
+                        <div className="px-2 py-1 flex justify-start items-center  bg-custom-tags text-xs">
+                          <FaRegClock className="mr-1" />
+                          {jobsall.time}
+                        </div>
+                        <div className="px-2 py-1 flex justify-start items-center text-xs bg-custom-tags">
                           {" "}
                           <FaUserTie className="mr-1" />
                           {jobsall.level}
                         </div>
-                        <div className="px-2 py-3 flex justify-start items-center text-sm">
-                          <FaRegClock className="mr-1" />
-                          {jobsall.time}
-                        </div>
+
                         <div
-                          className="px-2 py-3
-                      flex justify-start items-center text-sm"
+                          className="px-2 py-1
+                      flex justify-start items-center text-sm bg-custom-tags"
                         >
                           {" "}
                           <BiBuilding className="mr-1" />
@@ -140,17 +145,21 @@ const Postedjobs = () => {
                         </div>
                       </div>
                       <div className="flex justify-between">
-                        <div className="px-2 py-3 flex justify-start items-center">
+                        <div className="px-2 py-1 flex justify-start items-center bg-custom-tags text-xs">
                           {" "}
                           <BiBriefcase className="mr-1" />
                           {jobsall.work}
                         </div>
-                        <div className="px-2 py-3 flex justify-start items-center">
+                        <div className="px-2 py-1 flex justify-start items-center bg-custom-tags text-xs">
                           <FaDollarSign className="" />
                           {jobsall.salary}
                         </div>
-                        <div className="px-2 py-3">
-                          <Mybutton background={"bg-indigo-600  text-sm p-1"}>
+                        <div className="px-3 py-1">
+                          <Mybutton
+                            background={
+                              "bg-custom-purple  text-xs px-2 py-1 rounded-sm"
+                            }
+                          >
                             applay
                           </Mybutton>
                         </div>
