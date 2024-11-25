@@ -9,6 +9,8 @@ export default {
         "custom-tags": "#DFDFDF",
         "custom-black": "#000000",
         "custom-load": "#C9C9C9",
+        "custom-placeholder": "#444444",
+        dvider: "#DDDDDD",
       },
       fontFamily: {
         recoleta: ["Recoleta", "sans-serif"],

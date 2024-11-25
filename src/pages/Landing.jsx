@@ -44,7 +44,7 @@ const Landing = () => {
             <div className=" mx-2 md:mx-5 lg:mx-10">
               <Mybutton
                 background={
-                  "bg-custom-purple  text-sm md:text-xl lg:text-2xl py-1 md:py-2 lg:py-4 px-5 md:px-10 lg:px-16 rounded-lg  text-white"
+                  "bg-custom-purple  text-sm md:text-xl lg:text-2xl py-1 md:py-2 lg:py-4 px-5 md:px-10 lg:px-16 rounded-lg  text-white font-bold"
                 }
               >
                 {" "}

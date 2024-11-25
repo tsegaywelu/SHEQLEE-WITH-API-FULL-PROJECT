@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Dashboaredtitle from "../components/onetimecmponent/Dashboaredtitle";
+import categories12 from "../assets/SVG/categories.svg";
 import {
   FaGlobe,
   FaDatabase,
@@ -97,18 +99,20 @@ const Catagoris = () => {
   return (
     <div>
       <Location />
+      <div className="mt-10">
+        <Dashboaredtitle
+          text={
+            " Job categories along with their respective number of jobs posted and" +
+            " number of subscribers."
+          }
+          heading={"All Categories"}
+          css
+        >
+          <img src={categories12} width={96} height={96} />
+        </Dashboaredtitle>
+      </div>
       <div className="max-w-4xl mx-auto my-8 p-6">
         {/* {the title } */}
-        <div className="text-center mb-8">
-          <div className="flex justify-center text-purple-500 text-4xl mb-2">
-            <FaGlobe />
-          </div>
-          <h1 className="text-3xl font-bold">All Categories</h1>
-          <p className="text-gray-500 mt-2">
-            Job categories along with their respective number of jobs posted and
-            number of subscribers.
-          </p>
-        </div>
 
         {/* Categories Grid */}
         <Link to={`/sheqle/catagory/${fakeid}`}>
@@ -119,8 +123,9 @@ const Catagoris = () => {
                 title={category.title}
                 jobs={category.jobs}
                 subscribers={category.subscribers}
-                icon={category.icon}
-              />
+              >
+                {category.icon}
+              </CatagoriesCard>
             ))}
           </div>
         </Link>

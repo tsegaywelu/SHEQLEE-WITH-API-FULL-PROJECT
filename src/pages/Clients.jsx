@@ -10,20 +10,20 @@ const Clients = () => {
       </div>
       {/* //header part  */}
       <div className=" mt-5 md:mt-20 flex  flex-col gap-7 justify-center items-center">
-        <h1 className=" text-2xl md:text-4xl font-semibold ">
+        <h1 className=" text-xl md:text-4xl font-semibold font-kantumruy ">
           sheqlee for clients{" "}
         </h1>
-        <p className="text-sm md:text-xl max-w-[500px] text-center">
+        <p className=" max-w-[600px] text-sm md:text-2xl   text-center p-1 font-kantumruy ">
           access a pool of talented,comptent and dedicated experts and
           profetional from ethiopia
         </p>
         <div className="mt-5 md:mt-15 flex gap-10 ">
-          <Mybutton background="border-4 border-indigo-700 rounded-lg py-1 md:py-2 px-2 md:px-7">
-            log in
+          <Mybutton background="border-[4px] border-custom-purple rounded-lg py-1 md:py-2 px-2 md:px-4 text-xl font-bold">
+            Log in
           </Mybutton>
-          <Mybutton background=" bg-purple-400 text-sm md:text-xl lg:text-2xl p-1 md:p-2 lg:p-3 rounded-lg">
+          <Mybutton background=" bg-custom-purple text-white text-sm md:text-xl lg:text-2xl py-1 md:py-2 lg:py-3 px-5 rounded-lg font-bold">
             {" "}
-            register as an employer
+            Register as an employer
           </Mybutton>
         </div>
         {/* //information and analysis section  */}
@@ -74,6 +74,16 @@ const Clients = () => {
             />
           </div>
         </div>
+      </div>
+      <div className=" flex justify-center items-center">
+        <Mybutton
+          background={
+            "bg-custom-purple  text-sm md:text-xl lg:text-2xl py-1 md:py-2 lg:py-4 px-5 md:px-10 lg:px-16 rounded-lg  text-white font-bold "
+          }
+        >
+          {" "}
+          Post a job now
+        </Mybutton>
       </div>
     </div>
   );

@@ -12,18 +12,28 @@ export const Modal = ({ closewin }) => {
         &times;
       </button>
       <div className="  flex items-center justify-center h-screen w-full fixed mx-auto bg-stone-900/60 z-10 ">
-        <div className=" flex flex-col items-center justify-center py-5 px-20  font-semibold  bg-white rounded-lg shadow-lg">
-          <p className="  mx-auto  md:text-xl  ">
-            plase register or login as a <br />
-            client to post jobs
+        <div className=" flex flex-col items-center justify-center py-5 px-20  font-semibold  bg-white rounded-xl shadow-lg">
+          <p className="  mx-auto  md:text-xl font-kantumruy font-medium  ">
+            please register or login as a <br />
+            client to post jobs.
           </p>
-          <div className=" ">
+          <div className=" flex justify-around items-center mt-5  w-full ">
             <Link to={"/sheqlee/companysignup"}>
-              <Mybutton background={" p-2  m-2"}>Sign Up</Mybutton>
+              <Mybutton
+                background={
+                  " py-2 px-5  bg-custom-purple text-white rounded-xl"
+                }
+              >
+                Sign Up
+              </Mybutton>
             </Link>
             <Link to={"/sheqlee/login"}>
-              <Mybutton background={"bg-indigo-700 p-2 rounded-lg m-3"}>
-                Sign in{" "}
+              <Mybutton
+                background={
+                  "border-[3px] border-custom-purple  py-2 px-4 rounded-lg m-3"
+                }
+              >
+                Log in
               </Mybutton>
             </Link>
           </div>

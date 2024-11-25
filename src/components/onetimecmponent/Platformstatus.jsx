@@ -3,7 +3,7 @@ import handshake from "../../assets/SVG/handshake.svg";
 import programmer from "../../assets/SVG/programmer.svg";
 import company from "../../assets/SVG/company.svg";
 const Platformstatus = () => {
-  const loading = true;
+  const loading = false;
   return (
     <section className="flex flex-col items-center py-10  ">
       <h2 className="text-xl md:text-3xl font-bold mb-6">Platform status</h2>

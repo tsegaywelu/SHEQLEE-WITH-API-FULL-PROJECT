@@ -1,5 +1,6 @@
 import React from "react";
 import Postedjobs from "../components/basecomponents/Postedjobs";
+import product from "../assets/SVG/product.svg";
 import {
   FaBell,
   FaLightbulb,
@@ -11,22 +12,22 @@ import {
 import Location from "../components/basecomponents/Location";
 const Catagprydetail = () => {
   return (
-    <div className="md:mt-10 lg:mt-15">
+    <div className="md:mt-10 ">
       <div className="ml-20">
         <Location />
       </div>
       <div className="flex flex-col items-center text-center p-8 font-sans text-black">
         <div className="mb-4 text-purple-400">
-          <FaLightbulb size={48} />
+          <img src={product} height={96} width={96} />
         </div>
-        <h1 className="text-lg md:text-xl lg:text-4xl font-bold mb-2">
+        <h1 className="text-lg md:text-xl lg:text-4xl font-bold mb-2 mt-4">
           UI/UX & Product Design
         </h1>
-        <p className="text-sm md:text-xl lg:text-2xl text-gray-900 mb-4">
+        <p className="text-sm md:text-xl lg:text-2xl text-gray-900 mb-4 mt-6">
           All job posts in the <strong>UI/UX & Product Design</strong> category.
         </p>
 
-        <button className="flex items-center gap-5 px-4 py-2 md:px-8 md:py-4 bg-purple-400 hover:bg-purple-500 text-white font-semibold rounded-lg transition duration-300">
+        <button className="flex items-center gap-5 px-4 py-2 md:px-8 md:py-4 bg-custom-purple hover:bg-purple-500 text-white font-semibold rounded-lg transition duration-300 mt-6">
           <FaBell /> Subscribe to category
         </button>
 

@@ -105,7 +105,7 @@ const Postedjobs = () => {
             <h3 className="md:text-2xl font-semibold md:mb-6">
               latest job posts{" "}
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-5 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-16 ">
               {/* ///////////////////// */}
 
               {Jobs.map((jobsall) => {
@@ -115,16 +115,16 @@ const Postedjobs = () => {
                     key={jobsall.title + Math.random()}
                   >
                     <div className=" flex gap-5">
-                      <img src={devops} alt="" />
+                      <img src={devops} width={32} height={32} />
                       <p className="text-3xl font-semibold font-kantumruy">
                         {jobsall.title}
                       </p>
                     </div>
-                    <p className="text-sm mt-10 font-kantumruy ">
+                    <p className="text-xs mt-7 font-kantumruy ">
                       {jobsall.descreiption}
                     </p>
-                    <div className="mt-5 ">
-                      <div className="flex  justify-between  mb-3 ">
+                    <div className="mt-5  mr-6">
+                      <div className="flex  justify-between  mb-3 gap-1 ">
                         <div className="px-2 py-1 flex justify-start items-center  bg-custom-tags text-xs">
                           <FaRegClock className="mr-1" />
                           {jobsall.time}
@@ -144,8 +144,8 @@ const Postedjobs = () => {
                           {jobsall.companyname}
                         </div>
                       </div>
-                      <div className="flex justify-between">
-                        <div className="px-2 py-1 flex justify-start items-center bg-custom-tags text-xs">
+                      <div className="flex justify-between mr-5">
+                        <div className="px-2 py-1 flex justify-start items-center bg-custom-tags text-xs ">
                           {" "}
                           <BiBriefcase className="mr-1" />
                           {jobsall.work}
@@ -157,7 +157,7 @@ const Postedjobs = () => {
                         <div className="px-3 py-1">
                           <Mybutton
                             background={
-                              "bg-custom-purple  text-xs px-2 py-1 rounded-sm"
+                              "bg-custom-purple  text-xs px-4 py-1 rounded-sm text-white"
                             }
                           >
                             applay

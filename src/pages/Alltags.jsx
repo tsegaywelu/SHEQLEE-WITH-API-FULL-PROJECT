@@ -1,6 +1,7 @@
 import React from "react";
 import Tags from "../components/basecomponents/Tags";
-import { FaTag } from "react-icons/fa";
+import tag from "../assets/SVG/tag.svg";
+import Dashboaredtitle from "../components/onetimecmponent/Dashboaredtitle";
 import Location from "../components/basecomponents/Location";
 const Alltags = () => {
   return (
@@ -8,15 +9,16 @@ const Alltags = () => {
       <div className="ml-20">
         <Location />
       </div>
-      <div className="flex flex-col items-center text-center p-8 font-sans text-gray-800">
-        <div className="mb-4 text-purple-400">
-          <FaTag size={48} />
-        </div>
-        <h1 className="text-2xl font-bold mb-2">All Tags</h1>
-        <p className="text-lg text-gray-600 flex justify-center items-center">
-          Job tags along with their respective number of <br />
-          jobs posted and number of subscribers.
-        </p>
+      <div className="mt-7">
+        <Dashboaredtitle
+          text={
+            " Job tags along with their respective number of jobs posted and number of subscribers."
+          }
+          heading={"All Tags"}
+          css
+        >
+          <img src={tag} />
+        </Dashboaredtitle>
       </div>
       <Tags />
 
