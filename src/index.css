@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 .ql-toolbar {
-  background-color: rgb(58, 51, 51); /* Replace with your desired color */
+  background-color: rgb(
+    58,
+    51,
+    51
+  ); /* i can Replace this with my desired color */
   border-radius: 14px 14px 0 0;
   text-align: left;
 }
@@ -12,9 +16,26 @@
   outline: none;
 }
 button svg {
-  fill: white !important; /* Replace #FF5722 with your desired color */
+  fill: white !important; /* i can replace also #FF5722 with my desired color */
 }
 
 button svg {
   stroke: white !important;
+}
+
+@font-face {
+  font-family: "Kantumruy Pro";
+  src: url("/src/assets/fonts/Kantumruy/KantumruyPro-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900; /* i will modify  this range based on font weights in UI/UX */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("/src/assets/fonts/Lora/Lora-Italic-VariableFont_wght.ttf")
+    format("truetype");
+
+  font-weight: 400 700; /* Modify this based on the weights you downloaded */
+  font-style: normal;
 }

@@ -3,43 +3,49 @@ import handshake from "../../assets/SVG/handshake.svg";
 import programmer from "../../assets/SVG/programmer.svg";
 import company from "../../assets/SVG/company.svg";
 const Platformstatus = () => {
-  const loading = false;
+  const loading = true;
   return (
-    <section className="flex flex-col items-center py-10  ">
-      <h2 className="text-xl md:text-3xl font-bold mb-6">Platform status</h2>
+    <section className="flex flex-col items-center py-10  gap-5 ">
+      <h2 className="text-xl md:text-4xl  mb-6 font-medium font-kantumruy ">
+        Platform status
+      </h2>
       {loading ? (
         <div className="flex flex-wrap   w-full justify-around">
           {/* for hand shake */}
           <div className="flex flex-col items-center text-center gap-5 ">
-            <img src={handshake} alt="" />
-            <h3 className="w-2/3 h-5 bg-custom-tags  rounded-lg"></h3>
-            <div className="w-full h-3 bg-custom-tags rounded-lg"></div>
-            <p className="w-1/3  h-3 bg-custom-tags  rounded-lg"></p>
+            <div>
+              <img src={handshake} width={96} height={96} />
+            </div>
+            <h3 className="w-2/3 h-4 bg-custom-tags  rounded-[10px]"></h3>
+            <div className="w-full h-2 bg-custom-tags rounded-[7px] "></div>
+            <p className="w-1/3  h-2 bg-custom-tags  rounded-[7px]"></p>
           </div>
 
           {/* for user icon  */}
           <div className="flex flex-col items-center text-center gap-5">
-            <img src={programmer} alt="" />
-            <h3 className="w-2/3 h-5 bg-custom-tags  rounded-lg"></h3>
-            <div className="w-full h-3 bg-custom-tags rounded-lg"></div>
-            <p className="w-1/3  h-3 bg-custom-tags  rounded-lg"></p>
+            <img src={programmer} width={96} height={96} />
+            <h3 className="w-2/3 h-4 bg-custom-tags  rounded-[10px]"></h3>
+            <div className="w-full h-2 bg-custom-tags rounded-[7px]"></div>
+            <p className="w-1/3  h-2 bg-custom-tags  rounded-[7px]"></p>
           </div>
 
           {/* for the  */}
           <div className="flex flex-col items-center text-center gap-5">
-            <img src={company} alt="" />
-            <h3 className="w-2/3 h-5 bg-custom-tags  rounded-lg"></h3>
-            <div className="w-full h-3 bg-custom-tags rounded-lg"></div>
-            <p className="w-1/3  h-3 bg-custom-tags  rounded-lg"></p>
+            <img src={company} alt="" width={96} height={96} />
+            <h3 className="w-2/3 h-4 bg-custom-tags  rounded-lg"></h3>
+            <div className="w-full h-2 bg-custom-tags rounded-[7px]"></div>
+            <p className="w-1/3  h-2 bg-custom-tags  rounded-[7px]"></p>
           </div>
         </div>
       ) : (
         <div className="flex flex-wrap   w-full justify-around">
           {/* for hand shake */}
           <div className="flex flex-col items-center text-center">
-            <img src={handshake} alt="" />
-            <h3 className="text-2xl font-semibold mt-5">100K+</h3>
-            <p className="text-gray-600  text-xl mt-5">
+            <img src={handshake} alt="" width={96} height={96} />
+            <h3 className="text-3xl font-semibold font-kantumruy mt-5  ">
+              100K+
+            </h3>
+            <p className="font-kantumruy text-custom-black text-xl mt-5">
               Total jobs posted on <br />
               Sheqlee to date
             </p>
@@ -47,18 +53,20 @@ const Platformstatus = () => {
 
           {/* for user icon  */}
           <div className="flex flex-col items-center text-center">
-            <img src={programmer} alt="" />
-            <h3 className="text-2xl font-semibold mt-5">15K+</h3>
-            <p className="text-gray-600  text-xl mt-5 ">
+            <img src={programmer} alt="" width={96} height={96} />
+            <h3 className="text-3xl font-semibold font-kantumruy  mt-5">
+              15K+
+            </h3>
+            <p className="font-kantumruy text-custom-black  text-xl mt-5 ">
               Ethiopian professionals <br /> signed up so far
             </p>
           </div>
 
           {/* for the  */}
           <div className="flex flex-col items-center text-center">
-            <img src={company} alt="" />
-            <h3 className="text-2xl font-semibold mt-5">1K+</h3>
-            <p className="text-gray-600  text-xl mt-5 ">
+            <img src={company} alt="" width={96} height={96} />
+            <h3 className="text-3xl font-semibold font-kantumruy  mt-5">1K+</h3>
+            <p className="font-kantumruy text-custom-black text-xl mt-4 ">
               Korean companies <br /> posting jobs daily
             </p>
           </div>

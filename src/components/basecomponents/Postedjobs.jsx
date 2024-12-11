@@ -34,13 +34,13 @@ const Postedjobs = () => {
   return (
     <>
       {loading ? (
-        <div className=" py-3 md:py-6 lg:py-12 ">
+        <div className=" py-3 md:py-6 lg:py-12  mx-8 md:mx-16 ">
           <div className="flex justify-between">
-            <h4 className="text-[50px] font-kantumruy my-3">
-              latest job posts{" "}
+            <h4 className="text-[50px]  font-kantumruy font-medium my-3">
+              Latest job posts{" "}
             </h4>
             <div className="flex justify-center items-center gap-2 relative ">
-              <div className="w-24 h-4 bg-custom-tags  "></div>
+              <div className="w-24 h-4 bg-custom-tags rounded-[7px] "></div>
               <div className=" absolute  w-1/2 h-[7px] bg-custom-purple left-0 bottom-6"></div>
               <img src={Rightarrow} alt="" width={8} height={12} />
             </div>
@@ -50,48 +50,50 @@ const Postedjobs = () => {
             {emptyRectangles.map((jobsall, index) => {
               return (
                 <div
-                  className=" bg-custom-slate rounded-2xl md:p-3 lg:pr-10  lg:pt-5  "
+                  className=" bg-custom-slate rounded-2xl md:p-3 lg:pr-10  lg:pt-5   "
                   key={index}
                 >
                   <div className="flex  justify-center items-center gap-5">
-                    <div className=" w-7 h-7 rounded-full bg-custom-tags "></div>
-                    <div className="h-4 w-full bg-custom-tags"></div>
+                    <div className=" w-7 h-7 rounded-full bg-custom-tags   "></div>
+                    <div className="h-5 w-full bg-custom-tags rounded-[7px]"></div>
                   </div>
                   <div>
-                    <p className="h-2 w-full bg-custom-tags mt-10"></p>
-                    <p className="h-2 w-1/2 bg-custom-tags mt-2"></p>
+                    <p className="h-3 w-full bg-custom-tags mt-10 rounded-[5px] "></p>
+                    <p className="h-3 w-1/2 bg-custom-tags mt-2 rounded-[5px]"></p>
                   </div>
 
                   <div className="mt-10">
                     <div className="flex  justify-between">
-                      <div className="flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1">
-                        <div className=" w-4 h-4 rounded-full bg-custom-load "></div>
-                        <div className="h-2 w-16 flex-grow bg-custom-load"></div>
+                      <div className="flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1  rounded-[5px]">
+                        <div className=" w-4 h-4 rounded-full bg-custom-load  "></div>
+                        <div className="h-2 w-16 flex-grow bg-custom-load   rounded-[5px]"></div>
                       </div>
                       {/* /////////////// */}
-                      <div className="flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1">
+                      <div className="flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1 rounded-[5px]">
                         <div className=" w-4 h-4 rounded-full bg-custom-load "></div>
-                        <div className="h-2 w-16 flex-grow bg-custom-load"></div>
+                        <div className="h-2 w-16 flex-grow bg-custom-load  rounded-[5px]"></div>
                       </div>
                       {/* /////////////// */}
-                      <div className="flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1">
+                      <div className="flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1 rounded-[5px]">
                         <div className=" w-4 h-4 rounded-full bg-custom-load "></div>
-                        <div className="h-2 w-16 flex-grow bg-custom-load"></div>
+                        <div className="h-2 w-16 flex-grow bg-custom-load rounded-[5px]"></div>
                       </div>
                     </div>
 
-                    <div className="flex  justify-between">
-                      <div className=" flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1">
+                    <div className="flex  justify-between mr-10">
+                      <div className=" flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1 rounded-[5px]">
                         <div className=" w-4 h-4 rounded-full bg-custom-load "></div>
-                        <div className="h-2 w-16 flex-grow bg-custom-load"></div>
+                        <div className="h-2 w-16 flex-grow bg-custom-load rounded-[5px]"></div>
                       </div>
                       {/* /////////////// */}
-                      <div className="flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1">
+                      <div className="flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1 rounded-[5px]">
                         <div className=" w-4 h-4 rounded-full bg-custom-load "></div>
-                        <div className="h-2 w-16 flex-grow bg-custom-load"></div>
+                        <div className="h-2 w-16 flex-grow bg-custom-load rounded-[5px]"></div>
                       </div>
                       {/* /////////////// */}
-                      <div className="h-5 w-1/4 flex gap-2 justify-center items-center mt-5 bg-custom-tags p-1 border-8 border-custom-purple"></div>
+                      <div className="h-5 w-1/4 flex gap-2 justify-center items-center mt-5 bg-custom-purple p-1 border-8 border-custom-purple rounded-[5px] ">
+                        <div className="bg-custom-tags h-2 w-full rounded-[19px]"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -101,10 +103,17 @@ const Postedjobs = () => {
         </div>
       ) : (
         <Link to={`/sheqlee/alljob/${fakeid}`}>
-          <div className="py-4 md:py-8 lg:py-12">
-            <h3 className="md:text-2xl font-semibold md:mb-6">
-              latest job posts{" "}
-            </h3>
+          <div className="py-4 md:py-8 lg:py-12 mx-8 md:mx-16">
+            <div className="flex justify-between">
+              <h4 className="text-[50px]  font-kantumruy font-medium my-3">
+                Latest job posts{" "}
+              </h4>
+              <div className="flex justify-center items-center gap-2 relative ">
+                <h3 className="text-xs">745+ more jobs</h3>
+                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-6"></div>
+                <img src={Rightarrow} alt="" width={8} height={12} />
+              </div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-16 ">
               {/* ///////////////////// */}
 
@@ -125,11 +134,11 @@ const Postedjobs = () => {
                     </p>
                     <div className="mt-5  mr-6">
                       <div className="flex  justify-between  mb-3 gap-1 ">
-                        <div className="px-2 py-1 flex justify-start items-center  bg-custom-tags text-xs">
+                        <div className="px-2 py-1 flex justify-start items-center  bg-custom-tags text-xs rounded-[5px]">
                           <FaRegClock className="mr-1" />
                           {jobsall.time}
                         </div>
-                        <div className="px-2 py-1 flex justify-start items-center text-xs bg-custom-tags">
+                        <div className="px-2 py-1 flex justify-start items-center text-xs bg-custom-tags rounded-[5px]">
                           {" "}
                           <FaUserTie className="mr-1" />
                           {jobsall.level}
@@ -137,7 +146,7 @@ const Postedjobs = () => {
 
                         <div
                           className="px-2 py-1
-                      flex justify-start items-center text-sm bg-custom-tags"
+                      flex justify-start items-center text-sm bg-custom-tags rounded-[5px]"
                         >
                           {" "}
                           <BiBuilding className="mr-1" />
@@ -145,16 +154,16 @@ const Postedjobs = () => {
                         </div>
                       </div>
                       <div className="flex justify-between mr-5">
-                        <div className="px-2 py-1 flex justify-start items-center bg-custom-tags text-xs ">
+                        <div className="px-2 py-1 flex justify-start items-center bg-custom-tags text-xs rounded-[5px] ">
                           {" "}
                           <BiBriefcase className="mr-1" />
                           {jobsall.work}
                         </div>
-                        <div className="px-2 py-1 flex justify-start items-center bg-custom-tags text-xs">
+                        <div className="px-2 py-1 flex justify-start items-center bg-custom-tags text-xs rounded-[5px]">
                           <FaDollarSign className="" />
                           {jobsall.salary}
                         </div>
-                        <div className="px-3 py-1">
+                        <div className="px-3 py-1 rounded-[5px]">
                           <Mybutton
                             background={
                               "bg-custom-purple  text-xs px-4 py-1 rounded-sm text-white"

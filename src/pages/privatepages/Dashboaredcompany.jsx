@@ -6,7 +6,7 @@ import { IoGridOutline } from "react-icons/io5";
 import Dashboaredtitle from "../../components/onetimecmponent/Dashboaredtitle";
 import Jobdetail from "../../components/onetimecmponent/Jobdetail";
 const Dashboaredcompany = () => {
-  const job = false;
+  const job = true;
   return (
     <div>
       <div className="my-5">

@@ -5,8 +5,10 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Dropdown from "../basecomponents/Dropdown";
 import mysvg from "../../assets/SVG/logo.svg";
+import { useSelector } from "react-redux";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  //const state = useSelector((state) => state.user.currentuser);
 
   const state = "guest";
   //const state = "company";
@@ -19,7 +21,7 @@ const Header = () => {
         {/* Left section: Logo and title */}
         <div className="flex flex-col md:flex-row  mx-3  md:mx-5 lg:mx-10 gap-5 ">
           <img src={mysvg} alt="Logo loading..." className=" h-[50px]" />
-          <h1 className="text-sm md:text-2xl font-extrabold  flex justify-center items-center font-recoleta">
+          <h1 className="text-sm md:text-2xl font-extrabold flex justify-center items-center font-lora">
             Sheqlee
           </h1>
         </div>
@@ -47,7 +49,7 @@ const Header = () => {
             isMenuOpen ? "flex flex-col gap-2 " : "hidden "
           }`}
         >
-          <div className=" mt-1 p-1 md:p-2 lg:p-3  text-custom-black font-  font-kantumruy">
+          <div className=" mt-1 p-1 md:p-2 lg:p-3  text-custom-black font-kantumruy font-medium">
             <Link to={"/sheqlee/alljobs"}>all jobs</Link>
           </div>
 
@@ -67,7 +69,7 @@ const Header = () => {
             />
           </Link>
           <Link to={"/sheqlee/client"}>
-            <div className="mt-1 p-1 md:p-2 lg:p-3 lg:font-semibold text-sm lg:text-base ">
+            <div className="mt-1 p-1 md:p-2 lg:p-3   font-kantumruy font-medium ">
               {/* border-b-4 border-blue-600 lg:pb-10 self-end bg-red-500 */}
               Clients
             </div>
@@ -79,7 +81,7 @@ const Header = () => {
               <Link to={"/sheqlee/login"}>
                 <Mybutton
                   background={
-                    "border-[4px] border-custom-purple rounded-lg py-1 md:py-2 px-2 md:px-4 text-base font-bold "
+                    "border-[3px] border-custom-purple rounded-lg py-1 md:py-2 px-2 md:px-4 text-base font-semibold font-kantumruy "
                   }
                 >
                   Log in
@@ -90,10 +92,10 @@ const Header = () => {
               <Link to={"/sheqlee/companysignup"}>
                 <Mybutton
                   background={
-                    "bg-custom-purple rounded-xl lg:px-3 md:p-2 lg:py-3 text-base font-bold text-white"
+                    "bg-custom-purple rounded-xl lg:px-3 md:p-2 lg:py-3   text-white font-semibold font-kantumruy "
                   }
                 >
-                  Sign Up
+                  Sign up
                 </Mybutton>
               </Link>
             </div>
@@ -110,6 +112,7 @@ const Header = () => {
               </Link>
               <div className="flex  ">
                 <img src={tsegay} alt="" className="w-10 h-10 rounded-full" />
+
                 <Dropdown
                   dropdowntitle={"Microsoft"}
                   categories={[

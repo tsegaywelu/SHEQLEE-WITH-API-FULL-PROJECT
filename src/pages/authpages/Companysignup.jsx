@@ -32,7 +32,7 @@ const Companysignup = () => {
         />
         <h2 className="  rounded-lg pl-16 h-full   w-full text-lg ">
           if you are freelancer please visite{" "}
-          <Link className=" border-b-2 border-purple-400 font-bold">
+          <Link className=" border-b-2 border-purple-400 font-bold font-kantumruy">
             frelancer registration{" "}
           </Link>{" "}
           page.

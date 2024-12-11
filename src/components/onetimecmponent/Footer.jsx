@@ -1,5 +1,11 @@
 import React from "react";
-import logo from "../../assets/logoblack.png";
+import mysvg from "../../assets/SVG/footerlogo.svg";
+import facebook from "../../assets/SVG/facebook.svg";
+import twitter from "../../assets/SVG/twitter.svg";
+import instagram from "../../assets/SVG/instagram.svg";
+import telegram from "../../assets/SVG/telegram.svg";
+import linkedin from "../../assets/SVG/linkedin.svg";
+import youtube from "../../assets/SVG/youtube.svg";
 
 import {
   FaFacebook,
@@ -14,27 +20,29 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black text-white px-2 md:px-8 lg:px-16 py-2 md:py-8 lg:py-16 mt-5">
+      <footer className="bg-black text-white px-2 md:px-8 lg:px-16 pt-2 md:pt-8 lg:pt-16 pb-4 mt-5">
         <div className="container mx-auto flex flex-wrap lg:flex-nowrap justify-between gap-10">
           {/* Address Section */}
           <div className="w-full sm:w-1/4 text-center sm:text-left mb-6 sm:mb-0">
-            <div className="flex items-center justify-center sm:justify-start mb-4">
-              <img src={logo} alt="Logo" className="w-20 h-20  mr-2" />
-              <h2 className="text-xl font-semibold">ADDRESS</h2>
+            <div className="flex  flex-col items-center justify-center sm:justify-start mb-4 gap-5">
+              <img src={mysvg} alt="Logo loading..." className=" h-[50px]" />
+              <h2 className="font-kantumruy font-medium">ADDRESS</h2>
             </div>
-            <p>MIT, Mekelle, Tigray</p>
+            <p className=" font-kantumruy font-light  text-center ">
+              MIT, Mekelle, Tigray
+            </p>
           </div>
 
           {/* Links Section */}
           <div className="w-full sm:w-1/4 mb-6 sm:mb-0">
-            <h3 className="text-lg font-semibold mb-2 border-b-2 border-white pr-5 max-sm:w-fit ">
+            <h3 className="lg:text-2xl font-medium font-kantumruy  lg:mb-4 lg:pb-3 border-b-2 border-white mr-20 max-sm:w-fit ">
               Links
             </h3>
             <ul>
               <li>
                 <Link
                   to={"/sheqlee/company"}
-                  className="text-gray-400 hover:text-white "
+                  className="font-light font-kantumruy  "
                 >
                   Companies
                 </Link>
@@ -43,7 +51,7 @@ const Footer = () => {
                 <Link
                   to={"/sheqlee/catagoris"}
                   href="#"
-                  className="text-gray-400 hover:text-white"
+                  className="font-light font-kantumruy "
                 >
                   Categories
                 </Link>
@@ -51,7 +59,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/sheqlee/tags"}
-                  className="text-gray-400 hover:text-white"
+                  className="font-light font-kantumruy "
                 >
                   Tags
                 </Link>
@@ -61,22 +69,22 @@ const Footer = () => {
 
           {/* Company Section */}
           <div className="w-full sm:w-1/4 mb-6 sm:mb-0 ">
-            <h3 className="text-lg font-semibold mb-2  border-b-2 border-white pr-5 max-sm:w-fit ">
+            <h3 className="lg:text-2xl font-medium font-kantumruy  lg:mb-4 lg:pb-3 border-b-2 border-white mr-20 max-sm:w-fit ">
               Company
             </h3>
             <ul>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="font-light font-kantumruy ">
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="font-light font-kantumruy ">
                   Blog
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="font-light font-kantumruy ">
                   Pricing
                 </a>
               </li>
@@ -85,19 +93,19 @@ const Footer = () => {
 
           {/* Support Section */}
           <div className="w-full sm:w-1/4 mb-6 sm:mb-0">
-            <h3 className="text-lg font-semibold mb-2 border-b-2 border-white pr-5 max-sm:w-fit ">
+            <h3 className="lg:text-2xl font-medium font-kantumruy  lg:mb-4 lg:pb-3 border-b-2 border-white mr-20 max-sm:w-fit ">
               Support
             </h3>
             <ul>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="font-light font-kantumruy ">
                   Getting started
                 </a>
               </li>
               <li>
                 <Link
                   to={"/sheqlee/contact"}
-                  className="text-gray-400 hover:text-white"
+                  className="font-light font-kantumruy "
                 >
                   Contact
                 </Link>
@@ -105,7 +113,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/sheqlee/FAQ"}
-                  className="text-gray-400 hover:text-white"
+                  className="font-light font-kantumruy "
                 >
                   FAQ
                 </Link>
@@ -115,22 +123,22 @@ const Footer = () => {
 
           {/* Legal Section */}
           <div className="w-full sm:w-1/4 mb-6 sm:mb-0">
-            <h3 className="text-lg font-semibold mb-2 border-b-2 border-white pr-5 max-sm:w-fit ">
+            <h3 className="lg:text-2xl font-medium font-kantumruy  lg:mb-4 lg:pb-3 border-b-2 border-white mr-20 max-sm:w-fit ">
               Legal
             </h3>
             <ul>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="font-light font-kantumruy ">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="font-light font-kantumruy ">
                   Terms and Conditions
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="font-light font-kantumruy ">
                   Cookie Policy
                 </a>
               </li>
@@ -139,29 +147,43 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="container mx-auto mt-8 flex flex-wrap items-center justify-between">
-          <p className="text-gray-400 text-sm">
+        <div className="container mx-auto mt-8 flex flex-wrap items-end justify-between">
+          <p className="font-light font-kantumruy">
             © 2024 Sheqlee Co., Ltd. All rights reserved.
           </p>
-          <div className="flex space-x-4">
-            <a href="#">
-              <FaFacebook size={24} />
-            </a>
-            <a href="#">
-              <FaTwitter size={24} />
-            </a>
-            <a href="#">
-              <FaInstagram size={24} />
-            </a>
-            <a href="#">
-              <FaTelegram size={24} />
-            </a>
-            <a href="#">
-              <FaLinkedin size={24} />
-            </a>
-            <a href="#">
-              <FaYoutube size={24} />
-            </a>
+          <div className="flex flex-col justify-center items-center gap-3 font-kantumruy font-light">
+            <p>Follow us on</p>
+            <div className="flex space-x-4">
+              <a href="#">
+                <img
+                  src={facebook}
+                  alt="facebook icon"
+                  width={18}
+                  height={18}
+                />
+              </a>
+              <a href="#">
+                <img src={twitter} alt="facebook icon" width={18} height={18} />
+              </a>
+              <a href="#">
+                <img
+                  src={instagram}
+                  alt="facebook icon"
+                  width={18}
+                  height={18}
+                />
+              </a>
+              <a href="#">
+                <img
+                  src={telegram}
+                  alt="facebook icon"
+                  width={18}
+                  height={18}
+                />
+              </a>
+              <img src={linkedin} alt="facebook icon" width={18} height={18} />
+              <img src={youtube} alt="facebook icon" width={18} height={18} />
+            </div>
           </div>
         </div>
       </footer>

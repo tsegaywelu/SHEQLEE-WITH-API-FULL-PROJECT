@@ -11,9 +11,10 @@ export default {
         "custom-load": "#C9C9C9",
         "custom-placeholder": "#444444",
         dvider: "#DDDDDD",
+        "custom-location": "#FCFCFC",
       },
       fontFamily: {
-        recoleta: ["Recoleta", "sans-serif"],
+        lora: ["Lora", "sans-serif"],
         kantumruy: ["Kantumruy Pro", "sans-serif"],
       },
     },

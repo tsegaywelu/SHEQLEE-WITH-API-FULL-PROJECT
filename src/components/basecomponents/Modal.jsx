@@ -21,7 +21,7 @@ export const Modal = ({ closewin }) => {
             <Link to={"/sheqlee/companysignup"}>
               <Mybutton
                 background={
-                  " py-2 px-5  bg-custom-purple text-white rounded-xl"
+                  " border-[2px] border-custom-purple py-2 px-5  bg-custom-purple text-white rounded-xl font-semibold font-kantumruy"
                 }
               >
                 Sign Up
@@ -30,7 +30,7 @@ export const Modal = ({ closewin }) => {
             <Link to={"/sheqlee/login"}>
               <Mybutton
                 background={
-                  "border-[3px] border-custom-purple  py-2 px-4 rounded-lg m-3"
+                  "border-[3px] border-custom-purple  py-2 px-4 rounded-lg m-3 font-semibold font-kantumruy"
                 }
               >
                 Log in

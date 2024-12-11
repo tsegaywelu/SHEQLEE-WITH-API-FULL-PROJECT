@@ -6,6 +6,12 @@ import { MdEmail, MdSubject } from "react-icons/md";
 import Mybutton from "../../components/basecomponents/Mybutton";
 import Divider from "../../components/basecomponents/Divider";
 import { FcGoogle } from "react-icons/fc";
+import building1 from "../../assets/svg1/company.svg";
+import building from "../../assets/SVG/company.svg";
+import profetional from "../../assets/svg1/professional1.svg";
+import user from "../../assets/svg1/user.svg";
+import email from "../../assets/svg1/email.svg";
+import key from "../../assets/svg1/key1.svg";
 const Employersignup = () => {
   return (
     // for all the input fields i have to use components but for now lets t odo it
@@ -15,30 +21,34 @@ const Employersignup = () => {
       </div>
 
       {/*i am  asking  if user is frelancer */}
-      <div className="relative  max-w-2xl  p-4  my-4 md:my-8  bg-slate-100 mx-auto">
-        <FaUser
+      <div className="relative  max-w-2xl  p-6  my-4 md:my-8  bg-custom-slate mx-auto mt-3">
+        {/* <FaUser
           size={48}
           className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-3"
+        /> */}
+        <img
+          src={building1}
+          className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-6"
         />
-        <h2 className="  rounded-lg pl-16 h-full   w-full text-sm ">
+        <h2 className="  rounded-lg pl-16 h-full   w-full text-lg ">
           if you are freelancer please visite{" "}
-          <Link className=" border-b-2 border-purple-400 font-bold">
+          <Link className=" border-b-2 border-purple-400 font-semibold font-kantumruy">
             employer registaration{" "}
           </Link>{" "}
           page
         </h2>
       </div>
       {/* header part */}
-      <div className="flex  flex-start  max-w-5xl mx-auto text-center gap-4">
-        <FaBuilding size={48} className="bg-white text-purple-400" />{" "}
+      <div className="flex  flex-start  max-w-4xl mx-auto text-center gap-7 mt-20">
+        <img src={profetional} width={45} height={45} />
         <div>
           {" "}
-          <h1 className="text-xl md:text-4xl text-center">
-            Profetional Registration{" "}
+          <h1 className="text-2xl md:text-4xl text-center font-semibold  font-kantumruy">
+            Professional Registration{" "}
           </h1>
         </div>
       </div>
-      <form action="" className=" max-w-5xl mx-auto ">
+      <form action="" className=" max-w-4xl mx-auto ">
         {/* below devide part */}
         <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
           <div className="flex flex-col flex-grow ">
@@ -46,13 +56,13 @@ const Employersignup = () => {
               full name <span className="text-red-700">*</span>
             </label>
             <div className="relative ">
-              <MdSubject
-                size={48}
-                className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full"
+              <img
+                src={user}
+                className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-4"
               />
               <input
                 type="text"
-                className="bg-slate-200  rounded-lg pl-16 h-full outline-none p-3 w-full text-xl"
+                className="bg-custom-tags  rounded-lg pl-16 h-full outline-none p-3 w-full text-xl"
                 id="companyname"
                 placeholder="SHEQLEE co .Ltd"
               />
@@ -63,13 +73,14 @@ const Employersignup = () => {
               your email <span className="text-red-700">*</span>
             </label>
             <div className="relative  ">
-              <span className="bg-black text-white rounded-l-lg absolute  h-full  ">
-                https://
-              </span>
+              <img
+                src={email}
+                className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-5 mr-5"
+              />
               <input
                 type="email"
                 id="email"
-                className="bg-slate-200 rounded-lg  h-full outline-none p-3  w-full text-xl"
+                className="bg-custom-tags rounded-lg  h-full outline-none p-3  w-full text-xl pl-16 "
                 placeholder="abebe@gmail.com "
               />
             </div>
@@ -81,15 +92,16 @@ const Employersignup = () => {
               password <span className="text-red-700">*</span>
             </label>
             <div className="relative ">
-              <MdSubject
-                size={48}
-                className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full"
+              <img
+                src={key}
+                className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-5 "
               />
+
               <input
-                type="text"
-                className="bg-slate-200  rounded-lg pl-16 h-full outline-none p-3 w-full text-xl"
+                type="password"
+                className="bg-custom-tags rounded-lg pl-20 h-full outline-none p-3 w-full text-xl"
                 id="companyname"
-                placeholder="SHEQLEE co .Ltd"
+                placeholder="************"
               />
             </div>
           </div>
@@ -97,15 +109,17 @@ const Employersignup = () => {
             <label className="text-xl font-bold m-3" htmlFor="email">
               confirm password <span className="text-red-700">*</span>
             </label>
-            <div className="relative  ">
-              <span className="bg-black text-white rounded-l-lg absolute  h-full  ">
-                https://
-              </span>
+            <div className="relative ">
+              <img
+                src={key}
+                className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-5 "
+              />
+
               <input
-                type="email"
-                id="email"
-                className="bg-slate-200 rounded-lg  h-full outline-none p-3  w-full text-xl"
-                placeholder="abebe@gmail.com "
+                type="password"
+                className="bg-custom-tags rounded-lg pl-20 h-full outline-none p-3 w-full text-xl"
+                id="companyname"
+                placeholder="************"
               />
             </div>
           </div>
@@ -129,7 +143,9 @@ const Employersignup = () => {
               already got an account?{" "}
               <strong className="border-b-2 border-purple-400">Login</strong>{" "}
               <Mybutton
-                background={"bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3 ml-5"}
+                background={
+                  "bg-custom-purple text-white font-kuntumry font-semibold rounded-lg p-1 md:py-2 lg:py-3  px-5 ml-5"
+                }
               >
                 Register
               </Mybutton>

@@ -31,7 +31,9 @@ const Tags = () => {
         <div className=" bg-custom-slate  px-3 md:px-6 lg:px-12 py-1 md:py-2 lg:py-5">
           {/* top texsts */}
           <div className="flex justify-between">
-            <h4 className="text-[50px] font-kantumruy my-3">Popular Tags</h4>
+            <h4 className="text-[40px] font-kantumruy font-medium my-3">
+              Popular tags
+            </h4>
             <div className="flex justify-center items-center gap-2 relative ">
               <div className="w-24 h-4 bg-custom-tags  "></div>
               <div className=" absolute  w-1/2 h-[7px] bg-custom-purple left-0 bottom-6"></div>
@@ -65,14 +67,19 @@ const Tags = () => {
         <div className=" bg-custom-slate px-2 md:px-5 lg:px-12 py-1 md:py-3 lg:py-5">
           {/* top texsts */}
           <div className="flex justify-between">
-            <h4 className="text-[50px] font-kantumruy my-3">Popular Tags</h4>
-            <div className="flex justify-center items-center gap-2">
-              <p className="text-xs">745+ more tags </p>
+            <h4 className="text-[50px]  font-kantumruy font-medium my-3">
+              Popular tags
+            </h4>
+            <div className="flex justify-center items-center gap-2 relative">
+              <p className="text-xs font-kantumruy font-medium">
+                745+ more tags{" "}
+              </p>
+              <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-6"></div>
               <img src={Rightarrow} alt="" width={8} height={12} />
             </div>
           </div>
           {/* //display the tags  */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
             {Totaltags.slice(0, 6).map((tag) => {
               return (
                 <Link to={`/sheqlee/tag/${fakeid}`}>
@@ -80,8 +87,10 @@ const Tags = () => {
                     key={tag.id}
                     className=" bg-custom-tags  p-5 rounded-xl border-l-[15px] border-l-black "
                   >
-                    <div className="font-semibold text-2xl">{tag.tagname}</div>
-                    <div>
+                    <div className="font-kantumruy font-medium text-2xl">
+                      {tag.tagname}
+                    </div>
+                    <div className="font-kantumruy ">
                       {tag.numberofjobs} jobs . {tag.numberofsubscribers}{" "}
                       subscribers
                     </div>

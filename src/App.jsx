@@ -24,11 +24,12 @@ import Companyprofile from "./pages/privatepages/Companyprofile";
 import { Companyprofilesetting } from "./pages/privatepages/Companyprofilesetting";
 import Userdashboared from "./pages/privatepages/client/Userdashboared";
 import Twoinput from "./components/basecomponents/Twoinput";
+import Resetpassword from "./pages/authpages/Resetpassword";
 const App = () => {
   console.log("<App/> rendered");
   return (
     <BrowserRouter>
-      <div className="mx-3 md:mx-6 lg:mx-12 ">
+      <div className="">
         <Header />
         <Routes>
           <Route path="/sheqlee" element={<Landing />} />
@@ -55,6 +56,8 @@ const App = () => {
           <Route path="/sheqlee/companysignup" element={<Companysignup />} />
           <Route path="/sheqlee/employersignup" element={<Employersignup />} />
           <Route path="/sheqlee/login" element={<Login />} />
+          <Route path="/sheqlee/resetpassword" element={<Resetpassword />} />
+
           {/* below are all the private routes  */}
 
           <Route
