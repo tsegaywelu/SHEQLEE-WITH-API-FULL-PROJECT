@@ -6,18 +6,20 @@ const Location = () => {
   const { pathname } = useLocation();
   const pathSegments = pathname.split("/").filter(Boolean);
   return (
-    <div className=" flex  items-center justify-start gap-3  font-kantumruy text-black bg-custom-location">
-      <div className="32">
-        <img src={place} width={12} height={12} />
+    <div className="  font-kantumruy text-black bg-custom-location">
+      <div className="mx-20 flex  items-center justify-start gap-3 py-1">
+        <div className="32">
+          <img src={place} width={12} height={12} />
+        </div>
+        {pathSegments.map((segment, index) => (
+          <span key={index} className="flex justify-center items-center">
+            {decodeURIComponent(segment.replace(/%20/g, " "))}
+            {index < pathSegments.length - 1 && (
+              <img src={greater} width={6} height={6} className="ml-3" />
+            )}
+          </span>
+        ))}
       </div>
-      {pathSegments.map((segment, index) => (
-        <span key={index} className="flex justify-center items-center">
-          {segment}{" "}
-          {index < pathSegments.length - 1 && (
-            <img src={greater} width={4} height={4} className="ml-3" />
-          )}
-        </span>
-      ))}
     </div>
   );
 };

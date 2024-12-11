@@ -35,9 +35,9 @@ const App = () => {
           <Route path="/sheqlee" element={<Landing />} />
           <Route path="/game" element={<Twoinput />} />
 
-          <Route path="/sheqlee/alljobs" element={<Alljobs />} />
+          <Route path="/sheqlee/all jobs" element={<Alljobs />} />
 
-          <Route path="/sheqlee/catagoris" element={<Catagoris />} />
+          <Route path="/sheqlee/Categories" element={<Catagoris />} />
           <Route path="/sheqlee/tags" element={<Alltags />} />
           <Route
             path="/sheqlee/alljob/:theidtodisplay"

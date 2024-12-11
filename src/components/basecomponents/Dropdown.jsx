@@ -16,7 +16,7 @@ function Dropdown({ categories, dropdowntitle }) {
           onClick={() => setIsOpen(!isOpen)}
           // onMouseEnter={() => setIsOpen(true)}
           // onMouseLeave={() => setIsOpen(false)}
-          className="inline-flex justify-center w-full rounded-md  shadow-sm px-6 py-2 bg-slate-100 text-base  text-black font-medium font-kantumruy  "
+          className="inline-flex justify-center w-full rounded-md   px-6 py-2 bg-custom-slate text-base  text-black font-medium font-kantumruy  "
         >
           {dropdowntitle}
           <span>

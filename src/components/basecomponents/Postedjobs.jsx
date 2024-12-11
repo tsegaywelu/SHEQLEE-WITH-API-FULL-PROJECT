@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { FaUserTie, FaRegClock, FaDollarSign } from "react-icons/fa";
-import { BiBuilding, BiBriefcase } from "react-icons/bi";
 import Mybutton from "./Mybutton";
 import { Link } from "react-router-dom";
 import Rightarrow from "../../assets/SVG/Right.svg";
-import devops from "../../assets/SVG/devops.svg";
+import clock from "../../assets/SVG/clock.svg";
+import companyb from "../../assets/SVG/companyb.svg";
+import calendar from "../../assets/SVG/calendar.svg";
+import qualityassurance from "../../assets/SVG/qualityassurance.svg";
+import Jobicons from "../onetimecmponent/Jobicons";
+// import devops from "../../assets/SVG/devops.svg";
 const emptyRectangles = [{}, {}, {}, {}, {}, {}, {}, {}, {}];
+import { useLocation } from "react-router-dom";
 const Postedjobs = () => {
+  const { pathname } = useLocation(); //here i want to cut out the text "latest posted jobs " in other pages
+  const actualpath = pathname.replaceAll("/", "");
   const [loading, setloading] = useState(true);
   const [Jobs, setJobs] = useState([]);
 
@@ -35,16 +41,19 @@ const Postedjobs = () => {
     <>
       {loading ? (
         <div className=" py-3 md:py-6 lg:py-12  mx-8 md:mx-16 ">
-          <div className="flex justify-between">
-            <h4 className="text-[50px]  font-kantumruy font-medium my-3">
-              Latest job posts{" "}
-            </h4>
-            <div className="flex justify-center items-center gap-2 relative ">
-              <div className="w-24 h-4 bg-custom-tags rounded-[7px] "></div>
-              <div className=" absolute  w-1/2 h-[7px] bg-custom-purple left-0 bottom-6"></div>
-              <img src={Rightarrow} alt="" width={8} height={12} />
+          {actualpath === "sheqlee" && (
+            <div className="flex justify-between">
+              <h4 className="text-[50px]  font-kantumruy font-medium my-3">
+                Latest job posts
+              </h4>
+              <div className="flex justify-center items-center gap-2 relative ">
+                <div className="w-24 h-4 bg-custom-tags rounded-[7px] "></div>
+                <div className=" absolute  w-1/2 h-[7px] bg-custom-purple left-0 bottom-6"></div>
+                <img src={Rightarrow} alt="" width={8} height={12} />
+              </div>
             </div>
-          </div>
+          )}
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 ">
             {/* ///////////////////// */}
             {emptyRectangles.map((jobsall, index) => {
@@ -104,74 +113,96 @@ const Postedjobs = () => {
       ) : (
         <Link to={`/sheqlee/alljob/${fakeid}`}>
           <div className="py-4 md:py-8 lg:py-12 mx-8 md:mx-16">
-            <div className="flex justify-between">
-              <h4 className="text-[50px]  font-kantumruy font-medium my-3">
-                Latest job posts{" "}
-              </h4>
-              <div className="flex justify-center items-center gap-2 relative ">
-                <h3 className="text-xs">745+ more jobs</h3>
-                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-6"></div>
-                <img src={Rightarrow} alt="" width={8} height={12} />
+            {actualpath === "sheqlee" && (
+              <div className="flex justify-between">
+                <h4 className="text-[50px]  font-kantumruy font-medium my-3">
+                  Latest job posts{" "}
+                </h4>
+                <div className="flex justify-center items-center gap-2 relative ">
+                  <h3 className="text-xs">745+ more jobs</h3>
+                  <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-6"></div>
+                  <img src={Rightarrow} alt="" width={8} height={12} />
+                </div>
               </div>
-            </div>
+            )}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-16 ">
               {/* ///////////////////// */}
 
               {Jobs.map((jobsall) => {
                 return (
                   <div
-                    className=" bg-custom-slate rounded-2xl md:pr-5 p-2 "
+                    className=" bg-custom-slate rounded-[20px] md:pr-5 p-2  "
                     key={jobsall.title + Math.random()}
                   >
                     <div className=" flex gap-5">
-                      <img src={devops} width={32} height={32} />
-                      <p className="text-3xl font-semibold font-kantumruy">
+                      <img src={qualityassurance} width={24} height={24} />
+                      <p className="text-2xl font-medium font-kantumruy">
                         {jobsall.title}
                       </p>
                     </div>
-                    <p className="text-xs mt-7 font-kantumruy ">
+                    <p className="text-base mt-7 font-kantumruy  line-clamp-2 ">
                       {jobsall.descreiption}
                     </p>
-                    <div className="mt-5  mr-6">
-                      <div className="flex  justify-between  mb-3 gap-1 ">
-                        <div className="px-2 py-1 flex justify-start items-center  bg-custom-tags text-xs rounded-[5px]">
-                          <FaRegClock className="mr-1" />
-                          {jobsall.time}
-                        </div>
-                        <div className="px-2 py-1 flex justify-start items-center text-xs bg-custom-tags rounded-[5px]">
-                          {" "}
-                          <FaUserTie className="mr-1" />
-                          {jobsall.level}
-                        </div>
+                    <div className="   mt-5">
+                      <div className="flex   flex-wrap mb-3 gap-2  ">
+                        <Jobicons text={jobsall.time}>
+                          <img
+                            src={calendar}
+                            width={14}
+                            height={14}
+                            className="mr-1"
+                            alt=""
+                          />
+                        </Jobicons>
+                        <Jobicons text={jobsall.companyname}>
+                          <img
+                            src={companyb}
+                            width={14}
+                            height={14}
+                            className="mr-1"
+                            alt=""
+                          />
+                        </Jobicons>
 
-                        <div
-                          className="px-2 py-1
-                      flex justify-start items-center text-sm bg-custom-tags rounded-[5px]"
+                        <Jobicons text={jobsall.work}>
+                          <img
+                            src={clock}
+                            width={14}
+                            height={14}
+                            className="mr-1"
+                            alt=""
+                          />
+                        </Jobicons>
+                        {/* ///////// */}
+                        <Jobicons text={jobsall.level}>
+                          <img
+                            src={calendar}
+                            width={14}
+                            height={14}
+                            className="mr-1"
+                            alt=""
+                          />
+                        </Jobicons>
+                        <Jobicons text={jobsall.salary}>
+                          <img
+                            src={companyb}
+                            width={14}
+                            height={14}
+                            className="mr-1"
+                            alt=""
+                          />
+                        </Jobicons>
+
+                        <Mybutton
+                          background={
+                            "bg-custom-purple  text-xs px-4 py-1 font-medium text-white font-kantumruy rounded-[5px] "
+                          }
                         >
-                          {" "}
-                          <BiBuilding className="mr-1" />
-                          {jobsall.companyname}
-                        </div>
+                          Apply
+                        </Mybutton>
                       </div>
-                      <div className="flex justify-between mr-5">
-                        <div className="px-2 py-1 flex justify-start items-center bg-custom-tags text-xs rounded-[5px] ">
-                          {" "}
-                          <BiBriefcase className="mr-1" />
-                          {jobsall.work}
-                        </div>
-                        <div className="px-2 py-1 flex justify-start items-center bg-custom-tags text-xs rounded-[5px]">
-                          <FaDollarSign className="" />
-                          {jobsall.salary}
-                        </div>
-                        <div className="px-3 py-1 rounded-[5px]">
-                          <Mybutton
-                            background={
-                              "bg-custom-purple  text-xs px-4 py-1 rounded-sm text-white"
-                            }
-                          >
-                            applay
-                          </Mybutton>
-                        </div>
+                      <div className="flex justify-between items-center gap-1 mr-5 bg-green-600">
+                        {/* ///////// */}
                       </div>
                     </div>
                   </div>

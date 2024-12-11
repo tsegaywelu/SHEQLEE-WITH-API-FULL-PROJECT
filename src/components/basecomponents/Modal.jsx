@@ -12,7 +12,7 @@ export const Modal = ({ closewin }) => {
         &times;
       </button>
       <div className="  flex items-center justify-center h-screen w-full fixed mx-auto bg-stone-900/60 z-10 ">
-        <div className=" flex flex-col items-center justify-center py-5 px-20  font-semibold  bg-white rounded-xl shadow-lg">
+        <div className=" flex flex-col items-center justify-center py-5 px-16  font-semibold  bg-white rounded-xl shadow-lg">
           <p className="  mx-auto  md:text-xl font-kantumruy font-medium  ">
             please register or login as a <br />
             client to post jobs.

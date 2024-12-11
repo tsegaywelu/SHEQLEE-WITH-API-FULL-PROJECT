@@ -2,6 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Dashboaredtitle from "../components/onetimecmponent/Dashboaredtitle";
 import categories12 from "../assets/SVG/categories.svg";
+import websvg from "../assets/catagorySvgs/web.svg";
+import uiuxdesign from "../assets/catagorySvgs/uiuxdesign.svg";
+import product from "../assets/catagorySvgs/product.svg";
+import qualityassurance from "../assets/catagorySvgs/qualityassurance.svg";
+import devops from "../assets/catagorySvgs/devops.svg";
+import python from "../assets/catagorySvgs/python.svg";
 import {
   FaGlobe,
   FaDatabase,
@@ -17,80 +23,81 @@ import CatagoriesCard from "../cards/CatagoriesCard";
 import Location from "../components/basecomponents/Location";
 
 const categories = [
-  { title: "Web Frontend", jobs: 140, subscribers: 2173, icon: <FaGlobe /> },
+  { title: "Web Frontend", jobs: 140, subscribers: 2173, icon: websvg },
   {
     title: "Backend & Database",
     jobs: 140,
     subscribers: 2173,
-    icon: <FaDatabase />,
+    icon: devops,
   },
   {
     title: "UI/UX & Product Design",
     jobs: 78,
     subscribers: 1045,
-    icon: <FaBrush />,
+    icon: uiuxdesign,
+  },
+  {
+    title: "Machin learning",
+    jobs: 140,
+    subscribers: 2173,
+    icon: qualityassurance,
   },
   {
     title: "Mobile Application",
     jobs: 140,
     subscribers: 2173,
-    icon: <FaMobileAlt />,
+    icon: product,
   },
-  {
-    title: "Machine Learning",
-    jobs: 140,
-    subscribers: 2173,
-    icon: <FaRobot />,
-  },
-  { title: "Web Full-Stack", jobs: 140, subscribers: 2173, icon: <FaCode /> },
-  { title: "Security", jobs: 140, subscribers: 2173, icon: <FaShieldAlt /> },
+  { title: "Web Full-Stack", jobs: 140, subscribers: 2173, icon: python },
   {
     title: "QA & DevOps Engineer",
     jobs: 140,
     subscribers: 2173,
-    icon: <FaWrench />,
-  },
-  {
-    title: "Web Frontend",
-    jobs: 140,
-    subscribers: 2173,
-    icon: <GiMagnifyingGlass />,
-  },
-  {
-    title: "UI/UX & Product Design",
-    jobs: 78,
-    subscribers: 1045,
-    icon: <FaBrush />,
-  },
-  {
-    title: "Mobile Application",
-    jobs: 140,
-    subscribers: 2173,
-    icon: <FaMobileAlt />,
-  },
-  {
-    title: "Backend & Database",
-    jobs: 140,
-    subscribers: 2173,
-    icon: <FaDatabase />,
-  },
-  {
-    title: "Machine Learning",
-    jobs: 140,
-    subscribers: 2173,
-    icon: <FaRobot />,
-  },
-  {
-    title: "Web Full-Stack",
-    jobs: 140,
-    subscribers: 2173,
-    icon: <FaCode />,
+    icon: qualityassurance,
   },
   {
     title: "Security",
     jobs: 140,
     subscribers: 2173,
-    icon: <FaShieldAlt />,
+    icon: websvg,
+  },
+  { title: "Web Frontend", jobs: 140, subscribers: 2173, icon: websvg },
+  {
+    title: "Backend & Database",
+    jobs: 140,
+    subscribers: 2173,
+    icon: devops,
+  },
+  {
+    title: "UI/UX & Product Design",
+    jobs: 78,
+    subscribers: 1045,
+    icon: uiuxdesign,
+  },
+  {
+    title: "Machin learning",
+    jobs: 140,
+    subscribers: 2173,
+    icon: qualityassurance,
+  },
+  {
+    title: "Mobile Application",
+    jobs: 140,
+    subscribers: 2173,
+    icon: product,
+  },
+  { title: "Web Full-Stack", jobs: 140, subscribers: 2173, icon: python },
+  {
+    title: "QA & DevOps Engineer",
+    jobs: 140,
+    subscribers: 2173,
+    icon: qualityassurance,
+  },
+  {
+    title: "Security",
+    jobs: 140,
+    subscribers: 2173,
+    icon: websvg,
   },
 ];
 
@@ -116,7 +123,7 @@ const Catagoris = () => {
 
         {/* Categories Grid */}
         <Link to={`/sheqle/catagory/${fakeid}`}>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-xl p-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-8 text-xl p-3">
             {categories.map((category) => (
               <CatagoriesCard
                 key={category.title}
@@ -124,7 +131,7 @@ const Catagoris = () => {
                 jobs={category.jobs}
                 subscribers={category.subscribers}
               >
-                {category.icon}
+                <img src={category.icon} height={32} width={32} alt="" />
               </CatagoriesCard>
             ))}
           </div>

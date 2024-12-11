@@ -50,11 +50,11 @@ const Header = () => {
           }`}
         >
           <div className=" mt-1 p-1 md:p-2 lg:p-3  text-custom-black font-kantumruy font-medium">
-            <Link to={"/sheqlee/alljobs"}>all jobs</Link>
+            <Link to={"/sheqlee/All jobs"}>All jobs</Link>
           </div>
 
           {/* Category Dropdown */}
-          <Link to={"/sheqlee/catagoris"}>
+          <Link to={"/sheqlee/Categories"}>
             <Dropdown
               dropdowntitle={"catagory"}
               categories={[
