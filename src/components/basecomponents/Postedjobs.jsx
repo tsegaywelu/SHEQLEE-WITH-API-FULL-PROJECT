@@ -54,7 +54,7 @@ const Postedjobs = () => {
             </div>
           )}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-7 ">
             {/* ///////////////////// */}
             {emptyRectangles.map((jobsall, index) => {
               return (
@@ -125,7 +125,7 @@ const Postedjobs = () => {
                 </div>
               </div>
             )}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 lg:gap-16 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3  lg:gap-x-8 lg:gap-y-7 ">
               {/* ///////////////////// */}
 
               {Jobs.map((jobsall) => {
@@ -140,7 +140,7 @@ const Postedjobs = () => {
                         {jobsall.title}
                       </p>
                     </div>
-                    <p className="text-base mt-7 font-kantumruy  line-clamp-2 ">
+                    <p className="text-base mt-7 font-kantumruy  line-clamp-4 ">
                       {jobsall.descreiption}
                     </p>
                     <div className="   mt-5">

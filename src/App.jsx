@@ -48,7 +48,7 @@ const App = () => {
             element={<Catagprydetail />}
           />
           <Route path="/sheqlee/tag/:theidtodisplay" element={<Tagdetail />} />
-          <Route path="/sheqlee/client" element={<Clients />} />
+          <Route path="/sheqlee/clients" element={<Clients />} />
           <Route path="/sheqlee/company" element={<Companys />} />
           <Route path="/sheqlee/contact" element={<Contact />} />
           <Route path="/sheqlee/FAQ" element={<FAQ1 />} />

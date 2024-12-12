@@ -56,7 +56,7 @@ const Header = () => {
           {/* Category Dropdown */}
           <Link to={"/sheqlee/Categories"}>
             <Dropdown
-              dropdowntitle={"catagory"}
+              dropdowntitle={"categories"}
               categories={[
                 "Front-End",
                 "Back-End",
@@ -68,7 +68,7 @@ const Header = () => {
               ]}
             />
           </Link>
-          <Link to={"/sheqlee/client"}>
+          <Link to={"/sheqlee/clients"}>
             <div className="mt-1 p-1 md:p-2 lg:p-3   font-kantumruy font-medium ">
               {/* border-b-4 border-blue-600 lg:pb-10 self-end bg-red-500 */}
               Clients

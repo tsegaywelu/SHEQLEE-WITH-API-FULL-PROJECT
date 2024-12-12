@@ -2,7 +2,7 @@ import React from "react";
 import Mybutton from "./Mybutton";
 import { createPortal } from "react-dom";
 import { Link } from "react-router-dom";
-export const Modal = ({ closewin }) => {
+export const Modal = ({ closewin, message }) => {
   return createPortal(
     <div>
       <button
@@ -14,8 +14,7 @@ export const Modal = ({ closewin }) => {
       <div className="  flex items-center justify-center h-screen w-full fixed mx-auto bg-stone-900/60 z-10 ">
         <div className=" flex flex-col items-center justify-center py-5 px-16  font-semibold  bg-white rounded-xl shadow-lg">
           <p className="  mx-auto  md:text-xl font-kantumruy font-medium  ">
-            please register or login as a <br />
-            client to post jobs.
+            <div dangerouslySetInnerHTML={{ __html: message }} />
           </p>
           <div className=" flex justify-around items-center mt-5  w-full ">
             <Link to={"/sheqlee/companysignup"}>

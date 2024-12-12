@@ -6,6 +6,7 @@ export default {
       colors: {
         "custom-purple": "#8967B3",
         "custom-slate": "#F7F7F7",
+        "custom-white": "#FFFFFF",
         "custom-tags": "#DFDFDF",
         "custom-black": "#000000",
         "custom-load": "#C9C9C9",

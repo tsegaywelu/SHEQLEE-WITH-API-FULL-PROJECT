@@ -75,7 +75,12 @@ const Landing = () => {
   return (
     // hero section
     <>
-      {showModal && <Modal closewin={closemodal} />}
+      {showModal && (
+        <Modal
+          closewin={closemodal}
+          message={" please register or login as a <br /> client to post jobs."}
+        />
+      )}
       <div className="flex  flex-col md:flex-row  justify-start mt-16 ">
         {/* leftside text */}
         {leftsidecontents()}

@@ -5,23 +5,24 @@ import Info from "../components/onetimecmponent/Info";
 const Clients = () => {
   return (
     <div>
-      <div className="mx-20">
+      <div className="relative">
         <Location />
+        <div className="absolute w-16 h-[5px] bg-custom-purple bottom-8 md:right-85 md:right-66 lg:right-48 mr-16"></div>
       </div>
       {/* //header part  */}
-      <div className=" mt-5 md:mt-20 flex  flex-col gap-7 justify-center items-center">
-        <h1 className=" text-xl md:text-4xl font-semibold font-kantumruy ">
+      <div className=" mt-5 md:mt-10 flex  flex-col gap-7 justify-center items-center">
+        <h1 className=" text-xl md:text-5xl font-semibold font-kantumruy ">
           sheqlee for clients{" "}
         </h1>
-        <p className=" max-w-[600px] text-sm md:text-2xl   text-center p-1 font-kantumruy ">
-          access a pool of talented,comptent and dedicated experts and
-          profetional from ethiopia
+        <p className=" max-w-[500px] text-xl   text-center p-1 font-kantumruy ">
+          Access a pool of talented,comptent and dedicated experts and
+          profetional from Ethiopia.
         </p>
         <div className="mt-5 md:mt-15 flex gap-10 ">
-          <Mybutton background="border-[4px] border-custom-purple rounded-lg py-1 md:py-2 px-2 md:px-4 text-xl font-bold">
+          <Mybutton background="border-[4px] border-custom-purple rounded-lg py-1 md:py-2 px-2 md:px-4 text-xl font-kantumruy font-medium">
             Log in
           </Mybutton>
-          <Mybutton background=" bg-custom-purple text-white text-sm md:text-xl lg:text-2xl py-1 md:py-2 lg:py-3 px-5 rounded-lg font-bold">
+          <Mybutton background=" bg-custom-purple text-custom-white text-sm md:text-xl lg:text-2xl py-1 md:py-2 lg:py-3 px-5 rounded-lg font-kantumruy font-medium">
             {" "}
             Register as an employer
           </Mybutton>
@@ -31,11 +32,11 @@ const Clients = () => {
           <div className="flex justify-start">
             <Info
               subscribers={"1.5M+"}
-              title={"unique alerts deleverd"}
+              title={"Unique alerts delivered"}
               discriptiondetail={
-                "we have been deliverd about 30000000 notifications about new remotejobs to job seekers since the website launched"
+                "We have been delivered 3,916,718 notifications about new remote jobs to job seekers since the website launched. (Launched: 1 YEAR AGO)"
               }
-              cssproperty="flex  justify-center text-start  w-3/4 mt-3 md:mt-10 mb-16 "
+              cssproperty="flex  justify-center text-start  w-3/4 mt-3 md:mt-10 mb-16 font-kantumruy "
               rounded="rounded-l-3xl"
             />
           </div>
@@ -47,18 +48,18 @@ const Clients = () => {
               discriptiondetail={
                 "we have telegram channel with 49.716+ real subscribers our channel posts have 29.5 k views per day on average "
               }
-              cssproperty="flex  justify-center text-end  flex-row-reverse w-3/4 mt-3 md:mt-10 mb-16 "
+              cssproperty="flex  justify-center text-end  flex-row-reverse w-3/4 mt-3 md:mt-10 mb-16 font-kantumruy "
               rounded="rounded-r-3xl"
             />
           </div>
           <div className="flex justify-start">
             <Info
               subscribers={"1.5M+"}
-              title={"unique alerts deleverd"}
+              title={"Unique alerts delivered"}
               discriptiondetail={
-                "we have been deliverd about 30000000 notifications about new remotejobs to job seekers since the website launched"
+                "We have been delivered 3,916,718 notifications about new remote jobs to job seekers since the website launched. (Launched: 1 YEAR AGO)"
               }
-              cssproperty="flex  justify-center text-start  w-3/4 mt-3 md:mt-10 mb-16 "
+              cssproperty="flex  justify-center text-start  w-3/4 mt-3 md:mt-10 mb-16 font-kantumruy "
               rounded="rounded-l-3xl"
             />
           </div>
