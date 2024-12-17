@@ -20,7 +20,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black text-white px-2 md:px-8 lg:px-16 pt-2 md:pt-8 lg:pt-16 pb-4 mt-5">
+      {/* //here it was having mt-5 but i deleted it because of clinet.jsx check for others effect  */}
+      <footer className="bg-black text-white px-2 md:px-8 lg:px-16 pt-2 md:pt-8 lg:pt-16 pb-4">
         <div className="container mx-auto flex flex-wrap lg:flex-nowrap justify-between gap-10">
           {/* Address Section */}
           <div className="w-full sm:w-1/4 text-center sm:text-left mb-6 sm:mb-0">

@@ -118,7 +118,7 @@ const Catagoris = () => {
     <div>
       <div className="relative">
         <Location />
-        <div className="absolute w-20 h-[5px] bg-custom-purple bottom-8 md:right-85 md:right-60 lg:right-72 mr-20"></div>
+        <div className="absolute w-20 h-[5px] bg-custom-purple bottom-8 md:right-85 md:right-60 lg:right-84 mr-32"></div>
       </div>
 
       <div className="mt-10">

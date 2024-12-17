@@ -6,6 +6,7 @@ const Info = ({
   discriptiondetail,
   cssproperty,
   rounded,
+  launched,
 }) => {
   return (
     <div className={cssproperty}>
@@ -14,13 +15,13 @@ const Info = ({
       >
         {subscribers}
       </span>
-      <span className="bg-purple-50 h-full px-9 py-2  ">
+      <span className="bg-custom-slate h-full px-9 py-2  ">
         <h1 className=" text-xl lg:text-3xl font-medium font-kantumruy pb-2 ">
           {title}
         </h1>
 
         <p className="text-sm font-kantumruy ">{discriptiondetail}</p>
-        <p> (launched 4 years age )</p>
+        <p>{launched}</p>
       </span>
     </div>
   );

@@ -1,38 +1,38 @@
 import React from "react";
 import Location from "../../components/basecomponents/Location";
-import { FaUser, FaBuilding } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { MdEmail, MdSubject } from "react-icons/md";
 import Mybutton from "../../components/basecomponents/Mybutton";
 import Divider from "../../components/basecomponents/Divider";
-import { FcGoogle } from "react-icons/fc";
 import profetional from "../../assets/svg1/professional.svg";
 import building from "../../assets/SVG/company.svg";
 import building1 from "../../assets/svg1/company.svg";
 import user from "../../assets/svg1/user.svg";
 import email from "../../assets/svg1/email.svg";
 import key from "../../assets/svg1/key1.svg";
+import google from "../../assets/SVG/google.svg";
+import Oneinput from "../../components/basecomponents/Oneinput";
+import Continuewithgoogle from "../../components/basecomponents/Continuewithgoogle";
+import Qestion from "../../components/basecomponents/Qestion";
+import Checkbox from "../../components/basecomponents/Checkbox";
 const Companysignup = () => {
   return (
-    // for all the input fields i have to use components but for now lets t odo it
-    <div>
-      <div className="lg:mx-36">
+    <div className="">
+      <div>
         <Location />
       </div>
 
       {/*i am  asking  if user is frelancer */}
       <div className="relative  max-w-2xl  p-7  my-4 md:my-8 bg-custom-slate mx-auto">
-        {/* <FaUser
-          size={48}
-          className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-3"
-        /> */}
         <img
           src={profetional}
           className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-7"
         />
-        <h2 className="  rounded-lg pl-16 h-full   w-full text-lg ">
+        <h2 className="  rounded-lg pl-16 h-full   w-full text-lg font-kantumruy ">
           if you are freelancer please visite{" "}
-          <Link className=" border-b-2 border-purple-400 font-bold font-kantumruy">
+          <Link
+            to={"/sheqlee/employersignup"}
+            className=" border-b-2 border-purple-400 font-semibold font-kantumruy"
+          >
             frelancer registration{" "}
           </Link>{" "}
           page.
@@ -51,43 +51,34 @@ const Companysignup = () => {
       </div>
       <form action="" className=" max-w-4xl mx-auto ">
         <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
-          <div className="flex flex-col flex-grow ">
-            <label className="text-xl font-bold  m-3" htmlFor="companyname">
-              company name <span className="text-red-800">*</span>
-            </label>
-            <div className="relative ">
-              {/* <MdSubject
-                size={48}
-                className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full"
-              /> */}
-              <img
-                src={building1}
-                className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-3"
-              />
-              <input
-                type="text"
-                className="bg-custom-tags  rounded-lg pl-16 h-full outline-none p-3 w-full text-xl"
-                id="companyname"
-                placeholder="SHEQLEE co .Ltd"
-              />
-            </div>
-          </div>
+          <Oneinput
+            iconmyimage={building1}
+            placeholder={"Sheqlee Co. Ltd."}
+            labeltext={"Company name"}
+            type={"text"}
+            id={"companyname"}
+            warn
+          />
+
           <div className="flex flex-col flex-grow  ">
-            <label className="text-xl font-bold m-3" htmlFor="email">
+            <label
+              className="text-xl   my-3 font-kantumruy font-medium"
+              htmlFor="email"
+            >
               Domain <span className="text-red-700">*</span>
             </label>
             <div className="flex  ">
               {/* <span className="bg-black text-white rounded-l-lg absolute  h-full  ">
                 https://
               </span> */}
-              <span className="bg-black text-white rounded-l-lg text-lg p-3">
+              <span className="bg-black text-white rounded-l-lg text-xl p-3 font-kantumruy">
                 https://
               </span>
               <input
                 type="email"
                 id="email"
-                className="bg-custom-tags    rounded-lg  h-full outline-none p-3  w-full text-xl"
-                placeholder="abebe@gmail.com "
+                className="bg-custom-tags  rounded-r-lg  h-full outline-none p-3 w-full text-xl font-kantumruy placeholder:text-custom-placeholder"
+                placeholder="sheqlee.com "
               />
             </div>
           </div>
@@ -96,100 +87,71 @@ const Companysignup = () => {
         <Divider> company representative</Divider>
         {/* below devide part */}
         <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
-          <div className="flex flex-col flex-grow ">
-            <label className="text-xl font-bold  m-3" htmlFor="companyname">
-              full name <span className="text-red-700">*</span>
-            </label>
-            <div className="relative ">
-              <img
-                src={user}
-                className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-4"
-              />
-              <input
-                type="text"
-                className="bg-custom-tags  rounded-lg pl-16 h-full outline-none p-3 w-full text-xl"
-                id="companyname"
-                placeholder="SHEQLEE co .Ltd"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col flex-grow  ">
-            <label className="text-xl font-bold m-3" htmlFor="email">
-              your email <span className="text-red-700">*</span>
-            </label>
-            <div className="relative  ">
-              <img
-                src={email}
-                className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-5 mr-5"
-              />
-              <input
-                type="email"
-                id="email"
-                className="bg-custom-tags rounded-lg  h-full outline-none p-3  w-full text-xl pl-16 "
-                placeholder="abebe@gmail.com "
-              />
-            </div>
-          </div>
+          <Oneinput
+            iconmyimage={user}
+            placeholder={"Abebe Bekila"}
+            labeltext={"Full name"}
+            type={"text"}
+            id={"fullname"}
+            warn
+          />
+          <Oneinput
+            iconmyimage={email}
+            placeholder={"abebe@gmail.com"}
+            labeltext={"Email"}
+            type={"email"}
+            id={"email"}
+            warn
+          />
         </div>
         <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
-          <div className="flex flex-col flex-grow ">
-            <label className="text-xl font-bold  m-3" htmlFor="companyname">
-              password <span className="text-red-700">*</span>
-            </label>
-            <div className="relative ">
-              <img
-                src={key}
-                className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-5 "
-              />
-
-              <input
-                type="password"
-                className="bg-custom-tags rounded-lg pl-20 h-full outline-none p-3 w-full text-xl"
-                id="companyname"
-                placeholder="************"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col flex-grow  ">
-            <label className="text-xl font-bold m-3" htmlFor="email">
-              confirm password <span className="text-red-700">*</span>
-            </label>
-            <div className="relative ">
-              <img
-                src={key}
-                className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-5 "
-              />
-
-              <input
-                type="password"
-                className="bg-custom-tags rounded-lg pl-20 h-full outline-none p-3 w-full text-xl"
-                id="companyname"
-                placeholder="************"
-              />
-            </div>
-          </div>
+          <Oneinput
+            iconmyimage={key}
+            placeholder={"**********"}
+            labeltext={"Password"}
+            type={"password"}
+            id={"password"}
+            warn
+            showeyeicon
+          />
+          <Oneinput
+            iconmyimage={key}
+            placeholder={"**********"}
+            labeltext={"Confirm password"}
+            type={"password"}
+            id={"password1"}
+            warn
+          />
         </div>
         {/* //check box part */}
-        <div className="m-4">
-          <input type="checkbox" />{" "}
-          <span>
-            by creating an account , you agree to our{" "}
-            <strong className="border-b-2 border-purple-400">
-              terms and conditions{" "}
-            </strong>{" "}
-            and{" "}
-            <strong className="border-b-2 border-purple-400">
-              privacy policy{" "}
-            </strong>{" "}
-          </span>
+        <div className="my-4">
+          {/* //<input type="checkbox" className="h-[20px] w-[20px] bg-black mt-1" /> */}
+          <div className="flex items-center gap-3">
+            <Checkbox />
+            <span className="text-sm font-kantumruy">
+              by creating an account , you agree to our{" "}
+              <span className="border-b-2 border-custom-purple font-kantumruy font-semibold">
+                terms and conditions{" "}
+              </span>{" "}
+              and{" "}
+              <span className="border-b-2 border-custom-purple font-kantumruy font-semibold">
+                privacy policy{" "}
+              </span>{" "}
+            </span>
+          </div>
+
           {/* //for the button  */}
           <div className="text-end mt-10 ">
-            <p>
+            <p className="text-sm font-kantumruy">
               already got an account?{" "}
-              <strong className="border-b-2 border-purple-400">Login</strong>{" "}
+              <Link to={"/sheqlee/login"}>
+                <span className="border-b-2   border-custom-purple font-kantumruy font-semibold">
+                  Login
+                </span>
+              </Link>
               <Mybutton
                 background={
-                  "bg-custom-purple text-white font-bold text-2xl rounded-lg p-1 md:p-2 lg:p-3 ml-5"
+                  "bg-custom-purple text-white font-semibold font-kantumruy text-xl rounded-lg p-1 md:p-2 lg:p-3 ml-5 "
                 }
               >
                 Register
@@ -198,12 +160,9 @@ const Companysignup = () => {
           </div>
         </div>
         <Divider>or continue with google</Divider>
-        <button className="flex gap-4 bg-blue-600 p-3 rounded-lg text-xl mx-auto lg:px-5 mt-5">
-          {" "}
-          <FcGoogle size={24} />
-          contniue with google
-        </button>
+        <Continuewithgoogle />
       </form>
+      <Qestion />
     </div>
   );
 };

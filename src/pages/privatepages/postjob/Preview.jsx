@@ -6,7 +6,7 @@ import { FaGears } from "react-icons/fa6";
 
 const Preview = ({ formData, onBack }) => {
   return (
-    <div className="max-w-3xl mx-auto mt-10">
+    <div className="   mx-auto mt-10">
       <div>
         <div className="relative  max-w-2xl  px-4 py-7 my-4 md:my-16 bg-slate-100 mx-auto">
           <CiGrid31
@@ -24,7 +24,7 @@ const Preview = ({ formData, onBack }) => {
       </div>
 
       {/* //text part  */}
-      <div className="max-w-3xl mx-auto  text-center  ">
+      <div className=" max-w-6xl mx-auto  text-center  ">
         <div className="flex flex-col   gap-1 md:gap-3">
           <div className="flex justify-center items-center gap-x-2">
             {" "}
@@ -62,44 +62,51 @@ const Preview = ({ formData, onBack }) => {
             className=" 
           flex gap-10 items-center justify-center mt-5"
           >
-            <p>
+            <p className="text-3xl">
               <strong>Job Type:</strong> {formData.jobType}
             </p>
-            <p>
+            <p className="text-3xl">
               <strong>Skill Level:</strong> {formData.skillLevel}
             </p>
-            <p>
-              <strong>Salary:</strong> {formData.salary}
+            <p className="text-3xl">
+              <strong>Salary:</strong> {formData.currency} {formData.salary}
+              {formData.rate}
             </p>
           </div>
         </div>
 
-        <div className="bg-slate-50 text-start pl-10">
+        <div className="bg-slate-50 text-start pl-10 ">
           {/* //edit this part plase and leave three divs */}
-          <p>
+          <p className="text-3xl">
             <strong>Category:</strong> {formData.category}
           </p>
 
-          <h3>Requirements</h3>
+          <h3 className="text-3xl  font-kantumruy font-medium">Requirements</h3>
           <div dangerouslySetInnerHTML={{ __html: formData.requirements }} />
 
-          <h3>shortdescription</h3>
+          <h3 className="text-3xl  font-kantumruy font-medium">
+            shortdescription
+          </h3>
           <div
             dangerouslySetInnerHTML={{ __html: formData.shortdescription }}
           />
-          <h3>jobDescription</h3>
+          <h3 className="text-3xl  font-kantumruy font-medium">
+            jobDescription
+          </h3>
           <div dangerouslySetInnerHTML={{ __html: formData.jobDescription }} />
 
-          <h3>applyInstructions</h3>
+          <h3 className="text-3xl  font-kantumruy font-medium">
+            applyInstructions
+          </h3>
           <div
             dangerouslySetInnerHTML={{ __html: formData.applyInstructions }}
           />
 
-          <p>
+          <p className="text-3xl">
             <strong>Skills:</strong> {formData.skills}
           </p>
 
-          <p>
+          <p className="text-3xl">
             <strong>applyLink:</strong> {formData.applyLink}
           </p>
 

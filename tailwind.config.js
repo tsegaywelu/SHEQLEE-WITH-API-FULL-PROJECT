@@ -11,9 +11,13 @@ export default {
         "custom-black": "#000000",
         "custom-load": "#C9C9C9",
         "custom-placeholder": "#444444",
+        "custom-blue": "#4285F4",
         dvider: "#DDDDDD",
         "custom-location": "#FCFCFC",
+        "custom-gray": "#333333",
       },
+      fill: ["hover", "focus"],
+      stroke: ["hover", "focus"],
       fontFamily: {
         lora: ["Lora", "sans-serif"],
         kantumruy: ["Kantumruy Pro", "sans-serif"],

@@ -10,6 +10,8 @@ const Vacancyform = () => {
     jobType: "",
     skillLevel: "",
     salary: "",
+    rate: "",
+    currency: "",
     shortdescription: "",
     requirements: "",
     jobDescription: "",

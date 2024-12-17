@@ -7,6 +7,12 @@ const emptyRectangles = [{}, {}, {}, {}, {}, {}];
 const Tags = () => {
   const { pathname } = useLocation();
   const actualpath = pathname.replaceAll("/", "");
+  let changebackground = false;
+  if (actualpath === "sheqleetags" || actualpath === "sheqleecompany") {
+    changebackground = true;
+  }
+
+  const mylink = pathname.includes("tags") ? "tag" : "company";
   const [loading, setloading] = useState(true);
   const [Totaltags, setTotaltags] = useState(new Array(8));
   useEffect(() => {
@@ -30,9 +36,10 @@ const Tags = () => {
     <>
       {loading ? (
         // page in a loading situation
+
         <div
           className={` px-3 md:px-6 lg:px-12 pb-5 ${
-            actualpath === "sheqleetags" ? "bg-white" : "bg-custom-slate"
+            changebackground ? "bg-white" : "bg-custom-slate"
           }   `}
         >
           {/* top texsts */}
@@ -56,9 +63,7 @@ const Tags = () => {
                 <div
                   key={tag.id}
                   className={` p-4 md:p-3 lg:p-6 rounded-xl border-l-[5px] md:border-l-[20px] lg: border-l-black ${
-                    actualpath === "sheqleetags"
-                      ? "bg-custom-slate"
-                      : "bg-custom-tags"
+                    changebackground ? "bg-custom-slate" : "bg-custom-tags"
                   }  `}
                 >
                   <div className="font-semibold text-2xl w-1/2 h-5 bg-custom-load mb-4 rounded-lg"></div>
@@ -79,10 +84,9 @@ const Tags = () => {
         // if the page is loaded
         <div
           className={` px-2 md:px-5 lg:px-12 py-1 md:py-3 lg:py-5 ${
-            actualpath === "sheqleetags" ? "bg-white" : "bg-custom-slate"
+            changebackground ? "bg-white" : "bg-custom-slate"
           } `}
         >
-          {/* top texsts */}
           {/* actualpath==='sheqleetags' */}
           {actualpath === "sheqlee" && (
             <div className="flex justify-between">
@@ -103,13 +107,11 @@ const Tags = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-8">
             {Totaltags.slice(0, 6).map((tag) => {
               return (
-                <Link to={`/sheqlee/tag/${tag.tagname}`}>
+                <Link to={`/sheqlee/${mylink}/${tag.tagname}`}>
                   <div
                     key={tag.id}
                     className={` p-5 rounded-xl border-l-[15px] border-l-black ${
-                      actualpath === "sheqleetags"
-                        ? "bg-custom-slate"
-                        : "bg-custom-tags"
+                      changebackground ? "bg-custom-slate" : "bg-custom-tags"
                     }   `}
                   >
                     <div className="font-kantumruy font-medium text-2xl">

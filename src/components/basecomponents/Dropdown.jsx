@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
-function Dropdown({ categories, dropdowntitle }) {
+function Dropdown({ categories, dropdowntitle, icons, showicons }) {
   const [isOpen, setIsOpen] = useState(false);
 
   // List of categories to display
@@ -33,15 +34,33 @@ function Dropdown({ categories, dropdowntitle }) {
       {isOpen && (
         <div>
           <div className=" bg-stone-900/60 z-50">
-            <div className="absolute  z-50    w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 ">
-              <div className="py-1">
-                {categories.map((category) => (
+            <div
+              className={`absolute  z-40     rounded-b-[10px] shadow-lg bg-white ring-1 ring-black ring-opacity-5 ${
+                showicons ? "right-7 md:w-48 mt-2" : "w-44"
+              }`}
+            >
+              <div className="py-1 font-medium font-kantumruy ">
+                {categories.map((category, index) => (
                   <a
                     key={category}
                     href="#"
-                    className="block py-2  text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                    className="block py-2  text-sm text-custom-black hover:bg-gray-100 hover:text-gray-900 text-start "
                   >
-                    {category}
+                    <div className="">
+                      <Link
+                        to={
+                          showicons
+                            ? `/sheqlee/${category}`
+                            : `/sheqle/catagory/${category}`
+                        }
+                        className="flex  justify-start gap-x-3  px-5"
+                        onClick={() => setIsOpen(!isOpen)}
+                      >
+                        {" "}
+                        {showicons && <img src={icons[index]} alt="" />}{" "}
+                        {category}
+                      </Link>
+                    </div>
                   </a>
                 ))}
               </div>

@@ -23,8 +23,12 @@ import Dashboaredcompany from "./pages/privatepages/Dashboaredcompany";
 import Companyprofile from "./pages/privatepages/Companyprofile";
 import { Companyprofilesetting } from "./pages/privatepages/Companyprofilesetting";
 import Userdashboared from "./pages/privatepages/client/Userdashboared";
-import Twoinput from "./components/basecomponents/Twoinput";
+import Twoinput from "./components/basecomponents/Oneinput";
 import Resetpassword from "./pages/authpages/Resetpassword";
+import Companydetail from "./pages/Companydetail";
+import Interpasswordcode from "./pages/authpages/Interpasswordcode";
+import Privacypoliciy from "./pages/authpages/Privacypoliciy";
+import Logout from "./pages/privatepages/Logout";
 const App = () => {
   console.log("<App/> rendered");
   return (
@@ -50,14 +54,23 @@ const App = () => {
           <Route path="/sheqlee/tag/:theidtodisplay" element={<Tagdetail />} />
           <Route path="/sheqlee/clients" element={<Clients />} />
           <Route path="/sheqlee/company" element={<Companys />} />
+          <Route
+            path="/sheqlee/company/:theidtodisplay"
+            element={<Companydetail />}
+          />
           <Route path="/sheqlee/contact" element={<Contact />} />
           <Route path="/sheqlee/FAQ" element={<FAQ1 />} />
           {/* /////auth pages  */}
           <Route path="/sheqlee/companysignup" element={<Companysignup />} />
           <Route path="/sheqlee/employersignup" element={<Employersignup />} />
           <Route path="/sheqlee/login" element={<Login />} />
-          <Route path="/sheqlee/resetpassword" element={<Resetpassword />} />
-
+          <Route path="/sheqlee/reset password" element={<Resetpassword />} />
+          <Route
+            path="/sheqlee/reset password/Code/New Password"
+            element={<Interpasswordcode />}
+          />
+          <Route path="/sheqlee/Logout" element={<Logout />} />
+          <Route path="/sheqlee/Privacy Policy" element={<Privacypoliciy />} />
           {/* below are all the private routes  */}
 
           <Route
@@ -78,7 +91,7 @@ const App = () => {
             }
           ></Route>
           <Route
-            path="/sheqlee/companyprofile"
+            path="/sheqlee/company profile"
             element={
               <Private>
                 <Companyprofile />
@@ -87,7 +100,7 @@ const App = () => {
           ></Route>
 
           <Route
-            path="/sheqlee/companyprofile/setting"
+            path="/sheqlee/account setting"
             element={
               <Private>
                 <Companyprofilesetting />

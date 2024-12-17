@@ -2,27 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+.quill {
+  /* this is the father to all class */
+  /* background-color: red;
+  border: 3px solid yellow; */
+}
+
 .ql-toolbar {
-  background-color: rgb(
-    58,
-    51,
-    51
-  ); /* i can Replace this with my desired color */
+  /* this is the header part */
+  background-color: #444; /* i can Replace this with my desired color */
   border-radius: 14px 14px 0 0;
   text-align: left;
 }
+
+.ql-container {
+  /*    this is the container part and it is also  father to ql-editor below */
+  background-color: #dfdfdf;
+
+  outline: none;
+  border-radius: 0 0 14px 14px;
+}
 .ql-editor {
+  /* this is under the ql-container class  */
   min-height: 180px;
   outline: none;
 }
-button svg {
-  fill: white !important; /* i can replace also #FF5722 with my desired color */
-}
+
+/* button svg {
+  fill: white !important; 
+} */
 
 button svg {
   stroke: white !important;
+  /* this is working only to line through and scripts   */
 }
-
+.ql-formats {
+  /* this is group of bold italic line throug one group and then order one group e.t.c */
+  border-right: 2px solid white;
+  /* this is working */
+}
+.ql-bold svg,
+.ql-italic svg,
+.ql-strike svg,
+.ql-list svg,
+.ql-script svg {
+  stroke: white !important;
+  fill: white !important;
+}
 @font-face {
   font-family: "Kantumruy Pro";
   src: url("/src/assets/fonts/Kantumruy/KantumruyPro-VariableFont_wght.ttf")

@@ -6,12 +6,16 @@ import { Link } from "react-router-dom";
 import Dropdown from "../basecomponents/Dropdown";
 import mysvg from "../../assets/SVG/logo.svg";
 import { useSelector } from "react-redux";
+import dashboaredsvg from "../../assets/direction/dashboard.svg";
+import settingsvg from "../../assets/direction/settings.svg";
+import logoutsvg from "../../assets/direction/logout.svg";
+import companysvg from "../../assets/direction/company.svg";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   //const state = useSelector((state) => state.user.currentuser);
 
-  const state = "guest";
-  //const state = "company";
+  //const state = "guest";
+  const state = "company";
   //const state = "frelancer";
 
   // left component
@@ -58,22 +62,24 @@ const Header = () => {
             <Dropdown
               dropdowntitle={"categories"}
               categories={[
-                "Front-End",
-                "Back-End",
+                "Front End",
+                "Back End",
                 "Mobile App",
-                "UI/UX",
+                "UI UX",
                 "Machine Learning",
                 "Security",
                 "Database",
               ]}
             />
           </Link>
-          <Link to={"/sheqlee/clients"}>
-            <div className="mt-1 p-1 md:p-2 lg:p-3   font-kantumruy font-medium ">
-              {/* border-b-4 border-blue-600 lg:pb-10 self-end bg-red-500 */}
-              Clients
-            </div>
-          </Link>
+          {state === "guest" && (
+            <Link to={"/sheqlee/clients"}>
+              <div className="mt-1 p-1 md:p-2 lg:p-3   font-kantumruy font-medium ">
+                {/* border-b-4 border-blue-600 lg:pb-10 self-end bg-red-500 */}
+                Clients
+              </div>
+            </Link>
+          )}
 
           {/* Buttons */}
           {state === "guest" ? (
@@ -100,27 +106,29 @@ const Header = () => {
               </Link>
             </div>
           ) : state === "company" ? (
-            <div className="flex  max-sm:flex-col justify-center items-center gap-5 ">
+            <div className="flex  max-sm:flex-col justify-center items-center gap-10 ">
               <Link to={"sheqlee/vacancy"}>
                 <Mybutton
                   background={
-                    "bg-custom-purple rounded-lg p-1 md:p-2 lg:p-3 text-sm"
+                    "bg-custom-purple rounded-xl lg:px-3 md:p-2 lg:py-3   text-white font-semibold font-kantumruy "
                   }
                 >
                   Post a job
                 </Mybutton>
               </Link>
-              <div className="flex  ">
-                <img src={tsegay} alt="" className="w-10 h-10 rounded-full" />
+              <div className="flex  items-center justify-center  ">
+                <img src={tsegay} alt="" className="w-7 h-7 rounded-full" />
 
                 <Dropdown
                   dropdowntitle={"Microsoft"}
                   categories={[
-                    "dashboared",
-                    "company profile",
-                    "account setting ",
+                    "Dashboared",
+                    "Company profile",
+                    "Account setting ",
                     "Logout",
                   ]}
+                  icons={[dashboaredsvg, companysvg, settingsvg, logoutsvg]}
+                  showicons
                 />
               </div>
             </div>
@@ -135,7 +143,7 @@ const Header = () => {
                   Edit profile
                 </Mybutton>
               </Link>
-              <div className="flex  ">
+              <div className="flex   ">
                 <img src={tsegay} alt="" className="w-10 h-10 rounded-full" />
                 <Dropdown
                   dropdowntitle={"jon deo"}

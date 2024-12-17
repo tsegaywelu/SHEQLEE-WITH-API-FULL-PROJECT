@@ -1,68 +1,63 @@
 import React from "react";
 import { MdEmail } from "react-icons/md";
 import contact from "../../src/assets/SVG/contact.svg";
+import email from "../../src/assets/SVG/email.svg";
 import idea from "../../src/assets/SVG/idea.svg";
 import Location from "../components/basecomponents/Location";
 import Mybutton from "../components/basecomponents/Mybutton";
+import Dashboaredtitle from "../components/onetimecmponent/Dashboaredtitle";
+import Twoinput1 from "../components/basecomponents/Twoinput1";
+import Oneinput from "../components/basecomponents/Oneinput";
+import Qestion from "../components/basecomponents/Qestion";
 const Contact = () => {
   return (
     <div>
-      <div className="mx-20">
+      <div className="">
         <Location />
       </div>
       <div className="mt-5 md:my-10">
-        <div className="flex flex-col items-center">
+        {/* <div className="flex flex-col items-center">
           <img src={contact} alt="" />
           <h2 className="text-xl md:text-4xl font-bold p-2 ">Contact</h2>
           <p className=" max-w-[600px] text-center text-sm md:text-2xl  ">
             Please reach out to us if you have any questions or you need our
             assistance with something.
           </p>
-        </div>
+        </div> */}
+        <Dashboaredtitle
+          text={
+            "Please reach out to us if you have any questions or you need our assistance with something."
+          }
+          heading={"Contact"}
+          css
+        >
+          <img src={contact} width={66} height={66} />
+        </Dashboaredtitle>
+
         {/* inputs section */}
-        <div className="flex  max-sm:flex-col m-5 gap-8 justify-center lg:px-28 md:mt-10">
-          <div className="flex flex-col flex-grow ">
-            <label className="text-xl font-bold  m-3" htmlFor="subject">
-              Subject
-            </label>
-            <div className="relative ">
-              {/* <MdSubject
-                size={48}
-                className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full"
-              /> */}
-              <img
-                src={idea}
-                className="absolute left-0 top-0 bg-black rounded-l-lg p-3   "
-                style={{ width: 50, height: 52 }}
-              />
-              <input
-                type="text"
-                className="bg-custom-tags  rounded-lg pl-16 h-full outline-none p-3 w-full text-xl"
-                id="subject"
-                placeholder="regarding post a job "
-              />
-            </div>
-          </div>
-          <div className="flex flex-col flex-grow  ">
-            <label className="text-xl font-bold m-3" htmlFor="email">
-              your email
-            </label>
-            <div className="relative ">
-              <MdEmail
-                size={48}
-                className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-3"
-              />
-              <input
-                type="email"
-                id="email"
-                className="bg-custom-tags rounded-lg pl-16 h-full outline-none p-3  w-full text-xl"
-                placeholder="abebe@gmail.com "
-              />
-            </div>
-          </div>
+        <div className="flex  max-sm:flex-col my-5 gap-8 justify-center lg:px-28 md:mt-10">
+          <Oneinput
+            iconmyimage={idea}
+            placeholder={"Regarding Posting a Job"}
+            labeltext={"subject"}
+            type={"text"}
+            id={"subject"}
+          />
+          <Oneinput
+            iconmyimage={email}
+            placeholder={"abebe@gmail.com"}
+            labeltext={"your email"}
+            type={"email"}
+            id={"email"}
+          />
         </div>
-        <div className="md:px-28 mb-4 relative">
-          <label className="text-xl font-bold m-3" htmlFor="message">
+
+        {/* //message section  */}
+        <div className="md:px-28 space-y-3  relative">
+          <label
+            className="text-xl  my-3    font-kantumruy font-medium "
+            htmlFor="message"
+          >
             message
           </label>
           <textarea
@@ -70,16 +65,19 @@ const Contact = () => {
             id="message"
             placeholder="Write your message down..."
             rows={7}
-            className="bg-custom-tags w-full rounded-lg p-4  outline-none text-2xl "
+            className="bg-custom-tags w-full rounded-lg p-4  outline-none text-xl placeholder:font-kantumruy placeholder:text-custom-placeholder resize-none "
           ></textarea>
-          <span className="absolute md:right-32 right-2 bottom-1">0/512</span>
+          <span className="absolute md:right-32 right-2 bottom-1 font-kantumruy">
+            0/512
+          </span>
         </div>
         <div className="flex justify-end mx-32 mt-10">
-          <Mybutton background="bg-custom-purple p-3 rounded-lg text-white  text-2xl">
+          <Mybutton background="bg-custom-purple p-3 rounded-lg text-white  text-xl font-kantumruy font-medium">
             Send message
           </Mybutton>
         </div>
       </div>
+      <Qestion />
     </div>
   );
 };

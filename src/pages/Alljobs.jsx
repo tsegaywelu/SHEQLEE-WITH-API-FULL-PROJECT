@@ -12,7 +12,7 @@ const Alljobs = () => {
     <>
       <div className="relative">
         <Location />
-        <div className="absolute w-16 h-[5px] bg-custom-purple bottom-8 md:right-85 lg:right-96 mr-24"></div>
+        <div className="absolute w-16 h-[5px] bg-custom-purple bottom-8 md:right-85 lg:right-80 mr-44"></div>
       </div>
 
       <div className=" px-3 md:px-6 lg:px-8 my-3 md:my-6 lg:my-12 p-3 md:p-6 lg:p-10  ">
@@ -28,7 +28,7 @@ const Alljobs = () => {
           </p>
           {/* filetr part */}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6 mx-5 md:mx-10 lg:mx-20 text-custom-placeholder">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6 mx-1 md:mx-2 lg:mx-5 text-custom-placeholder ">
             <div className="relative  ">
               <Dropdownform
                 options={["Category 1", "Category 2", "Category 3"]}
@@ -50,8 +50,9 @@ const Alljobs = () => {
 
             <div className="relative  col-span-2">
               <input
-                className="bg-custom-tags text-custom-placeholder font-kantumruy p-1  md:p-3 md:pl-12 rounded-[15px] lg:col-span-2    w-full outline-none "
+                // className="bg-custom-tags  placeholder:text-custom-placeholder font-kantumruy p-1  md:p-3 md:pl-12 rounded-[15px] lg:col-span-2    w-full outline-none "
                 type="text"
+                className="bg-custom-tags  rounded-lg  h-full outline-none p-3 w-full text-xl font-kantumruy placeholder:text-custom-placeholder lg:col-span-2  md:pl-12"
                 placeholder="Search by programming technology or field..."
               />
               <img
@@ -61,7 +62,7 @@ const Alljobs = () => {
               />
             </div>
 
-            <Mybutton background="bg-custom-purple rounded-[15px]  text-white font-semibold  font-kantumruy ">
+            <Mybutton background="bg-custom-purple rounded-[15px]  text-xl text-white font-semibold  font-kantumruy ">
               Apply filter
             </Mybutton>
           </div>
