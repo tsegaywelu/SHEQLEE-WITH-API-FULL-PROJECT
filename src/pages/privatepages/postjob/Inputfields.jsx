@@ -145,11 +145,12 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
           </div>
           {/* //requirements part  */}
 
-          <div className="space-y-20 my-20">
+          <div className="space-y-10 mt-5 ">
             <Reatchtext
               showtext={"Requirements "}
               value={formData.requirements}
               onChange={(content) => updateFormData("requirements", content)}
+              placeholder={"Requirements..."}
               warn
             />
 
@@ -157,6 +158,7 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
               showtext={"description"}
               value={formData.jobDescription}
               onChange={(content) => updateFormData("jobDescription", content)}
+              placeholder={"Description..."}
             />
             <Reatchtext
               showtext={"how to apply"}
@@ -164,6 +166,7 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
               onChange={(content) =>
                 updateFormData("applyInstructions", content)
               }
+              placeholder={"How can professionals apply..."}
             />
           </div>
           <div className="mt-5 text-start">
@@ -216,16 +219,19 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
             >
               <h1 className="text-2xl font-semibold" onClick={onPreview}>
                 Next{" "}
-                <span className=" text-sm font-kantumruy font-normal">
+                <span className=" text-xl font-kantumruy font-normal">
                   [preview and confirm]
                 </span>
               </h1>
             </Mybutton>
           </div>
         </form>
-      </div>
-      <div className="my-10">
-        <Divider />
+        <div className="my-10">
+          <Divider />
+          <span className="block text-start font-kantumruy ">
+            <span className="text-red-800">*</span> all fields are required.{" "}
+          </span>
+        </div>
       </div>
     </div>
   );

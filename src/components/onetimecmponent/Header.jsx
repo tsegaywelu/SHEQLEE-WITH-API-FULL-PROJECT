@@ -15,8 +15,8 @@ const Header = () => {
   //const state = useSelector((state) => state.user.currentuser);
 
   //const state = "guest";
-  const state = "company";
-  //const state = "frelancer";
+  // const state = "company";
+  const state = "frelancer";
 
   // left component
   const leftsidecontent = () => {
@@ -25,7 +25,7 @@ const Header = () => {
         {/* Left section: Logo and title */}
         <div className="flex flex-col md:flex-row  mx-3  md:mx-5 lg:mx-10 gap-5 ">
           <img src={mysvg} alt="Logo loading..." className=" h-[50px]" />
-          <h1 className="text-sm md:text-2xl font-extrabold flex justify-center items-center font-lora">
+          <h1 className="text-sm md:text-2xl font-extrabold flex justify-center items-center font-recolta">
             Sheqlee
           </h1>
         </div>
@@ -133,21 +133,24 @@ const Header = () => {
               </div>
             </div>
           ) : (
-            <div className="flex  max-sm:flex-col justify-center items-center gap-5 ">
+            <div className="flex  max-sm:flex-col justify-center items-center gap-0 ">
               <Link to={"sheqlee/vacancy"}>
                 <Mybutton
                   background={
-                    "bg-custom-purple  rounded-lg p-1 md:p-2 lg:p-3 text-sm"
+                    "bg-custom-purple rounded-xl lg:px-3 md:p-2 lg:py-3   text-white font-semibold font-kantumruy"
                   }
                 >
                   Edit profile
                 </Mybutton>
               </Link>
               <div className="flex   ">
-                <img src={tsegay} alt="" className="w-10 h-10 rounded-full" />
+                {/* <img src={tsegay} alt="" className="w-10 h-10 rounded-full" /> */}
                 <Dropdown
-                  dropdowntitle={"jon deo"}
-                  categories={["dashboared", "account setting ", "Logout"]}
+                  dropdowntitle={"Muruts Yifter"}
+                  categories={["Dashboared", "Account setting ", "Logout"]}
+                  icons={[dashboaredsvg, settingsvg, logoutsvg]}
+                  showicons
+                  chnagelinksurl
                 />
               </div>
             </div>

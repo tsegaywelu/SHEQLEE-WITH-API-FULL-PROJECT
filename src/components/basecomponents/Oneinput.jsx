@@ -36,9 +36,9 @@ const Oneinput = ({
           } h-full outline-none p-3 w-full text-xl font-kantumruy placeholder:text-custom-placeholder`}
           id={id}
           placeholder={placeholder}
-          // value={formData.correctvalue}
-          value={formData[correctvalue] || ""}
-          onChange={(e) => updateFormData(correctvalue, e.target.value)}
+
+          // value={formData[correctvalue] || ""}
+          // onChange={(e) => updateFormData(correctvalue, e.target.value)}
         />
         {showeyeicon && (
           <div className=" absolute right-4 bottom-5 ">

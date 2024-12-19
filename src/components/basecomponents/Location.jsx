@@ -10,7 +10,7 @@ const Location = ({ Lost }) => {
   const pathSegments = pathname.split("/").filter(Boolean);
 
   return (
-    <div className="  font-kantumruy text-black bg-custom-location">
+    <div className="  font-kantumruy text-black bg-custom-location py-1">
       <div className="mx-20 flex  items-center justify-start gap-3 py-1">
         <div className="ml-28">
           <img src={place} width={12} height={12} />

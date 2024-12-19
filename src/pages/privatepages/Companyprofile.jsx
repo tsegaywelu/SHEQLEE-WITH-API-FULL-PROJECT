@@ -1,5 +1,4 @@
 import React from "react";
-import { BsBuildings } from "react-icons/bs";
 import Dashboaredtitle from "../../components/onetimecmponent/Dashboaredtitle";
 import Location from "../../components/basecomponents/Location";
 import tsegay from "../../assets/tsegay.jpg";
@@ -8,114 +7,98 @@ import Reatchtext from "../../components/basecomponents/Reatchtext";
 import { FaAngleDown } from "react-icons/fa";
 import Mybutton from "../../components/basecomponents/Mybutton";
 import Divider from "../../components/basecomponents/Divider";
+import building from "../../assets/SVG/company.svg";
+import Oneinputfor from "../../components/basecomponents/Oneinputfor";
+import blackedit from "../../assets/direction/editblack.svg";
+import profilepic from "../../assets/direction/profile.svg";
+import profilepic1 from "../../assets/direction/settings - alt2/profile.png";
+import Sectionprofile from "../../components/basecomponents/Sectionprofile";
+import Dropdownform from "../../components/basecomponents/Dropdownform";
 const Companyprofile = () => {
   return (
     <div>
-      <div className="my-5">
+      <div>
         <Location />
       </div>
       <div className=" flex  flex-col  items-center  gap-5 justify-center my-5 md:my-10 ">
         <Dashboaredtitle
           text={
-            " Provide accurate information about your company to make your slfe discoverable"
+            " Provide accurate information about your company to make yourself discoverable."
           }
           css={"max-w-[550px]"}
-          heading={"company profile"}
+          heading={"Company profile"}
         >
-          <BsBuildings size={66} className="text-purple-600" />
+          <img src={building} alt="company svg" width={66} height={66} />
         </Dashboaredtitle>
       </div>
 
       {/* // input parts  */}
-      <form action="">
-        <div className="flex max-sm:flex-col justify-center items-start  gap-5  mx-3 md:mx-10 lg:mx-48 p-2">
-          <div className="flex flex-col w-2/3 gap-2 relative">
-            <label htmlFor="name" className="text-sm md:text-xl">
-              {" "}
-              company name <span className="text-red-700">*</span>
-            </label>
-            <input
-              type="text"
-              placeholder="Sheqlee Co., Ltd."
-              className="bg-slate-200 p-3 rounded-lg outline-none"
+      <form action="" onSubmit={(e) => e.preventDefault()}>
+        <div className="flex max-sm:flex-col justify-center items-start  gap-5  max-w-5xl  mx-auto">
+          <div className="flex flex-col w-2/3 gap-2 relative  ">
+            <Oneinputfor
+              labeltext={"Company name"}
+              warn
+              placeholder={"Sheqlee Co., Ltd."}
+              icon={blackedit}
+              id={"name"}
             />
-            <div className="absolute right-0 bottom-3">
-              <MdEdit size={20} />
-            </div>
           </div>
           <div className="flex flex-col w-2/3 gap-2 relative">
-            <label htmlFor="name" className="text-sm md:text-xl">
-              {" "}
-              Domain <span className="text-red-700">*</span>
-            </label>
-            <input
-              type="text"
-              placeholder="http://sheqlee.com"
-              className="bg-slate-200 p-3 rounded-lg outline-none"
+            <Oneinputfor
+              labeltext={"Domain"}
+              warn
+              placeholder={"https://sheqlee.com"}
+              icon={blackedit}
+              id={"Domain "}
             />
-            <div className="absolute right-0 bottom-3">
-              <MdEdit size={20} />
-            </div>
           </div>
-          <div className="flex flex-col gap-2">
-            <img src={tsegay} alt="" className="w-24 h-24 rounded-full" />
-            <button className="bg-purple-400 py-1 px-6 rounded-lg text-xl">
-              upload
-            </button>
-            <div className="flex flex-nowrap">
-              <p className="text-xs ">2 MB max | 1:1 Ratio</p>
-            </div>
-          </div>
+
+          <Sectionprofile profilepic1={profilepic1} buttontext={"upload"} />
         </div>
         {/* //ritch text part */}
         <div>
-          <div className=" sm:mx-3 md:mx-16 lg:mx-48">
-            <Reatchtext showtext={"description"} />
+          <div className=" -translate-y-8 max-w-5xl  mx-auto">
+            <Reatchtext
+              showtext={"Description"}
+              placeholder={"A brief description about your company..."}
+            />
           </div>
-          <div>
-            <div className="flex max-sm:flex-col justify-center items-center  gap-5  mx-3 md:mx-10 lg:mx-48 p-2">
+          <div className="">
+            <div className="flex max-sm:flex-col justify-center items-center  gap-5  max-w-5xl  mx-auto">
               <div className="flex flex-col w-2/3 gap-2 relative">
-                <label htmlFor="name" className="text-sm md:text-xl">
-                  {" "}
-                  company size
-                </label>
-                <input
-                  type="text"
-                  placeholder="less than 10 people"
-                  className="bg-slate-200 p-3 rounded-lg outline-none text-xl"
+                <Dropdownform
+                  options={["Less than 5", "Less than 10", "Less than 50"]}
+                  defaultText="Company size"
+                  labeltext={"Company size"}
                 />
-                <div className="absolute right-0 bottom-3">
-                  <FaAngleDown size={20} />
-                </div>
               </div>
               <div className="flex flex-col w-2/3 gap-2 relative">
-                <label htmlFor="name" className="text-sm md:text-xl">
-                  HQ location{" "}
-                </label>
-                <input
-                  type="text"
-                  placeholder="south koria "
-                  className="bg-slate-200 p-3 rounded-lg outline-none text-xl"
+                <Oneinputfor
+                  labeltext={"HQ location"}
+                  placeholder={"Seoul, S. Korea"}
+                  icon={blackedit}
+                  id={"location "}
                 />
-                <div className="absolute right-0 bottom-3">
-                  <MdEdit size={20} />
-                </div>
               </div>
             </div>
             <div className=" mt-14 mx-4 md:mx-12 lg:mx-52">
               <div className="flex justify-end  ">
                 <Mybutton
-                  background={"bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3"}
+                  background={
+                    "bg-custom-purple font-semibold font-kantumruy  text-custom-white rounded-lg p-1 md:p-2 lg:p-3"
+                  }
                 >
-                  <h1 className="text-2xl">update profile</h1>
+                  <h1 className="text-2xl">update profile </h1>
                 </Mybutton>
               </div>
             </div>
           </div>
-          <div className="max-w-4xl mx-auto">
+
+          <div className=" max-w-5xl  mx-auto mb-10">
             <Divider></Divider>
-            <span className="block mx-32">
-              <span className="text-red-800">*</span> all fields are required{" "}
+            <span className="block font-kantumruy text-start ">
+              <span className="text-red-800">*</span> all fields are required.{" "}
             </span>
           </div>
         </div>

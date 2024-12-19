@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
-function Dropdown({ categories, dropdowntitle, icons, showicons }) {
+function Dropdown({
+  categories,
+  dropdowntitle,
+  icons,
+  showicons,
+  chnagelinksurl,
+}) {
   const [isOpen, setIsOpen] = useState(false);
-
-  // List of categories to display
-
   return (
-    <div
-      // onMouseLeave={() => setIsOpen(false)}
-      className=" inline-block text-center"
-    >
+    <div className=" inline-block text-center">
       {/* Dropdown button */}
       <div className="relative">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          // onMouseEnter={() => setIsOpen(true)}
-          // onMouseLeave={() => setIsOpen(false)}
           className="inline-flex justify-center w-full rounded-md   px-6 py-2 bg-custom-slate text-base  text-black font-medium font-kantumruy  "
         >
           {dropdowntitle}

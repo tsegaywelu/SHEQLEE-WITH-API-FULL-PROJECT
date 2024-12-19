@@ -10,7 +10,8 @@
 
 .ql-toolbar {
   /* this is the header part */
-  background-color: #444; /* i can Replace this with my desired color */
+  /* background-color: #444;  */
+  background-color: whitesmoke;
   border-radius: 14px 14px 0 0;
   text-align: left;
 }
@@ -37,18 +38,24 @@ button svg {
   /* this is working only to line through and scripts   */
 }
 .ql-formats {
+  /* > *:not(.ql-script) */
   /* this is group of bold italic line throug one group and then order one group e.t.c */
-  border-right: 2px solid white;
+  border-right: 2px solid black;
   /* this is working */
 }
-.ql-bold svg,
-.ql-italic svg,
-.ql-strike svg,
-.ql-list svg,
-.ql-script svg {
-  stroke: white !important;
-  fill: white !important;
+.ql-container {
+  font-size: 20px !important;
 }
+
+.ql-toolbar .ql-bold svg,
+.ql-toolbar .ql-italic svg,
+.ql-toolbar .ql-strike svg,
+.ql-toolbar .ql-list svg,
+.ql-toolbar .ql-align svg {
+  fill: white !important;
+  stroke: white !important;
+}
+
 @font-face {
   font-family: "Kantumruy Pro";
   src: url("/src/assets/fonts/Kantumruy/KantumruyPro-VariableFont_wght.ttf")
@@ -61,6 +68,13 @@ button svg {
   font-family: "Lora";
   src: url("/src/assets/fonts/Lora/Lora-Italic-VariableFont_wght.ttf")
     format("truetype");
+
+  font-weight: 400 700; /* Modify this based on the weights you downloaded */
+  font-style: normal;
+}
+@font-face {
+  font-family: "Recolta";
+  src: url("/src/assets/fonts/Recoleta-Black.ttf") format("truetype");
 
   font-weight: 400 700; /* Modify this based on the weights you downloaded */
   font-style: normal;

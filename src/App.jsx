@@ -29,13 +29,20 @@ import Companydetail from "./pages/Companydetail";
 import Interpasswordcode from "./pages/authpages/Interpasswordcode";
 import Privacypoliciy from "./pages/authpages/Privacypoliciy";
 import Logout from "./pages/privatepages/Logout";
+import Userprofile from "./pages/privatepages/client/Userprofile";
 const App = () => {
   console.log("<App/> rendered");
+
+  // here  i have three kind of users  for my system  guest,company,frelancer  so here there is clash of routes
+  //and also if user is frelancer he can not access the  company pages and reverse .
+  //const state = "company";
+  const state = "frelancer";
   return (
     <BrowserRouter>
       <div className="">
         <Header />
         <Routes>
+          {/* //those are common for any user  */}
           <Route path="/sheqlee" element={<Landing />} />
           <Route path="/game" element={<Twoinput />} />
 
@@ -71,51 +78,75 @@ const App = () => {
           />
           <Route path="/sheqlee/Logout" element={<Logout />} />
           <Route path="/sheqlee/Privacy Policy" element={<Privacypoliciy />} />
-          {/* below are all the private routes  */}
 
-          <Route
-            path="/sheqlee/vacancy"
-            element={
-              <Private>
-                <Inputfields />
-              </Private>
-            }
-          ></Route>
+          {state === "company" ? (
+            <>
+              {/* below are all the private routes for company only   */}
+              <Route
+                path="/sheqlee/vacancy"
+                element={
+                  <Private>
+                    <Inputfields />
+                  </Private>
+                }
+              ></Route>
 
-          <Route
-            path="/sheqlee/dashboared"
-            element={
-              <Private>
-                <Dashboaredcompany />
-              </Private>
-            }
-          ></Route>
-          <Route
-            path="/sheqlee/company profile"
-            element={
-              <Private>
-                <Companyprofile />
-              </Private>
-            }
-          ></Route>
+              <Route
+                path="/sheqlee/dashboared"
+                element={
+                  <Private>
+                    <Dashboaredcompany />
+                  </Private>
+                }
+              ></Route>
+              <Route
+                path="/sheqlee/company profile"
+                element={
+                  <Private>
+                    <Companyprofile />
+                  </Private>
+                }
+              ></Route>
 
-          <Route
-            path="/sheqlee/account setting"
-            element={
-              <Private>
-                <Companyprofilesetting />
-              </Private>
-            }
-          ></Route>
-          {/* //frelancer pages  */}
-          <Route
-            path="/sheqlee/userdashboared"
-            element={
-              <Private>
-                <Userdashboared />
-              </Private>
-            }
-          ></Route>
+              <Route
+                path="/sheqlee/account setting"
+                element={
+                  <Private>
+                    <Companyprofilesetting />
+                  </Private>
+                }
+              ></Route>
+            </>
+          ) : (
+            <>
+              {/* //below are all the private routes for users or frelancers only  */}
+              <Route
+                path="/sheqlee/dashboared"
+                element={
+                  <Private>
+                    <Userdashboared />
+                  </Private>
+                }
+              ></Route>
+              <Route
+                path="/sheqlee/profile"
+                element={
+                  <Private>
+                    <Userprofile />
+                  </Private>
+                }
+              ></Route>
+              <Route
+                path="/sheqlee/account setting"
+                element={
+                  <Private>
+                    <Companyprofilesetting />
+                  </Private>
+                }
+              ></Route>
+            </>
+          )}
+
           <Route path="*" element={<Lost />}></Route>
         </Routes>
         <Footer />

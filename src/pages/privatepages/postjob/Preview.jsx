@@ -1,24 +1,23 @@
 import React from "react";
 import Mybutton from "../../../components/basecomponents/Mybutton";
-import { CiGrid31 } from "react-icons/ci";
 import Divider from "../../../components/basecomponents/Divider";
-import { FaGears } from "react-icons/fa6";
-
+import devops from "../../../assets/SVG/devops.svg";
+import template from "../../../assets/direction/template.svg";
 const Preview = ({ formData, onBack }) => {
   return (
     <div className="   mx-auto mt-10">
       <div>
         <div className="relative  max-w-2xl  px-4 py-7 my-4 md:my-16 bg-slate-100 mx-auto">
-          <CiGrid31
-            size={48}
-            className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-3 w-20"
+          <img
+            src={template}
+            alt="icon"
+            className="bg-black  rounded-l-lg absolute left-0 top-0  h-full p-3 w-20"
           />
-          <h2 className="  rounded-lg pl-20 h-full   w-full text-sm ">
-            to speed up the process of posting a job try using {"  "}
-            <button className=" border-b-2 border-purple-400 font-bold px-1">
-              JOB templates
+          <h2 className="   pl-20 h-full   w-full text-sm font-kantumruy">
+            To speed up the process of posting a job, try using
+            <button className=" ml-2 border-b-[3px] border-custom-purple  font-kantumruy font-semibold">
+              job templates.
             </button>{" "}
-            page
           </h2>
         </div>
       </div>
@@ -28,35 +27,42 @@ const Preview = ({ formData, onBack }) => {
         <div className="flex flex-col   gap-1 md:gap-3">
           <div className="flex justify-center items-center gap-x-2">
             {" "}
-            <h1 className="text-xl  md:text-3xl lg:text-4xl font-extrabold">
+            <h1 className="text-xl  md:text-3xl lg:text-4xl font-semibold font-kantumruy">
               Review and Publish
             </h1>
-            <span className="text-2xl">[2/2]</span>
+            <span className="text-4xl font-kantumruy">[2/2]</span>
           </div>
-          <p className="text-sm md:text-2xl">
-            Review job detail before pusblishing !!
+          <p className="text-sm md:text-2xl font-kantumruy">
+            Review job details before publishing.
           </p>
         </div>
         {/* //buttons part */}
         <div className="flex justify-center gap-10 mt-16 ">
           <Mybutton
             background={
-              "border-4 border-indigo-700 rounded-lg py-1 md:py-2 px-2 md:px-5 text-2xl  "
+              "border-4 border-custom-purple rounded-lg py-1 md:py-2 px-2 md:px-5 text-2xl font-kantumruy font-medium  "
             }
           >
             Edit
           </Mybutton>
-          <Mybutton background={"bg-purple-400 rounded-lg p-1 md:p-2 lg:p-3"}>
-            <h1 className="text-2xl">Publish job</h1>
+          <Mybutton
+            background={
+              "bg-custom-purple rounded-lg p-1 md:p-2 lg:p-3 font-semibold font-kantumruy text-white"
+            }
+          >
+            <h1 className="text-2xl">Publish job </h1>
           </Mybutton>
         </div>
 
         <Divider>VACANCY PREVIEW</Divider>
         {/* //below devider part  */}
         <div>
-          <div className="flex justify-center items-center gap-8">
-            <FaGears size={48} />{" "}
-            <span className=" text-sm md:text-3xl ">{formData.jobTitle}</span>
+          <div className="flex justify-center items-center gap-4">
+            <img src={devops} alt="" />
+            <span className=" text-sm md:text-4xl  font-kantumruy font-medium">
+              {" "}
+              {formData.jobTitle}
+            </span>
           </div>
           <div
             className=" 
@@ -117,6 +123,9 @@ const Preview = ({ formData, onBack }) => {
           >
             Back to Edit
           </button>
+        </div>
+        <div className="my-10">
+          <Divider />
         </div>
       </div>
     </div>
