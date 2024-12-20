@@ -17,6 +17,23 @@ import tsegay from "../../../assets/tsegay.jpg";
 import PrintProfileComponent from "./PrintProfileComponent";
 
 const Profilepreviw = () => {
+  const handlePrint = () => {
+    const printWindow = window.open("", "_blank"); // Open a new window/tab
+    printWindow.document.write(
+      "<!DOCTYPE html><html><head><title>Print</title>"
+    );
+    printWindow.document.write(
+      "<style>@page { size: auto; margin: 0mm; }</style>"
+    ); // Important for full page printing
+    printWindow.document.write("</head><body>");
+    printWindow.document.write(
+      document.getElementById("print-content").innerHTML
+    ); // Write the print component's HTML
+    printWindow.document.write("</body></html>");
+    printWindow.document.close();
+    printWindow.print();
+    printWindow.close(); // Close the print window after printing
+  };
   const [skills, setSkills] = useState([
     { name: "Java", level: 3 },
     { name: "Flutter", level: 3 },
@@ -34,27 +51,20 @@ const Profilepreviw = () => {
 
   //  thisi   printable page
 
-  const handlePrint = () => {
-    if (printComponentRef.current) {
-      setTimeout(() => {
-        window.print();
-      }, 0);
-    }
-  };
-
   return (
     <div className="">
       <div>
         <Location />
       </div>
-      <div className="w-full">
-        <PrintProfileComponent
+      <div className="">
+        {/* //this component is hidden because it is shown only at the time of print  */}
+        {/* <PrintProfileComponent
           name={name}
           title={title}
           mylinks={mylinks}
           skills={skills}
           history={history}
-        />
+        /> */}
       </div>
       <div className=" flex  flex-col  items-center  gap-5 justify-center my-5 md:my-10 ">
         <Dashboaredtitle css={"max-w-[550px]"} heading={"Freelancer Profile"}>
@@ -112,11 +122,23 @@ const Profilepreviw = () => {
                 onClick={handlePrint}
               >
                 <h1 className="text-2xl">Print profile </h1>
+                {/* when i click this button PrintProfileComponent.jsx will be called and  printed but still he is waiting the button to be clicked  */}
               </Mybutton>
             </div>
           </div>
         </div>
       </form>
+      <div style={{ display: "none" }}>
+        <div id="print-content">
+          <PrintProfileComponent
+            name={name}
+            title={title}
+            mylinks={mylinks}
+            skills={skills}
+            history={history}
+          />
+        </div>
+      </div>
     </div>
   );
 };
