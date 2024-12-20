@@ -30,6 +30,7 @@ import Interpasswordcode from "./pages/authpages/Interpasswordcode";
 import Privacypoliciy from "./pages/authpages/Privacypoliciy";
 import Logout from "./pages/privatepages/Logout";
 import Userprofile from "./pages/privatepages/client/Userprofile";
+import Profilepreviw from "./pages/privatepages/client/Profilepreviw";
 const App = () => {
   console.log("<App/> rendered");
 
@@ -141,6 +142,14 @@ const App = () => {
                 element={
                   <Private>
                     <Companyprofilesetting />
+                  </Private>
+                }
+              ></Route>
+              <Route
+                path="/sheqlee/Profile Preview"
+                element={
+                  <Private>
+                    <Profilepreviw />
                   </Private>
                 }
               ></Route>

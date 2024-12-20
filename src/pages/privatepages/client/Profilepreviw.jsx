@@ -13,7 +13,9 @@ import Linkstabble from "../../../components/onetimecmponent/Linkstabble";
 import Uploadcv from "../../../components/onetimecmponent/Uploadcv";
 import Mybutton from "../../../components/basecomponents/Mybutton";
 import Divider from "../../../components/basecomponents/Divider";
-const Userprofile = () => {
+import tsegay from "../../../assets/tsegay.jpg";
+
+const Profilepreviw = () => {
   const [skills, setSkills] = useState([
     { name: "Java", level: 3 },
     { name: "Flutter", level: 3 },
@@ -24,19 +26,17 @@ const Userprofile = () => {
     { profile: "linkedin", link: "https://linkedin.com/mylinkedin" },
   ]);
 
+  const history =
+    "I have been working as a software developer for the last 3+ years. I have excellent experience in backend, web frontend and mobile app development. I am extremely dedicated to completing projects on time and with splendid work quality. I would be an addition to your team.";
+  const name = "Muruts Yifter";
+  const title = "Full-Stack Developer";
   return (
     <div>
       <div>
         <Location />
       </div>
       <div className=" flex  flex-col  items-center  gap-5 justify-center my-5 md:my-10 ">
-        <Dashboaredtitle
-          text={
-            " The more complete your profile, the easier for companies to select you for jobs."
-          }
-          css={"max-w-[550px]"}
-          heading={"Edit Profile"}
-        >
+        <Dashboaredtitle css={"max-w-[550px]"} heading={"Freelancer Profile"}>
           <img src={profilesvg} alt="company svg" width={66} height={66} />
         </Dashboaredtitle>
       </div>
@@ -46,62 +46,52 @@ const Userprofile = () => {
           <div className="flex flex-col w-2/3 gap-2 relative  ">
             <Oneinputfor
               labeltext={"Full name "}
-              warn
               placeholder={"Muruts Yifter"}
               icon={blackedit}
               id={"name"}
+              value={name}
             />
           </div>
           <div className="flex flex-col w-2/3 gap-2 relative">
             <Oneinputfor
               labeltext={"Title "}
-              warn
               placeholder={"Full-Stack Developer"}
               icon={blackedit}
               id={"title "}
+              value={title}
             />
           </div>
 
-          <Sectionprofile profilepic1={profilepic1} buttontext={"upload"} />
+          <Sectionprofile profilepic1={tsegay} />
         </div>
         <div>
-          <div className=" -translate-y-8 max-w-5xl mx-auto">
-            <Reatchtext
-              showtext={"Introduce yourself"}
-              placeholder={"Say something appealing about yourself..."}
-            />
+          <div className=" my-10 max-w-5xl mx-auto font-kantumruy space-y-4">
+            <label htmlFor="bio" className="font-medium text-2xl">
+              Bio
+            </label>
+            <textarea
+              id="bio"
+              rows={5}
+              className="bg-custom-tags rounded-[15px] p-5  w-full resize-none outline-none text-xl"
+              value={history}
+            ></textarea>
           </div>
         </div>
-        <div className="mx-auto  max-w-5xl ">
-          <Skillstable
-            skills={skills}
-            title={"Your skills"}
-            subtitle={
-              " Adding your skills will help us make job suggestions more accurately."
-            }
-          />
-          <Linkstabble
-            mylinks={mylinks}
-            title={"Your profiles"}
-            subtitle={
-              "Adding your links to your profiles make more credible. Profiles could be GitHub, LinkedIn etc."
-            }
-          />
+        <div className="mx-auto  max-w-5xl space-y-8 ">
+          <Skillstable skills={skills} title={"Skillset"} buttons={false} />
+          <Linkstabble mylinks={mylinks} title={"Profiles"} buttons={false} />
           <Uploadcv />
-          <div className="flex justify-end  ">
-            <Mybutton
-              background={
-                "bg-custom-purple font-semibold font-kantumruy  text-custom-white rounded-lg p-1 md:p-2 lg:p-3"
-              }
-            >
-              <h1 className="text-2xl">update profile </h1>
-            </Mybutton>
-          </div>
-          <div className=" max-w-5xl  mx-auto mb-10">
-            <Divider></Divider>
-            <span className="block font-kantumruy text-start ">
-              <span className="text-red-800">*</span> all fields are required.{" "}
-            </span>
+          <div className="flex justify-end">
+            <div className="  my-16 ">
+              <Mybutton
+                background={
+                  "bg-custom-purple font-semibold font-kantumruy  text-custom-white rounded-lg p-1 md:p-2 lg:p-3"
+                }
+                onClick={window.print()}
+              >
+                <h1 className="text-2xl">Print profile </h1>
+              </Mybutton>
+            </div>
           </div>
         </div>
       </form>
@@ -109,4 +99,4 @@ const Userprofile = () => {
   );
 };
 
-export default Userprofile;
+export default Profilepreviw;
