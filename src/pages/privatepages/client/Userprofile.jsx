@@ -87,7 +87,7 @@ const Userprofile = () => {
               "Adding your links to your profiles make more credible. Profiles could be GitHub, LinkedIn etc."
             }
           />
-          <Uploadcv />
+          <Uploadcv label={"Your CV (*.pdf)"} />
           <div className="flex justify-end  ">
             <Mybutton
               background={

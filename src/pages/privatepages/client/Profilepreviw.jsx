@@ -30,6 +30,8 @@ const Profilepreviw = () => {
     "I have been working as a software developer for the last 3+ years. I have excellent experience in backend, web frontend and mobile app development. I am extremely dedicated to completing projects on time and with splendid work quality. I would be an addition to your team.";
   const name = "Muruts Yifter";
   const title = "Full-Stack Developer";
+
+  //
   return (
     <div>
       <div>
@@ -80,14 +82,14 @@ const Profilepreviw = () => {
         <div className="mx-auto  max-w-5xl space-y-8 ">
           <Skillstable skills={skills} title={"Skillset"} buttons={false} />
           <Linkstabble mylinks={mylinks} title={"Profiles"} buttons={false} />
-          <Uploadcv />
+          <Uploadcv label={"CV"} />
           <div className="flex justify-end">
             <div className="  my-16 ">
               <Mybutton
                 background={
                   "bg-custom-purple font-semibold font-kantumruy  text-custom-white rounded-lg p-1 md:p-2 lg:p-3"
                 }
-                onClick={window.print()}
+                // onClick={window.print()} but now i will use what you say gimini
               >
                 <h1 className="text-2xl">Print profile </h1>
               </Mybutton>
