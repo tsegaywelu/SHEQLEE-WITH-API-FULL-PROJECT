@@ -17,6 +17,8 @@ export default {
         "custom-gray": "#333333",
         "custom-red": "#EA4335",
         "white-slate": "#C7C7C7",
+        itseemsgray: "#C9C8C8",
+        itseemswhite: "#F3F3F3",
       },
       fill: ["hover", "focus"],
       stroke: ["hover", "focus"],

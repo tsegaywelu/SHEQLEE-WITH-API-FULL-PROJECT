@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Location from "../../../components/basecomponents/Location";
 import profilesvg from "../../../assets/direction/profilesvg.svg";
 import Dashboaredtitle from "../../../components/onetimecmponent/Dashboaredtitle";
@@ -14,6 +14,7 @@ import Uploadcv from "../../../components/onetimecmponent/Uploadcv";
 import Mybutton from "../../../components/basecomponents/Mybutton";
 import Divider from "../../../components/basecomponents/Divider";
 import tsegay from "../../../assets/tsegay.jpg";
+import PrintProfileComponent from "./PrintProfileComponent";
 
 const Profilepreviw = () => {
   const [skills, setSkills] = useState([
@@ -27,21 +28,40 @@ const Profilepreviw = () => {
   ]);
 
   const history =
-    "I have been working as a software developer for the last 3+ years. I have excellent experience in backend, web frontend and mobile app development. I am extremely dedicated to completing projects on time and with splendid work quality. I would be an addition to your team.";
-  const name = "Muruts Yifter";
-  const title = "Full-Stack Developer";
+    "Dedicated and efficient full-stack developer, with 3+ years of experience in application layers, presentation layers and database. Certified both in F/E and B/E technologies. Spearheaded transition from LAMP to MEAN which cut latency by 40% and increased effectiveness of database administration by 20%. Seeking to further improve HTML5 and CSS3 skills as the future full-stack developer at KeplerLab.";
+  const name = "Tsegay Welu";
+  const title = "Full-Stack Web Developer";
 
-  //
+  //  thisi   printable page
+
+  const handlePrint = () => {
+    if (printComponentRef.current) {
+      setTimeout(() => {
+        window.print();
+      }, 0);
+    }
+  };
+
   return (
-    <div>
+    <div className="">
       <div>
         <Location />
+      </div>
+      <div className="w-full">
+        <PrintProfileComponent
+          name={name}
+          title={title}
+          mylinks={mylinks}
+          skills={skills}
+          history={history}
+        />
       </div>
       <div className=" flex  flex-col  items-center  gap-5 justify-center my-5 md:my-10 ">
         <Dashboaredtitle css={"max-w-[550px]"} heading={"Freelancer Profile"}>
           <img src={profilesvg} alt="company svg" width={66} height={66} />
         </Dashboaredtitle>
       </div>
+
       <form action="" onSubmit={(e) => e.preventDefault()}>
         {/* //inputs part */}
         <div className="flex max-sm:flex-col justify-center items-start  gap-5  max-w-5xl mx-auto ">
@@ -89,7 +109,7 @@ const Profilepreviw = () => {
                 background={
                   "bg-custom-purple font-semibold font-kantumruy  text-custom-white rounded-lg p-1 md:p-2 lg:p-3"
                 }
-                // onClick={window.print()} but now i will use what you say gimini
+                onClick={handlePrint}
               >
                 <h1 className="text-2xl">Print profile </h1>
               </Mybutton>
