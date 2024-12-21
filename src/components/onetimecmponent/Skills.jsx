@@ -15,6 +15,7 @@ const Skills = ({ skills, title, subtitle, buttons }) => {
           buttontext={"Add skill"}
           setshowmodal={setshowmodal}
           showmodal={showmodal}
+          dropdown
         />
       )}
       <div className="space-y-3 mb-5">

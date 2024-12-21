@@ -23,11 +23,11 @@ const Uploadcv = ({ label, id }) => {
       </label>
       {/* section for the inputs */}
       <div className="flex items-center w-fit flex-wrap  ">
-        <span className="font-kantumruy  px-10 py-2 rounded-lg  rounded-r-none bg-custom-tags flex-grow overflow-hidden border-4 border-custom-purple">
+        <span className="font-kantumruy  px-10 pt-1 text-xl rounded-lg  rounded-r-none bg-custom-tags flex-grow overflow-hidden border-4 border-custom-purple ">
           {filename ? filename : "..."}
         </span>
         <button
-          className="bg-custom-purple px-3 py-2 rounded-lg rounded-l-none  border-4 border-custom-purple font-kantumruy font-semibold text-white"
+          className="bg-custom-purple px-3 py-1 rounded-lg rounded-l-none  border-4 border-custom-purple font-kantumruy font-semibold text-white"
           onClick={handleclick}
         >
           Upload CV <span className="font-normal">[.pdf]</span>
@@ -39,6 +39,7 @@ const Uploadcv = ({ label, id }) => {
           accept=".pdf"
           className="hidden"
           onChange={handleFileChange}
+          id={label}
         />
       </div>
     </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Mybutton from "./Mybutton";
 import { createPortal } from "react-dom";
 import { Link } from "react-router-dom";
+import Dropdownform from "./Dropdownform";
 export const Dropdownprofile = ({
   closewin,
   message,
@@ -10,6 +11,7 @@ export const Dropdownprofile = ({
   buttontext,
   setshowmodal,
   showmodal,
+  dropdown,
 }) => {
   return createPortal(
     <div className="">
@@ -28,17 +30,25 @@ export const Dropdownprofile = ({
               <div className="flex flex-col justify-center items-center gap-4 w-full">
                 <input
                   type="text"
-                  id="programing"
                   placeholder={placeholder1}
                   className="bg-custom-tags p-4 placeholder:text-custom-placeholder w-4/5 rounded-lg outline-none "
                 />
 
-                <input
-                  type="text"
-                  id="programing"
-                  placeholder={placeholder2}
-                  className="bg-custom-tags p-4 placeholder:text-custom-placeholder w-4/5 rounded-lg outline-none "
-                />
+                {dropdown ? (
+                  <div className="relative w-4/5 text-custom-placeholder font-normal ">
+                    <Dropdownform
+                      options={["Junior", "Intermidate", "Sunior"]}
+                      defaultText="skill level"
+                    />
+                  </div>
+                ) : (
+                  <input
+                    type="text"
+                    placeholder={placeholder2}
+                    className="bg-custom-tags p-4 placeholder:text-custom-placeholder w-4/5 rounded-lg outline-none "
+                  />
+                )}
+
                 <div className="flex justify-end   ">
                   <Mybutton
                     background={

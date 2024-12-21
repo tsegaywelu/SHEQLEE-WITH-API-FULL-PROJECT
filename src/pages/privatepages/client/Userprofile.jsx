@@ -79,6 +79,7 @@ const Userprofile = () => {
             subtitle={
               " Adding your skills will help us make job suggestions more accurately."
             }
+            buttons
           />
           <Linkstabble
             mylinks={mylinks}
@@ -86,9 +87,24 @@ const Userprofile = () => {
             subtitle={
               "Adding your links to your profiles make more credible. Profiles could be GitHub, LinkedIn etc."
             }
+            buttons
           />
-          <Uploadcv label={"Your CV (*.pdf)"} />
-          <div className="flex justify-end  ">
+
+          <Uploadcv
+            label={
+              <div className="font-kantumruy space-y-1">
+                <h1 className="font-medium">
+                  Your CV ( <span className="text-red-600">*</span>.pdf)
+                </h1>
+                <p className="text-sm font-normal">
+                  Adding your CV will help us to know you in details and suggest
+                  you to companies.
+                </p>
+              </div>
+            }
+          />
+
+          <div className="flex justify-end  mt-5 ">
             <Mybutton
               background={
                 "bg-custom-purple font-semibold font-kantumruy  text-custom-white rounded-lg p-1 md:p-2 lg:p-3"
