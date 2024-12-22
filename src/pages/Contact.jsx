@@ -65,7 +65,7 @@ const Contact = () => {
             id="message"
             placeholder="Write your message down..."
             rows={7}
-            className="bg-custom-tags w-full rounded-lg p-4  outline-none text-xl placeholder:font-kantumruy placeholder:text-custom-placeholder resize-none "
+            className="placeholders"
           ></textarea>
           <span className="absolute md:right-32 right-2 bottom-1 font-kantumruy">
             0/512

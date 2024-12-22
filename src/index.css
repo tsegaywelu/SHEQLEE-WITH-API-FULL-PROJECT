@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* let me do here that i did not want to type many css tailwind class fo every container so i will group them? */
+
+.placeholders {
+  @apply bg-custom-tags w-full rounded-lg p-4  outline-none text-xl placeholder:font-kantumruy placeholder:text-custom-placeholder resize-none;
+}
 
 .quill {
   /* this is the father to all class */

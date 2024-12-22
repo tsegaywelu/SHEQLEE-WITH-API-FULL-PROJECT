@@ -53,8 +53,11 @@ const Header = () => {
             isMenuOpen ? "flex flex-col gap-2 " : "hidden "
           }`}
         >
-          <div className=" mt-1 p-1 md:p-2 lg:p-3  text-custom-black font-kantumruy font-medium">
-            <Link to={"/sheqlee/All jobs"}>All jobs</Link>
+          <div className=" mt-1 p-1 md:p-2 lg:p-3  text-custom-black font-kantumruy font-medium relative ">
+            <Link to={"/sheqlee/All jobs"} className=" inline-block relative">
+              All jobs
+              <div className="absolute w-16 h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-38px]"></div>
+            </Link>
           </div>
 
           {/* Category Dropdown */}

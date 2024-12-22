@@ -12,13 +12,12 @@ const Alljobs = () => {
     <>
       <div className="relative">
         <Location />
-        <div className="absolute w-16 h-[5px] bg-custom-purple bottom-8 md:right-85 lg:right-80 mr-44"></div>
       </div>
 
-      <div className=" px-3 md:px-6 lg:px-8 my-3 md:my-6 lg:my-12 p-3 md:p-6 lg:p-10  ">
+      <div className=" px-3 md:px-6 lg:px-8 my-3 md:my-6 lg:my-12 p-3 md:p-6 lg:p-10 ">
         <div className="max-w-4xl mx-auto ">
           {/* header part */}
-          <h1 className="text-center font-kantumruy font-semibold text-xl md:text-2xl lg:text-4xl mb-3 ">
+          <h1 className="text-center font-kantumruy font-semibold text-xl md:text-2xl lg:text-4xl mb-3   ">
             All job posts{" "}
           </h1>
           {/* text part */}
@@ -33,6 +32,7 @@ const Alljobs = () => {
               <Dropdownform
                 options={["Category 1", "Category 2", "Category 3"]}
                 defaultText="All categories"
+                onChange={onchange}
               />
             </div>
             <div className="relative">

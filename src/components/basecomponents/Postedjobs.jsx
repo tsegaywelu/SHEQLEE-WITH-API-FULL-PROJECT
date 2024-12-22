@@ -54,7 +54,7 @@ const Postedjobs = () => {
             </div>
           )}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-7 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-7 animate-pulse">
             {/* ///////////////////// */}
             {emptyRectangles.map((jobsall, index) => {
               return (

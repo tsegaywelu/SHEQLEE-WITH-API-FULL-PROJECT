@@ -48,7 +48,7 @@ const Profilepreviw = () => {
     "Dedicated and efficient full-stack developer, with 3+ years of experience in application layers, presentation layers and database. Certified both in F/E and B/E technologies. Spearheaded transition from LAMP to MEAN which cut latency by 40% and increased effectiveness of database administration by 20%. Seeking to further improve HTML5 and CSS3 skills as the future full-stack developer at KeplerLab.";
   const name = "Tsegay Welu";
   const title = "Full-Stack Web Developer";
-
+  const email = "muruts.yifter@gmail.com";
   //  thisi   printable page
 
   return (
@@ -112,7 +112,16 @@ const Profilepreviw = () => {
         <div className="mx-auto  max-w-5xl space-y-8 ">
           <Skillstable skills={skills} title={"Skillset"} buttons={false} />
           <Linkstabble mylinks={mylinks} title={"Profiles"} buttons={false} />
-          <Uploadcv label={"CV"} />
+          <div className="flex justify-between">
+            <Uploadcv label={<div className="text-xl my-3">CV </div>} />
+            <Oneinputfor
+              labeltext={"Email "}
+              placeholder={"Full-Stack Developer"}
+              icon={blackedit}
+              id={"title "}
+              value={email}
+            />
+          </div>
           <div className="flex justify-end">
             <div className="  my-16 ">
               <Mybutton

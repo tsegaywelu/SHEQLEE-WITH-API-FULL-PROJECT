@@ -12,9 +12,9 @@ const Dropdownform = ({
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
-
+  const [selectedvalue, setselected] = useState(defaultText);
   const handleOptionClick = (option) => {
-    onChange(option); // Call the parent's `onChange` function
+    setselected(option); // Call the parent's `onChange` function
     setIsOpen(false); // Close dropdown
   };
 
@@ -32,13 +32,17 @@ const Dropdownform = ({
           className="bg-custom-tags  rounded-lg  h-full outline-none p-3 w-full text-xl  font-kantumruy text-custom-placeholder text-start "
           value={value || defaultText}
         >
-          {value || defaultText}{" "}
+          {selectedvalue}
           <img
             src={arrowdown}
             alt=""
             width={10}
             height={10}
-            className="absolute top-6 right-3"
+            className={`absolute top-6 right-3 ${
+              isOpen
+                ? "rotate-180 transition duration-700"
+                : "rotate-0 transition duration-700"
+            }`}
           />
         </button>
         {isOpen && (
@@ -47,7 +51,7 @@ const Dropdownform = ({
               <li
                 key={index}
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                onClick={() => handleOptionClick(option)}
+                onClick={(e) => handleOptionClick(option)}
               >
                 {option}
               </li>
