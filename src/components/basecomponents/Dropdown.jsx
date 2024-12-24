@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 function Dropdown({
   categories,
   dropdowntitle,
   icons,
   showicons,
   chnagelinksurl,
+  underline,
 }) {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
   return (
     <div className=" inline-block text-center">
       {/* Dropdown button */}
@@ -22,9 +25,15 @@ function Dropdown({
             {" "}
             <FaAngleDown
               size={10}
-              className="!fill-black  absolute top-4  right-2"
+              className={`!fill-black  absolute top-4  right-2 transition duration-700 ${
+                isOpen ? "rotate-180" : "rotate-0"
+              }`}
             />
           </span>
+
+          {pathname.includes("Categories") && underline && (
+            <div className="absolute w-20 h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-32px]"></div>
+          )}
         </button>
       </div>
 

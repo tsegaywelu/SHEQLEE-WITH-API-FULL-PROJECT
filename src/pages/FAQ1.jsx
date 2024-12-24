@@ -4,6 +4,7 @@ import up from "../assets/SVG/up.svg";
 import Location from "../components/basecomponents/Location";
 import question from "../assets/SVG/question.svg";
 import Dashboaredtitle from "../components/onetimecmponent/Dashboaredtitle";
+import Qestion from "../components/basecomponents/Qestion";
 const FAQ1 = () => {
   const [activetab, setactivetab] = useState("freelancers");
   const [openquestion, setopenquestion] = useState(null);
@@ -64,7 +65,7 @@ const FAQ1 = () => {
   return (
     <div>
       <Location />
-      <div className="p-6 max-w-4xl mx-auto  mt-2 md:mt-6 ">
+      <div className="p-6 max-w-4xl mx-auto  mt-2   ">
         <Dashboaredtitle
           text={
             "The following are some of the most commonly asked questions by our users."
@@ -108,22 +109,25 @@ const FAQ1 = () => {
         <div className="space-y-4">
           {faqData[activetab].map((item, index) => {
             return (
-              <div key={index} className="border rounded-lg overflow-hidden">
+              <div key={index} className="border rounded-lg overflow-hidden ">
                 <button
-                  className="w-full px-4 md:px-12 py-3 md:py-6 text-left text-sm md:text-xl bg-custom-tags font-kantumruy"
+                  className="w-full px-4 md:px-8 py-3 md:py-6 text-left text-sm md:text-xl bg-custom-tags font-kantumruy flex  items-center justify-between"
                   onClick={() => togleanswer(index)}
                 >
                   {item.question}
-                  <span className="float-right">
+                  <span className="w-4 h-4 flex-shrink-0 flex items-center justify-center  rounded-full ">
                     {openquestion === index ? (
-                      <img src={up} width={16} height={16} />
+                      <img src={up} className="w-full h-full object-contain" />
                     ) : (
-                      <img src={down} width={16} height={16} />
+                      <img
+                        src={down}
+                        className="w-full h-full object-contain"
+                      />
                     )}
                   </span>
                 </button>
                 {openquestion === index && (
-                  <div className="p-4 bg-custom-slate text-lg text-custom-black font-kantumruy">
+                  <div className="p-8 bg-custom-slate text-lg text-custom-black font-kantumruy">
                     {" "}
                     {item.answer}
                   </div>
@@ -133,6 +137,7 @@ const FAQ1 = () => {
           })}
         </div>
       </div>
+      <Qestion />
     </div>
   );
 };

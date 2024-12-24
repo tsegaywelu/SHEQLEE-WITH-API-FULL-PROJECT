@@ -28,7 +28,7 @@ const Companysignup = () => {
           className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-7"
         />
         <h2 className="  rounded-lg pl-16 h-full   w-full text-lg font-kantumruy ">
-          if you are freelancer please visite{" "}
+          if you are freelancer please visit{" "}
           <Link
             to={"/sheqlee/employersignup"}
             className=" border-b-2 border-purple-400 font-semibold font-kantumruy"
@@ -45,7 +45,7 @@ const Companysignup = () => {
         <div>
           {" "}
           <h1 className="text-2xl md:text-4xl text-center font-semibold font-kantumruy">
-            company Registration{" "}
+            Company Registration{" "}
           </h1>
         </div>
       </div>
@@ -71,7 +71,7 @@ const Companysignup = () => {
               {/* <span className="bg-black text-white rounded-l-lg absolute  h-full  ">
                 https://
               </span> */}
-              <span className="bg-black text-white rounded-l-lg text-xl p-3 font-kantumruy">
+              <span className="bg-black text-white rounded-l-lg text-xl py-2 px-3  font-kantumruy">
                 https://
               </span>
               <input
@@ -129,13 +129,13 @@ const Companysignup = () => {
           <div className="flex items-center gap-3">
             <Checkbox />
             <span className="text-sm font-kantumruy">
-              by creating an account , you agree to our{" "}
+              By creating an account , you agree to our{" "}
               <span className="border-b-2 border-custom-purple font-kantumruy font-semibold">
-                terms and conditions{" "}
+                Terms and Conditions{" "}
               </span>{" "}
               and{" "}
               <span className="border-b-2 border-custom-purple font-kantumruy font-semibold">
-                privacy policy{" "}
+                Privacy Policy{" "}
               </span>{" "}
             </span>
           </div>
@@ -143,7 +143,7 @@ const Companysignup = () => {
           {/* //for the button  */}
           <div className="text-end mt-10 ">
             <p className="text-sm font-kantumruy">
-              already got an account?{" "}
+              Already got an account?{" "}
               <Link to={"/sheqlee/login"}>
                 <span className="border-b-2   border-custom-purple font-kantumruy font-semibold">
                   Login
@@ -151,7 +151,7 @@ const Companysignup = () => {
               </Link>
               <Mybutton
                 background={
-                  "bg-custom-purple text-white font-semibold font-kantumruy text-xl rounded-lg p-1 md:p-2 lg:p-3 ml-5 "
+                  "bg-custom-purple text-white font-semibold font-kantumruy text-xl rounded-lg py-1 md:py-2 lg:py-3 px-5 ml-5 "
                 }
               >
                 Register

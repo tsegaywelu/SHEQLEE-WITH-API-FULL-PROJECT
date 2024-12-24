@@ -8,6 +8,7 @@ import employeeimage from "../assets/companysPNG/placeholder/placeholder.png";
 import bell from "../assets/SVG/bell.svg";
 import down from "../assets/companysPNG/down/down.png";
 import Postedjobs from "../components/basecomponents/Postedjobs";
+import Qestion from "../components/basecomponents/Qestion";
 const Companydetail = () => {
   return (
     <div>
@@ -16,9 +17,9 @@ const Companydetail = () => {
       </div>
       <div className="flex flex-col justify-center items-center gap-y-6">
         <img src={companylogo} alt="company logo" width={96} height={96} />
-        <div className="flex gap-2">
+        <div className="flex gap-2 items-center">
           <h2 className="font-kantumruy font-semibold text-4xl">Hotjar</h2>
-          <div className="w-4 h-4 mt-2">
+          <div className="w-4 h-4 ">
             <img src={verify} alt="verify icon" width={24} height={12} />
           </div>
         </div>
@@ -82,20 +83,21 @@ const Companydetail = () => {
           identify as women.
         </p>
         <button className="absolute bottom-4 right-3 bg-custom-purple rounded-[5px] text-white p-2 font-kantumruy font-medium">
-          <span className="flex gap-1">
+          <span className="flex gap-1 text-[13px]">
             Read more
-            <div className="w-4 h-4 pt-1">
+            <div className="w-2.5 h-2.5 ml-[2px] pt-[2px]">
               <img src={down} />
             </div>
           </span>
         </button>
       </div>
-      <div className=" mt-10">
-        <h2 className="font-kantumruy font-semibold text-center text-3xl mt-10">
+      <div className=" mt-24">
+        <h2 className="font-kantumruy font-semibold text-center text-3xl ">
           Job posts from Hotjar
         </h2>
       </div>
       <Postedjobs />
+      <Qestion />
     </div>
   );
 };

@@ -8,6 +8,7 @@ import Postedjobs from "../components/basecomponents/Postedjobs";
 import Platformstatus from "../components/onetimecmponent/Platformstatus";
 //import { Player as Lottie } from "@lottiefiles/react-lottie-player";
 import Lottie from "lottie-react";
+import Qestion from "../components/basecomponents/Qestion";
 const Landing = () => {
   const [showModal, setshowModal] = useState(false);
   // function closemodal() {
@@ -24,7 +25,7 @@ const Landing = () => {
   const leftsidecontents = () => {
     return (
       <>
-        <div className="md:w-1/2 flex items-center  justify-center flex-col ">
+        <div className="md:w-1/2 flex items-center  justify-center flex-col  ">
           <h1 className="font-semibold font-kantumruy text-xl md:text-3xl lg:text-5xl  w-[90%] pl-20 ">
             Recruit <span className="text-custom-purple">affordable</span>
             <div>
@@ -34,7 +35,7 @@ const Landing = () => {
             <div>professionals.</div>
           </h1>
 
-          <p className=" lg:my-7 text-sm md:text-xl  mx-2 md:ml-5 lg:ml-10 pl-1 mr-5 pr-5   ">
+          <p className=" lg:my-7 text-sm md:text-xl    mr-5 pr-5   ">
             <div>Web frontend, mobile app, backend, database,</div>
             <div>full-stack, data science, UI/UX & product design,</div>
             project management, scrum master, etc.
@@ -42,8 +43,8 @@ const Landing = () => {
           {/* //for the  pop up text */}
 
           {/* //button component */}
-          <div className=" mt-5 md:mt-5 lg:mt-10  w-full" onClick={openmodal}>
-            <div className=" mx-5 md:mx-10 lg:mx-24">
+          <div className=" mt-5 md:mt-5 lg:mt-10  w-full " onClick={openmodal}>
+            <div className=" translate-x-28">
               <Mybutton
                 background={
                   "bg-custom-purple  text-sm md:text-xl lg:text-2xl py-1 md:py-2 lg:py-4 px-5 md:px-10 lg:px-16 rounded-lg  text-white font-semibold font-kantumruy "
@@ -91,7 +92,8 @@ const Landing = () => {
         {/* display tags here  */}
       </div>
       <Tags />
-      <Postedjobs />
+      <Postedjobs showicon5 />
+      <Qestion />
       <Platformstatus />
     </>
   );

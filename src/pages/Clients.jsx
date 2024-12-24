@@ -9,7 +9,6 @@ const Clients = () => {
     <div>
       <div className="relative">
         <Location />
-        <div className="absolute w-16 h-[5px] bg-custom-purple bottom-8 md:right-85 md:right-66 lg:right-64 mr-2"></div>
       </div>
       {/* //header part  */}
       <div className=" mt-5 md:mt-10 flex  flex-col gap-7 justify-center items-center">
@@ -42,7 +41,7 @@ const Clients = () => {
               discriptiondetail={
                 "We have been delivered 3,916,718 notifications about new remote jobs to job seekers since the website launched."
               }
-              cssproperty="flex  justify-center text-start  w-3/4 mt-3 md:mt-10 mb-16 font-kantumruy "
+              cssproperty="flex  justify-center text-start  w-3/4 mt-3 md:mt-5 mb-8 font-kantumruy  "
               rounded="rounded-l-3xl"
               launched={"(Launched: 1 YEAR AGO)"}
             />
@@ -55,7 +54,7 @@ const Clients = () => {
               discriptiondetail={
                 "We have a telegram channel with 49,716+ real subscribers. Our channel posts have 29.5K views per day on average."
               }
-              cssproperty="flex  justify-center text-end  flex-row-reverse w-3/4 mt-3 md:mt-10 mb-16 font-kantumruy "
+              cssproperty="flex  justify-center text-end  flex-row-reverse w-3/4 mt-3 md:mt-5 mb-8 font-kantumruy   p-12"
               rounded="rounded-r-3xl"
             />
           </div>
@@ -66,7 +65,7 @@ const Clients = () => {
               discriptiondetail={
                 "We have been delivered 3,916,718 notifications about new remote jobs to job seekers since the website launched."
               }
-              cssproperty="flex  justify-center text-start  w-3/4 mt-3 md:mt-10 mb-16 font-kantumruy "
+              cssproperty="flex  justify-center text-start  w-3/4 mt-3 md:mt-5 mb-8 font-kantumruy "
               rounded="rounded-l-3xl"
               launched={"(Launched: 1 YEAR AGO)"}
             />
@@ -78,7 +77,7 @@ const Clients = () => {
               discriptiondetail={
                 "We have a telegram channel with 49,716+ real subscribers. Our channel posts have 29.5K views per day on average."
               }
-              cssproperty="flex  justify-center text-end  flex-row-reverse w-3/4 mt-3 md:mt-10 mb-16 font-kantumruy "
+              cssproperty="flex  justify-center text-end  flex-row-reverse w-3/4 mt-3 md:mt-5 mb-8 font-kantumruy "
               rounded="rounded-r-3xl"
             />
           </div>

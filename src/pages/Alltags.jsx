@@ -3,13 +3,14 @@ import Tags from "../components/basecomponents/Tags";
 import tag from "../assets/SVG/tag.svg";
 import Dashboaredtitle from "../components/onetimecmponent/Dashboaredtitle";
 import Location from "../components/basecomponents/Location";
+import Qestion from "../components/basecomponents/Qestion";
 const Alltags = () => {
   return (
     <div>
       <div className="">
         <Location />
       </div>
-      <div className="mt-7 mb-4">
+      <div className="mt-7 mb-8">
         <Dashboaredtitle
           text={
             " Job tags along with their respective number of jobs posted and number of subscribers."
@@ -23,6 +24,7 @@ const Alltags = () => {
       <Tags />
 
       <h1>pagination part </h1>
+      <Qestion />
     </div>
   );
 };

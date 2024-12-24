@@ -16,25 +16,25 @@ const Platformstatus = () => {
             <div>
               <img src={handshake} width={96} height={96} />
             </div>
-            <h3 className="w-2/3 h-4 bg-custom-tags  rounded-[10px]"></h3>
-            <div className="w-full h-2 bg-custom-tags rounded-[7px] "></div>
-            <p className="w-1/3  h-2 bg-custom-tags  rounded-[7px]"></p>
+            <h3 className="w-full h-6 bg-custom-tags  rounded-[3px]"></h3>
+            <div className="w-full h-3 bg-custom-tags rounded-[7px] scale-x-150 translate-y-1 "></div>
+            <p className="w-1/2  h-3 bg-custom-tags  rounded-[7px]"></p>
           </div>
 
           {/* for user icon  */}
           <div className="flex flex-col items-center text-center gap-5">
             <img src={programmer} width={96} height={96} />
-            <h3 className="w-2/3 h-4 bg-custom-tags  rounded-[10px]"></h3>
-            <div className="w-full h-2 bg-custom-tags rounded-[7px]"></div>
-            <p className="w-1/3  h-2 bg-custom-tags  rounded-[7px]"></p>
+            <h3 className="w-full h-6 bg-custom-tags  rounded-[3px]"></h3>
+            <div className="w-full h-3 bg-custom-tags rounded-[7px] scale-x-150 translate-y-1"></div>
+            <p className="w-1/2  h-3 bg-custom-tags  rounded-[7px]"></p>
           </div>
 
           {/* for the  */}
           <div className="flex flex-col items-center text-center gap-5">
             <img src={company} alt="" width={96} height={96} />
-            <h3 className="w-2/3 h-4 bg-custom-tags  rounded-lg"></h3>
-            <div className="w-full h-2 bg-custom-tags rounded-[7px]"></div>
-            <p className="w-1/3  h-2 bg-custom-tags  rounded-[7px]"></p>
+            <h3 className="w-full h-6 bg-custom-tags  rounded-[3px]"></h3>
+            <div className="w-full h-3 bg-custom-tags rounded-[7px] scale-x-150 translate-y-1"></div>
+            <p className="w-1/2  h-3 bg-custom-tags  rounded-[7px]"></p>
           </div>
         </div>
       ) : (

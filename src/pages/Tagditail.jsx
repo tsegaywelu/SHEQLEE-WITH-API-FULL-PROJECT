@@ -6,6 +6,7 @@ import Mybutton from "../components/basecomponents/Mybutton";
 import { FaFacebook, FaTwitter, FaTelegram, FaLinkedin } from "react-icons/fa";
 import Location from "../components/basecomponents/Location";
 import { Modal } from "../components/basecomponents/Modal";
+import Qestion from "../components/basecomponents/Qestion";
 const Catagprydetail = () => {
   const { theidtodisplay } = useParams();
   const mytitle = theidtodisplay;
@@ -38,7 +39,7 @@ const Catagprydetail = () => {
           <h1 className="text-lg md:text-xl lg:text-4xl text-custom-black font-semibold font-kantumruy mb-2 mt-4 capitalize">
             {mytitle}
           </h1>
-          <p className="text-sm md:text-xl lg:text-2xl text-custom-black font-kantumruy mb-4 mt-1">
+          <p className="text-sm md:text-xl lg:text-2xl text-custom-black font-kantumruy mb-10 mt-1">
             All job posts with the tag{" "}
             <span className="font-medium ">{mytitle}</span>
           </p>
@@ -74,6 +75,7 @@ const Catagprydetail = () => {
           </div>
         </div>
         <Postedjobs />
+        <Qestion />
       </div>
     </div>
   );

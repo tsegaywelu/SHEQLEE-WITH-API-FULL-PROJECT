@@ -2,7 +2,7 @@ import React from "react";
 import Location from "../../components/basecomponents/Location";
 import Mybutton from "../../components/basecomponents/Mybutton";
 import Divider from "../../components/basecomponents/Divider";
-import { FcGoogle } from "react-icons/fc";
+
 import enter from "../../assets/svg1/enter.svg";
 import key from "../../assets/svg1/key1.svg";
 import Continuewithgoogle from "../../components/basecomponents/Continuewithgoogle";
@@ -11,7 +11,14 @@ import email from "../../assets/svg1/email.svg";
 import Oneinput from "../../components/basecomponents/Oneinput";
 import { Link } from "react-router-dom";
 import Checkbox from "../../components/basecomponents/Checkbox";
+import { useDispatch } from "react-redux";
+import {
+  signinStart,
+  signinSuccess,
+  signinFailure,
+} from "../../redux/user/user.slice";
 const Login = () => {
+  const dispatch = useDispatch();
   return (
     // for all the input fields i have to use components but for now lets to do it
     <div>

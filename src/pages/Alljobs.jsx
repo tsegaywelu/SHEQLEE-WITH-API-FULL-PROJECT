@@ -7,6 +7,7 @@ import Location from "../components/basecomponents/Location";
 import search from "../../src/assets/SVG/search.svg";
 import Noresult from "../components/basecomponents/Noresult";
 import Dropdownform from "../components/basecomponents/Dropdownform";
+import Qestion from "../components/basecomponents/Qestion";
 const Alljobs = () => {
   return (
     <>
@@ -14,7 +15,7 @@ const Alljobs = () => {
         <Location />
       </div>
 
-      <div className=" px-3 md:px-6 lg:px-8 my-3 md:my-6 lg:my-12 p-3 md:p-6 lg:p-10 ">
+      <div className=" px-3 md:px-6 lg:px-8 my-3  p-3 md:p-6 lg:p-10 ">
         <div className="max-w-4xl mx-auto ">
           {/* header part */}
           <h1 className="text-center font-kantumruy font-semibold text-xl md:text-2xl lg:text-4xl mb-3   ">
@@ -62,15 +63,16 @@ const Alljobs = () => {
               />
             </div>
 
-            <Mybutton background="bg-custom-purple rounded-[15px]  text-xl text-white font-semibold  font-kantumruy ">
+            <Mybutton background="bg-custom-purple rounded-lg  text-xl text-white font-semibold  font-kantumruy ">
               Apply filter
             </Mybutton>
           </div>
         </div>
       </div>
       {/* //display all jobs from postedjobs.jsx   */}
-      <Postedjobs />
+      <Postedjobs showicon5 />
       {/* <Noresult /> */}
+      <Qestion />
     </>
   );
 };

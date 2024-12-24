@@ -4,6 +4,7 @@ import email from "../../assets/svg1/email.svg";
 import Mybutton from "../../components/basecomponents/Mybutton";
 import Location from "../../components/basecomponents/Location";
 import Resetpasswordcomponent from "../../components/basecomponents/Resetpasswordcomponent";
+import Qestion from "../../components/basecomponents/Qestion";
 const Resetpassword = () => {
   return (
     <div>
@@ -24,6 +25,7 @@ const Resetpassword = () => {
           showbutton
         />
       </form>
+      <Qestion />
     </div>
   );
 };

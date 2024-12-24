@@ -6,6 +6,7 @@ import { FaFacebook, FaTwitter, FaTelegram, FaLinkedin } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import Location from "../components/basecomponents/Location";
 import { Modal } from "../components/basecomponents/Modal";
+import Qestion from "../components/basecomponents/Qestion";
 const Catagprydetail = () => {
   const { theidtodisplay } = useParams();
   const mytitle = theidtodisplay;
@@ -24,7 +25,6 @@ const Catagprydetail = () => {
       )}
       <div className="relative">
         <Location />
-        <div className="absolute w-20 h-[5px] bg-custom-purple bottom-8 md:right-85 md:right-60 lg:right-72 mr-20"></div>
       </div>
       <div className=" ">
         <div className="flex flex-col items-center text-center p-8 font-sans text-black">
@@ -71,6 +71,7 @@ const Catagprydetail = () => {
           </div>
         </div>
         <Postedjobs />
+        <Qestion />
       </div>
     </div>
   );

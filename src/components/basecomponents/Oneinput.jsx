@@ -15,7 +15,7 @@ const Oneinput = ({
   nopaddingleft,
 }) => {
   return (
-    <div className="flex flex-col flex-grow ">
+    <div className="flex flex-col flex-grow  ">
       <label className="text-xl   my-3 font-kantumruy font-medium" htmlFor={id}>
         {labeltext}{" "}
         {smalltext && <span className="text-sm px-2">{smalltext}</span>}{" "}
@@ -26,7 +26,7 @@ const Oneinput = ({
           <img
             src={iconmyimage}
             className="absolute left-0 top-0 bg-black rounded-l-lg p-4   "
-            style={{ width: 50, height: 52 }}
+            style={{ width: 48, height: 48 }}
           />
         )}
         <input
@@ -36,9 +36,8 @@ const Oneinput = ({
           } h-full outline-none p-3 w-full text-xl font-kantumruy placeholder:text-custom-placeholder`}
           id={id}
           placeholder={placeholder}
-
-          // value={formData[correctvalue] || ""}
-          // onChange={(e) => updateFormData(correctvalue, e.target.value)}
+          value={formData[correctvalue] || ""}
+          onChange={(e) => updateFormData(correctvalue, e.target.value)}
         />
         {showeyeicon && (
           <div className=" absolute right-4 bottom-5 ">

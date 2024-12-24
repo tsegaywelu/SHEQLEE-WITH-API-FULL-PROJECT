@@ -25,7 +25,7 @@ const Companys = () => {
           subscribers.
         </p>
       </div> */}
-      <div className="mt-7 mb-4">
+      <div className="mt-7 mb-10">
         <Dashboaredtitle
           text={
             "List of the companies on Sheqlee with their number of job posts and subscribers."

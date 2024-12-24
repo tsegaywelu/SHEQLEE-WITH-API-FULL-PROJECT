@@ -38,7 +38,7 @@ const Resetpasswordcomponent = ({
           <div className="relative  ">
             <img
               src={icon}
-              className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-5 "
+              className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-4 "
             />
 
             <input

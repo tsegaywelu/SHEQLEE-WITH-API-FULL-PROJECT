@@ -10,6 +10,7 @@ import devops from "../assets/catagorySvgs/devops.svg";
 import python from "../assets/catagorySvgs/python.svg";
 import CatagoriesCard from "../cards/CatagoriesCard";
 import Location from "../components/basecomponents/Location";
+import Qestion from "../components/basecomponents/Qestion";
 const categories = [
   { title: "Web Frontend", jobs: 140, subscribers: 2173, icon: websvg, id: 1 },
   {
@@ -118,7 +119,6 @@ const Catagoris = () => {
     <div>
       <div className="relative">
         <Location />
-        <div className="absolute w-20 h-[5px] bg-custom-purple bottom-8 md:right-85 md:right-60 lg:right-84 mr-32"></div>
       </div>
 
       <div className="mt-10">
@@ -153,6 +153,7 @@ const Catagoris = () => {
           ))}
         </div>
       </div>
+      <Qestion />
     </div>
   );
 };

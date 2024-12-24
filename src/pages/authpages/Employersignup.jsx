@@ -25,14 +25,14 @@ const Employersignup = () => {
       </div>
 
       {/*i am  asking  if user is frelancer */}
-      <div className="relative  max-w-2xl  p-6  my-4 md:my-8  bg-custom-slate mx-auto mt-3">
+      <div className="relative  max-w-2xl  p-6  my-4 md:my-8  bg-custom-slate mx-auto mt-3 rounded-r-[15px]">
         {/* <FaUser
           size={48}
           className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-3"
         /> */}
         <img
           src={building1}
-          className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-6"
+          className="bg-black text-white rounded-l-[15px] absolute left-0 top-0  h-full p-6"
         />
         <h2 className="  rounded-lg pl-16 h-full   w-full text-lg    font-kantumruy">
           If you are an employer, please visit{" "}

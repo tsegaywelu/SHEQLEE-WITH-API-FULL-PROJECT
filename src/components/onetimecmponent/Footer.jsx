@@ -26,7 +26,11 @@ const Footer = () => {
           {/* Address Section */}
           <div className="w-full sm:w-1/4 text-center sm:text-left mb-6 sm:mb-0">
             <div className="flex  flex-col items-center justify-center sm:justify-start mb-4 gap-5">
-              <img src={mysvg} alt="Logo loading..." className=" h-[50px]" />
+              <img
+                src={mysvg}
+                alt="Logo loading..."
+                className=" h-[50px] w-[50px]"
+              />
               <h2 className="font-kantumruy font-medium">ADDRESS</h2>
             </div>
             <p className=" font-kantumruy font-light  text-center ">
@@ -153,7 +157,7 @@ const Footer = () => {
             © 2024 Sheqlee Co., Ltd. All rights reserved.
           </p>
           <div className="flex flex-col justify-center items-center gap-3 font-kantumruy font-light">
-            <p>Follow us on</p>
+            <p className="self-start">Follow us on</p>
             <div className="flex space-x-4">
               <a href="#">
                 <img

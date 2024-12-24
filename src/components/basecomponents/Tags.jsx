@@ -12,7 +12,11 @@ const Tags = () => {
     changebackground = true;
   }
 
-  const mylink = pathname.includes("tags") ? "tag" : "company";
+  const mylink = pathname.includes("tags")
+    ? "tag"
+    : pathname.includes("company")
+    ? "company"
+    : "tag";
   const [loading, setloading] = useState(true);
   const [Totaltags, setTotaltags] = useState(new Array(8));
   useEffect(() => {
@@ -50,8 +54,8 @@ const Tags = () => {
                 Popular tags
               </h4>
               <div className="flex justify-center items-center gap-2 relative ">
-                <div className="w-24 h-4 bg-custom-tags  "></div>
-                <div className=" absolute  w-1/2 h-[7px] bg-custom-purple left-0 bottom-6"></div>
+                <div className="w-24 h-4 bg-custom-tags  rounded-lg "></div>
+                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-3 "></div>
                 <img src={Rightarrow} alt="" width={8} height={12} />
               </div>
             </div>
@@ -90,7 +94,7 @@ const Tags = () => {
           {/* actualpath==='sheqleetags' */}
           {actualpath === "sheqlee" && (
             <div className="flex justify-between">
-              <h4 className="text-[50px]  font-kantumruy font-medium">
+              <h4 className="text-[45px]  font-kantumruy font-medium pb-2">
                 Popular tags
               </h4>
               <div className="flex justify-center items-center gap-2 relative">
@@ -105,12 +109,12 @@ const Tags = () => {
 
           {/* //display the tags  */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-8">
-            {Totaltags.slice(0, 6).map((tag) => {
+            {Totaltags.map((tag) => {
               return (
                 <Link to={`/sheqlee/${mylink}/${tag.tagname}`}>
                   <div
                     key={tag.id}
-                    className={` p-5 rounded-xl border-l-[15px] border-l-black ${
+                    className={` px-5 py-3 rounded-xl border-l-[15px] border-l-black ${
                       changebackground ? "bg-custom-slate" : "bg-custom-tags"
                     }   `}
                   >

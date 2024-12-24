@@ -10,13 +10,16 @@ import dashboaredsvg from "../../assets/direction/dashboard.svg";
 import settingsvg from "../../assets/direction/settings.svg";
 import logoutsvg from "../../assets/direction/logout.svg";
 import companysvg from "../../assets/direction/company.svg";
+import { useLocation } from "react-router-dom";
 const Header = () => {
+  const { pathname } = useLocation();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   //const state = useSelector((state) => state.user.currentuser);
 
-  //const state = "guest";
+  const state = "guest";
   // const state = "company";
-  const state = "frelancer";
+  // const state = "frelancer";
 
   // left component
   const leftsidecontent = () => {
@@ -24,7 +27,11 @@ const Header = () => {
       <>
         {/* Left section: Logo and title */}
         <div className="flex flex-col md:flex-row  mx-3  md:mx-5 lg:mx-10 gap-5 ">
-          <img src={mysvg} alt="Logo loading..." className=" h-[50px]" />
+          <img
+            src={mysvg}
+            alt="Logo loading..."
+            className=" h-[50px] w-[50px]"
+          />
           <h1 className="text-sm md:text-2xl font-extrabold flex justify-center items-center font-recolta">
             Sheqlee
           </h1>
@@ -56,12 +63,14 @@ const Header = () => {
           <div className=" mt-1 p-1 md:p-2 lg:p-3  text-custom-black font-kantumruy font-medium relative ">
             <Link to={"/sheqlee/All jobs"} className=" inline-block relative">
               All jobs
-              <div className="absolute w-16 h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-38px]"></div>
+              {pathname.includes("job") && (
+                <div className="absolute w-16 h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-38px]"></div>
+              )}
             </Link>
           </div>
 
           {/* Category Dropdown */}
-          <Link to={"/sheqlee/Categories"}>
+          <Link to={"/sheqlee/Categories"} className=" ">
             <Dropdown
               dropdowntitle={"categories"}
               categories={[
@@ -73,35 +82,40 @@ const Header = () => {
                 "Security",
                 "Database",
               ]}
+              underline
             />
           </Link>
           {state === "guest" && (
-            <Link to={"/sheqlee/clients"}>
-              <div className="mt-1 p-1 md:p-2 lg:p-3   font-kantumruy font-medium ">
+            <Link to={"/sheqlee/clients"} className="inline-block relative">
+              <div className="mt-1 p-1 md:p-2 lg:p-3   font-kantumruy font-medium   ">
                 {/* border-b-4 border-blue-600 lg:pb-10 self-end bg-red-500 */}
                 Clients
               </div>
+              {pathname.includes("clients") && (
+                <div className="absolute w-16 h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-24px] left-3"></div>
+              )}
             </Link>
           )}
 
           {/* Buttons */}
           {state === "guest" ? (
             <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-3 lg:gap-6">
-              <Link to={"/sheqlee/login"}>
-                <Mybutton
-                  background={
-                    "border-[3px] border-custom-purple rounded-lg py-1 md:py-2 px-2 md:px-4 text-base font-semibold font-kantumruy "
-                  }
-                >
-                  Log in
-                </Mybutton>
+              <Link
+                to={"/sheqlee/login"}
+                className={` ${
+                  pathname.includes("login")
+                    ? "bg-black rounded-xl text-white border-[3px]"
+                    : "border-[3px] border-custom-purple rounded-xl "
+                } py-1 md:py-[6px] px-2 md:px-4 text-base font-semibold font-kantumruy`}
+              >
+                <Mybutton>Log in</Mybutton>
               </Link>
 
               {/* here rederect user to componay sign up page or user sign up page */}
               <Link to={"/sheqlee/companysignup"}>
                 <Mybutton
                   background={
-                    "bg-custom-purple rounded-xl lg:px-3 md:p-2 lg:py-3   text-white font-semibold font-kantumruy "
+                    "bg-custom-purple rounded-xl lg:px-3 md:p-2 lg:py-2   text-white font-semibold font-kantumruy "
                   }
                 >
                   Sign up
@@ -137,7 +151,7 @@ const Header = () => {
             </div>
           ) : (
             <div className="flex  max-sm:flex-col justify-center items-center gap-0 ">
-              <Link to={"sheqlee/vacancy"}>
+              <Link to={"sheqlee/profile"}>
                 <Mybutton
                   background={
                     "bg-custom-purple rounded-xl lg:px-3 md:p-2 lg:py-3   text-white font-semibold font-kantumruy"

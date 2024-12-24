@@ -10,7 +10,7 @@ import Jobicons from "../onetimecmponent/Jobicons";
 // import devops from "../../assets/SVG/devops.svg";
 const emptyRectangles = [{}, {}, {}, {}, {}, {}, {}, {}, {}];
 import { useLocation } from "react-router-dom";
-const Postedjobs = () => {
+const Postedjobs = ({ showicon5 }) => {
   const { pathname } = useLocation(); //here i want to cut out the text "latest posted jobs " in other pages
   const actualpath = pathname.replaceAll("/", "");
   const [loading, setloading] = useState(true);
@@ -48,7 +48,7 @@ const Postedjobs = () => {
               </h4>
               <div className="flex justify-center items-center gap-2 relative ">
                 <div className="w-24 h-4 bg-custom-tags rounded-[7px] "></div>
-                <div className=" absolute  w-1/2 h-[7px] bg-custom-purple left-0 bottom-6"></div>
+                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-8"></div>
                 <img src={Rightarrow} alt="" width={8} height={12} />
               </div>
             </div>
@@ -111,31 +111,33 @@ const Postedjobs = () => {
           </div>
         </div>
       ) : (
-        <Link to={`/sheqlee/alljob/${fakeid}`}>
-          <div className="py-4 md:py-8 lg:py-12 mx-8 md:mx-16">
-            {actualpath === "sheqlee" && (
-              <div className="flex justify-between">
-                <h4 className="text-[50px]  font-kantumruy font-medium my-3">
-                  Latest job posts{" "}
-                </h4>
-                <div className="flex justify-center items-center gap-2 relative ">
-                  <h3 className="text-xs">745+ more jobs</h3>
-                  <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-6"></div>
-                  <img src={Rightarrow} alt="" width={8} height={12} />
-                </div>
+        <div className="py-4 md:py-8 lg:py-12 mx-8 md:mx-16">
+          {actualpath === "sheqlee" && (
+            <div className="flex justify-between ">
+              <h4 className="text-[50px]  font-kantumruy font-medium my-3">
+                Latest job posts{" "}
+              </h4>
+              <div className="flex justify-center items-center gap-2 relative ">
+                <h3 className="text-xs">745+ more jobs</h3>
+                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-6"></div>
+                <img src={Rightarrow} alt="" width={8} height={12} />
               </div>
-            )}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3  lg:gap-x-8 lg:gap-y-7 ">
-              {/* ///////////////////// */}
+            </div>
+          )}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3  lg:gap-x-8 lg:gap-y-7 ">
+            {/* ///////////////////// */}
 
-              {Jobs.map((jobsall) => {
-                return (
+            {Jobs.map((jobsall) => {
+              return (
+                <Link to={`/sheqlee/alljob/${jobsall.title}`}>
                   <div
-                    className=" bg-custom-slate rounded-[20px] md:pr-5 p-2  "
+                    className=" bg-custom-slate rounded-[20px] md:pr-5 px-3 pb-2 pt-5   "
                     key={jobsall.title + Math.random()}
                   >
                     <div className=" flex gap-5">
-                      <img src={qualityassurance} width={24} height={24} />
+                      {showicon5 && (
+                        <img src={qualityassurance} width={24} height={24} />
+                      )}
                       <p className="text-2xl font-medium font-kantumruy">
                         {jobsall.title}
                       </p>
@@ -206,11 +208,11 @@ const Postedjobs = () => {
                       </div>
                     </div>
                   </div>
-                );
-              })}
-            </div>
+                </Link>
+              );
+            })}
           </div>
-        </Link>
+        </div>
       )}
     </>
   );

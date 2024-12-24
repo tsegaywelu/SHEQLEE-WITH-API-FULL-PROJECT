@@ -78,5 +78,5 @@ export const {
   signoutstart,
   signoutsuccess,
   signoutfailure,
-} = userSlice.actions;
+} = userSlice.actions; //those all are fromt the userslice
 export default userSlice.reducer;

@@ -6,8 +6,8 @@ import Alljobs from "./pages/Alljobs";
 import Lost from "./components/onetimecmponent/Lost";
 import Header from "./components/onetimecmponent/Header";
 import Catagoris from "./pages/Catagoris";
-import Clients from "./pages/Clients";
-import Jobdetail from "./pages/Jobdetail";
+import Clients from "./pages/Clients1";
+import Jobdetail from "./pages/Jobdetail1";
 import Catagprydetail from "./pages/Catagprydetail";
 import Alltags from "./pages/Alltags";
 import Tagdetail from "./pages/Tagditail";
@@ -36,8 +36,8 @@ const App = () => {
 
   // here  i have three kind of users  for my system  guest,company,frelancer  so here there is clash of routes
   //and also if user is frelancer he can not access the  company pages and reverse .
-  //const state = "company";
-  const state = "frelancer";
+  const state = "company";
+  // const state = "frelancer";
   return (
     <BrowserRouter>
       <div className="">
