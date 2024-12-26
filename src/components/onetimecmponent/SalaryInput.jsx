@@ -48,7 +48,7 @@ const SalaryInput = ({
           placeholder="Enter salary..."
           value={salary}
           onChange={(e) => setSalary(e.target.value)}
-          className="bg-custom-tags   h-full outline-none p-3 w-2/3 text-xl font-kantumruy placeholder:text-custom-placeholder text-start"
+          className="bg-custom-tags   h-full outline-none px-3 py-[14px]  w-2/3 text-xl font-kantumruy placeholder:text-custom-placeholder text-start"
         />
 
         {/* Rate Dropdown */}

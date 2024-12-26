@@ -21,11 +21,11 @@ const Linkstabble = ({ mylinks, title, subtitle, buttons }) => {
         <h2 className="font-kantumruy text-xl font-medium">{title}</h2>
         <p className="font-kantumruy ">{subtitle}</p>
       </div>
-      <div className="rounded-[15px]  overflow-hidden h-fit w-fll ">
+      <div className="rounded-lg overflow-hidden h-fit w-fll ">
         <table className="w-full font-kantumruy  " style={{ padding: "10px" }}>
           <thead className="bg-custom-placeholder     ">
             <tr>
-              <th className="text-start font-kantumruy font-medium text-white p-4 text-xl">
+              <th className="text-start font-kantumruy font-medium text-white p-3 text-xl">
                 Profile name
               </th>
               <th className="text-end p-0 ">
@@ -35,25 +35,40 @@ const Linkstabble = ({ mylinks, title, subtitle, buttons }) => {
                   </p>
                 </div>
               </th>
-              <th className="text-end  pr-4 font-kantumruy font-medium text-white text-xl">
-                Action
-              </th>
+              {buttons && (
+                <th className="text-end  pr-4 font-kantumruy font-medium text-white text-xl">
+                  Action
+                </th>
+              )}
             </tr>
           </thead>
-          <tbody className="bg-custom-tags  rounded-b-[15px] overflow-hidden ">
+          <tbody className="bg-custom-tags  rounded-b-lg overflow-hidden ">
             {mylinks.map((thelink, index) => (
-              <tr key={index} className="border-b-2 border-gray-400">
+              <tr
+                key={index}
+                className={` ${
+                  index + 1 < mylinks.length && "border-b-2  border-slate-400"
+                }`}
+              >
                 {" "}
                 <td className="text-start  pl-3">{thelink.profile}</td>
-                <td className="text-sart py-5 ">{thelink.link}</td>
-                <td className="text-end pr-3  ">
-                  <button
-                    onClick={() => onDeleteSkill(index)}
-                    className="bg-custom-purple p-2 rounded-md"
-                  >
-                    <img src={delete1} alt="" />
-                  </button>
+                <td
+                  className={`text-sart py-3  ${
+                    !buttons && "text-custom-blue"
+                  }`}
+                >
+                  {thelink.link}
                 </td>
+                {buttons && (
+                  <td className="text-end pr-3  ">
+                    <button
+                      onClick={() => onDeleteSkill(index)}
+                      className="bg-custom-purple p-2 rounded-md w-7 h-7"
+                    >
+                      <img src={delete1} alt="" />
+                    </button>
+                  </td>
+                )}
               </tr>
             ))}
           </tbody>

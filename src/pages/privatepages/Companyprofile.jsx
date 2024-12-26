@@ -34,7 +34,7 @@ const Companyprofile = () => {
 
       {/* // input parts  */}
       <form action="" onSubmit={(e) => e.preventDefault()}>
-        <div className="flex max-sm:flex-col justify-center items-start  gap-5  max-w-5xl  mx-auto">
+        <div className="flex max-sm:flex-col justify-center items-start  gap-8  max-w-5xl  mx-auto">
           <div className="flex flex-col w-2/3 gap-2 relative  ">
             <Oneinputfor
               labeltext={"Company name"}
@@ -54,7 +54,7 @@ const Companyprofile = () => {
             />
           </div>
 
-          <Sectionprofile profilepic1={profilepic1} buttontext={"upload"} />
+          <Sectionprofile profilepic1={profilepic1} buttontext={"Upload"} />
         </div>
         {/* //ritch text part */}
         <div>
@@ -64,7 +64,7 @@ const Companyprofile = () => {
               placeholder={"A brief description about your company..."}
             />
           </div>
-          <div className="">
+          <div className=" -translate-y-10">
             <div className="flex max-sm:flex-col justify-center items-center  gap-5  max-w-5xl  mx-auto">
               <div className="flex flex-col w-2/3 gap-2 relative">
                 <Dropdownform
@@ -89,7 +89,7 @@ const Companyprofile = () => {
                     "bg-custom-purple font-semibold font-kantumruy  text-custom-white rounded-lg p-1 md:p-2 lg:p-3"
                   }
                 >
-                  <h1 className="text-2xl">update profile </h1>
+                  <h1 className="text-2xl">Update profile </h1>
                 </Mybutton>
               </div>
             </div>
@@ -97,8 +97,8 @@ const Companyprofile = () => {
 
           <div className=" max-w-5xl  mx-auto mb-10">
             <Divider></Divider>
-            <span className="block font-kantumruy text-start ">
-              <span className="text-red-800">*</span> all fields are required.{" "}
+            <span className="block font-kantumruy text-start mt-3 ">
+              <span className="text-red-800">*</span> fields are required.{" "}
             </span>
           </div>
         </div>

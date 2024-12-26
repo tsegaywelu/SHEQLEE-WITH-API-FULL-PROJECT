@@ -9,6 +9,7 @@ function Dropdown({
   showicons,
   chnagelinksurl,
   underline,
+  pagetype,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const { pathname } = useLocation();
@@ -60,12 +61,35 @@ function Dropdown({
                             ? `/sheqlee/${category}`
                             : `/sheqle/catagory/${category}`
                         }
-                        className="flex  justify-start gap-x-3  px-5"
                         onClick={() => setIsOpen(!isOpen)}
                       >
-                        {" "}
-                        {showicons && <img src={icons[index]} alt="" />}{" "}
-                        {category}
+                        <div
+                          className={`flex  justify-start gap-x-3  px-5 
+                            ${
+                              pagetype === "even" && index % 2 == 0
+                                ? "border-b-[2px] border-dvider pb-2 "
+                                : ""
+                            }      
+                          
+                          
+                         ${
+                           pagetype === "odd" && index !== categories.length - 1
+                             ? "border-b-[2px] border-dvider pb-2"
+                             : ""
+                         } 
+                          `}
+                        >
+                          {" "}
+                          {showicons && (
+                            <img
+                              src={icons[index]}
+                              alt=""
+                              width={16}
+                              height={16}
+                            />
+                          )}{" "}
+                          {category}
+                        </div>
                       </Link>
                     </div>
                   </a>

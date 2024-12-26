@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Location from "../../components/basecomponents/Location";
 import Mybutton from "../../components/basecomponents/Mybutton";
 import Divider from "../../components/basecomponents/Divider";
@@ -17,8 +17,23 @@ import {
   signinSuccess,
   signinFailure,
 } from "../../redux/user/user.slice";
+import Qestion from "../../components/basecomponents/Qestion";
 const Login = () => {
   const dispatch = useDispatch();
+
+  const [formData, setFormdata] = useState({
+    email: "",
+    password: "",
+  });
+  const updateFormData = (field, value) => {
+    setFormdata((prevdata) => ({
+      ...prevdata,
+      [field]: value,
+    }));
+  };
+  const closewindow = () => {
+    console.table(formData);
+  };
   return (
     // for all the input fields i have to use components but for now lets to do it
     <div>
@@ -36,7 +51,11 @@ const Login = () => {
           </h1>
         </div>
       </div>
-      <form action="" className=" max-w-4xl mx-auto ">
+      <form
+        action=""
+        className=" max-w-4xl mx-auto "
+        onSubmit={(e) => e.preventDefault()}
+      >
         {/* below devide part */}
         <div className="flex  max-sm:flex-col m-5 gap-8 justify-center md:mt-10">
           <Oneinput
@@ -45,6 +64,9 @@ const Login = () => {
             labeltext={"Email"}
             type={"email"}
             id={"email"}
+            formData={formData}
+            updateFormData={updateFormData}
+            correctvalue={"email"}
           />
           <Oneinput
             iconmyimage={key}
@@ -53,28 +75,31 @@ const Login = () => {
             type={"password"}
             id={"password"}
             showeyeicon
+            formData={formData}
+            updateFormData={updateFormData}
+            correctvalue={"password"}
           />
         </div>
         {/* //checkbox */}
         <div className="m-4">
           <div className="flex gap-4  items-center">
             <Checkbox />
-            <span className="font-kantumruy"> remember me next time</span>
+            <span className="font-kantumruy"> Remember me next time</span>
           </div>
           {/* //for the button  */}
           <div className="text-end mt-10 ">
             <p className="font-kantumruy">
-              forget password?
+              Forget password?
               <Link to={"/sheqlee/resetpassword"}>
-                <span className="border-b-2   border-custom-purple font-kantumruy font-semibold">
+                <span className="pb-1 border-b-2   border-custom-purple font-kantumruy font-semibold ml-2 ">
                   Reset
                 </span>{" "}
               </Link>
               <Mybutton
                 background={
-                  "bg-custom-purple text-white text-xl font-semibold  font-kantumruy  rounded-lg py-1 md:py-2 lg:py-3 px-5 ml-5"
+                  "bg-custom-purple text-white text-xl font-semibold  font-kantumruy  rounded-lg py-1 md:py-2 lg:py-3 px-6 ml-5"
                 }
-                // onClick={handleLogin}
+                closewindow={closewindow}
               >
                 Login
               </Mybutton>
@@ -84,6 +109,7 @@ const Login = () => {
         <Divider>or continue with google</Divider>
         <Continuewithgoogle />
       </form>
+      <Qestion />
     </div>
   );
 };

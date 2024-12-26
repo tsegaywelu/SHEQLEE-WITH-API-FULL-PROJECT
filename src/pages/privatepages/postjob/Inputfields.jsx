@@ -18,9 +18,9 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
           alt="icon"
           className="bg-black  rounded-l-lg absolute left-0 top-0  h-full p-3 w-20"
         />
-        <h2 className="   pl-20 h-full   w-full text-sm font-kantumruy">
+        <h2 className="   pl-20 h-full   w-full font-kantumruy ">
           To speed up the process of posting a job, try using
-          <button className=" ml-2 border-b-[3px] border-custom-purple  font-kantumruy font-semibold">
+          <button className=" ml-2 border-b-[2px] border-custom-purple  font-kantumruy font-semibold">
             job templates.
           </button>{" "}
         </h2>
@@ -68,7 +68,7 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
                 defaultText="select catagory"
                 value={formData.category}
                 onChange={(value) => updateFormData("category", value)}
-                labeltext={"catagory"}
+                labeltext={"Catagory"}
                 warn
               />
             </div>
@@ -90,7 +90,7 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
                 className="text-xl   my-3 font-kantumruy font-medium text-start"
                 htmlFor="companyname"
               >
-                Skill level <span className="text-red-700">*</span>
+                Skill level <span className="text-red-600 font-normal">*</span>
               </label>
               <Dropdownform
                 options={["Intermidate", "expert", "fullstack"]}
@@ -104,7 +104,8 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
                 className="text-xl   my-3 font-kantumruy font-medium text-start"
                 htmlFor="email"
               >
-                Salary <span className="text-sm">(fixed or range )</span>{" "}
+                Salary{" "}
+                <span className="text-sm font-normal">(fixed or range )</span>{" "}
               </label>
 
               <SalaryInput
@@ -123,7 +124,7 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
               className="text-xl  my-3    font-kantumruy font-medium "
               htmlFor="message"
             >
-              short description <span className="text-red-700">*</span>
+              Short description <span className="text-red-700">*</span>
             </label>
             <textarea
               name="message"
@@ -137,8 +138,8 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
                 updateFormData("shortdescription", e.target.value)
               }
             ></textarea>
-            <span className="absolute  bottom-12 right-3">0/128</span>
-            <p className="text-start font-kantumruy">
+            <span className="absolute  bottom-14 right-3">0/128</span>
+            <p className="text-start font-kantumruy -translate-y-3">
               Who are you looking for? Give us a one-liner description of your
               ideal candidate.
             </p>
@@ -155,13 +156,13 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
             />
 
             <Reatchtext
-              showtext={"description"}
+              showtext={"Description"}
               value={formData.jobDescription}
               onChange={(content) => updateFormData("jobDescription", content)}
               placeholder={"Description..."}
             />
             <Reatchtext
-              showtext={"how to apply"}
+              showtext={"How to apply"}
               value={formData.applyInstructions}
               onChange={(content) =>
                 updateFormData("applyInstructions", content)
@@ -201,7 +202,7 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
           <div className="flex items-center gap-3 mt-5">
             <Checkbox />
             <span className="text-sm font-kantumruy">
-              i want my company name to exclude from this vacancy{" "}
+              I want my company name to exclude from this vacancy{" "}
             </span>
           </div>
           <div className="flex justify-end gap-10 mt-16 ">
@@ -210,7 +211,7 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
                 "border-4 border-custom-purple rounded-lg py-1 md:py-2 px-2 md:px-5 text-2xl font-kantumruy font-medium  "
               }
             >
-              save draft
+              Save draft
             </Mybutton>
             <Mybutton
               background={
@@ -228,8 +229,8 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
         </form>
         <div className="my-10">
           <Divider />
-          <span className="block text-start font-kantumruy ">
-            <span className="text-red-800">*</span> all fields are required.{" "}
+          <span className="block text-start font-kantumruy mt-3  ">
+            <span className="text-red-800 ">*</span> fields are required.{" "}
           </span>
         </div>
       </div>

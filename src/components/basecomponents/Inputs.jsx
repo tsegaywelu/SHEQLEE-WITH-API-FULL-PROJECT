@@ -64,7 +64,7 @@ const Inputs = () => {
         <div className="flex justify-end  ">
           <Mybutton
             background={
-              "bg-custom-purple font-kantumruy rounded-lg p-1 md:p-2 lg:p-3 text-2xl font-semibold text-custom-white"
+              "bg-custom-purple font-kantumruy rounded-lg p-1 md:p-2 lg:py-3 lg:px-8 text-2xl font-semibold text-custom-white"
             }
           >
             Update setting

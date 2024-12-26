@@ -2,13 +2,13 @@ import React from "react";
 
 const Sectionprofile = ({ profilepic1, buttontext }) => {
   return (
-    <div className="flex flex-col gap-3 justify-end font-kantumruy  mt-3">
+    <div className="flex flex-col gap-1  justify-center font-kantumruy  w-40 h-40  ">
       <img
         src={profilepic1}
-        width={10}
-        height={10}
         alt=""
-        className="w-60 h-30 rounded-full bg-custom-tags "
+        className={` ${
+          profilepic1 ? "" : p - 6
+        } object-cover rounded-full bg-custom-tags `}
       />
       {buttontext && (
         <button className="bg-custom-purple font-medium font-kantumruy text-custom-white py-1 px-6 rounded-lg text-xl">

@@ -16,7 +16,10 @@ const Location = ({ Lost }) => {
           <img src={place} width={12} height={12} />
         </div>
         {pathSegments.map((segment, index) => (
-          <span key={index} className="flex justify-center items-center">
+          <span
+            key={index}
+            className="flex justify-center items-center  capitalize"
+          >
             {decodeURIComponent(segment.replace(/%20/g, " "))}
 
             {index < pathSegments.length - 1 && (

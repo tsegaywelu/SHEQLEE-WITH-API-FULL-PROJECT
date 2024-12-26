@@ -110,8 +110,8 @@ const Profilepreviw = () => {
           </div>
         </div>
         <div className="mx-auto  max-w-5xl space-y-8 ">
-          <Skillstable skills={skills} title={"Skillset"} buttons={false} />
-          <Linkstabble mylinks={mylinks} title={"Profiles"} buttons={false} />
+          <Skillstable skills={skills} title={"Skillset"} />
+          <Linkstabble mylinks={mylinks} title={"Profiles"} />
           <div className="flex justify-between">
             <Uploadcv label={<div className="text-xl my-3">CV </div>} />
             <Oneinputfor

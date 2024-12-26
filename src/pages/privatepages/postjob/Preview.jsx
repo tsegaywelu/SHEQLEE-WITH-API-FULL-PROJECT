@@ -12,15 +12,15 @@ const Preview = ({ formData, onBack }) => {
   return (
     <div className="   mx-auto mt-10">
       <div>
-        <div className="relative  max-w-2xl  px-4 py-7 my-4 md:my-16 bg-slate-100 mx-auto">
+        <div className="relative  max-w-2xl  px-4 py-7 my-4 md:my-16 bg-custom-slate mx-auto">
           <img
             src={template}
             alt="icon"
             className="bg-black  rounded-l-lg absolute left-0 top-0  h-full p-3 w-20"
           />
-          <h2 className="   pl-20 h-full   w-full text-sm font-kantumruy">
+          <h2 className="   pl-20 h-full   w-full text-base font-kantumruy ">
             To speed up the process of posting a job, try using
-            <button className=" ml-2 border-b-[3px] border-custom-purple  font-kantumruy font-semibold">
+            <button className=" ml-2 border-b-[2px] border-custom-purple  font-kantumruy font-semibold">
               job templates.
             </button>{" "}
           </h2>
@@ -37,7 +37,7 @@ const Preview = ({ formData, onBack }) => {
             </h1>
             <span className="text-4xl font-kantumruy">[2/2]</span>
           </div>
-          <p className="text-sm md:text-2xl font-kantumruy">
+          <p className="text-sm md:text-[22px] font-kantumruy">
             Review job details before publishing.
           </p>
         </div>
@@ -45,14 +45,14 @@ const Preview = ({ formData, onBack }) => {
         <div className="flex justify-center gap-10 mt-16 ">
           <Mybutton
             background={
-              "border-4 border-custom-purple rounded-lg py-1 md:py-2 px-2 md:px-5 text-2xl font-kantumruy font-medium  "
+              "border-4 border-custom-purple rounded-xl py-1 md:py-2 px-2 md:px-6 text-2xl font-kantumruy font-medium  "
             }
           >
             Edit
           </Mybutton>
           <Mybutton
             background={
-              "bg-custom-purple rounded-lg p-1 md:p-2 lg:p-3 font-semibold font-kantumruy text-white"
+              "bg-custom-purple rounded-lg p-1 md:p-2  md:px-6 font-semibold font-kantumruy text-white"
             }
           >
             <h1 className="text-2xl">Publish job </h1>
@@ -61,7 +61,7 @@ const Preview = ({ formData, onBack }) => {
 
         <Divider>VACANCY PREVIEW</Divider>
         {/* //below devider part  */}
-        <div className="flex flex-col items-center justify-center gap-5 mt-10">
+        <div className="flex flex-col items-center justify-center gap-5 my-10">
           <div className="flex justify-center items-center gap-4">
             <img src={devops} alt="job icon " width={28} height={28} />
             <span className=" text-sm md:text-4xl  font-kantumruy font-medium">

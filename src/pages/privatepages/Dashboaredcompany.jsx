@@ -18,14 +18,14 @@ const Dashboaredcompany = () => {
           text={
             job
               ? "all the jobs you have posted and are about to post."
-              : " you have not posted any job yet. get started by posting a job"
+              : " You have not posted any jobs yet. Get started by posting a job."
           }
           heading={"Dashboared"}
         >
           <img src={dashboared} alt="dashboared svg" width={66} height={66} />
         </Dashboaredtitle>
       </div>
-      <div className=" flex  flex-col  items-center  gap-5 justify-center my-5 md:my-10 ">
+      <div className=" flex  flex-col  items-center  gap-5 justify-center my-5 md:my-10 overflow-auto  ">
         {job ? (
           <Jobdetail />
         ) : (
@@ -33,7 +33,7 @@ const Dashboaredcompany = () => {
             <Link to={"/sheqlee/vacancy"}>
               <Mybutton
                 background={
-                  "bg-custom-purple rounded-lg p-1 md:p-2 lg:p-3 text-sm md:text-2xl font-medium font-kantumruy text-white"
+                  "bg-custom-purple rounded-lg p-1 md:p-2 lg:py-3 lg:px-6 text-sm md:text-2xl font-medium font-kantumruy text-white"
                 }
               >
                 Post your first job

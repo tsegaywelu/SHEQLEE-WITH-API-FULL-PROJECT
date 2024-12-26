@@ -133,9 +133,12 @@ const Footer = () => {
             </h3>
             <ul>
               <li>
-                <a href="#" className="font-light font-kantumruy ">
+                <Link
+                  to={"/sheqlee/Privacy Policy"}
+                  className="font-light font-kantumruy "
+                >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="font-light font-kantumruy ">

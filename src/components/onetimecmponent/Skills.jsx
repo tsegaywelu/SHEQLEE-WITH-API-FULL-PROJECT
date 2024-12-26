@@ -22,31 +22,51 @@ const Skills = ({ skills, title, subtitle, buttons }) => {
         <h2 className="font-kantumruy text-xl font-medium">{title}</h2>
         <p className="font-kantumruy ">{subtitle}</p>
       </div>
-      <div className="rounded-[15px]  overflow-hidden h-fit w-fll ">
+      <div className="rounded-lg  overflow-hidden h-fit w-fll ">
         <table className="w-full font-kantumruy  " style={{ padding: "10px" }}>
           <thead className="bg-custom-placeholder     ">
             <tr>
-              <th className="text-start font-kantumruy font-medium text-white p-4">
+              <th className="text-start font-kantumruy font-medium text-white p-3 text-xl">
                 Skill
               </th>
-              <th className="text-end p-5 ">
-                <div className="flex justify-end">
-                  <p className="text-start w-1/3 font-kantumruy font-medium text-white ">
+              <th
+                className="text-end p-2   flex justify-center 
+              "
+              >
+                <div className="text-center w-fit ml-52">
+                  <p
+                    className={` ${
+                      buttons ? "text-center w-fit ml-20" : " "
+                    }    font-kantumruy font-medium text-white text-xl`}
+                  >
                     Level
                   </p>
                 </div>
               </th>
-              <th className="text-end  pr-4 font-kantumruy font-medium text-white">
-                Action
-              </th>
+              {buttons && (
+                <th className="text-end  pr-4 font-kantumruy font-medium text-white text-xl">
+                  Action
+                </th>
+              )}
             </tr>
           </thead>
-          <tbody className="bg-custom-tags  rounded-b-[15px] overflow-hidden ">
+          <tbody className="bg-custom-tags  rounded-b-lg overflow-hidden ">
             {skills.map((skill, index) => (
-              <tr key={index} className="border-b-2 border-gray-400">
+              <tr
+                key={index}
+                className={` ${
+                  index + 1 < skills.length && "border-b-2  border-slate-400"
+                }`}
+              >
                 {" "}
                 <td className="text-start  pl-3">{skill.name}</td>
-                <td className="text-end py-5 ">
+                <td
+                  className={`  ${
+                    buttons
+                      ? "text-end py-3 "
+                      : "  inline-block w-full text-center ml-48 py-3    "
+                  }`}
+                >
                   {Array.from({ length: 5 }).map((_, i) => (
                     <span
                       key={i}
@@ -63,14 +83,16 @@ const Skills = ({ skills, title, subtitle, buttons }) => {
                     </span>
                   ))}
                 </td>
-                <td className="text-end pr-3  ">
-                  <button
-                    onClick={() => onDeleteSkill(index)}
-                    className="bg-custom-purple p-2 rounded-md"
-                  >
-                    <img src={delete1} alt="" />
-                  </button>
-                </td>
+                {buttons && (
+                  <td className="text-end pr-3  ">
+                    <button
+                      onClick={() => onDeleteSkill(index)}
+                      className="bg-custom-purple p-2 rounded-md w-7 h-7  "
+                    >
+                      <img src={delete1} />
+                    </button>
+                  </td>
+                )}
               </tr>
             ))}
           </tbody>

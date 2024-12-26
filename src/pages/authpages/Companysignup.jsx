@@ -14,7 +14,28 @@ import Oneinput from "../../components/basecomponents/Oneinput";
 import Continuewithgoogle from "../../components/basecomponents/Continuewithgoogle";
 import Qestion from "../../components/basecomponents/Qestion";
 import Checkbox from "../../components/basecomponents/Checkbox";
+import { useState } from "react";
 const Companysignup = () => {
+  const [formData, setFormData] = useState({
+    companyname: "",
+    domain: "",
+    fullname: "",
+    email: "",
+    password: "",
+    confirmpassword: "",
+    checkbox: "",
+  });
+  const updateFormData = (field, value) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [field]: value,
+    }));
+  };
+
+  const closewindow = () => {
+    //handle what do you want here please
+    console.table(formData);
+  };
   return (
     <div className="">
       <div>
@@ -30,7 +51,7 @@ const Companysignup = () => {
         <h2 className="  rounded-lg pl-16 h-full   w-full text-lg font-kantumruy ">
           if you are freelancer please visit{" "}
           <Link
-            to={"/sheqlee/employersignup"}
+            to={"/sheqlee/Professional Signup"}
             className=" border-b-2 border-purple-400 font-semibold font-kantumruy"
           >
             frelancer registration{" "}
@@ -58,6 +79,9 @@ const Companysignup = () => {
             type={"text"}
             id={"companyname"}
             warn
+            formData={formData}
+            updateFormData={updateFormData}
+            correctvalue={"companyname"}
           />
 
           <div className="flex flex-col flex-grow  ">
@@ -75,10 +99,12 @@ const Companysignup = () => {
                 https://
               </span>
               <input
-                type="email"
-                id="email"
+                type="url"
+                id="url"
                 className="bg-custom-tags  rounded-r-lg  h-full outline-none p-3 w-full text-xl font-kantumruy placeholder:text-custom-placeholder"
                 placeholder="sheqlee.com "
+                value={formData.domain}
+                onChange={(e) => updateFormData("domain", e.target.value)}
               />
             </div>
           </div>
@@ -94,6 +120,9 @@ const Companysignup = () => {
             type={"text"}
             id={"fullname"}
             warn
+            formData={formData}
+            updateFormData={updateFormData}
+            correctvalue={"fullname"}
           />
           <Oneinput
             iconmyimage={email}
@@ -102,6 +131,9 @@ const Companysignup = () => {
             type={"email"}
             id={"email"}
             warn
+            formData={formData}
+            updateFormData={updateFormData}
+            correctvalue={"email"}
           />
         </div>
         <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
@@ -113,6 +145,9 @@ const Companysignup = () => {
             id={"password"}
             warn
             showeyeicon
+            formData={formData}
+            updateFormData={updateFormData}
+            correctvalue={"password"}
           />
           <Oneinput
             iconmyimage={key}
@@ -121,6 +156,9 @@ const Companysignup = () => {
             type={"password"}
             id={"password1"}
             warn
+            formData={formData}
+            updateFormData={updateFormData}
+            correctvalue={"confirmpassword"}
           />
         </div>
         {/* //check box part */}
@@ -153,6 +191,7 @@ const Companysignup = () => {
                 background={
                   "bg-custom-purple text-white font-semibold font-kantumruy text-xl rounded-lg py-1 md:py-2 lg:py-3 px-5 ml-5 "
                 }
+                closewindow={closewindow}
               >
                 Register
               </Mybutton>

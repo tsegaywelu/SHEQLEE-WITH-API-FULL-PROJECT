@@ -10,11 +10,11 @@ const Oneinputfor = ({ labeltext, warn, placeholder, icon, id, value }) => {
       <input
         type="text"
         placeholder={placeholder}
-        className=" bg-custom-tags  rounded-lg  pl-2 h-full outline-none p-3 w-full text-xl font-kantumruy placeholder:text-custom-placeholder"
+        className=" bg-custom-tags  rounded-lg  pl-5 pr-5 h-full outline-none p-3 w-full text-xl font-kantumruy placeholder:text-custom-placeholder"
         id={id}
         value={value}
       />
-      <div className="absolute right-3 bottom-4">
+      <div className="absolute right-5 bottom-4">
         <img src={icon} alt="" width={14} height={14} />
       </div>
     </div>

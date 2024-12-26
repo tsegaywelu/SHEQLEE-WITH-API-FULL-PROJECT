@@ -28,8 +28,8 @@ const Alljobs = () => {
           </p>
           {/* filetr part */}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6 mx-1 md:mx-2 lg:mx-5 text-custom-placeholder ">
-            <div className="relative  ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-y-3 gap-x-6  mx-1 md:mx-2 lg:mx-5 text-custom-placeholder ">
+            <div className="relative   ">
               <Dropdownform
                 options={["Category 1", "Category 2", "Category 3"]}
                 defaultText="All categories"

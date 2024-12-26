@@ -109,7 +109,7 @@ const Tags = () => {
 
           {/* //display the tags  */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-8">
-            {Totaltags.map((tag) => {
+            {Totaltags.slice(0, 6).map((tag) => {
               return (
                 <Link to={`/sheqlee/${mylink}/${tag.tagname}`}>
                   <div

@@ -52,7 +52,7 @@ export const Dropdownprofile = ({
                 <div className="flex justify-end   ">
                   <Mybutton
                     background={
-                      "bg-black font-semibold font-kantumruy  text-custom-white rounded-lg px-8 py-3"
+                      "bg-black font-semibold font-kantumruy  text-custom-white rounded-lg px-16 py-3"
                     }
                     onClick={(e) => setshowmodal(!showmodal)}
                   >

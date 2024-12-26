@@ -10,6 +10,10 @@ const Resetpasswordcomponent = ({
   id,
   clarify,
   showbutton,
+  formData,
+  updateFormData,
+  code,
+  type,
 }) => {
   return (
     <>
@@ -27,8 +31,8 @@ const Resetpasswordcomponent = ({
       <div
         className={` ${
           showbutton
-            ? "mt-5 mx-auto  space-y-5 w-4/5"
-            : "flex flex-col gap-5 mt-10 w-fit "
+            ? "mt-5 mx-auto  space-y-3 w-4/5"
+            : "flex flex-col gap-3 mt-10 w-fit "
         } `}
       >
         <label htmlFor="email" className="font-kantumruy font-medium text-xl">
@@ -42,13 +46,15 @@ const Resetpasswordcomponent = ({
             />
 
             <input
-              type="password"
+              type={type}
               className="bg-custom-tags  rounded-lg pl-16 h-full outline-none p-3 w-full text-xl font-kantumruy placeholder:text-custom-placeholder"
               id={id}
               placeholder={placeholder}
+              value={formData[id] || ""}
+              onChange={(e) => updateFormData(id, e.target.value)}
             />
           </div>
-          <p className="text-sm mt-1 font-kantumruy">{clarify}</p>
+          <p className="text-sm  font-kantumruy mt-2">{clarify}</p>
         </div>
 
         {/* //this is inside of the flex so saying any thing will not work or make out of this  */}
@@ -59,6 +65,7 @@ const Resetpasswordcomponent = ({
                 background={
                   "bg-custom-purple text-white font-medium font-kantumruy text-2xl rounded-[10px] py-1 md:py-2 lg:py-3  px-4 float-right mt-5 "
                 }
+                closewindow={code}
               >
                 Send code
               </Mybutton>

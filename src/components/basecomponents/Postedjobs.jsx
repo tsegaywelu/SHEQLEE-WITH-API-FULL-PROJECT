@@ -118,7 +118,7 @@ const Postedjobs = ({ showicon5 }) => {
                 Latest job posts{" "}
               </h4>
               <div className="flex justify-center items-center gap-2 relative ">
-                <h3 className="text-xs">745+ more jobs</h3>
+                <h3 className="text-sm font-medium">745+ more jobs</h3>
                 <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-6"></div>
                 <img src={Rightarrow} alt="" width={8} height={12} />
               </div>

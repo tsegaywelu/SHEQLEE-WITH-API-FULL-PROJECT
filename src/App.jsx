@@ -36,8 +36,8 @@ const App = () => {
 
   // here  i have three kind of users  for my system  guest,company,frelancer  so here there is clash of routes
   //and also if user is frelancer he can not access the  company pages and reverse .
-  const state = "company";
-  // const state = "frelancer";
+  // const state = "company";
+  const state = "frelancer";
   return (
     <BrowserRouter>
       <div className="">
@@ -70,7 +70,10 @@ const App = () => {
           <Route path="/sheqlee/FAQ" element={<FAQ1 />} />
           {/* /////auth pages  */}
           <Route path="/sheqlee/companysignup" element={<Companysignup />} />
-          <Route path="/sheqlee/employersignup" element={<Employersignup />} />
+          <Route
+            path="/sheqlee/Professional Signup"
+            element={<Employersignup />}
+          />
           <Route path="/sheqlee/login" element={<Login />} />
           <Route path="/sheqlee/reset password" element={<Resetpassword />} />
           <Route

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Location from "../../components/basecomponents/Location";
 import { FaUser, FaBuilding } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -16,9 +16,28 @@ import google from "../../assets/SVG/google.svg";
 import Oneinput from "../../components/basecomponents/Oneinput";
 import Continuewithgoogle from "../../components/basecomponents/Continuewithgoogle";
 import Checkbox from "../../components/basecomponents/Checkbox";
+import Qestion from "../../components/basecomponents/Qestion";
 const Employersignup = () => {
+  const [formData, setFormData] = useState({
+    fullname: "",
+    email: "",
+    password: "",
+    confirmpassword: "",
+    checkbox: "",
+  });
+
+  const updateFormData = (field, value) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [field]: value,
+    }));
+  };
+
+  const closewindow = () => {
+    //handle what do you want here please
+    console.table(formData);
+  };
   return (
-    // for all the input fields i have to use components but for now lets t odo it
     <div>
       <div className="">
         <Location />
@@ -38,7 +57,7 @@ const Employersignup = () => {
           If you are an employer, please visit{" "}
           <Link
             to={"/sheqlee/companysignup"}
-            className=" border-b-2 border-purple-400 font-semibold font-kantumruy"
+            className=" pb-1  border-b-2 border-purple-400 font-semibold font-kantumruy"
           >
             employers registration
           </Link>{" "}
@@ -55,7 +74,13 @@ const Employersignup = () => {
           </h1>
         </div>
       </div>
-      <form action="" className=" max-w-4xl mx-auto ">
+      <form
+        action=""
+        className=" max-w-4xl mx-auto "
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
         {/* below devide part */}
         <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
           <Oneinput
@@ -65,6 +90,9 @@ const Employersignup = () => {
             type={"text"}
             id={"fullname"}
             warn
+            formData={formData}
+            updateFormData={updateFormData}
+            correctvalue={"fullname"}
           />
           <Oneinput
             iconmyimage={email}
@@ -73,6 +101,9 @@ const Employersignup = () => {
             type={"email"}
             id={"email"}
             warn
+            formData={formData}
+            updateFormData={updateFormData}
+            correctvalue={"email"}
           />
         </div>
         <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
@@ -84,6 +115,9 @@ const Employersignup = () => {
             id={"password"}
             warn
             showeyeicon
+            formData={formData}
+            updateFormData={updateFormData}
+            correctvalue={"password"}
           />
           <Oneinput
             iconmyimage={key}
@@ -92,6 +126,9 @@ const Employersignup = () => {
             type={"password"}
             id={"password1"}
             warn
+            formData={formData}
+            updateFormData={updateFormData}
+            correctvalue={"confirmpassword"}
           />
         </div>
         {/* //check box part */}
@@ -100,21 +137,21 @@ const Employersignup = () => {
             <Checkbox />
             <span className="text-sm font-kantumruy">
               by creating an account , you agree to our{" "}
-              <span className="border-b-2 border-custom-purple font-kantumruy font-semibold">
-                terms and conditions{" "}
+              <span className="pb-1 border-b-2 border-custom-purple font-kantumruy font-semibold">
+                Terms and Conditions{" "}
               </span>{" "}
               and{" "}
-              <span className="border-b-2 border-custom-purple font-kantumruy font-semibold">
-                privacy policy{" "}
+              <span className="pb-1 border-b-2 border-custom-purple font-kantumruy font-semibold">
+                Privacy Policy{" "}
               </span>{" "}
             </span>
           </div>
           {/* //for the button  */}
           <div className="text-end mt-10 ">
             <p className="text-sm font-kantumruy">
-              already got an account?{" "}
+              Already got an account?{" "}
               <Link to={"/sheqlee/login"}>
-                <span className="border-b-2   border-custom-purple font-kantumruy font-semibold">
+                <span className="pb-1 border-b-2   border-custom-purple font-kantumruy font-semibold">
                   Login
                 </span>
               </Link>
@@ -122,6 +159,7 @@ const Employersignup = () => {
                 background={
                   "bg-custom-purple text-white font-semibold font-kantumruy text-xl rounded-lg p-1 md:p-2 lg:p-3 ml-5 "
                 }
+                closewindow={closewindow}
               >
                 Register
               </Mybutton>
@@ -131,6 +169,7 @@ const Employersignup = () => {
         <Divider>or continue with google</Divider>
         <Continuewithgoogle />
       </form>
+      <Qestion />
     </div>
   );
 };

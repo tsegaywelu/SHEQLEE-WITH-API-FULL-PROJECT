@@ -107,16 +107,16 @@ const Userprofile = () => {
           <div className="flex justify-end  mt-5 ">
             <Mybutton
               background={
-                "bg-custom-purple font-semibold font-kantumruy  text-custom-white rounded-lg p-1 md:p-2 lg:p-3"
+                "bg-custom-purple font-semibold font-kantumruy  text-custom-white rounded-lg p-1 md:p-2 lg:py-3 lg:px-6"
               }
             >
-              <h1 className="text-2xl">update profile </h1>
+              <h1 className="text-2xl">Update profile </h1>
             </Mybutton>
           </div>
           <div className=" max-w-5xl  mx-auto mb-10">
             <Divider></Divider>
-            <span className="block font-kantumruy text-start ">
-              <span className="text-red-800">*</span> all fields are required.{" "}
+            <span className="block font-kantumruy text-start mt-3 ">
+              <span className="text-red-600">*</span> fields are required.{" "}
             </span>
           </div>
         </div>

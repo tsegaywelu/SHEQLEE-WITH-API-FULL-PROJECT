@@ -8,8 +8,8 @@ const Dashboaredtitle = ({ text, children, heading, css }) => {
         {heading}
       </h2>
       <p
-        className={`    md:text-xl   text-center p-1  font-kantumruy ${
-          css ? "max-w-[550px]" : "max-w-[400px]"
+        className={`    md:text-2xl   text-center p-1  font-kantumruy ${
+          css ? "max-w-[600px] " : "max-w-[400px]"
         }`}
       >
         {text}

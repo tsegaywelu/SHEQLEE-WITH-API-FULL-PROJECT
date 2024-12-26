@@ -17,8 +17,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   //const state = useSelector((state) => state.user.currentuser);
 
-  const state = "guest";
-  // const state = "company";
+  // const state = "guest";
+  const state = "company";
   // const state = "frelancer";
 
   // left component
@@ -127,7 +127,7 @@ const Header = () => {
               <Link to={"sheqlee/vacancy"}>
                 <Mybutton
                   background={
-                    "bg-custom-purple rounded-xl lg:px-3 md:p-2 lg:py-3   text-white font-semibold font-kantumruy "
+                    "bg-custom-purple rounded-xl lg:px-3 md:p-2 lg:py-2   text-white font-semibold font-kantumruy "
                   }
                 >
                   Post a job
@@ -146,6 +146,7 @@ const Header = () => {
                   ]}
                   icons={[dashboaredsvg, companysvg, settingsvg, logoutsvg]}
                   showicons
+                  pagetype={"even"}
                 />
               </div>
             </div>
@@ -154,7 +155,7 @@ const Header = () => {
               <Link to={"sheqlee/profile"}>
                 <Mybutton
                   background={
-                    "bg-custom-purple rounded-xl lg:px-3 md:p-2 lg:py-3   text-white font-semibold font-kantumruy"
+                    "bg-custom-purple rounded-xl lg:px-3 md:p-2 lg:py-2   text-white font-semibold font-kantumruy"
                   }
                 >
                   Edit profile
@@ -168,6 +169,7 @@ const Header = () => {
                   icons={[dashboaredsvg, settingsvg, logoutsvg]}
                   showicons
                   chnagelinksurl
+                  pagetype={"odd"}
                 />
               </div>
             </div>

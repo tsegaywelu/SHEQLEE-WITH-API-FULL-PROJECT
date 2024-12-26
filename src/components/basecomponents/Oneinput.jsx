@@ -32,7 +32,7 @@ const Oneinput = ({
         <input
           type={type}
           className={`bg-custom-tags  rounded-lg ${
-            nopaddingleft ? "pl-2" : " pl-16"
+            nopaddingleft ? "pl-5" : " pl-16"
           } h-full outline-none p-3 w-full text-xl font-kantumruy placeholder:text-custom-placeholder`}
           id={id}
           placeholder={placeholder}

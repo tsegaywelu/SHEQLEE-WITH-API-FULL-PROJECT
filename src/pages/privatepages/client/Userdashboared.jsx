@@ -24,8 +24,8 @@ const Userdashboared = () => {
       </div>
       <div className="max-w-4xl mx-auto">
         <form action="" onSubmit={(e) => e.preventDefault()}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6 mx-1 md:mx-2 lg:mx-5 text-custom-placeholder ">
-            <div className="relative  ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-x-5 lg:gap-y-3 mx-1 md:mx-2 lg:mx-5 text-custom-placeholder ">
+            <div className="relative   ">
               <Dropdownform
                 options={["Category 1", "Category 2", "Category 3"]}
                 defaultText="Select categories"
@@ -51,14 +51,14 @@ const Userdashboared = () => {
               />
             </div>
 
-            <Mybutton background="bg-custom-purple rounded-[15px]  text-xl text-white font-semibold  font-kantumruy ">
+            <Mybutton background="bg-custom-purple rounded-lg  text-xl text-white font-semibold  font-kantumruy ">
               Apply filter
             </Mybutton>
           </div>
         </form>
       </div>
       <div className="mt-8">
-        <Postedjobs />
+        <Postedjobs showicon5 />
       </div>
     </div>
   );
