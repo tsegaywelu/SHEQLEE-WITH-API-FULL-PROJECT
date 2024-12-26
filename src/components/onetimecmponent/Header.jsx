@@ -18,8 +18,8 @@ const Header = () => {
   //const state = useSelector((state) => state.user.currentuser);
 
   // const state = "guest";
-  const state = "company";
-  // const state = "frelancer";
+  // const state = "company";
+  const state = "frelancer";
 
   // left component
   const leftsidecontent = () => {

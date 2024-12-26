@@ -104,7 +104,7 @@ const Userprofile = () => {
             }
           />
 
-          <div className="flex justify-end  mt-5 ">
+          <div className="flex justify-end  mt-10 ">
             <Mybutton
               background={
                 "bg-custom-purple font-semibold font-kantumruy  text-custom-white rounded-lg p-1 md:p-2 lg:py-3 lg:px-6"

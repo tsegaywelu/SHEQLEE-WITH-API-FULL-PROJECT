@@ -17,7 +17,7 @@ export const Dropdownprofile = ({
     <div className="">
       {showmodal && (
         <div className="  flex items-center justify-center h-screen w-full fixed mx-auto bg-stone-900/60 z-10 ">
-          <div className=" flex flex-col items-center justify-center w-1/2 h-1/2 z-50 font-semibold  bg-white rounded-xl shadow-lg  space-y-6">
+          <div className=" flex flex-col items-center justify-center w-1/3 h-[40%] z-50 font-semibold   bg-white py-3 rounded-xl shadow-lg  space-y-6">
             <p className="  mx-auto  md:text-xl font-kantumruy font-medium   ">
               <div dangerouslySetInnerHTML={{ __html: message }} />
             </p>
@@ -25,17 +25,17 @@ export const Dropdownprofile = ({
             <form
               action="
            "
-              className="  w-4/5  "
+              className="  w-4/5   "
             >
               <div className="flex flex-col justify-center items-center gap-4 w-full">
                 <input
                   type="text"
                   placeholder={placeholder1}
-                  className="bg-custom-tags p-4 placeholder:text-custom-placeholder w-4/5 rounded-lg outline-none "
+                  className="bg-custom-tags p-4 placeholder:text-custom-placeholder w-full rounded-lg outline-none "
                 />
 
                 {dropdown ? (
-                  <div className="relative w-4/5 text-custom-placeholder font-normal ">
+                  <div className="relative w-full font-normal ">
                     <Dropdownform
                       options={["Junior", "Intermidate", "Sunior"]}
                       defaultText="skill level"
@@ -45,18 +45,18 @@ export const Dropdownprofile = ({
                   <input
                     type="text"
                     placeholder={placeholder2}
-                    className="bg-custom-tags p-4 placeholder:text-custom-placeholder w-4/5 rounded-lg outline-none "
+                    className="bg-custom-tags p-4 placeholder:text-custom-placeholder w-full rounded-lg outline-none "
                   />
                 )}
 
                 <div className="flex justify-end   ">
                   <Mybutton
                     background={
-                      "bg-black font-semibold font-kantumruy  text-custom-white rounded-lg px-16 py-3"
+                      "bg-black font-semibold font-kantumruy  text-custom-white rounded-lg px-16 py-3 mt-2"
                     }
                     onClick={(e) => setshowmodal(!showmodal)}
                   >
-                    <h1 className="text-2xl">{buttontext} </h1>
+                    <h1 className="text-xl">{buttontext} </h1>
                   </Mybutton>
                 </div>
               </div>

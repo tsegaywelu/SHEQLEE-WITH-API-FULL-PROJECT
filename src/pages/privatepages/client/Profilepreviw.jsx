@@ -10,7 +10,7 @@ import Reatchtext from "../../../components/basecomponents/Reatchtext";
 import Skillstable from "../../../components/onetimecmponent/Skills";
 import { useState } from "react";
 import Linkstabble from "../../../components/onetimecmponent/Linkstabble";
-import Uploadcv from "../../../components/onetimecmponent/Uploadcv";
+import Downloadfile from "../../../components/onetimecmponent/Downloadfile";
 import Mybutton from "../../../components/basecomponents/Mybutton";
 import Divider from "../../../components/basecomponents/Divider";
 import tsegay from "../../../assets/tsegay.jpg";
@@ -109,18 +109,25 @@ const Profilepreviw = () => {
             ></textarea>
           </div>
         </div>
-        <div className="mx-auto  max-w-5xl space-y-8 ">
+        <div className="mx-auto  max-w-5xl space-y-12 ">
           <Skillstable skills={skills} title={"Skillset"} />
           <Linkstabble mylinks={mylinks} title={"Profiles"} />
-          <div className="flex justify-between">
-            <Uploadcv label={<div className="text-xl my-3">CV </div>} />
-            <Oneinputfor
-              labeltext={"Email "}
-              placeholder={"Full-Stack Developer"}
-              icon={blackedit}
-              id={"title "}
-              value={email}
-            />
+          <div className="flex gap-10 w-full">
+            <div className="w-1/2">
+              <Downloadfile
+                label={<div className="text-xl my-3">CV </div>}
+                fileUrl={"www.myfile.com"}
+                filename="Resume - Murutswisehfuisedfhsjdhf2022.pdf"
+              />
+            </div>
+            <div className=" w-1/2  font-kantumruy">
+              <div className="flex flex-col  space-y-5 mt-4">
+                <p className="font-medium font-kantumruy">Email </p>
+                <p className="bg-custom-tags py-[14px] pl-5 rounded-lg font-kantumruy ">
+                  muruts.yifter@gmail.com
+                </p>
+              </div>
+            </div>
           </div>
           <div className="flex justify-end">
             <div className="  my-16 ">

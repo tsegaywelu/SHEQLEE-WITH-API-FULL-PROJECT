@@ -25,8 +25,8 @@ const Oneinput = ({
         {iconmyimage && (
           <img
             src={iconmyimage}
-            className="absolute left-0 top-0 bg-black rounded-l-lg p-4   "
-            style={{ width: 48, height: 48 }}
+            className="absolute left-0 top-0  bg-black rounded-l-lg p-4     "
+            style={{ width: 52, height: 52 }}
           />
         )}
         <input
