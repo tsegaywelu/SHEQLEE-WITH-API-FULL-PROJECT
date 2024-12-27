@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+//here i have to clear all the un used codes form my pages
 import Location from "../../../components/basecomponents/Location";
 import profilesvg from "../../../assets/direction/profilesvg.svg";
 import Dashboaredtitle from "../../../components/onetimecmponent/Dashboaredtitle";
