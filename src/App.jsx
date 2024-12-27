@@ -31,13 +31,15 @@ import Privacypoliciy from "./pages/authpages/Privacypoliciy";
 import Logout from "./pages/privatepages/Logout";
 import Userprofile from "./pages/privatepages/client/Userprofile";
 import Profilepreviw from "./pages/privatepages/client/Profilepreviw";
+import { useSelector } from "react-redux";
 const App = () => {
   console.log("<App/> rendered");
 
   // here  i have three kind of users  for my system  guest,company,frelancer  so here there is clash of routes
   //and also if user is frelancer he can not access the  company pages and reverse .
-  // const state = "company";
-  const state = "frelancer";
+  const { currentuser, loading, error } = useSelector((state) => state.user);
+
+  const state = currentuser ? currentuser.role : "guest";
   return (
     <BrowserRouter>
       <div className="">

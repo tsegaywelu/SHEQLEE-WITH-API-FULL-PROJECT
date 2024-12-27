@@ -15,11 +15,8 @@ const Header = () => {
   const { pathname } = useLocation();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  //const state = useSelector((state) => state.user.currentuser);
-
-  // const state = "guest";
-  // const state = "company";
-  const state = "frelancer";
+  const { currentuser, loading, error } = useSelector((state) => state.user);
+  const state = currentuser ? currentuser.role : "guest";
 
   // left component
   const leftsidecontent = () => {
@@ -104,9 +101,9 @@ const Header = () => {
                 to={"/sheqlee/login"}
                 className={` ${
                   pathname.includes("login")
-                    ? "bg-black rounded-xl text-white border-[3px]"
-                    : "border-[3px] border-custom-purple rounded-xl "
-                } py-1 md:py-[6px] px-2 md:px-4 text-base font-semibold font-kantumruy`}
+                    ? "bg-black rounded-xl text-white lg:px-4 md:p-2 lg:py-2 font-semibold font-kantumruy"
+                    : "border-[3px] border-custom-purple rounded-xl py-1 md:py-[6px] px-2 md:px-4 text-base font-semibold font-kantumruy "
+                } `}
               >
                 <Mybutton>Log in</Mybutton>
               </Link>

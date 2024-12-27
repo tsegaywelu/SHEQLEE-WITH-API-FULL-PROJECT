@@ -33,6 +33,16 @@ const Login = () => {
   };
   const closewindow = () => {
     console.table(formData);
+    //lets send here the user email as user type
+
+    dispatch(
+      signinSuccess({
+        role: "company",
+        id: 1,
+        name: "Test User",
+        email: "test@example.com",
+      })
+    );
   };
   return (
     // for all the input fields i have to use components but for now lets to do it

@@ -1,12 +1,10 @@
 import React from "react";
-import { MdEmail } from "react-icons/md";
 import contact from "../../src/assets/SVG/contact.svg";
 import email from "../../src/assets/SVG/email.svg";
 import idea from "../../src/assets/SVG/idea.svg";
 import Location from "../components/basecomponents/Location";
 import Mybutton from "../components/basecomponents/Mybutton";
 import Dashboaredtitle from "../components/onetimecmponent/Dashboaredtitle";
-import Twoinput1 from "../components/basecomponents/Twoinput1";
 import Oneinput from "../components/basecomponents/Oneinput";
 import Qestion from "../components/basecomponents/Qestion";
 import { useState } from "react";
