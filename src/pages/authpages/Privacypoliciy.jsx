@@ -1,7 +1,7 @@
 import React from "react";
 import Location from "../../components/basecomponents/Location";
 import Qestion from "../../components/basecomponents/Qestion";
-const Privacypoliciy = () => {
+const PrivacyPolicy = () => {
   return (
     <div>
       <div>
@@ -22,4 +22,4 @@ const Privacypoliciy = () => {
   );
 };
 
-export default Privacypoliciy;
+export default PrivacyPolicy;

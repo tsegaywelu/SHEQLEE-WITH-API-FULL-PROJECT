@@ -15,7 +15,7 @@ const Userdashboared = () => {
       <div className="lg:mt-10 ">
         <Dashboaredtitle
           text={"These are jobs for you based on your skills."}
-          heading={"Dashboared"}
+          heading={"Dashboard"}
           css
         >
           {/* <IoGridOutline size={66} className="text-purple-600" /> */}

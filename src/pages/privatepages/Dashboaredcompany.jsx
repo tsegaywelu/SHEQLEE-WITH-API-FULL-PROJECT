@@ -6,7 +6,7 @@ import { IoGridOutline } from "react-icons/io5";
 import Dashboaredtitle from "../../components/onetimecmponent/Dashboaredtitle";
 import Jobdetail from "../../components/onetimecmponent/Jobcard";
 import dashboared from "../../assets/direction/dashboard.svg";
-const Dashboaredcompany = () => {
+const Dashboardcompany = () => {
   const job = true;
   return (
     <div>
@@ -20,7 +20,7 @@ const Dashboaredcompany = () => {
               ? "all the jobs you have posted and are about to post."
               : " You have not posted any jobs yet. Get started by posting a job."
           }
-          heading={"Dashboared"}
+          heading={"Dashboard"}
         >
           <img src={dashboared} alt="dashboared svg" width={66} height={66} />
         </Dashboaredtitle>
@@ -46,4 +46,4 @@ const Dashboaredcompany = () => {
   );
 };
 
-export default Dashboaredcompany;
+export default Dashboardcompany;

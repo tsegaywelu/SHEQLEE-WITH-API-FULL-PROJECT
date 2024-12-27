@@ -59,7 +59,7 @@ function Dropdown({
                         to={
                           showicons
                             ? `/sheqlee/${category}`
-                            : `/sheqle/catagory/${category}`
+                            : `/sheqle/Categories/${category}`
                         }
                         onClick={() => setIsOpen(!isOpen)}
                       >

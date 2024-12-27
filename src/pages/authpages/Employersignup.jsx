@@ -43,7 +43,7 @@ const Employersignup = () => {
         <Location />
       </div>
 
-      {/*i am  asking  if user is frelancer */}
+      {/*i am  asking  if user is freelancer */}
       <div className="relative  max-w-2xl  p-6  my-4 md:my-8  bg-custom-slate mx-auto mt-3 rounded-r-[15px]">
         {/* <FaUser
           size={48}

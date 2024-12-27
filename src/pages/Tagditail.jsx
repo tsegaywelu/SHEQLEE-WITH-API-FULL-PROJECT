@@ -7,7 +7,7 @@ import { FaFacebook, FaTwitter, FaTelegram, FaLinkedin } from "react-icons/fa";
 import Location from "../components/basecomponents/Location";
 import { Modal } from "../components/basecomponents/Modal";
 import Qestion from "../components/basecomponents/Qestion";
-const Catagprydetail = () => {
+const Tagdetail = () => {
   const { theidtodisplay } = useParams();
   const mytitle = theidtodisplay;
   const logo = mytitle.slice(0, 2);
@@ -81,4 +81,4 @@ const Catagprydetail = () => {
   );
 };
 
-export default Catagprydetail;
+export default Tagdetail;

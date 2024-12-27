@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import Location from "../components/basecomponents/Location";
 import { Modal } from "../components/basecomponents/Modal";
 import Qestion from "../components/basecomponents/Qestion";
-const Catagprydetail = () => {
+const Categorydetail = () => {
   const { theidtodisplay } = useParams();
   const mytitle = theidtodisplay;
   const [showModal, setshowModal] = useState(false);
@@ -77,4 +77,4 @@ const Catagprydetail = () => {
   );
 };
 
-export default Catagprydetail;
+export default Categorydetail;

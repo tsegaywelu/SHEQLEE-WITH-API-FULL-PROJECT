@@ -37,7 +37,7 @@ const Login = () => {
 
     dispatch(
       signinSuccess({
-        role: "company",
+        role: "freelancer",
         id: 1,
         name: "Test User",
         email: "test@example.com",

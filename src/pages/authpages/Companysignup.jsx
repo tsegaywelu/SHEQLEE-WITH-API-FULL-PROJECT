@@ -42,7 +42,7 @@ const Companysignup = () => {
         <Location />
       </div>
 
-      {/*i am  asking  if user is frelancer */}
+      {/*i am  asking  if user is freelancer */}
       <div className="relative  max-w-2xl  p-7  my-4 md:my-8 bg-custom-slate mx-auto">
         <img
           src={profetional}
@@ -54,7 +54,7 @@ const Companysignup = () => {
             to={"/sheqlee/Professional Signup"}
             className=" border-b-2 border-purple-400 font-semibold font-kantumruy"
           >
-            frelancer registration{" "}
+            freelancer registration{" "}
           </Link>{" "}
           page.
         </h2>
