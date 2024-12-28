@@ -9,7 +9,9 @@ import bell from "../assets/SVG/bell.svg";
 import down from "../assets/companysPNG/down/down.png";
 import Postedjobs from "../components/basecomponents/Postedjobs";
 import Qestion from "../components/basecomponents/Qestion";
+import { useParams } from "react-router-dom";
 const Companydetail = () => {
+  const { theidtodisplay } = useParams();
   return (
     <div>
       <div className="">
@@ -18,7 +20,9 @@ const Companydetail = () => {
       <div className="flex flex-col justify-center items-center gap-y-6">
         <img src={companylogo} alt="company logo" width={96} height={96} />
         <div className="flex gap-2 items-center">
-          <h2 className="font-kantumruy font-semibold text-4xl">Hotjar</h2>
+          <h2 className="font-kantumruy font-semibold text-4xl">
+            {theidtodisplay}
+          </h2>
           <div className="w-4 h-4 ">
             <img src={verify} alt="verify icon" width={24} height={12} />
           </div>

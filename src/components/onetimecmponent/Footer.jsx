@@ -45,7 +45,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to={"/sheqlee/catagoris"}
+                  to={"/sheqlee/categories"}
                   href="#"
                   className="font-light font-kantumruy "
                 >

@@ -131,7 +131,7 @@ const Postedjobs = ({ showicon5 }) => {
               return (
                 <Link to={`/sheqlee/alljob/${jobsall.title}`}>
                   <div
-                    className=" bg-custom-slate rounded-[20px] md:pr-5 px-3 pb-2 pt-5   "
+                    className=" bg-custom-slate rounded-[20px] md:pr-2 px-3 pb-2 pt-5   "
                     key={jobsall.title + Math.random()}
                   >
                     <div className=" flex gap-5">
@@ -142,7 +142,7 @@ const Postedjobs = ({ showicon5 }) => {
                         {jobsall.title}
                       </p>
                     </div>
-                    <p className="text-base mt-7 font-kantumruy  line-clamp-4 ">
+                    <p className="text-base mt-7 font-kantumruy  line-clamp-3">
                       {jobsall.descreiption}
                     </p>
                     <div className="   mt-5">
@@ -202,9 +202,6 @@ const Postedjobs = ({ showicon5 }) => {
                         >
                           Apply
                         </Mybutton>
-                      </div>
-                      <div className="flex justify-between items-center gap-1 mr-5 bg-green-600">
-                        {/* ///////// */}
                       </div>
                     </div>
                   </div>
