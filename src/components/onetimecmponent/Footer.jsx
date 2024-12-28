@@ -6,15 +6,6 @@ import instagram from "../../assets/SVG/instagram.svg";
 import telegram from "../../assets/SVG/telegram.svg";
 import linkedin from "../../assets/SVG/linkedin.svg";
 import youtube from "../../assets/SVG/youtube.svg";
-
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaTelegram,
-  FaLinkedin,
-  FaYoutube,
-} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -157,7 +148,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="container mx-auto mt-8 flex flex-wrap items-end justify-between">
           <p className="font-light font-kantumruy">
-            © 2024 Sheqlee Co., Ltd. All rights reserved.
+            © {new Date().getFullYear()} Sheqlee Co., Ltd. All rights reserved.
           </p>
           <div className="flex flex-col justify-center items-center gap-3 font-kantumruy font-light">
             <p className="self-start">Follow us on</p>
@@ -176,7 +167,7 @@ const Footer = () => {
               <a href="#">
                 <img
                   src={instagram}
-                  alt="facebook icon"
+                  alt="instagram icon"
                   width={18}
                   height={18}
                 />
@@ -184,13 +175,22 @@ const Footer = () => {
               <a href="#">
                 <img
                   src={telegram}
-                  alt="facebook icon"
+                  alt="telegram icon"
                   width={18}
                   height={18}
                 />
               </a>
-              <img src={linkedin} alt="facebook icon" width={18} height={18} />
-              <img src={youtube} alt="facebook icon" width={18} height={18} />
+              <a href="">
+                <img
+                  src={linkedin}
+                  alt="linkedin icon"
+                  width={18}
+                  height={18}
+                />
+              </a>
+              <a href="www.youtube.com">
+                <img src={youtube} alt="youtube icon" width={22} height={22} />
+              </a>
             </div>
           </div>
         </div>

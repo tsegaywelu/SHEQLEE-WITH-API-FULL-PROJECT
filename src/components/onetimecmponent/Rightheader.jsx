@@ -23,11 +23,15 @@ const Rightheader = () => {
         <FaTimes
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="flex-grow-0 text-xl text-red-800 cursor-pointer md:hidden mx-auto"
+          aria-expanded={isMenuOpen}
+          aria-label="Close menu"
         />
       ) : (
         <FaBars
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="flex-grow-0 text-3xl cursor-pointer md:hidden"
+          aria-expanded={isMenuOpen}
+          aria-label="Toggle menu"
         />
       )}
       {/* Right section: Navigation and buttons */}
