@@ -9,13 +9,13 @@ import building1 from "../../assets/svg1/company.svg";
 import user from "../../assets/svg1/user.svg";
 import email from "../../assets/svg1/email.svg";
 import key from "../../assets/svg1/key1.svg";
-import google from "../../assets/SVG/google.svg";
 import Oneinput from "../../components/basecomponents/Oneinput";
 import Continuewithgoogle from "../../components/basecomponents/Continuewithgoogle";
 import Qestion from "../../components/basecomponents/Qestion";
 import Checkbox from "../../components/basecomponents/Checkbox";
 import { useState } from "react";
 const Companysignup = () => {
+  const [errors, seterrors] = useState({});
   const [formData, setFormData] = useState({
     companyname: "",
     domain: "",
@@ -35,6 +35,7 @@ const Companysignup = () => {
   const closewindow = () => {
     //handle what do you want here please
     console.table(formData);
+    seterrors(formData);
   };
   return (
     <div className="">
@@ -70,7 +71,11 @@ const Companysignup = () => {
           </h1>
         </div>
       </div>
-      <form action="" className=" max-w-4xl mx-auto ">
+      <form
+        action=""
+        className=" max-w-4xl mx-auto "
+        onSubmit={(e) => e.preventDefault()}
+      >
         <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
           <Oneinput
             iconmyimage={building1}
