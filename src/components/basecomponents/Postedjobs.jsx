@@ -36,7 +36,7 @@ const Postedjobs = ({ showicon5 }) => {
     }
     fetchjobs();
   }, []);
-  const fakeid = "job detail";
+
   return (
     <>
       {loading ? (
