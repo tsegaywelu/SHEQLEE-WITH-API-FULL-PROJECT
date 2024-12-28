@@ -41,10 +41,10 @@ const Rightheader = () => {
         }`}
       >
         <div className=" mt-1 p-1 md:p-2 lg:p-3  text-custom-black font-kantumruy font-medium relative ">
-          <Link to={"/sheqlee/All jobs"} className=" inline-block relative">
+          <Link to={"/sheqlee/All jobs"} className=" inline-block relative ">
             All jobs
             {pathname.includes("job") && (
-              <div className="absolute w-16 h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-38px]"></div>
+              <div className="absolute w-14 h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-38px] right-0"></div>
             )}
           </Link>
         </div>

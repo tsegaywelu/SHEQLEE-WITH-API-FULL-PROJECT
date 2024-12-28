@@ -18,7 +18,7 @@ const Info1 = ({
         {subscribers}
       </span> */}
       <span
-        className={`bg-black text-white text-5xl font-medium font-kantumruy w-[350px]    flex justify-center items-center overflow-hidden p-2 ${rounded}`}
+        className={`bg-black text-white text-5xl font-medium font-kantumruy w-[300px]    flex justify-center items-center overflow-hidden p-2 ${rounded}`}
       >
         {subscribers}
       </span>
@@ -28,8 +28,8 @@ const Info1 = ({
             {title}
           </h1>
 
-          <p className=" text-xl  font-kantumruy ">{discriptiondetail}</p>
-          <p className="text-xl">{launched}</p>
+          <p className=" text-lg  font-kantumruy ">{discriptiondetail}</p>
+          <p className="text-lg">{launched}</p>
         </span>
       )}
 
@@ -39,8 +39,8 @@ const Info1 = ({
             {title}
           </h1>
 
-          <p className=" text-xl  font-kantumruy ">{discriptiondetail}</p>
-          <p className="text-xl">{launched}</p>
+          <p className=" text-lg  font-kantumruy ">{discriptiondetail}</p>
+          <p className="text-lg">{launched}</p>
         </span>
       )}
     </div>
