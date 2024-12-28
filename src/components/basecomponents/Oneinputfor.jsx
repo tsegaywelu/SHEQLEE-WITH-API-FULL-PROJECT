@@ -14,7 +14,7 @@ const Oneinputfor = ({ labeltext, warn, placeholder, icon, id, value }) => {
         id={id}
         value={value}
       />
-      <div className="absolute right-5 bottom-4">
+      <div className="absolute right-5 bottom-4 max-h-full max-w-full">
         <img src={icon} alt="" width={14} height={14} />
       </div>
     </div>
