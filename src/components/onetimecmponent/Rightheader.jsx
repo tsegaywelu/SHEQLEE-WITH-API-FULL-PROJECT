@@ -52,7 +52,7 @@ const Rightheader = () => {
         {/* Category Dropdown */}
         <Link to={"/sheqlee/Categories"} className=" ">
           <Dropdown
-            dropdowntitle={"categories"}
+            dropdowntitle={"Categories"}
             categories={[
               "Front End",
               "Back End",
@@ -63,6 +63,7 @@ const Rightheader = () => {
               "Database",
             ]}
             underline
+            pagetype={"odd"}
           />
         </Link>
         {state === "guest" && (
@@ -84,7 +85,7 @@ const Rightheader = () => {
               to={"/sheqlee/login"}
               className={` ${
                 pathname.includes("login")
-                  ? "bg-black rounded-xl text-white lg:px-4 md:p-2 lg:py-2 font-semibold font-kantumruy"
+                  ? "bg-black rounded-xl border-[3px] border-black text-white lg:px-4 md:p-2 lg:py-2 font-semibold font-kantumruy"
                   : "border-[3px] border-custom-purple rounded-xl py-1 md:py-[6px] px-2 md:px-4 text-base font-semibold font-kantumruy "
               } `}
             >

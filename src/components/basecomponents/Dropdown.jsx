@@ -47,12 +47,12 @@ function Dropdown({
                 showicons ? "right-7 md:w-48 mt-2" : "w-44"
               }`}
             >
-              <div className="py-1 font-medium font-kantumruy ">
+              <div className=" font-medium font-kantumruy ">
                 {categories.map((category, index) => (
                   <a
                     key={category}
                     href="#"
-                    className="block py-2  text-sm text-custom-black hover:bg-gray-100 hover:text-gray-900 text-start "
+                    className="block  text-sm text-custom-black text-start hover:bg-gray-100 hover:text-gray-900   "
                   >
                     <div className="">
                       <Link
@@ -64,7 +64,7 @@ function Dropdown({
                         onClick={() => setIsOpen(!isOpen)}
                       >
                         <div
-                          className={`flex  justify-start gap-x-3  px-5 
+                          className={`flex  py-2 justify-start gap-x-3  px-5  
                             ${
                               pagetype === "even" && index % 2 == 0
                                 ? "border-b-[2px] border-dvider pb-2 "

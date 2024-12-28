@@ -41,7 +41,7 @@ const Platformstatus = () => {
         <div className="flex flex-wrap   w-full justify-around">
           {/* for hand shake */}
           <div className="flex flex-col items-center text-center">
-            <img src={handshake} alt="" width={96} height={96} />
+            <img src={handshake} alt="handshke svg" width={96} height={96} />
             <h3 className="text-3xl font-semibold font-kantumruy mt-5  ">
               100K+
             </h3>
@@ -53,18 +53,18 @@ const Platformstatus = () => {
 
           {/* for user icon  */}
           <div className="flex flex-col items-center text-center">
-            <img src={programmer} alt="" width={96} height={96} />
-            <h3 className="text-3xl font-semibold font-kantumruy  mt-5">
+            <img src={programmer} alt="programer svg" width={80} height={80} />
+            <h3 className="text-3xl font-semibold font-kantumruy  mt-4">
               15K+
             </h3>
-            <p className="font-kantumruy text-custom-black  text-xl mt-5 ">
+            <p className="font-kantumruy text-custom-black  text-xl mt-4 ">
               Ethiopian professionals <br /> signed up so far
             </p>
           </div>
 
           {/* for the  */}
           <div className="flex flex-col items-center text-center">
-            <img src={company} alt="" width={96} height={96} />
+            <img src={company} alt="company svg" width={92} height={92} />
             <h3 className="text-3xl font-semibold font-kantumruy  mt-5">1K+</h3>
             <p className="font-kantumruy text-custom-black text-xl mt-4 ">
               Korean companies <br /> posting jobs daily

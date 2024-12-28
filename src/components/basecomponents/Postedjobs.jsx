@@ -59,7 +59,7 @@ const Postedjobs = ({ showicon5 }) => {
             {emptyRectangles.map((jobsall, index) => {
               return (
                 <div
-                  className=" bg-custom-slate rounded-2xl md:p-3 lg:pr-10  lg:pt-5   "
+                  className=" bg-custom-slate rounded-2xl md:p-3 lg:pr-5  lg:pt-5   "
                   key={index}
                 >
                   <div className="flex  justify-center items-center gap-5">
@@ -142,7 +142,7 @@ const Postedjobs = ({ showicon5 }) => {
                         {jobsall.title}
                       </p>
                     </div>
-                    <p className="text-base mt-7 font-kantumruy  line-clamp-3">
+                    <p className="text-base mt-7 font-kantumruy  line-clamp-5">
                       {jobsall.descreiption}
                     </p>
                     <div className="   mt-5">
