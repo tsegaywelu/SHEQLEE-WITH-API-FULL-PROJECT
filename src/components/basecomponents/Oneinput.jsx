@@ -23,7 +23,7 @@ const Oneinput = ({
       </label>
       <div className="relative flex  items-center justify-center overflow-hidden">
         {iconmyimage && (
-          <div className="relatve h-fit w-fit overflow-hidden ">
+          <div className="relatve h-fit w-fit rounded-l-lg overflow-hidden ">
             <img
               src={iconmyimage}
               className="absolute left-0 top-0  bg-black rounded-l-lg p-4     "
