@@ -18,7 +18,7 @@ import Interpasswordcode from "../pages/authpages/Interpasswordcode";
 import Logout from "../pages/privatepages/Logout";
 import PrivacyPolicy from "../pages/authpages/Privacypoliciy";
 const route = [
-  { path: "/", element: <Landing /> },
+  { path: "/sheqlee", element: <Landing /> },
   { path: "/sheqlee/all jobs", element: <Alljobs /> },
   { path: "/sheqlee/Categories", element: <Categories /> },
   { path: "/sheqlee/tags", element: <Alltags /> },

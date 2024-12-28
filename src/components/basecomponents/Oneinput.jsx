@@ -21,13 +21,15 @@ const Oneinput = ({
         {smalltext && <span className="text-sm px-2">{smalltext}</span>}{" "}
         {warn && <span className="text-red-600">*</span>}
       </label>
-      <div className="relative  ">
+      <div className="relative flex  items-center justify-center overflow-hidden">
         {iconmyimage && (
-          <img
-            src={iconmyimage}
-            className="absolute left-0 top-0  bg-black rounded-l-lg p-4     "
-            style={{ width: 52, height: 52 }}
-          />
+          <div className="relatve h-fit w-fit overflow-hidden ">
+            <img
+              src={iconmyimage}
+              className="absolute left-0 top-0  bg-black rounded-l-lg p-4     "
+              style={{ width: 52, height: 52 }}
+            />
+          </div>
         )}
         <input
           type={type}
