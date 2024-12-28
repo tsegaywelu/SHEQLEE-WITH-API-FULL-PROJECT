@@ -83,7 +83,7 @@ function Dropdown({
                           {showicons && (
                             <img
                               src={icons[index]}
-                              alt=""
+                              alt="icons"
                               width={16}
                               height={16}
                             />

@@ -17,7 +17,7 @@ import Resetpassword from "../pages/authpages/Resetpassword";
 import Interpasswordcode from "../pages/authpages/Interpasswordcode";
 import Logout from "../pages/privatepages/Logout";
 import PrivacyPolicy from "../pages/authpages/Privacypoliciy";
-const CommonRoute = [
+const route = [
   { path: "/sheqlee", element: <Landing /> },
   { path: "/sheqlee/all jobs", element: <Alljobs /> },
   { path: "/sheqlee/Categories", element: <Categories /> },
@@ -42,4 +42,4 @@ const CommonRoute = [
   { path: "/sheqlee/Privacy Policy", element: <PrivacyPolicy /> },
 ];
 
-export default CommonRoute;
+export default route;

@@ -10,6 +10,7 @@ import Freelancerroute from "./routes/Freelancerroute.jsx";
 
 const App = () => {
   const { currentuser } = useSelector((state) => state.user);
+
   const state = currentuser?.role || "guest";
   return (
     <BrowserRouter>
