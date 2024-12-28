@@ -26,8 +26,8 @@ const Oneinput = ({
           <div className="relatve h-fit w-fit rounded-l-lg overflow-hidden ">
             <img
               src={iconmyimage}
-              className="absolute left-0 top-0  bg-black rounded-l-lg p-4     "
-              style={{ width: 52, height: 52 }}
+              className="absolute left-0 top-0  bg-black rounded-l-lg p-4 h-full w-full     "
+              style={{ width: 52 }}
             />
           </div>
         )}
