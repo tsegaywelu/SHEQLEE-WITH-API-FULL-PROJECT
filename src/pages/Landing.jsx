@@ -25,8 +25,8 @@ const Landing = () => {
   const leftsidecontents = () => {
     return (
       <>
-        <div className="md:w-1/2 flex items-center  justify-center flex-col  bg-yellow-400  ">
-          <h1 className="font-semibold font-kantumruy text-xl md:text-3xl lg:text-5xl  w-[90%] pl-20  bg-blue-500">
+        <div className="md:w-1/2 flex items-center  justify-center flex-col     ">
+          <h1 className="font-semibold font-kantumruy text-xl md:text-3xl lg:text-5xl  w-[90%] pl-20">
             Recruit <span className="text-custom-purple">affordable</span>
             <div>
               {" "}
@@ -35,7 +35,7 @@ const Landing = () => {
             <div>professionals.</div>
           </h1>
 
-          <div className=" lg:my-7 text-sm md:text-xl  w-[90%] pl-20   bg-red-600 ">
+          <div className=" lg:my-7 text-sm md:text-xl  w-[90%] pl-20  ">
             <div>Web frontend, mobile app, backend, database,</div>
             <div>full-stack, data science, UI/UX & product design,</div>
             project management, scrum master, etc.
@@ -44,7 +44,7 @@ const Landing = () => {
 
           {/* //button component */}
           <div
-            className=" mt-5 md:mt-5 lg:mt-10   w-[90%] pl-20     bg-green-600"
+            className=" mt-5 md:mt-5 lg:mt-10   w-[90%] pl-20     "
             onClick={openmodal}
           >
             <div className=" ">
