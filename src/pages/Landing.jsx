@@ -25,7 +25,7 @@ const Landing = () => {
   const leftsidecontents = () => {
     return (
       <>
-        <div className="md:w-1/2 flex items-center  justify-center flex-col  ">
+        <div className="md:w-1/2 flex items-center  justify-center flex-col   ">
           <h1 className="font-semibold font-kantumruy text-xl md:text-3xl lg:text-5xl  w-[90%] pl-20 ">
             Recruit <span className="text-custom-purple">affordable</span>
             <div>
@@ -35,11 +35,11 @@ const Landing = () => {
             <div>professionals.</div>
           </h1>
 
-          <p className=" lg:my-7 text-sm md:text-xl    mr-5 pr-5   ">
+          <div className=" lg:my-7 text-sm md:text-xl    mr-5    ">
             <div>Web frontend, mobile app, backend, database,</div>
             <div>full-stack, data science, UI/UX & product design,</div>
             project management, scrum master, etc.
-          </p>
+          </div>
           {/* //for the  pop up text */}
 
           {/* //button component */}
