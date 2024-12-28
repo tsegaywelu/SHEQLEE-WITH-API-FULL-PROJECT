@@ -35,7 +35,7 @@ const Landing = () => {
             <div>professionals.</div>
           </h1>
 
-          <div className=" lg:my-7 text-sm md:text-xl    mr-5 ml-20   ">
+          <div className=" lg:my-7 text-sm md:text-xl    mr-5 m-3   ">
             <div>Web frontend, mobile app, backend, database,</div>
             <div>full-stack, data science, UI/UX & product design,</div>
             project management, scrum master, etc.
