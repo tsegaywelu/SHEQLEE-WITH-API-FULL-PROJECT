@@ -42,7 +42,7 @@ const Preview = ({ formData, onBack }) => {
           </p>
         </div>
         {/* //buttons part */}
-        <div className="flex justify-center gap-10 mt-16 ">
+        <div className="flex justify-center gap-10 mt-16  " onClick={onBack}>
           <Mybutton
             background={
               "border-4 border-custom-purple rounded-xl py-1 md:py-2 px-2 md:px-6 text-2xl font-kantumruy font-medium  "
