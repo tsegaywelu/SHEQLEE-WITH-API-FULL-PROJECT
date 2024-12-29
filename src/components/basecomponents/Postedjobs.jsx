@@ -143,7 +143,7 @@ const Postedjobs = ({ showicon5 }) => {
                         {jobsall.title}
                       </p>
                     </div>
-                    <p className="text-base mt-7 font-kantumruy  line-clamp-5">
+                    <p className="text-base mt-4 font-kantumruy  line-clamp-5">
                       {jobsall.descreiption}
                     </p>
                     <div className="   mt-5">
