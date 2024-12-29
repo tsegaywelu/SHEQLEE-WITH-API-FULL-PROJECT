@@ -21,7 +21,7 @@ const route = [
   { path: "/sheqlee/Categories", element: <Categories /> },
   { path: "/sheqlee/tags", element: <Alltags /> },
   { path: "/sheqlee/all job/:theidtodisplay", element: <Jobdetail /> },
-  { path: "/sheqle/Categories/:theidtodisplay", element: <Categorydetail /> },
+  { path: "/sheqlee/Categories/:theidtodisplay", element: <Categorydetail /> },
   { path: "/sheqlee/tag/:theidtodisplay", element: <Tagdetail /> },
   { path: "/sheqlee/clients", element: <Clients1 /> },
   { path: "/sheqlee/company", element: <Companys /> },
