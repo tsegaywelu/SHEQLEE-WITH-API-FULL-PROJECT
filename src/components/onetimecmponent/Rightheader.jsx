@@ -41,10 +41,10 @@ const Rightheader = () => {
         }`}
       >
         <div className=" mt-1 p-1 md:p-2 lg:p-3  text-custom-black font-kantumruy font-medium relative ">
-          <Link to={"/sheqlee/All jobs"} className=" inline-block relative ">
+          <Link to={"/sheqlee/All job"} className=" inline-block relative ">
             All jobs
             {pathname.includes("job") && (
-              <div className="absolute w-14 h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-38px] right-0"></div>
+              <div className="absolute w-[60px] h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-38px] right-0"></div>
             )}
           </Link>
         </div>
@@ -73,7 +73,7 @@ const Rightheader = () => {
               Clients
             </div>
             {pathname.includes("clients") && (
-              <div className="absolute w-16 h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-24px] left-3"></div>
+              <div className="absolute w-14 h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-24px] left-3"></div>
             )}
           </Link>
         )}

@@ -140,7 +140,7 @@ const Categories = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-8 text-xl p-3">
           {categories.map((category) => (
-            <Link to={`/sheqle/Categories/${category.title}`}>
+            <Link to={`/sheqlee/Categories/${category.title}`}>
               <CatagoriesCard
                 key={category.id}
                 title={category.title}

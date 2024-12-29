@@ -37,7 +37,7 @@ const Clients1 = () => {
       </div>
       <div className="   max-w-[1100px] mx-auto mt-20 space-y-10">
         <Info1
-          subscribers={"1"}
+          subscribers={"1.5M+"}
           title={"Unique alerts delivered"}
           discriptiondetail={
             "We have been delivered 3,916,718 notifications about new remote jobs to job seekers since the website launched."
@@ -48,7 +48,7 @@ const Clients1 = () => {
           right
         />
         <Info1
-          subscribers={"4"}
+          subscribers={"49.7K+"}
           title={"Telegram channel subscriber"}
           discriptiondetail={
             "We have a telegram channel with 49,716+ real subscribers. Our channel posts have 29.5K views per"

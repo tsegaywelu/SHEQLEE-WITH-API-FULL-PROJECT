@@ -19,11 +19,11 @@ import Logout from "../pages/privatepages/Logout";
 import PrivacyPolicy from "../pages/authpages/Privacypoliciy";
 const route = [
   { path: "/sheqlee", element: <Landing /> },
-  { path: "/sheqlee/all jobs", element: <Alljobs /> },
+  { path: "/sheqlee/all job", element: <Alljobs /> },
   { path: "/sheqlee/Categories", element: <Categories /> },
   { path: "/sheqlee/tags", element: <Alltags /> },
-  { path: "/sheqlee/alljob/:theidtodisplay", element: <Jobdetail /> },
-  { path: "/sheqle/Categories/:theidtodisplay", element: <Categorydetail /> },
+  { path: "/sheqlee/all job/:theidtodisplay", element: <Jobdetail /> },
+  { path: "/sheqlee/Categories/:theidtodisplay", element: <Categorydetail /> },
   { path: "/sheqlee/tag/:theidtodisplay", element: <Tagdetail /> },
   { path: "/sheqlee/clients", element: <Clients1 /> },
   { path: "/sheqlee/company", element: <Companys /> },

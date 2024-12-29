@@ -99,7 +99,7 @@ const Tags = () => {
               </h4>
               <div className="flex justify-center items-center gap-2 relative">
                 <p className="text-xs font-kantumruy font-medium">
-                  745+ more tags{" "}
+                  73+ more tags{" "}
                 </p>
                 <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-6"></div>
                 <img src={Rightarrow} alt="" width={8} height={12} />

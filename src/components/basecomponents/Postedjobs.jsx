@@ -129,7 +129,7 @@ const Postedjobs = ({ showicon5 }) => {
 
             {Jobs.map((jobsall) => {
               return (
-                <Link to={`/sheqlee/alljob/${jobsall.title}`}>
+                <Link to={`/sheqlee/all job/${jobsall.title}`}>
                   <div
                     className=" bg-custom-slate rounded-[20px] md:pr-2 px-3 pb-2 pt-5   "
                     key={jobsall.title + Math.random()}
