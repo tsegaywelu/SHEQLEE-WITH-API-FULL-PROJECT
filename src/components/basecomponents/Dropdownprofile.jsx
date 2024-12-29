@@ -42,7 +42,7 @@ export const Dropdownprofile = ({
                 <input
                   type="text"
                   placeholder={placeholder1}
-                  className="bg-custom-tags p-3 text-xl font-normal placeholder:text-custom-placeholder w-full rounded-lg outline-none font-kantumruy"
+                  className="bg-custom-tags p-3 text-xl font-normal text-custom-placeholder placeholder:text-custom-placeholder w-full rounded-lg outline-none font-kantumruy"
                 />
 
                 {dropdown ? (
