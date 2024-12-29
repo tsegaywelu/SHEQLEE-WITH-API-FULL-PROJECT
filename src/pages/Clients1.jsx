@@ -35,7 +35,7 @@ const Clients1 = () => {
         </div>
         {/* //Info1rmation and analysis section  */}
       </div>
-      <div className="   max-w-[1100px] mx-auto mt-20 space-y-10">
+      <div className="   max-w-[1100px] mx-auto mt-20 space-y-14">
         <Info1
           subscribers={"1.5M+"}
           title={"Unique alerts delivered"}
