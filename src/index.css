@@ -15,8 +15,8 @@
 
 .ql-toolbar {
   /* this is the header part */
-  /* background-color: #444;  */
-  background-color: whitesmoke;
+  background-color: #444;
+  /* background-color: whitesmoke; */
   border-radius: 14px 14px 0 0;
   text-align: left;
 }
@@ -45,7 +45,7 @@ button svg {
 .ql-formats {
   /* > *:not(.ql-script) */
   /* this is group of bold italic line throug one group and then order one group e.t.c */
-  border-right: 2px solid black;
+  border-right: 2px solid white;
   /* this is working */
 }
 .ql-container {
