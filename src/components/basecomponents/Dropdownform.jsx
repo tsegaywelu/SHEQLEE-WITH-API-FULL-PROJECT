@@ -29,7 +29,7 @@ const Dropdownform = ({
         <button
           onClick={toggleDropdown}
           // className="p-1 w-full md:p-3 bg-custom-tags text-custom-placeholder font-kantumruy text-start rounded-[10px]"
-          className="bg-custom-tags  rounded-lg  h-full outline-none p-3 w-full text-xl  font-kantumruy text-custom-placeholder text-start "
+          className="bg-custom-tags  rounded-lg  h-full outline-none p-3 w-full text-xl   text-custom-placeholder text-start  font-kantumruy"
           value={value || defaultText}
         >
           {selectedvalue}
