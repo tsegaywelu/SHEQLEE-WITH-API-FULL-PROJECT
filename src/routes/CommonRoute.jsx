@@ -20,7 +20,7 @@ const route = [
   { path: "/sheqlee/all job", element: <Alljobs /> },
   { path: "/sheqlee/Categories", element: <Categories /> },
   { path: "/sheqlee/tags", element: <Alltags /> },
-  { path: "/sheqlee/alljob/:theidtodisplay", element: <Jobdetail /> },
+  { path: "/sheqlee/all job/:theidtodisplay", element: <Jobdetail /> },
   { path: "/sheqle/Categories/:theidtodisplay", element: <Categorydetail /> },
   { path: "/sheqlee/tag/:theidtodisplay", element: <Tagdetail /> },
   { path: "/sheqlee/clients", element: <Clients1 /> },
