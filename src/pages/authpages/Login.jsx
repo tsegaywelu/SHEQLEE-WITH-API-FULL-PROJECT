@@ -100,7 +100,7 @@ const Login = () => {
           <div className="text-end mt-10 ">
             <p className="font-kantumruy">
               Forget password?
-              <Link to={"/sheqlee/resetpassword"}>
+              <Link to={"/sheqlee/reset password"}>
                 <span className="pb-1 border-b-2   border-custom-purple font-kantumruy font-semibold ml-2 ">
                   Reset
                 </span>{" "}

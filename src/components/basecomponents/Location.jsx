@@ -11,8 +11,8 @@ const Location = ({ Lost }) => {
   const pathSegments = pathname.split("/").filter(Boolean);
 
   const handleNavigation = (index) => {
-    const pathToNavigate = "/" + pathSegments.slice(0, index + 1).join("/");
-    navigate(pathToNavigate);
+    const mypath = "/" + pathSegments.slice(0, index + 1).join("/");
+    navigate(mypath);
   };
 
   return (
@@ -25,7 +25,7 @@ const Location = ({ Lost }) => {
           <span
             key={index}
             className="flex justify-center items-center capitalize cursor-pointer"
-            onClick={() => handleNavigation(index)} // Add onClick handler
+            onClick={() => handleNavigation(index)}
           >
             {decodeURIComponent(segment.replace(/%20/g, " "))}
             {index < pathSegments.length - 1 && (

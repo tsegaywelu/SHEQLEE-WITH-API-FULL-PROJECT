@@ -7,35 +7,36 @@ import companyb from "../../assets/SVG/companyb.svg";
 import calendar from "../../assets/SVG/calendar.svg";
 import qualityassurance from "../../assets/SVG/qualityassurance.svg";
 import Jobicons from "../onetimecmponent/Jobicons";
+import { Jobs } from "../../data/Postedjobs";
 // import devops from "../../assets/SVG/devops.svg";
 const emptyRectangles = [{}, {}, {}, {}, {}, {}, {}, {}, {}];
 import { useLocation } from "react-router-dom";
 const Postedjobs = ({ showicon5 }) => {
   const { pathname } = useLocation(); //here i want to cut out the text "latest posted jobs " in other pages
   const actualpath = pathname.replaceAll("/", "");
-  const [loading, setloading] = useState(true);
-  const [Jobs, setJobs] = useState([]);
+  const [loading, setloading] = useState(false);
+  // const [Jobs, setJobs] = useState([]);
 
-  useEffect(() => {
-    console.log("i am running ");
+  // useEffect(() => {
+  //   console.log("i am running ");
 
-    async function fetchjobs() {
-      try {
-        setloading(true);
-        const response = await fetch("http://localhost:3000/jobs");
-        if (!response.ok) {
-          throw new Error("Failed to fetch jobs");
-        }
-        const result = await response.json();
-        console.log({ result }, result.length);
-        setJobs(result);
-        setloading(false);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchjobs();
-  }, []);
+  //   async function fetchjobs() {
+  //     try {
+  //       setloading(true);
+  //       const response = await fetch("http://localhost:3000/jobs");
+  //       if (!response.ok) {
+  //         throw new Error("Failed to fetch jobs");
+  //       }
+  //       const result = await response.json();
+  //       console.log({ result }, result.length);
+  //       setJobs(result);
+  //       setloading(false);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   }
+  //   fetchjobs();
+  // }, []);
 
   return (
     <>
