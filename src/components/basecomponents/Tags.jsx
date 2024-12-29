@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Rightarrow from "../../assets/SVG/Right.svg";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { Totaltags } from "../../data/Tags";
+//import { Totaltags } from "../../data/Tags";
 const emptyRectangles = [{}, {}, {}, {}, {}, {}];
 const Tags = () => {
   const { pathname } = useLocation();
@@ -17,25 +17,25 @@ const Tags = () => {
     : pathname.includes("company")
     ? "company"
     : "tag";
-  const [loading, setloading] = useState(false);
-  // const [Totaltags, setTotaltags] = useState(new Array(8));
-  // useEffect(() => {
-  //   async function fetchtags() {
-  //     try {
-  //       setloading(true);
-  //       const response = await fetch("http://localhost:3000/tags");
-  //       if (!response.ok) {
-  //         throw new Error("Failed to fetch jobs");
-  //       }
-  //       const result = await response.json();
-  //       setTotaltags(result);
-  //       setloading(false);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   }
-  //   fetchtags();
-  // }, []);
+  const [loading, setloading] = useState(true);
+  const [Totaltags, setTotaltags] = useState(new Array(8));
+  useEffect(() => {
+    async function fetchtags() {
+      try {
+        setloading(true);
+        const response = await fetch("http://localhost:3000/tags");
+        if (!response.ok) {
+          throw new Error("Failed to fetch jobs");
+        }
+        const result = await response.json();
+        setTotaltags(result);
+        setloading(false);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchtags();
+  }, []);
   return (
     <>
       {loading ? (
@@ -99,7 +99,7 @@ const Tags = () => {
               </h4>
               <div className="flex justify-center items-center gap-2 relative">
                 <p className="text-xs font-kantumruy font-medium">
-                  73+ more tags{" "}
+                  745+ more tags{" "}
                 </p>
                 <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-6"></div>
                 <img src={Rightarrow} alt="" width={8} height={12} />
