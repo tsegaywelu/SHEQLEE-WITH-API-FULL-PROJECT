@@ -1,8 +1,4 @@
 import React from "react";
-import { FaCopy } from "react-icons/fa";
-import { MdEdit } from "react-icons/md";
-import { MdDelete } from "react-icons/md";
-import { FaEye } from "react-icons/fa";
 import eye from "../../assets/direction/eye1.svg";
 import copy from "../../assets/direction/copy.svg";
 import delete1 from "../../assets/direction/delete.svg";

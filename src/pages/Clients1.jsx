@@ -53,7 +53,7 @@ const Clients1 = () => {
           discriptiondetail={
             "We have a telegram channel with 49,716+ real subscribers. Our channel posts have 29.5K views per"
           }
-          cssproperty="flex  justify-center text-end  flex-row-reverse w-3/4   font-kantumruy      mx-auto mr-17"
+          cssproperty="flex  justify-center text-end  flex-row-reverse w-[77%]   font-kantumruy      mx-auto mr-16"
           rounded="rounded-r-2xl"
           launched={"day on average."}
           left
@@ -64,7 +64,7 @@ const Clients1 = () => {
           discriptiondetail={
             "We have been delivered 3,916,718 notifications about new remote jobs to job seekers since the website launched."
           }
-          cssproperty="flex  justify-center text-start  w-3/4  fonnnel subscribert-kantumruy  "
+          cssproperty="flex  justify-center text-start  w-3/4   fonnnel subscribert-kantumruy  "
           rounded="rounded-l-2xl"
           launched={"(Launched: 1 YEAR AGO)"}
           right
@@ -73,9 +73,9 @@ const Clients1 = () => {
           subscribers={"49.7K+"}
           title={"Telegram channel subscriber"}
           discriptiondetail={
-            "We have a telegram channel with 49,716+ real subscribers. Our channel posts have 29.5K views per day on average."
+            "We have a telegram channel with 49,716+ real subscribers. Our channel posts have 29.5K views per"
           }
-          cssproperty="flex  justify-center text-end  flex-row-reverse w-3/4   font-kantumruy      mx-auto mr-17"
+          cssproperty="flex  justify-center text-end  flex-row-reverse w-[77%]   font-kantumruy      mx-auto mr-16"
           rounded="rounded-r-2xl"
           launched={"day on average."}
           left
