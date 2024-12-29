@@ -97,7 +97,7 @@ const Companydetail = () => {
       </div>
       <div className=" mt-24">
         <h2 className="font-kantumruy font-semibold text-center text-3xl ">
-          Job posts from Hotjar
+          Job posts from {theidtodisplay}
         </h2>
       </div>
       <Postedjobs />
