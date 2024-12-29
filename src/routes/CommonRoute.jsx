@@ -17,7 +17,7 @@ import Interpasswordcode from "../pages/authpages/Interpasswordcode";
 import Logout from "../pages/privatepages/Logout";
 import PrivacyPolicy from "../pages/authpages/Privacypoliciy";
 const route = [
-  { path: "/sheqlee/all jobs", element: <Alljobs /> },
+  { path: "/sheqlee/all job", element: <Alljobs /> },
   { path: "/sheqlee/Categories", element: <Categories /> },
   { path: "/sheqlee/tags", element: <Alltags /> },
   { path: "/sheqlee/alljob/:theidtodisplay", element: <Jobdetail /> },
