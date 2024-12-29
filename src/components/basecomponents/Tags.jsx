@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Rightarrow from "../../assets/SVG/Right.svg";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-//import { Totaltags } from "../../data/Tags";
+import { Totaltags } from "../../data/Tags";
 const emptyRectangles = [{}, {}, {}, {}, {}, {}];
 const Tags = () => {
   const { pathname } = useLocation();
@@ -17,25 +17,25 @@ const Tags = () => {
     : pathname.includes("company")
     ? "company"
     : "tag";
-  const [loading, setloading] = useState(true);
-  const [Totaltags, setTotaltags] = useState(new Array(8));
-  useEffect(() => {
-    async function fetchtags() {
-      try {
-        setloading(true);
-        const response = await fetch("http://localhost:3000/tags");
-        if (!response.ok) {
-          throw new Error("Failed to fetch jobs");
-        }
-        const result = await response.json();
-        setTotaltags(result);
-        setloading(false);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchtags();
-  }, []);
+  const [loading, setloading] = useState(false);
+  // const [Totaltags, setTotaltags] = useState(new Array(8));
+  // useEffect(() => {
+  //   async function fetchtags() {
+  //     try {
+  //       setloading(true);
+  //       const response = await fetch("http://localhost:3000/tags");
+  //       if (!response.ok) {
+  //         throw new Error("Failed to fetch jobs");
+  //       }
+  //       const result = await response.json();
+  //       setTotaltags(result);
+  //       setloading(false);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   }
+  //   fetchtags();
+  // }, []);
   return (
     <>
       {loading ? (
