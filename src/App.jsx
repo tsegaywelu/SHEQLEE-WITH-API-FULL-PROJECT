@@ -7,7 +7,8 @@ import { useSelector } from "react-redux";
 import CommonRoute from "./routes/CommonRoute.jsx";
 import CompanyRoute from "./routes/CompanyRoute.jsx";
 import Freelancerroute from "./routes/Freelancerroute.jsx";
-
+import Landing from "./pages/Landing.jsx";
+import Userlanding from "./components/onetimecmponent/Userlanding.jsx";
 const App = () => {
   const { currentuser } = useSelector((state) => state.user);
 
@@ -16,7 +17,14 @@ const App = () => {
     <BrowserRouter>
       <div className="">
         <Header />
+
         <Routes>
+          <Route
+            path="/sheqlee"
+            element={
+              currentuser?.role === "freelancer" ? <Userlanding /> : <Landing />
+            }
+          />
           {CommonRoute.map((route) => (
             <Route key={route.path} path={route.path} element={route.element} />
           ))}

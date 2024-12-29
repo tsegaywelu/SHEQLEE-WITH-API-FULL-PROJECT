@@ -95,7 +95,7 @@ const Landing = () => {
         {/* display tags here  */}
       </div>
       <Tags />
-      <Postedjobs showicon5 />
+      <Postedjobs showicon5 showtitle />
       <Qestion />
       <Platformstatus />
     </>

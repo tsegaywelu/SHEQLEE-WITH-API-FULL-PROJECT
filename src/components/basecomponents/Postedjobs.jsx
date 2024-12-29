@@ -11,7 +11,7 @@ import { Jobs } from "../../data/Postedjobs";
 // import devops from "../../assets/SVG/devops.svg";
 const emptyRectangles = [{}, {}, {}, {}, {}, {}, {}, {}, {}];
 import { useLocation } from "react-router-dom";
-const Postedjobs = ({ showicon5 }) => {
+const Postedjobs = ({ showicon5, showtitle }) => {
   const { pathname } = useLocation(); //here i want to cut out the text "latest posted jobs " in other pages
   const actualpath = pathname.replaceAll("/", "");
   const [loading, setloading] = useState(false);
@@ -42,7 +42,7 @@ const Postedjobs = ({ showicon5 }) => {
     <>
       {loading ? (
         <div className=" py-3 md:py-6 lg:py-12  mx-8 md:mx-16 ">
-          {actualpath === "sheqlee" && (
+          {showtitle && (
             <div className="flex justify-between">
               <h4 className="text-[50px]  font-kantumruy font-medium my-3">
                 Latest job posts
@@ -113,7 +113,7 @@ const Postedjobs = ({ showicon5 }) => {
         </div>
       ) : (
         <div className="py-4 md:py-8 lg:py-12 mx-8 md:mx-16">
-          {actualpath === "sheqlee" && (
+          {showtitle && (
             <div className="flex justify-between ">
               <h4 className="text-[50px]  font-kantumruy font-medium my-3">
                 Latest job posts{" "}
