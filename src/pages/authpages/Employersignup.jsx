@@ -17,6 +17,7 @@ import Oneinput from "../../components/basecomponents/Oneinput";
 import Continuewithgoogle from "../../components/basecomponents/Continuewithgoogle";
 import Checkbox from "../../components/basecomponents/Checkbox";
 import Qestion from "../../components/basecomponents/Qestion";
+import Formtitle from "../../components/basecomponents/Formtitle";
 const Employersignup = () => {
   const [formData, setFormData] = useState({
     fullname: "",
@@ -44,36 +45,24 @@ const Employersignup = () => {
       </div>
 
       {/*i am  asking  if user is freelancer */}
-      <div className="relative  max-w-2xl  p-6  my-4 md:my-8  bg-custom-slate mx-auto mt-3 rounded-r-[15px]">
-        {/* <FaUser
-          size={48}
-          className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-3"
-        /> */}
-        <img
-          src={building1}
-          className="bg-black text-white rounded-l-[15px] absolute left-0 top-0  h-full p-6"
-        />
-        <h2 className="  rounded-lg pl-16 h-full   w-full text-lg    font-kantumruy">
+      <Formtitle
+        building1={building1}
+        profetional={profetional}
+        titletext={"Professional Registration"}
+      >
+        <h2 className="  rounded-lg pl-16 h-full   w-full     font-kantumruy">
           If you are an employer, please visit{" "}
           <Link
             to={"/sheqlee/companysignup"}
-            className=" pb-1  border-b-2 border-purple-400 font-semibold font-kantumruy"
+            className=" border-b-2 border-purple-400 font-semibold font-kantumruy"
           >
             employers registration
           </Link>{" "}
           page.
         </h2>
-      </div>
-      {/* header part */}
-      <div className="flex  flex-start  max-w-4xl mx-auto text-center gap-7 mt-20">
-        <img src={profetional} width={45} height={45} />
-        <div>
-          {" "}
-          <h1 className="text-2xl md:text-4xl text-center font-semibold  font-kantumruy">
-            Professional Registration{" "}
-          </h1>
-        </div>
-      </div>
+      </Formtitle>
+
+      {/* ????????????????????????????????????????? */}
       <form
         action=""
         className=" max-w-4xl mx-auto "

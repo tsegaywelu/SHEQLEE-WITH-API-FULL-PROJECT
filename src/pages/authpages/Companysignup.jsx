@@ -14,6 +14,7 @@ import Continuewithgoogle from "../../components/basecomponents/Continuewithgoog
 import Qestion from "../../components/basecomponents/Qestion";
 import Checkbox from "../../components/basecomponents/Checkbox";
 import { useState } from "react";
+import Formtitle from "../../components/basecomponents/Formtitle";
 const Companysignup = () => {
   const [errors, seterrors] = useState({});
   const [formData, setFormData] = useState({
@@ -43,8 +44,33 @@ const Companysignup = () => {
         <Location />
       </div>
 
+      <Formtitle
+        building1={profetional}
+        profetional={building}
+        titletext={"Company Registration"}
+      >
+        <h2 className="  rounded-lg pl-16 h-full   w-full     font-kantumruy ">
+          If you are freelancer please visit{" "}
+          <Link
+            to={"/sheqlee/Professional Signup"}
+            className=" border-b-2 border-purple-400 font-semibold font-kantumruy"
+          >
+            freelancer registration{" "}
+          </Link>{" "}
+          page.
+        </h2>
+      </Formtitle>
       {/*i am  asking  if user is freelancer */}
-      <div className="relative  max-w-2xl  p-7  my-4 md:my-8 bg-custom-slate mx-auto">
+      {/* <div classNa <h2 className="  rounded-lg pl-16 h-full   w-full text-lg font-kantumruy ">
+          if you are freelancer please visit{" "}
+          <Link
+            to={"/sheqlee/Professional Signup"}
+            className=" border-b-2 border-purple-400 font-semibold font-kantumruy"
+          >
+            freelancer registration{" "}
+          </Link>{" "}
+          page.
+        </h2>me="relative  max-w-2xl  p-7  my-4 md:my-8 bg-custom-slate mx-auto">
         <img
           src={profetional}
           className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-7"
@@ -60,9 +86,9 @@ const Companysignup = () => {
           page.
         </h2>
       </div>
-      {/* header part */}
+     
       <div className="flex  flex-start  max-w-4xl mx-auto text-center gap-4">
-        {/* <FaBuilding size={48} className="bg-white text-purple-400" />{" "} */}
+        
         <img src={building} width={45} height={45} />
         <div>
           {" "}
@@ -70,7 +96,7 @@ const Companysignup = () => {
             Company Registration{" "}
           </h1>
         </div>
-      </div>
+      </div> */}
       <form
         action=""
         className=" max-w-4xl mx-auto "
