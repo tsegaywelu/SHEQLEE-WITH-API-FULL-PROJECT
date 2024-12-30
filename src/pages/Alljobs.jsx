@@ -9,10 +9,27 @@ import Noresult from "../components/basecomponents/Noresult";
 import Dropdownform from "../components/basecomponents/Dropdownform";
 import Qestion from "../components/basecomponents/Qestion";
 const Alljobs = () => {
+  const [formData, setFormdata] = useState({
+    category: "",
+    type: "",
+    level: "",
+    programingName: "",
+  });
+  const updateFormData = (field, value) => {
+    setFormdata((prevData) => ({
+      ...prevData,
+      [field]: value,
+    }));
+  };
   return (
     <>
       <div className="relative">
         <Location />
+        {Object.entries(formData).map(([key, value]) => (
+          <div className="flex justify-around" key={key}>
+            {key}: {value}
+          </div>
+        ))}
       </div>
 
       <div className=" px-3 md:px-6 lg:px-8 my-3  p-3 md:p-6 lg:p-10 ">
@@ -33,19 +50,27 @@ const Alljobs = () => {
               <Dropdownform
                 options={["Category 1", "Category 2", "Category 3"]}
                 defaultText="All categories"
-                onChange={onchange}
+                updateFormData={updateFormData}
+                formData={formData}
+                correctvalue2={"category"}
               />
             </div>
             <div className="relative">
               <Dropdownform
                 options={["Type 1", "Type 2", "Type 3"]}
                 defaultText="All types"
+                updateFormData={updateFormData}
+                formData={formData}
+                correctvalue2={"type"}
               />
             </div>
             <div className="relative">
               <Dropdownform
                 options={["Level 1", "Level 2", "Level 3"]}
                 defaultText="All levels"
+                updateFormData={updateFormData}
+                formData={formData}
+                correctvalue2={"level"}
               />
             </div>
 
@@ -55,6 +80,10 @@ const Alljobs = () => {
                 type="text"
                 className="bg-custom-tags  rounded-lg  h-full outline-none p-3 w-full text-xl font-kantumruy placeholder:text-custom-placeholder lg:col-span-2  md:pl-12"
                 placeholder="Search by programming technology or field..."
+                value={formData.programingName}
+                onChange={(e) =>
+                  updateFormData("programingName", e.target.value)
+                }
               />
               <img
                 src={search}

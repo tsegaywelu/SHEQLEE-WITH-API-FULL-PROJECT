@@ -74,9 +74,9 @@ export const Dropdownprofile = ({
                 <div className="flex justify-end   ">
                   <Mybutton
                     background={` ${
-                      formData[correctvalue1] && formData[correctvalue2] // Both values are truthy
+                      formData[correctvalue1] && formData[correctvalue2]
                         ? "bg-custom-purple"
-                        : "bg-black" // At least one value is falsy
+                        : "bg-black"
                     } font-semibold font-kantumruy  text-custom-white rounded-lg px-16 py-3 mt-2`}
                     // onClick={(e) => setshowmodal(!showmodal)}
                     type="button"
