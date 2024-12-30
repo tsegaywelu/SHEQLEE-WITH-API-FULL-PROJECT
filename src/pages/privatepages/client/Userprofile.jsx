@@ -14,6 +14,19 @@ import Uploadcv from "../../../components/onetimecmponent/Uploadcv";
 import Mybutton from "../../../components/basecomponents/Mybutton";
 import Divider from "../../../components/basecomponents/Divider";
 const Userprofile = () => {
+  const [formData, setFormdata] = useState({
+    skillName: "",
+    skillLevel: "",
+    linkName: "",
+    URL: "",
+  });
+  const updateFormData = (field, value) => {
+    setFormdata((prevData) => ({
+      ...prevData,
+      [field]: value,
+    }));
+  };
+
   const [skills, setSkills] = useState([
     { name: "Java", level: 3 },
     { name: "Flutter", level: 3 },
@@ -28,6 +41,11 @@ const Userprofile = () => {
     <div>
       <div>
         <Location />
+        {Object.entries(formData).map(([key, value]) => (
+          <div className="flex justify-around" key={key}>
+            {key}: {value}
+          </div>
+        ))}
       </div>
       <div className=" flex  flex-col  items-center  gap-5 justify-center my-5 md:my-10 ">
         <Dashboaredtitle
@@ -80,6 +98,8 @@ const Userprofile = () => {
               " Adding your skills will help us make job suggestions more accurately."
             }
             buttons
+            updateFormData={updateFormData}
+            formData={formData}
           />
           <Linkstabble
             mylinks={mylinks}
@@ -88,6 +108,8 @@ const Userprofile = () => {
               "Adding your links to your profiles make more credible. Profiles could be GitHub, LinkedIn etc."
             }
             buttons
+            updateFormData={updateFormData}
+            formData={formData}
           />
 
           <Uploadcv

@@ -2,7 +2,14 @@ import React from "react";
 import delete1 from "../../assets/direction/delete.svg";
 import Dropdownprofile from "../basecomponents/Dropdownprofile";
 import { useState } from "react";
-const Linkstabble = ({ mylinks, title, subtitle, buttons }) => {
+const Linkstabble = ({
+  mylinks,
+  title,
+  subtitle,
+  buttons,
+  updateFormData,
+  formData,
+}) => {
   const [showmodal, setshowmodal] = useState(false);
 
   return (
@@ -15,6 +22,10 @@ const Linkstabble = ({ mylinks, title, subtitle, buttons }) => {
           buttontext={"Add link"}
           setshowmodal={setshowmodal}
           showmodal={showmodal}
+          updateFormData={updateFormData}
+          formData={formData}
+          correctvalue1={"linkName"}
+          correctvalue2={"URL"}
         />
       )}
       <div className="space-y-3 mb-5">

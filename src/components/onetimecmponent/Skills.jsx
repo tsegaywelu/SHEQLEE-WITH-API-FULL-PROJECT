@@ -2,7 +2,14 @@ import React, { useState } from "react";
 import delete1 from "../../assets/direction/delete.svg";
 import Dropdownprofile from "../basecomponents/Dropdownprofile";
 
-const Skills = ({ skills, title, subtitle, buttons }) => {
+const Skills = ({
+  skills,
+  title,
+  subtitle,
+  buttons,
+  updateFormData,
+  formData,
+}) => {
   const [showmodal, setshowmodal] = useState(false);
 
   return (
@@ -16,6 +23,10 @@ const Skills = ({ skills, title, subtitle, buttons }) => {
           setshowmodal={setshowmodal}
           showmodal={showmodal}
           dropdown
+          updateFormData={updateFormData}
+          formData={formData}
+          correctvalue1={"skillName"}
+          correctvalue2={"skillLevel"}
         />
       )}
       <div className="space-y-3 mb-5">

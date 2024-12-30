@@ -13,6 +13,11 @@ export const Dropdownprofile = ({
   setshowmodal,
   showmodal,
   dropdown,
+
+  updateFormData,
+  formData,
+  correctvalue1,
+  correctvalue2,
 }) => {
   return createPortal(
     <div className="">
@@ -32,17 +37,16 @@ export const Dropdownprofile = ({
               <div dangerouslySetInnerHTML={{ __html: message }} />
             </p>
 
-            <div
-              action="
-           "
-              className="  w-4/5   "
-              onSubmit={(e) => e.preventDefault()}
-            >
+            <div className="  w-4/5   ">
               <div className="flex flex-col justify-center items-center gap-4 w-full">
                 <input
                   type="text"
                   placeholder={placeholder1}
                   className="bg-custom-tags p-3 text-xl font-normal text-custom-placeholder placeholder:text-custom-placeholder w-full rounded-lg outline-none font-kantumruy"
+                  value={formData[correctvalue1] || ""}
+                  onChange={(e) =>
+                    updateFormData(correctvalue1, e.target.value)
+                  }
                 />
 
                 {dropdown ? (
@@ -50,6 +54,9 @@ export const Dropdownprofile = ({
                     <Dropdownform
                       options={["Junior", "Intermidate", "Sunior"]}
                       defaultText="Skill level"
+                      updateFormData={updateFormData}
+                      formData={formData}
+                      correctvalue2={correctvalue2}
                     />
                   </div>
                 ) : (
@@ -57,14 +64,20 @@ export const Dropdownprofile = ({
                     type="text"
                     placeholder={placeholder2}
                     className="bg-custom-tags p-4 font-normal text-xl placeholder:text-custom-placeholder w-full rounded-lg outline-none font-kantumruy "
+                    value={formData[correctvalue2] || ""}
+                    onChange={(e) =>
+                      updateFormData(correctvalue2, e.target.value)
+                    }
                   />
                 )}
 
                 <div className="flex justify-end   ">
                   <Mybutton
-                    background={
-                      "bg-black font-semibold font-kantumruy  text-custom-white rounded-lg px-16 py-3 mt-2"
-                    }
+                    background={` ${
+                      formData[correctvalue1] && formData[correctvalue2] // Both values are truthy
+                        ? "bg-custom-purple"
+                        : "bg-black" // At least one value is falsy
+                    } font-semibold font-kantumruy  text-custom-white rounded-lg px-16 py-3 mt-2`}
                     // onClick={(e) => setshowmodal(!showmodal)}
                     type="button"
                   >
