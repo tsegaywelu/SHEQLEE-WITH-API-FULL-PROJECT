@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Dashboaredtitle from "../../../components/onetimecmponent/Dashboaredtitle";
 import Location from "../../../components/basecomponents/Location";
 import dashboared from "../../../assets/direction/dashboard.svg";
@@ -7,12 +7,30 @@ import Dropdownform from "../../../components/basecomponents/Dropdownform";
 import Postedjobs from "../../../components/basecomponents/Postedjobs";
 import Skills from "../../../components/onetimecmponent/Skills";
 const Userdashboared = () => {
+  const [formData, setFormdata] = useState({
+    category: "",
+    type: "",
+    level: "",
+    tag: "",
+  });
+
+  const updateFormData = (field, value) => {
+    setFormdata((prevData) => ({
+      ...prevData,
+      [field]: value,
+    }));
+  };
   return (
     <div>
       <div className="">
         <Location />
+        {/* {Object.entries(formData).map(([key, value]) => (
+          <div className="flex justify-around" key={key}>
+            {key}: {value}
+          </div>
+        ))} */}
       </div>
-      <div className="lg:mt-10 ">
+      <div className="lg:my-10 ">
         <Dashboaredtitle
           text={"These are jobs for you based on your skills."}
           heading={"Dashboard"}
@@ -29,18 +47,27 @@ const Userdashboared = () => {
               <Dropdownform
                 options={["Category 1", "Category 2", "Category 3"]}
                 defaultText="Select categories"
+                formData={formData}
+                updateFormData={updateFormData}
+                correctvalue2={"category"}
               />
             </div>
             <div className="relative">
               <Dropdownform
                 options={["Type 1", "Type 2", "Type 3"]}
                 defaultText="Select type"
+                formData={formData}
+                updateFormData={updateFormData}
+                correctvalue2={"type"}
               />
             </div>
             <div className="relative">
               <Dropdownform
                 options={["Level 1", "Level 2", "Level 3"]}
                 defaultText="Select level"
+                formData={formData}
+                updateFormData={updateFormData}
+                correctvalue2={"level"}
               />
             </div>
 
@@ -48,6 +75,9 @@ const Userdashboared = () => {
               <Dropdownform
                 options={["Tag 1", "Tag 2", "Tag 3"]}
                 defaultText="Select tags"
+                formData={formData}
+                updateFormData={updateFormData}
+                correctvalue2={"tag"}
               />
             </div>
 
