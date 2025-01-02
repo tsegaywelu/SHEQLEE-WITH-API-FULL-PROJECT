@@ -13,10 +13,10 @@ const Footer = () => {
     <>
       {/* //here it was having mt-5 but i deleted it because of clinet.jsx check for others effect  */}
       <footer className="bg-black text-white  pt-2 md:pt-8 lg:pt-16 pb-4 ">
-        <div className="container mx-auto flex flex-wrap lg:flex-nowrap justify-between gap-10 ">
-          {/* Address Section */}
-          <div className="w-full sm:w-1/4  text-center sm:text-left mb-6 sm:mb-0  self-end lg:-translate-x-16">
-            <div className="flex  flex-col items-center justify-center sm:justify-start mb-4 gap-4">
+        <div className=" mx-auto flex flex-wrap lg:flex-nowrap justify-start gap-10  px-10 ">
+          {/*  Address Section    */}
+          <div className=" sm:w-1/4  text-center sm:text-left mb-6 sm:mb-0 self-start flex-[1.5] mt-4 ">
+            <div className="flex  flex-col items-center justify-center sm:justify-start mb-4 gap-4 ">
               <img
                 src={mysvg}
                 alt="Logo loading..."
@@ -30,8 +30,8 @@ const Footer = () => {
           </div>
 
           {/* Links Section */}
-          <div className="w-full sm:w-1/4 mb-6 sm:mb-0  ">
-            <h3 className="lg:text-xl font-medium font-kantumruy  lg:mb-4 lg:pb-3 border-b-2 border-white mr-10 max-sm:w-fit ">
+          <div className="w-full sm:w-1/4 mb-6 sm:mb-0  flex-[1] ">
+            <h3 className="lg:text-2xl font-medium font-kantumruy  lg:mb-4 lg:pb-3 border-b-2 border-white mr-10 max-sm:w-fit ">
               Links
             </h3>
             <ul>
@@ -64,8 +64,8 @@ const Footer = () => {
           </div>
 
           {/* Company Section */}
-          <div className="w-full sm:w-1/4 mb-6 sm:mb-0 ">
-            <h3 className="lg:text-xl font-medium font-kantumruy  lg:mb-4 lg:pb-3 border-b-2 border-white mr-10 max-sm:w-fit ">
+          <div className="w-full sm:w-1/4 mb-6 sm:mb-0  flex-[1]">
+            <h3 className="lg:text-2xl font-medium font-kantumruy  lg:mb-4 lg:pb-3 border-b-2 border-white mr-10 max-sm:w-fit ">
               Company
             </h3>
             <ul>
@@ -88,8 +88,8 @@ const Footer = () => {
           </div>
 
           {/* Support Section */}
-          <div className="w-full sm:w-1/4 mb-6 sm:mb-0">
-            <h3 className="lg:text-xl font-medium font-kantumruy  lg:mb-4 lg:pb-3 border-b-2 border-white mr-10 max-sm:w-fit ">
+          <div className="w-full sm:w-1/4 mb-6 sm:mb-0 flex-[1]">
+            <h3 className="lg:text-2xl font-medium font-kantumruy  lg:mb-4 lg:pb-3 border-b-2 border-white mr-10 max-sm:w-fit ">
               Support
             </h3>
             <ul>
@@ -118,8 +118,8 @@ const Footer = () => {
           </div>
 
           {/* Legal Section */}
-          <div className="w-full sm:w-1/4 mb-6 sm:mb-0">
-            <h3 className="lg:text-xl font-medium font-kantumruy  lg:mb-4 lg:pb-3 border-b-2 border-white mr-10 max-sm:w-fit ">
+          <div className="w-full sm:w-1/4 mb-6 sm:mb-0 flex-[1]">
+            <h3 className="lg:text-2xl font-medium font-kantumruy  lg:mb-4 lg:pb-3 border-b-2 border-white mr-10 max-sm:w-fit ">
               Legal
             </h3>
             <ul>
@@ -146,8 +146,8 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="container mx-auto mt-8 flex flex-wrap items-end justify-between ">
-          <p className="font-light font-kantumruy -translate-x-20 text-sm">
+        <div className=" px-8 mt-8 flex flex-wrap justify-between items-center   ">
+          <p className="font-light font-kantumruy  text-sm self-end ">
             © {new Date().getFullYear()} Sheqlee Co., Ltd. All rights reserved.
           </p>
           <div className="flex flex-col justify-center items-center gap-3 font-kantumruy font-light">

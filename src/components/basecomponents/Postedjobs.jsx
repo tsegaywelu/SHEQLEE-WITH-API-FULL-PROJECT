@@ -41,21 +41,21 @@ const Postedjobs = ({ showicon5, showtitle }) => {
   return (
     <>
       {loading ? (
-        <div className=" py-3 md:py-6 lg:py-12  mx-8 md:mx-16 ">
+        <div className="md:py-1 mx-8 md:mx-16 ">
           {showtitle && (
-            <div className="flex justify-between">
-              <h4 className="text-[50px]  font-kantumruy font-medium my-3">
+            <div className="flex justify-between my-8">
+              <h4 className="text-[33px]  font-kantumruy font-medium my-3">
                 Latest job posts
               </h4>
               <div className="flex justify-center items-center gap-2 relative ">
                 <div className="w-24 h-4 bg-custom-tags rounded-[7px] "></div>
-                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-8"></div>
+                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-5"></div>
                 <img src={Rightarrow} alt="" width={8} height={12} />
               </div>
             </div>
           )}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-7 animate-pulse">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-pulse">
             {/* ///////////////////// */}
             {emptyRectangles.map((jobsall, index) => {
               return (
@@ -112,42 +112,44 @@ const Postedjobs = ({ showicon5, showtitle }) => {
           </div>
         </div>
       ) : (
-        <div className="py-4 md:py-8 lg:py-12 mx-8 md:mx-16">
+        <div className="  md:py-1 mx-8 md:mx-16">
           {showtitle && (
-            <div className="flex justify-between ">
-              <h4 className="text-[50px]  font-kantumruy font-medium my-3">
+            <div className="flex justify-between my-8">
+              <h4 className="text-[33px]  font-kantumruy font-medium ">
                 Latest job posts{" "}
               </h4>
               <div className="flex justify-center items-center gap-2 relative ">
                 <h3 className="text-sm font-medium">745+ more jobs</h3>
-                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-6"></div>
+                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-2"></div>
                 <img src={Rightarrow} alt="" width={8} height={12} />
               </div>
             </div>
           )}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3  lg:gap-x-8 lg:gap-y-7 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3  lg:gap-x-10 lg:gap-y-9 ">
             {/* ///////////////////// */}
 
             {Jobs.map((jobsall) => {
               return (
-                <Link to={`/sheqlee/all job/${jobsall.title}`}>
+                <Link to={`/sheqlee/all jobs/${jobsall.title}`}>
                   <div
-                    className=" bg-custom-slate rounded-[20px] md:pr-2 px-3 pb-2 pt-5   "
+                    className=" bg-custom-slate rounded-[20px] md:pr-2 px-3  pt-5 h-[270px] flex flex-col  justify-between  pb-4  "
                     key={jobsall.title + Math.random()}
                   >
-                    <div className=" flex gap-5">
-                      {showicon5 && (
-                        <img src={qualityassurance} width={24} height={24} />
-                      )}
-                      <p className="text-2xl font-medium font-kantumruy">
-                        {jobsall.title}
+                    <div>
+                      <div className=" flex gap-5">
+                        {showicon5 && (
+                          <img src={qualityassurance} width={24} height={24} />
+                        )}
+                        <p className="text-[22px] font-medium font-kantumruy">
+                          {jobsall.title}
+                        </p>
+                      </div>
+                      <p className="text-base my-6 font-kantumruy  line-clamp-4">
+                        {jobsall.descreiption}
                       </p>
                     </div>
-                    <p className="text-base mt-4 font-kantumruy  line-clamp-5">
-                      {jobsall.descreiption}
-                    </p>
-                    <div className="   mt-5">
-                      <div className="flex   flex-wrap mb-3 gap-2  ">
+                    <div className="">
+                      <div className="flex   flex-wrap  gap-2  ">
                         <Jobicons text={jobsall.time}>
                           <img
                             src={calendar}

@@ -19,7 +19,7 @@ function Dropdown({
       <div className="relative">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="inline-flex justify-center w-full rounded-md   px-6 py-2 bg-custom-slate text-base  text-black font-medium font-kantumruy  "
+          className="inline-flex justify-center w-full rounded-md   pr-6 py-2 bg-custom-slate text-base  text-black font-medium font-kantumruy  "
         >
           {dropdowntitle}
           <span>
@@ -33,7 +33,7 @@ function Dropdown({
           </span>
 
           {pathname.includes("Categories") && underline && (
-            <div className="absolute w-20 h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-32px]"></div>
+            <div className="absolute w-20 h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-27px]"></div>
           )}
         </button>
       </div>
@@ -44,7 +44,7 @@ function Dropdown({
           <div className=" bg-stone-900/60 z-50">
             <div
               className={`absolute  z-40     rounded-b-[10px] shadow-lg bg-white ring-1 ring-black ring-opacity-5 ${
-                showicons ? "right-7 md:w-48 mt-2" : "w-44"
+                showicons ? "right-7 md:w-[172px] mt-2" : "w-44"
               }`}
             >
               <div className=" font-medium font-kantumruy ">
@@ -52,7 +52,7 @@ function Dropdown({
                   <a
                     key={category}
                     href="#"
-                    className="block  text-sm text-custom-black text-start hover:bg-gray-100 hover:text-gray-900   "
+                    className="block  text-[13px] text-custom-black text-start hover:bg-gray-100 hover:text-gray-900   "
                   >
                     <div className="">
                       <Link
@@ -84,8 +84,8 @@ function Dropdown({
                             <img
                               src={icons[index]}
                               alt="icons"
-                              width={16}
-                              height={16}
+                              width={14}
+                              height={14}
                             />
                           )}{" "}
                           {category}

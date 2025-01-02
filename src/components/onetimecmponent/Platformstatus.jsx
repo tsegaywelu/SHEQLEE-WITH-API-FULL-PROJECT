@@ -7,7 +7,7 @@ const Platformstatus = () => {
   return (
     <section className="flex flex-col items-center pb-16 pt-7  gap-5 ">
       <h2 className="text-xl md:text-4xl  mb-6 font-medium font-kantumruy ">
-        Platform status
+        Platform stats
       </h2>
       {loading ? (
         <div className="flex flex-wrap   w-full justify-around">
@@ -41,11 +41,17 @@ const Platformstatus = () => {
         <div className="flex flex-wrap   w-full justify-around">
           {/* for hand shake */}
           <div className="flex flex-col items-center text-center">
-            <img src={handshake} alt="handshke svg" width={96} height={96} />
-            <h3 className="text-3xl font-semibold font-kantumruy mt-5  ">
+            <img
+              src={handshake}
+              alt="handshke svg"
+              width={96}
+              height={96}
+              className=""
+            />
+            <h3 className="text-3xl font-semibold font-kantumruy mt-10  ">
               100K+
             </h3>
-            <p className="font-kantumruy text-custom-black text-xl mt-5">
+            <p className="font-kantumruy text-custom-black text-xl mt-4">
               Total jobs posted on <br />
               Sheqlee to date
             </p>
@@ -54,7 +60,7 @@ const Platformstatus = () => {
           {/* for user icon  */}
           <div className="flex flex-col items-center text-center">
             <img src={programmer} alt="programer svg" width={80} height={80} />
-            <h3 className="text-3xl font-semibold font-kantumruy  mt-4">
+            <h3 className="text-3xl font-semibold font-kantumruy  mt-10">
               15K+
             </h3>
             <p className="font-kantumruy text-custom-black  text-xl mt-4 ">
@@ -65,7 +71,9 @@ const Platformstatus = () => {
           {/* for the  */}
           <div className="flex flex-col items-center text-center">
             <img src={company} alt="company svg" width={92} height={92} />
-            <h3 className="text-3xl font-semibold font-kantumruy  mt-5">1K+</h3>
+            <h3 className="text-3xl font-semibold font-kantumruy  mt-10">
+              1K+
+            </h3>
             <p className="font-kantumruy text-custom-black text-xl mt-4 ">
               Korean companies <br /> posting jobs daily
             </p>

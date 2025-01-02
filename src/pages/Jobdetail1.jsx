@@ -15,15 +15,15 @@ const Jobdetail = () => {
   return (
     <div>
       <Location />
-      <div className="flex flex-col items-center justify-center gap-10 my-10">
+      <div className="flex flex-col items-center justify-center gap-5 my-10">
         <div className="flex justify-center items-center gap-4">
           <img src={devops} alt="job icon " width={48} height={48} />
-          <span className=" text-sm md:text-5xl  font-kantumruy font-medium capitalize">
+          <span className=" text-sm md:text-4xl  font-kantumruy font-semibold capitalize">
             {" "}
             {theidtodisplay}
           </span>
         </div>
-        <div className="flex justify-center items-center gap-x-5">
+        <div className="flex justify-center items-center gap-x-3">
           <Jobicons text={"1hr ago"}>
             <img
               src={companyb}
@@ -65,18 +65,18 @@ const Jobdetail = () => {
             />
           </Jobicons>
         </div>
-        <div className="space-y-1.5">
-          <button className="bg-custom-purple px-16 py-3 rounded-lg text-white font-kantumruy font-semibold text-2xl">
+        <div className="space-y-1.5 mt-4">
+          <button className="bg-custom-purple px-20 py-[10px] rounded-lg text-white font-kantumruy font-semibold text-xl">
             Apply now
           </button>
-          <p className="text-xs font-kantumruy">
+          <p className="text-xs font-kantumruy text-center">
             Please mention <span className="font-semibold">Sheqlee</span> when
             you apply.
           </p>
         </div>
       </div>
       {/* //body parts */}
-      <div className=" max-w-6xl mx-auto  bg-custom-slate text-start p-10 rounded-[15px]">
+      <div className=" max-w-4xl mx-auto  bg-custom-slate text-start p-10 rounded-[15px]">
         We need one to Designs and maintains prospect websites including graphic
         development, regular site updates, usability reviews and traffic
         reporting. QUALIFICATIONS - Bachelor's degree with major in graphic
@@ -121,7 +121,7 @@ const Jobdetail = () => {
           <Jobicons text={"Flutter"}></Jobicons>
         </div>
         <div className="space-y-1.5 flex flex-col justify-center items-center ">
-          <button className="bg-custom-purple px-16 py-3 rounded-lg text-white font-kantumruy font-semibold text-2xl">
+          <button className="bg-custom-purple px-20 py-[10px] rounded-lg text-white font-kantumruy font-semibold text-xl">
             Apply now
           </button>
           <p className="text-xs font-kantumruy">
@@ -152,6 +152,7 @@ const Jobdetail = () => {
           </div>
         </div>
       </div>
+
       <Qestion />
     </div>
   );

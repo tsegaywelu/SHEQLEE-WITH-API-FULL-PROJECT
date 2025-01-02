@@ -13,8 +13,8 @@ const Lost = () => {
       <div className="h-[400px]  flex  justify-center items-center">
         <div className="flex flex-col items-center space-y-10  ">
           {/* SVG Icon */}
-          <img src={error} width={66} height={66} />
-          <p className="text-3xl font-kantumruy text-custom-placeholder ">
+          <img src={error} width={56} height={66} />
+          <p className="text-2xl font-kantumruy text-custom-placeholder ">
             404 | PAGE NOT FOUND
           </p>
         </div>

@@ -15,10 +15,14 @@ import Mybutton from "../../../components/basecomponents/Mybutton";
 import Divider from "../../../components/basecomponents/Divider";
 const Userprofile = () => {
   const [formData, setFormdata] = useState({
+    fullName: "",
+    Title: "",
+    aboutYou: "",
     skillName: "",
     skillLevel: "",
     linkName: "",
     URL: "",
+    cv: "",
   });
   const updateFormData = (field, value) => {
     setFormdata((prevData) => ({
@@ -41,11 +45,11 @@ const Userprofile = () => {
     <div>
       <div>
         <Location />
-        {Object.entries(formData).map(([key, value]) => (
+        {/* {Object.entries(formData).map(([key, value]) => (
           <div className="flex justify-around" key={key}>
             {key}: {value}
           </div>
-        ))}
+        ))} */}
       </div>
       <div className=" flex  flex-col  items-center  gap-5 justify-center my-5 md:my-10 ">
         <Dashboaredtitle
@@ -68,6 +72,9 @@ const Userprofile = () => {
               placeholder={"Muruts Yifter"}
               icon={blackedit}
               id={"name"}
+              updateFormData={updateFormData}
+              formData={formData}
+              correctvalue={"fullName"}
             />
           </div>
           <div className="flex flex-col w-2/3 gap-2 relative">
@@ -77,6 +84,9 @@ const Userprofile = () => {
               placeholder={"Full-Stack Developer"}
               icon={blackedit}
               id={"title "}
+              updateFormData={updateFormData}
+              formData={formData}
+              correctvalue={"Title"}
             />
           </div>
 
@@ -87,6 +97,8 @@ const Userprofile = () => {
             <Reatchtext
               showtext={"Introduce yourself"}
               placeholder={"Say something appealing about yourself..."}
+              value={formData.aboutYou}
+              onChange={(content) => updateFormData("aboutYou", content)}
             />
           </div>
         </div>

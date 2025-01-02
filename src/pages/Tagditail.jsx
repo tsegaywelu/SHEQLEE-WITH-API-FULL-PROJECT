@@ -7,6 +7,7 @@ import { FaFacebook, FaTwitter, FaTelegram, FaLinkedin } from "react-icons/fa";
 import Location from "../components/basecomponents/Location";
 import { Modal } from "../components/basecomponents/Modal";
 import Qestion from "../components/basecomponents/Qestion";
+import Pagination from "../components/basecomponents/Pagination";
 const Tagdetail = () => {
   const { theidtodisplay } = useParams();
   const mytitle = theidtodisplay;
@@ -75,6 +76,9 @@ const Tagdetail = () => {
           </div>
         </div>
         <Postedjobs />
+        <div className="mx-16">
+          <Pagination totalPages={15} />
+        </div>
         <Qestion />
       </div>
     </div>

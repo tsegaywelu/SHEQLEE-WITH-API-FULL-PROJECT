@@ -48,61 +48,26 @@ const Companysignup = () => {
         building1={profetional}
         profetional={building}
         titletext={"Company Registration"}
+        margintop={"mt-12"}
       >
         <h2 className="  rounded-lg pl-16 h-full   w-full     font-kantumruy ">
-          If you are freelancer please visit{" "}
+          If you are freelancer, please visit{" "}
           <Link
             to={"/sheqlee/Professional Signup"}
-            className=" border-b-2 border-purple-400 font-semibold font-kantumruy"
+            className=" border-b-2 border-custom-purple  font-semibold font-kantumruy pb-[2px] mx-1"
           >
-            freelancer registration{" "}
+            freelancer registration
           </Link>{" "}
           page.
         </h2>
       </Formtitle>
-      {/*i am  asking  if user is freelancer */}
-      {/* <div classNa <h2 className="  rounded-lg pl-16 h-full   w-full text-lg font-kantumruy ">
-          if you are freelancer please visit{" "}
-          <Link
-            to={"/sheqlee/Professional Signup"}
-            className=" border-b-2 border-purple-400 font-semibold font-kantumruy"
-          >
-            freelancer registration{" "}
-          </Link>{" "}
-          page.
-        </h2>me="relative  max-w-2xl  p-7  my-4 md:my-8 bg-custom-slate mx-auto">
-        <img
-          src={profetional}
-          className="bg-black text-white rounded-l-lg absolute left-0 top-0  h-full p-7"
-        />
-        <h2 className="  rounded-lg pl-16 h-full   w-full text-lg font-kantumruy ">
-          if you are freelancer please visit{" "}
-          <Link
-            to={"/sheqlee/Professional Signup"}
-            className=" border-b-2 border-purple-400 font-semibold font-kantumruy"
-          >
-            freelancer registration{" "}
-          </Link>{" "}
-          page.
-        </h2>
-      </div>
-     
-      <div className="flex  flex-start  max-w-4xl mx-auto text-center gap-4">
-        
-        <img src={building} width={45} height={45} />
-        <div>
-          {" "}
-          <h1 className="text-2xl md:text-4xl text-center font-semibold font-kantumruy">
-            Company Registration{" "}
-          </h1>
-        </div>
-      </div> */}
+
       <form
         action=""
         className=" max-w-4xl mx-auto "
         onSubmit={(e) => e.preventDefault()}
       >
-        <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
+        <div className="flex  max-sm:flex-col  gap-8 justify-center  md:my-7">
           <Oneinput
             iconmyimage={building1}
             placeholder={"Sheqlee Co. Ltd."}
@@ -113,6 +78,7 @@ const Companysignup = () => {
             formData={formData}
             updateFormData={updateFormData}
             correctvalue={"companyname"}
+            changetheicon={"p-[14px]"}
           />
 
           <div className="flex flex-col flex-grow  ">
@@ -141,9 +107,11 @@ const Companysignup = () => {
           </div>
         </div>
         {/* // divider part */}
-        <Divider> company representative</Divider>
+        <div className="mt-16 ">
+          <Divider> company representative</Divider>
+        </div>
         {/* below devide part */}
-        <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
+        <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-5">
           <Oneinput
             iconmyimage={user}
             placeholder={"Abebe Bekila"}
@@ -154,6 +122,7 @@ const Companysignup = () => {
             formData={formData}
             updateFormData={updateFormData}
             correctvalue={"fullname"}
+            changetheicon={"p-[14px]"}
           />
           <Oneinput
             iconmyimage={email}
@@ -167,7 +136,7 @@ const Companysignup = () => {
             correctvalue={"email"}
           />
         </div>
-        <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
+        <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-5">
           <Oneinput
             iconmyimage={key}
             placeholder={"**********"}
@@ -179,6 +148,7 @@ const Companysignup = () => {
             formData={formData}
             updateFormData={updateFormData}
             correctvalue={"password"}
+            changetheicon={"p-[14px]"}
           />
           <Oneinput
             iconmyimage={key}
@@ -190,21 +160,22 @@ const Companysignup = () => {
             formData={formData}
             updateFormData={updateFormData}
             correctvalue={"confirmpassword"}
+            changetheicon={"p-[14px]"}
           />
         </div>
         {/* //check box part */}
         <div className="my-4">
           {/* //<input type="checkbox" className="h-[20px] w-[20px] bg-black mt-1" /> */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 mt-9 ">
             <Checkbox />
-            <span className="text-sm font-kantumruy">
-              By creating an account , you agree to our{" "}
-              <span className="border-b-2 border-custom-purple font-kantumruy font-semibold">
-                Terms and Conditions{" "}
+            <span className="text-sm font-kantumruy ">
+              By creating an account, you agree to our
+              <span className="border-b-2 border-custom-purple font-kantumruy font-semibold mx-1 pb-1">
+                Terms and Conditions
               </span>{" "}
               and{" "}
-              <span className="border-b-2 border-custom-purple font-kantumruy font-semibold">
-                Privacy Policy{" "}
+              <span className="border-b-2 border-custom-purple font-kantumruy font-semibold mx-1 pb-[2px]">
+                Privacy Policy.
               </span>{" "}
             </span>
           </div>

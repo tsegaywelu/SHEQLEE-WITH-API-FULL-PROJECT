@@ -8,27 +8,25 @@ import clock from "../../../assets/SVG/clock.svg";
 import companyb from "../../../assets/SVG/companyb.svg";
 import calendar from "../../../assets/SVG/calendar.svg";
 import tagsvg from "../../../assets/SVG/ags.svg";
+import Formtitle from "../../../components/basecomponents/Formtitle";
+import { Link } from "react-router-dom";
 const Preview = ({ formData, onBack }) => {
   return (
-    <div className="   mx-auto mt-10">
-      <div>
-        <div className="relative  max-w-2xl  px-4 py-7 my-4 md:my-16 bg-custom-slate mx-auto">
-          <img
-            src={template}
-            alt="icon"
-            className="bg-black  rounded-l-lg absolute left-0 top-0  h-full p-3 w-20"
-          />
-          <h2 className="   pl-20 h-full   w-full text-base font-kantumruy ">
-            To speed up the process of posting a job, try using
-            <button className=" ml-2 border-b-[2px] border-custom-purple  font-kantumruy font-semibold">
-              job templates.
-            </button>{" "}
-          </h2>
-        </div>
-      </div>
+    <div className="   ">
+      <Formtitle building1={template} margintop={"mt-10"}>
+        <h2 className="  rounded-lg pl-16 h-full   w-full     font-kantumruy ">
+          To speed up the process of posting a job, try using{" "}
+          <Link
+            to={""}
+            className=" border-b-2 border-custom-purple  font-semibold font-kantumruy pb-[2px] mx-1"
+          >
+            job templates.
+          </Link>{" "}
+        </h2>
+      </Formtitle>
 
       {/* //text part  */}
-      <div className=" max-w-6xl mx-auto  text-center  ">
+      <div className=" max-w-4xl mx-auto  text-center  mt-10 ">
         <div className="flex flex-col   gap-1 md:gap-3">
           <div className="flex justify-center items-center gap-x-2">
             {" "}
@@ -84,7 +82,7 @@ const Preview = ({ formData, onBack }) => {
               {formData.rate}
             </p>
           </div> */}
-          <div className="flex justify-center items-center gap-x-5">
+          <div className="flex justify-center items-center gap-x-5  ">
             <Jobicons text={"Infosys"}>
               <img
                 src={companyb}
@@ -158,8 +156,8 @@ const Preview = ({ formData, onBack }) => {
           </p>
         </div>
         <div className="my-10 flex justify-center items-center gap-5">
-          <div className="bg-black   flex justify-center items-center p-1   rounded-[4px]">
-            <img src={tagsvg} width={16} height={16} className="mr-1" alt="" />
+          <div className="bg-black  w-6 h-6 overflow-hidden  flex justify-center items-center p-1   rounded-[4px]">
+            <img src={tagsvg} width={16} height={16} alt="" />
           </div>
 
           <Jobicons text={"Java"}></Jobicons>

@@ -17,10 +17,10 @@ import Interpasswordcode from "../pages/authpages/Interpasswordcode";
 import Logout from "../pages/privatepages/Logout";
 import PrivacyPolicy from "../pages/authpages/Privacypoliciy";
 const route = [
-  { path: "/sheqlee/all job", element: <Alljobs /> },
+  { path: "/sheqlee/all jobs", element: <Alljobs /> },
   { path: "/sheqlee/Categories", element: <Categories /> },
   { path: "/sheqlee/tags", element: <Alltags /> },
-  { path: "/sheqlee/all job/:theidtodisplay", element: <Jobdetail /> },
+  { path: "/sheqlee/all jobs/:theidtodisplay", element: <Jobdetail /> },
   { path: "/sheqlee/Categories/:theidtodisplay", element: <Categorydetail /> },
   { path: "/sheqlee/tag/:theidtodisplay", element: <Tagdetail /> },
   { path: "/sheqlee/clients", element: <Clients1 /> },
@@ -28,7 +28,7 @@ const route = [
   { path: "/sheqlee/company/:theidtodisplay", element: <Companydetail /> },
   { path: "/sheqlee/contact", element: <Contact /> },
   { path: "/sheqlee/FAQ", element: <FAQ1 /> },
-  { path: "/sheqlee/companysignup", element: <Companysignup /> },
+  { path: "/sheqlee/company signup", element: <Companysignup /> },
   { path: "/sheqlee/Professional Signup", element: <Employersignup /> },
   { path: "/sheqlee/login", element: <Login /> },
   { path: "/sheqlee/reset password", element: <Resetpassword /> },

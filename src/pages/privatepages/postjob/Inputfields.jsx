@@ -9,25 +9,24 @@ import SalaryInput from "../../../components/onetimecmponent/SalaryInput";
 import Checkbox from "../../../components/basecomponents/Checkbox";
 import template from "../../../assets/direction/template.svg";
 import Divider from "../../../components/basecomponents/Divider";
+import Formtitle from "../../../components/basecomponents/Formtitle";
+import { Link } from "react-router-dom";
 const Inputfields = ({ formData, updateFormData, onPreview }) => {
   return (
     <div>
-      <div className="relative  max-w-2xl  px-4 py-7 my-4 md:my-16 bg-custom-slate mx-auto rounded-r-lg">
-        <img
-          src={template}
-          alt="icon"
-          className="bg-black  rounded-l-lg absolute left-0 top-0  h-full p-3 w-20"
-        />
-        <h2 className="   pl-20 h-full   w-full font-kantumruy ">
-          To speed up the process of posting a job, try using
-          <button className=" ml-2 border-b-[2px] border-custom-purple  font-kantumruy font-semibold">
+      <Formtitle building1={template} margintop={"mt-10"}>
+        <h2 className="  rounded-lg pl-16 h-full   w-full     font-kantumruy ">
+          To speed up the process of posting a job, try using{" "}
+          <Link
+            to={""}
+            className=" border-b-2 border-custom-purple  font-semibold font-kantumruy pb-[2px] mx-1"
+          >
             job templates.
-          </button>{" "}
+          </Link>{" "}
         </h2>
-      </div>
+      </Formtitle>
 
-      {/* text parts  */}
-      <div className="max-w-3xl mx-auto  text-center  ">
+      <div className="max-w-3xl mx-auto  text-center mt-10  ">
         <div className="flex flex-col   gap-1 md:gap-3">
           <div className="flex justify-center items-center gap-x-2">
             {" "}
@@ -66,20 +65,20 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
               <Dropdownform
                 options={["full time", "part time", "Category 3"]}
                 defaultText="select catagory"
-                value={formData.category}
-                onChange={(value) => updateFormData("category", value)}
-                labeltext={"Catagory"}
                 warn
+                updateFormData={updateFormData}
+                formData={formData}
+                correctvalue2={"category"}
               />
             </div>
             <div className="flex flex-col flex-grow  ">
               <Dropdownform
                 options={["back-end", "front-end", "full-stack"]}
                 defaultText="select type..."
-                value={formData.jobType}
-                onChange={(value) => updateFormData("jobType", value)}
-                labeltext={"Job type"}
                 warn
+                updateFormData={updateFormData}
+                formData={formData}
+                correctvalue2={"jobType"}
               />
             </div>
           </div>
@@ -95,8 +94,9 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
               <Dropdownform
                 options={["Intermidate", "expert", "fullstack"]}
                 defaultText="Add skill level..."
-                value={formData.skillLevel}
-                onChange={(value) => updateFormData("skillLevel", value)}
+                updateFormData={updateFormData}
+                formData={formData}
+                correctvalue2={"skillLevel"}
               />
             </div>
             <div className="flex flex-col flex-grow w-1/2  ">

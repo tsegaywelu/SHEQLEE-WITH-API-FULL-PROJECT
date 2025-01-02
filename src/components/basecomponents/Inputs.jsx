@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Oneinputfor from "./Oneinputfor";
 import blackedit from "../../assets/direction/editblack.svg";
 import Mybutton from "./Mybutton";
 import Divider from "./Divider";
 //pass the id label and all props from user parent component
 const Inputs = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+  const updateFormData = (field, value) => {
+    setFormData((prevdata) => ({
+      ...prevdata,
+      [field]: value,
+    }));
+  };
+  console.table(formData);
   return (
     <div>
       <div className="">
@@ -19,6 +32,9 @@ const Inputs = () => {
                   placeholder={"Muruts Yifter"}
                   icon={blackedit}
                   id={"name"}
+                  formData={formData}
+                  updateFormData={updateFormData}
+                  correctvalue="fullName"
                 />
               </div>
               <div className="flex flex-col flex-grow  relative ">
@@ -28,6 +44,9 @@ const Inputs = () => {
                   placeholder={"muruts.yifter@gmail.com"}
                   icon={blackedit}
                   id={"email"}
+                  formData={formData}
+                  updateFormData={updateFormData}
+                  correctvalue="email"
                 />
               </div>
             </div>
@@ -39,6 +58,9 @@ const Inputs = () => {
                   placeholder={"*************"}
                   icon={blackedit}
                   id={"password"}
+                  formData={formData}
+                  updateFormData={updateFormData}
+                  correctvalue="password"
                 />
               </div>
               <div className="flex flex-col flex-grow relative  ">
@@ -48,6 +70,9 @@ const Inputs = () => {
                   placeholder={"*************"}
                   icon={blackedit}
                   id={"confirmpassword"}
+                  formData={formData}
+                  updateFormData={updateFormData}
+                  correctvalue="confirmPassword"
                 />
               </div>
             </div>

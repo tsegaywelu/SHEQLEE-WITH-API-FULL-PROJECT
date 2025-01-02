@@ -2,9 +2,7 @@ import React from "react";
 import Dashboaredtitle from "../../components/onetimecmponent/Dashboaredtitle";
 import Location from "../../components/basecomponents/Location";
 import tsegay from "../../assets/tsegay.jpg";
-import { MdEdit } from "react-icons/md";
 import Reatchtext from "../../components/basecomponents/Reatchtext";
-import { FaAngleDown } from "react-icons/fa";
 import Mybutton from "../../components/basecomponents/Mybutton";
 import Divider from "../../components/basecomponents/Divider";
 import building from "../../assets/SVG/company.svg";
@@ -14,11 +12,30 @@ import profilepic from "../../assets/direction/profile.svg";
 import profilepic1 from "../../assets/direction/settings - alt2/profile.png";
 import Sectionprofile from "../../components/basecomponents/Sectionprofile";
 import Dropdownform from "../../components/basecomponents/Dropdownform";
+import { useState } from "react";
 const Companyprofile = () => {
+  const [formData, setFormdata] = useState({
+    companyName: "",
+    domain: "",
+    Description: "",
+    companySize: "",
+    companyLocation: "",
+  });
+  const updateFormData = (field, value) => {
+    setFormdata((prevData) => ({
+      ...prevData,
+      [field]: value,
+    }));
+  };
   return (
     <div>
       <div>
         <Location />
+        {/* {Object.entries(formData).map(([key, value]) => (
+          <div className="flex justify-around" key={key}>
+            {key}: {value}
+          </div>
+        ))} */}
       </div>
       <div className=" flex  flex-col  items-center  gap-5 justify-center my-5 md:my-10 ">
         <Dashboaredtitle
@@ -42,6 +59,9 @@ const Companyprofile = () => {
               placeholder={"Sheqlee Co., Ltd."}
               icon={blackedit}
               id={"name"}
+              updateFormData={updateFormData}
+              formData={formData}
+              correctvalue={"companyName"}
             />
           </div>
           <div className="flex flex-col w-2/3 gap-2 relative">
@@ -51,6 +71,9 @@ const Companyprofile = () => {
               placeholder={"https://sheqlee.com"}
               icon={blackedit}
               id={"Domain "}
+              updateFormData={updateFormData}
+              formData={formData}
+              correctvalue={"domain"}
             />
           </div>
 
@@ -62,6 +85,8 @@ const Companyprofile = () => {
             <Reatchtext
               showtext={"Description"}
               placeholder={"A brief description about your company..."}
+              value={formData.Description}
+              onChange={(content) => updateFormData("Description", content)}
             />
           </div>
           <div className=" -translate-y-10">
@@ -71,6 +96,9 @@ const Companyprofile = () => {
                   options={["Less than 5", "Less than 10", "Less than 50"]}
                   defaultText="Company size"
                   labeltext={"Company size"}
+                  updateFormData={updateFormData}
+                  formData={formData}
+                  correctvalue2={"companySize"}
                 />
               </div>
               <div className="flex flex-col w-2/3 gap-2 relative">
@@ -79,6 +107,9 @@ const Companyprofile = () => {
                   placeholder={"Seoul, S. Korea"}
                   icon={blackedit}
                   id={"location "}
+                  updateFormData={updateFormData}
+                  formData={formData}
+                  correctvalue={"companyLocation"}
                 />
               </div>
             </div>

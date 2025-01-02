@@ -7,7 +7,7 @@ import Dashboaredtitle from "../components/onetimecmponent/Dashboaredtitle";
 import Qestion from "../components/basecomponents/Qestion";
 const FAQ1 = () => {
   const [activetab, setactivetab] = useState("freelancers");
-  const [openquestion, setopenquestion] = useState(null);
+  const [openquestion, setopenquestion] = useState(0);
   ///////////////////////////////////////////////////
   const faqData = {
     freelancers: [
@@ -65,7 +65,7 @@ const FAQ1 = () => {
   return (
     <div>
       <Location />
-      <div className="p-6 max-w-4xl mx-auto  mt-2   ">
+      <div className="p-6 max-w-[850px] mx-auto  mt-2   ">
         <Dashboaredtitle
           text={
             "The following are some of the most commonly asked questions by our users."
@@ -81,7 +81,7 @@ const FAQ1 = () => {
           <div className="mb-4 bg-custom-tags  font-kantumruy font-medium w-fit m-3  rounded-[10px]">
             <button
               onClick={(e) => setactivetab("freelancers")}
-              className={`px-10 py-3 text-xl font-semibold rounded-[10px] 
+              className={`px-10 py-[6px] text-xl font-semibold rounded-[10px] 
         ${
           activetab === "freelancers"
             ? "bg-black text-white m-2"
@@ -93,7 +93,7 @@ const FAQ1 = () => {
 
             <button
               onClick={() => setactivetab("companies")}
-              className={`px-10 py-3 text-xl font-semibold rounded-[10px] ${
+              className={`px-10 py-[6px] text-xl font-semibold rounded-[10px] ${
                 activetab === "companies"
                   ? "bg-black text-white m-2"
                   : "bg-custom-tags text-gray-800 "

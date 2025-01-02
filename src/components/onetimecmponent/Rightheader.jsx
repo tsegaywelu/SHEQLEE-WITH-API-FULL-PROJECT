@@ -36,21 +36,21 @@ const Rightheader = () => {
       )}
       {/* Right section: Navigation and buttons */}
       <div
-        className={`flex-grow-0 flex items-center justify-center  gap-4   md:flex lg:justify-between md:flex-row  ${
+        className={`flex-grow-0 flex items-center  gap-5  md:flex md:flex-row   ${
           isMenuOpen ? "flex flex-col gap-2 " : "hidden "
         }`}
       >
-        <div className=" mt-1 p-1 md:p-2 lg:p-3  text-custom-black font-kantumruy font-medium relative ">
-          <Link to={"/sheqlee/All job"} className=" inline-block relative ">
+        <div className=" mt-1    text-custom-black font-kantumruy font-medium relative ">
+          <Link to={"/sheqlee/All jobs"} className=" inline-block relative ">
             All jobs
             {pathname.includes("job") && (
-              <div className="absolute w-[60px] h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-38px] right-0"></div>
+              <div className="absolute w-[55px] h-[6px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-35px] right-0"></div>
             )}
           </Link>
         </div>
 
         {/* Category Dropdown */}
-        <Link to={"/sheqlee/Categories"} className=" ">
+        <Link to={"/sheqlee/Categories"} className=" mt-1">
           <Dropdown
             dropdowntitle={"Categories"}
             categories={[
@@ -68,25 +68,25 @@ const Rightheader = () => {
         </Link>
         {state === "guest" && (
           <Link to={"/sheqlee/clients"} className="inline-block relative">
-            <div className="mt-1 p-1 md:p-2 lg:p-3   font-kantumruy font-medium   ">
+            <div className="mt-1 p-1 md:p-2 lg:pr-5   font-kantumruy font-medium   ">
               {/* border-b-4 border-blue-600 lg:pb-10 self-end bg-red-500 */}
               Clients
             </div>
             {pathname.includes("clients") && (
-              <div className="absolute w-14 h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-24px] left-3"></div>
+              <div className="absolute w-14 h-[6px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-26px] left-3"></div>
             )}
           </Link>
         )}
 
         {/* Buttons */}
         {state === "guest" ? (
-          <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-3 lg:gap-6">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-3 lg:gap-4">
             <Link
               to={"/sheqlee/login"}
               className={` ${
                 pathname.includes("login")
-                  ? "bg-black rounded-xl border-[3px] border-black text-white lg:px-4 md:p-2 lg:py-2 font-semibold font-kantumruy"
-                  : "border-[3px] border-custom-purple rounded-xl py-1 md:py-[6px] px-2 md:px-4 text-base font-semibold font-kantumruy "
+                  ? "bg-black rounded-xl  border-[3px] border-white text-white md:px-4 md:p-2 lg:py-2 font-semibold font-kantumruy"
+                  : "border-[3px] border-custom-purple rounded-[10px] py-1 md:py-[5px] px-2 md:px-4 text-base font-semibold font-kantumruy "
               } `}
             >
               <Mybutton>Log in</Mybutton>
@@ -96,7 +96,7 @@ const Rightheader = () => {
             <Link to={"/sheqlee/companysignup"}>
               <Mybutton
                 background={
-                  "bg-custom-purple rounded-xl lg:px-3 md:p-2 lg:py-2   text-white font-semibold font-kantumruy "
+                  "bg-custom-purple rounded-[10px] md:px-3 md:p-2 lg:py-2   text-white font-semibold font-kantumruy "
                 }
               >
                 Sign up
@@ -104,17 +104,17 @@ const Rightheader = () => {
             </Link>
           </div>
         ) : state === "company" ? (
-          <div className="flex  max-sm:flex-col justify-center items-center gap-10 ">
+          <div className="flex  max-sm:flex-col justify-center items-center gap-6  ">
             <Link to={"sheqlee/vacancy"}>
               <Mybutton
                 background={
-                  "bg-custom-purple rounded-xl lg:px-3 md:p-2 lg:py-2   text-white font-semibold font-kantumruy "
+                  "bg-custom-purple rounded-[10px] lg:px-3 md:p-2 lg:py-2   text-white font-semibold font-kantumruy "
                 }
               >
                 Post a job
               </Mybutton>
             </Link>
-            <div className="flex  items-center justify-center  ">
+            <div className="flex  items-center justify-center gap-3   ">
               <img
                 src={tsegay}
                 alt="user profile"

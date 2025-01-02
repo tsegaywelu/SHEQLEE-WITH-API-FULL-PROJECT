@@ -26,7 +26,10 @@ const Landing = () => {
     return (
       <>
         <div className="md:w-1/2 flex items-center  justify-center flex-col     ">
-          <h1 className="font-semibold font-kantumruy text-xl md:text-3xl lg:text-5xl  w-[90%] pl-16">
+          <h1
+            className="font-semibold font-kantumruy text-xl md:text-3xl lg:text-5xl  w-[90%] pl-16 leading-loose"
+            style={{ lineHeight: "1.09" }}
+          >
             Recruit <span className="text-custom-purple">affordable</span>
             <div>
               {" "}
@@ -50,11 +53,11 @@ const Landing = () => {
             <div className=" ">
               <Mybutton
                 background={
-                  "bg-custom-purple  text-sm md:text-xl lg:text-2xl py-1 md:py-2 lg:py-4 px-5 md:px-10 lg:px-16 rounded-lg  text-white font-semibold font-kantumruy "
+                  "bg-custom-purple  text-sm md:text-xl lg:text-2xl py-1 md:py-2 lg:py-4 px-5 md:px-10 lg:px-16 rounded-[15px] text-white font-semibold font-kantumruy "
                 }
               >
                 {" "}
-                Post your Projects
+                Post your projects
               </Mybutton>
             </div>
           </div>
@@ -82,7 +85,7 @@ const Landing = () => {
       {showModal && (
         <Modal
           closewin={closemodal}
-          message={" please register or login as a <br /> client to post jobs."}
+          message={" Please register or login as a <br> client to post jobs."}
         />
       )}
       <div className="flex  flex-col md:flex-row  justify-start mt-16 ">
@@ -96,7 +99,9 @@ const Landing = () => {
       </div>
       <Tags />
       <Postedjobs showicon5 showtitle />
-      <Qestion />
+      <div className="mt-7 mb-2">
+        <Qestion />
+      </div>
       <Platformstatus />
     </>
   );

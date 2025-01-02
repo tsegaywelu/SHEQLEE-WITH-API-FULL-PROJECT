@@ -9,12 +9,14 @@ import CompanyRoute from "./routes/CompanyRoute.jsx";
 import Freelancerroute from "./routes/Freelancerroute.jsx";
 import Landing from "./pages/Landing.jsx";
 import Userlanding from "./components/onetimecmponent/Userlanding.jsx";
+import Scrolltop from "./components/onetimecmponent/Scrolltop.jsx";
 const App = () => {
   const { currentuser } = useSelector((state) => state.user);
 
   const state = currentuser?.role || "guest";
   return (
     <BrowserRouter>
+      <Scrolltop />
       <div className="">
         <Header />
 
@@ -49,6 +51,7 @@ const App = () => {
 
           <Route path="*" element={<Lost />}></Route>
         </Routes>
+
         <Footer />
       </div>
     </BrowserRouter>

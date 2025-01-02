@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Mybutton from "../basecomponents/Mybutton";
 import Divider from "../basecomponents/Divider";
 const Deleteaccount = () => {
+  const [deletionReason, setdeletionReason] = useState("");
   return (
     <div className=" mx-5 md:mx-16 lg:mx-48 ">
       <div className=" font-kantumruy my-5 space-y-3">
         <h2 className=" text-xl md:text-3xl font-medium font-kantumruy ">
-          Account deletion{" "}
+          Account deletion
         </h2>
         <p className="font-kantumruy text-lg">
           Please note that your account will be available for recovery for a
@@ -30,6 +31,7 @@ const Deleteaccount = () => {
           //   className="bg-custom-tags w-full rounded-xl p-4 text-xl outline-none "
           className="bg-custom-tags w-full rounded-lg p-4  outline-none text-xl placeholder:font-kantumruy placeholder:text-custom-placeholder resize-none"
           placeholder="Why are you deleting your account..."
+          onChange={(e) => setdeletionReason(e.target.value)}
         ></textarea>
         <p className="absolute bottom-4 right-2 text-sm">0/128</p>
       </div>

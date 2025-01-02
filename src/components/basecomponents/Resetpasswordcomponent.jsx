@@ -25,7 +25,7 @@ const Resetpasswordcomponent = ({
         }`}
       >
         {" "}
-        <img src={padlock} />
+        <img src={padlock} height={40} width={40} />
         <h1 className="font-kantumruy font-semibold text-[35px]">{header}</h1>
       </div>
       <div

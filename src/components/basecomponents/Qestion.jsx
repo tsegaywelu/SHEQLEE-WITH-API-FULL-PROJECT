@@ -9,13 +9,13 @@ const Qestion = () => {
       <h1 className="font-kantumruy text-2xl font-medium">
         Are you a software developer in Ethiopia?
       </h1>
-      <Link to={"/sheqlee/companysignup"}>
+      <Link to={"/sheqlee/company signup"}>
         <Mybutton
           background={
             " border-[2px] border-custom-purple py-2 px-3  bg-custom-purple text-white rounded-xl font-medium font-kantumruy text-2xl"
           }
         >
-          Sign Up
+          Sign up
         </Mybutton>
       </Link>
     </div>

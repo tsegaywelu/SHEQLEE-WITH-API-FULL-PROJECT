@@ -49,12 +49,13 @@ const Employersignup = () => {
         building1={building1}
         profetional={profetional}
         titletext={"Professional Registration"}
+        margintop={"mt-20"}
       >
-        <h2 className="  rounded-lg pl-16 h-full   w-full     font-kantumruy">
+        <h2 className="  rounded-lg pl-16  h-full   w-full     font-kantumruy">
           If you are an employer, please visit{" "}
           <Link
-            to={"/sheqlee/companysignup"}
-            className=" border-b-2 border-purple-400 font-semibold font-kantumruy"
+            to={"/sheqlee/company signup"}
+            className=" border-b-2 border-custom-purple font-semibold font-kantumruy pb-[2px]"
           >
             employers registration
           </Link>{" "}
@@ -95,7 +96,7 @@ const Employersignup = () => {
             correctvalue={"email"}
           />
         </div>
-        <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
+        <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-5">
           <Oneinput
             iconmyimage={key}
             placeholder={"**********"}
@@ -122,16 +123,16 @@ const Employersignup = () => {
         </div>
         {/* //check box part */}
         <div className="my-4">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 mt-10">
             <Checkbox />
             <span className="text-sm font-kantumruy">
-              by creating an account , you agree to our{" "}
+              by creating an account, you agree to our{" "}
               <span className="pb-1 border-b-2 border-custom-purple font-kantumruy font-semibold">
                 Terms and Conditions{" "}
               </span>{" "}
               and{" "}
               <span className="pb-1 border-b-2 border-custom-purple font-kantumruy font-semibold">
-                Privacy Policy{" "}
+                Privacy Policy.{" "}
               </span>{" "}
             </span>
           </div>

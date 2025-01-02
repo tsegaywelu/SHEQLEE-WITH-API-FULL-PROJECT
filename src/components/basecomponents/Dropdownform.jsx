@@ -37,7 +37,7 @@ const Dropdownform = ({
       <div className="relative inline-block w-full">
         <button
           onClick={toggleDropdown}
-          className="bg-custom-tags rounded-lg h-full outline-none p-3 w-full text-xl text-custom-placeholder text-start font-kantumruy"
+          className="bg-custom-tags rounded-lg h-full outline-none  py-3 px-5 w-full text-xl text-custom-placeholder text-start font-kantumruy"
           aria-expanded={isOpen}
           aria-controls="dropdown-options"
         >

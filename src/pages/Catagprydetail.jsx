@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import Location from "../components/basecomponents/Location";
 import { Modal } from "../components/basecomponents/Modal";
 import Qestion from "../components/basecomponents/Qestion";
+import Pagination from "../components/basecomponents/Pagination";
 const Categorydetail = () => {
   const { theidtodisplay } = useParams();
   const mytitle = theidtodisplay;
@@ -71,6 +72,9 @@ const Categorydetail = () => {
           </div>
         </div>
         <Postedjobs />
+        <div className="mx-16">
+          <Pagination totalPages={15} />
+        </div>
         <Qestion />
       </div>
     </div>

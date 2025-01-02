@@ -3,6 +3,7 @@ import Rightarrow from "../../assets/SVG/Right.svg";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Totaltags } from "../../data/Tags";
+import Pagination from "./Pagination";
 const emptyRectangles = [{}, {}, {}, {}, {}, {}];
 const Tags = () => {
   const { pathname } = useLocation();
@@ -42,26 +43,26 @@ const Tags = () => {
         // page in a loading situation
 
         <div
-          className={` px-3 md:px-6 lg:px-12 pb-5 ${
+          className={` px-3 md:px-6 lg:px-16 pb-5 ${
             changebackground ? "bg-white" : "bg-custom-slate"
           }   `}
         >
           {/* top texsts */}
 
           {actualpath === "sheqlee" && (
-            <div className="flex justify-between">
-              <h4 className="text-[40px] font-kantumruy font-medium">
+            <div className="flex justify-between py-3">
+              <h4 className="text-[33px]  font-kantumruy font-medium">
                 Popular tags
               </h4>
               <div className="flex justify-center items-center gap-2 relative ">
-                <div className="w-24 h-4 bg-custom-tags  rounded-lg "></div>
-                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-3 "></div>
+                <div className="w-24 h-4 bg-custom-tags  rounded-[2px] "></div>
+                <div className=" absolute  w-1/3 h-[4px] bg-custom-purple left-0 bottom-1 "></div>
                 <img src={Rightarrow} alt="" width={8} height={12} />
               </div>
             </div>
           )}
           {/* //display the tags  */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 animate-pulse">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-y-5 gap-x-16 animate-pulse">
             {emptyRectangles.map((tag) => {
               return (
                 <div
@@ -70,14 +71,14 @@ const Tags = () => {
                     changebackground ? "bg-custom-slate" : "bg-custom-tags"
                   }  `}
                 >
-                  <div className="font-semibold text-2xl w-1/2 h-5 bg-custom-load mb-4 rounded-lg"></div>
-                  <div className=" flex justify-center gap-5 w-1/2">
+                  <div className="font-semibold text-2xl w-1/2 h-3 bg-custom-load mb-4 rounded-[3px]"></div>
+                  <div className=" flex justify-center  items-center gap-2 w-1/2">
                     {" "}
-                    <span className="w-1/2 h-3 bg-custom-load rounded-lg"></span>
-                    <span className="w-fit h-2  flex justify-center items-end text-3xl ">
-                      .
+                    <span className="w-1/2 h-2 bg-custom-load rounded-[3px]"></span>
+                    <span className="w-fit h-1 flex justify-center items-center text-xl text-custom-placeholder ">
+                      •
                     </span>
-                    <span className="w-1/2 h-3 bg-custom-load rounded-lg"></span>{" "}
+                    <span className="w-1/2 h-2 bg-custom-load rounded-[3px]"></span>{" "}
                   </div>
                 </div>
               );
@@ -87,42 +88,42 @@ const Tags = () => {
       ) : (
         // if the page is loaded
         <div
-          className={` px-2 md:px-5 lg:px-12 py-1 md:py-3 lg:py-5 ${
+          className={` px-2 md:px-5 lg:px-16 py-1 md:py-3 lg:pt-2 lg:pb-7 ${
             changebackground ? "bg-white" : "bg-custom-slate"
           } `}
         >
           {/* actualpath==='sheqleetags' */}
           {actualpath === "sheqlee" && (
-            <div className="flex justify-between">
-              <h4 className="text-[45px]  font-kantumruy font-medium pb-2">
+            <div className="flex justify-between my-3">
+              <h4 className="text-[33px]  font-kantumruy font-medium pb-2">
                 Popular tags
               </h4>
-              <div className="flex justify-center items-center gap-2 relative">
-                <p className="text-xs font-kantumruy font-medium">
+              <div className="flex justify-center items-center gap-2 relative pb-4">
+                <p className="text-sm font-kantumruy font-medium">
                   73+ more tags{" "}
                 </p>
-                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-6"></div>
+                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-5"></div>
                 <img src={Rightarrow} alt="" width={8} height={12} />
               </div>
             </div>
           )}
 
           {/* //display the tags  */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 gap-y-8">
-            {Totaltags.slice(0, 6).map((tag) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-8">
+            {Totaltags.map((tag) => {
               return (
                 <Link to={`/sheqlee/${mylink}/${tag.tagname}`}>
                   <div
                     key={tag.id}
-                    className={` px-5 py-3 rounded-xl border-l-[15px] border-l-black ${
+                    className={` px-4 py-3 rounded-xl border-l-[15px] border-l-black ${
                       changebackground ? "bg-custom-slate" : "bg-custom-tags"
                     }   `}
                   >
                     <div className="font-kantumruy font-medium text-2xl">
                       {tag.tagname}
                     </div>
-                    <div className="font-kantumruy mt-2 ">
-                      {tag.numberofjobs} jobs . {tag.numberofsubscribers}{" "}
+                    <div className="font-kantumruy mt-2  text-[17px]  text-custom-placeholder">
+                      {tag.numberofjobs} jobs • {tag.numberofsubscribers}{" "}
                       subscribers
                     </div>
                   </div>

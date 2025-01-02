@@ -77,6 +77,7 @@ const Login = () => {
             formData={formData}
             updateFormData={updateFormData}
             correctvalue={"email"}
+            changetheicon={"p-[18px]"}
           />
           <Oneinput
             iconmyimage={key}

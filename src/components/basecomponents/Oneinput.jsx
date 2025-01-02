@@ -13,6 +13,7 @@ const Oneinput = ({
   updateFormData,
   correctvalue,
   nopaddingleft,
+  changetheicon,
 }) => {
   return (
     <div className="flex flex-col flex-grow  ">
@@ -26,7 +27,9 @@ const Oneinput = ({
           <div className="relatve h-fit w-fit rounded-l-lg overflow-hidden ">
             <img
               src={iconmyimage}
-              className="absolute left-0 top-0  bg-black rounded-l-lg p-4 h-full w-full     "
+              className={`absolute left-0 top-0  bg-black rounded-l-lg  ${
+                changetheicon ? changetheicon : "p-4"
+              }  h-full w-full    `}
               style={{ width: 52 }}
             />
           </div>
@@ -35,7 +38,7 @@ const Oneinput = ({
           type={type}
           className={`bg-custom-tags  rounded-lg ${
             nopaddingleft ? "pl-5" : " pl-16"
-          } h-full outline-none p-3 w-full text-xl font-kantumruy placeholder:text-custom-placeholder`}
+          } h-full outline-none p-[11px] w-full text-xl font-kantumruy placeholder:text-custom-placeholder`}
           id={id}
           placeholder={placeholder}
           value={formData[correctvalue] || ""}

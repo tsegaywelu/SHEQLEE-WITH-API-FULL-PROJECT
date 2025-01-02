@@ -10,7 +10,9 @@ import down from "../assets/companysPNG/down/down.png";
 import Postedjobs from "../components/basecomponents/Postedjobs";
 import Qestion from "../components/basecomponents/Qestion";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 const Companydetail = () => {
+  const [isreadmore, setisreadmore] = useState(false);
   const { theidtodisplay } = useParams();
   return (
     <div>
@@ -47,7 +49,7 @@ const Companydetail = () => {
             <h2 className="text-xs font-kantumruy">100-999</h2>
           </div>
           <div className="flex gap-2 items-center justify-center bg-dvider px-2 py-1 rounded-[5px]">
-            <div className="w-2 h-2 ">
+            <div className="w-2 h-3 ">
               <img src={employeeimage} alt="" width={12} height={6} />
             </div>
             <h2 className="text-xs font-kantumruy">Seoul, S. Korea</h2>
@@ -86,22 +88,39 @@ const Companydetail = () => {
           LGBTQIA+ communities, people with disabilities, and all people who
           identify as women.
         </p>
-        <button className="absolute bottom-4 right-3 bg-custom-purple rounded-[5px] text-white p-2 font-kantumruy font-medium">
+        <p className={`text-lg mb-10 ${isreadmore ? "" : "hidden "}`}>
+          {" "}
+          We put our customers at the heart of everything we do, and we do so
+          through a diverse team working together in an honest, inclusive
+          environment. We all commit to creating a safe working environment and
+          are allies to those often underrepresented - including but not limited
+          to members of BIPOC and LGBTQIA+ communities, people with
+          disabilities, and all people who identify as women.
+        </p>
+        <button
+          className="absolute bottom-4 right-3 bg-custom-purple rounded-[5px] text-white p-2 font-kantumruy font-medium"
+          onClick={(e) => setisreadmore(!isreadmore)}
+        >
           <span className="flex gap-1 text-[13px]">
-            Read more
+            {isreadmore ? <div>Read less</div> : <div>Read more </div>}
             <div className="w-2.5 h-2.5 ml-[2px] pt-[2px]">
-              <img src={down} />
+              <img
+                src={down}
+                className={`${isreadmore ? "rotate-180" : "rotate-0"}`}
+              />
             </div>
           </span>
         </button>
       </div>
       <div className=" mt-24">
-        <h2 className="font-kantumruy font-semibold text-center text-3xl ">
+        <h2 className="font-kantumruy font-semibold text-center text-3xl my-7">
           Job posts from {theidtodisplay}
         </h2>
       </div>
       <Postedjobs />
-      <Qestion />
+      <div className="mt-16">
+        <Qestion />
+      </div>
     </div>
   );
 };

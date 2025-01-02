@@ -33,7 +33,7 @@ const Contact = () => {
         {formData.message}
         {formData.subject}
       </div>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-4xl mx-auto ">
         <div className="mt-5 md:my-10">
           <Dashboaredtitle
             text={
@@ -46,7 +46,7 @@ const Contact = () => {
           </Dashboaredtitle>
 
           {/* inputs section */}
-          <div className="flex  max-sm:flex-col my-5 gap-8 justify-center lg:px-28 md:mt-5">
+          <div className="flex  max-sm:flex-col my-5 gap-8 justify-center  md:mt-5">
             <Oneinput
               iconmyimage={idea}
               placeholder={"Regarding Posting a Job"}
@@ -56,6 +56,7 @@ const Contact = () => {
               formData={formData}
               updateFormData={updateFormData}
               correctvalue={"subject"}
+              changetheicon={"p-3"}
             />
             <Oneinput
               iconmyimage={email}
@@ -70,7 +71,7 @@ const Contact = () => {
           </div>
 
           {/* //message section  */}
-          <div className="md:px-28 space-y-3  relative">
+          <div className=" space-y-3  relative">
             <label
               className="text-xl  my-3    font-kantumruy font-medium "
               htmlFor="message"
@@ -87,11 +88,11 @@ const Contact = () => {
               value={formData.message}
               onChange={(e) => updateFormData("message", e.target.value)}
             ></textarea>
-            <span className="absolute md:right-32 right-2 bottom-2 font-kantumruy">
+            <span className="absolute  right-2 bottom-2 font-kantumruy">
               0/512
             </span>
           </div>
-          <div className="flex justify-end mx-32 mt-10 ">
+          <div className="flex justify-end  mt-10 ">
             <Mybutton
               background="bg-custom-purple p-3 rounded-lg text-white  text-xl font-kantumruy font-medium"
               closewindow={closewindow}
