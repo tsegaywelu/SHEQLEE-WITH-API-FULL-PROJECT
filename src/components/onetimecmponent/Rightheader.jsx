@@ -136,12 +136,16 @@ const Rightheader = () => {
             </div>
           </div>
         ) : (
-          <div className="flex  max-sm:flex-col justify-center items-center gap-0 ">
+          <div className="flex  max-sm:flex-col justify-center items-center gap-5 ">
             <Link to={"sheqlee/profile"}>
               <Mybutton
-                background={
-                  "bg-custom-purple rounded-xl lg:px-3 md:p-2 lg:py-2   text-white font-semibold font-kantumruy"
-                }
+                background={` rounded-[10px] lg:px-3 md:p-2 lg:py-2   text-white font-semibold font-kantumruy
+                  ${
+                    pathname.includes("profile")
+                      ? "bg-black"
+                      : "bg-custom-purple"
+                  }
+                     `}
               >
                 Edit profile
               </Mybutton>

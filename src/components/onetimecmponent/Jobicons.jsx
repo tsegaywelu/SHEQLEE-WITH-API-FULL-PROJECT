@@ -10,4 +10,3 @@ const Jobicons = ({ children, text }) => {
 };
 
 export default Jobicons;
-className = "mr-1";

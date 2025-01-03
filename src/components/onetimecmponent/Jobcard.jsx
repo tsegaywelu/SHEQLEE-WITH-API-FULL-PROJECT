@@ -6,9 +6,9 @@ import edit from "../../assets/direction/edit.svg";
 
 const Jobdetail = () => {
   return (
-    <div className="w-full  overflow-visible ">
-      <table className="w-fit mx-auto">
-        <thead className=" text-sm md:text-2xl bg-custom-tags font-kantumruy rounded-t-[20px] ">
+    <div className="  overflow-hidden w-fit rounded-[15px] pb-[11px]  bg-clip-padding bg-custom-slate">
+      <table className="w-fit mx-auto ">
+        <thead className=" text-sm md:text-2xl bg-custom-tags font-kantumruy  ">
           <th className="px-4  text-left  py-7 rounded-tl-lg font-medium ">
             JID
           </th>
@@ -18,7 +18,7 @@ const Jobdetail = () => {
           <th className="px-4  text-left font-medium ">Status</th>
           <th className="px-4  text-left   font-medium">Actions</th>
         </thead>
-        <tbody className="text-sm md:text-xl lg:text-2xl bg-custom-slate font-kantumruy">
+        <tbody className="text-sm md:text-xl lg:text-[22px] bg-custom-slate font-kantumruy ">
           <tr className="border-b-2  border-gray-200  ">
             <td className=" px-6 py-5">1</td>
             <td className=" px-6">Senior Mobile App developer</td>
@@ -30,59 +30,59 @@ const Jobdetail = () => {
                 <div className="min-w-3 w-3 min-h-3 h-3 rounded bg-gray-700 "></div>
               </div>
             </td>
-            <td className=" px-6 ">
-              <div className="flex items-center justify-center gap-1 relative">
-                <button className="bg-custom-purple p-2 rounded-md w-10 h-10">
+            <td className=" px-6 relative ">
+              <div className="flex items-center justify-center gap-1  ">
+                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
                   {/* <img src={copy} alt="" /> */}
                   <img src={copy} alt="" />
                 </button>
                 <button className="bg-black py-1 px-4 rounded-lg text-white ">
                   Publish
                 </button>
-                <button className="bg-custom-purple p-2 rounded-md w-10 h-10">
+                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
                   {/* <MdEdit size={22} /> */}
                   <img src={edit} alt="" />
                 </button>
-                <button className="bg-custom-purple p-2 rounded-md w-10 h-10">
+                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
                   {/* <img src={delete1} alt="" /> */}
                   <img src={delete1} alt="" />
                 </button>
-                <button className=" absolute   bg-custom-tags text-sm -bottom-6  right-0 px-1">
-                  delete draft
+                <button className=" absolute   bg-custom-tags text-xs -bottom-2 right-0  rounded-[3px] px-2 py-[2px]">
+                  Delete draft
                 </button>
               </div>
             </td>
           </tr>
           <tr className="border-b-2  border-gray-200   ">
             <td className=" px-6 py-5">2</td>
-            <td className=" px-6">phython back-end developer</td>
-            <td className=" px-6">part time </td>
+            <td className=" px-6">Phython back-end developer</td>
+            <td className=" px-6">Part time </td>
             <td className=" px-6">Lead</td>
             <td className=" px-6">
-              <div className=" rounded border-2 border-green-500 p-[1px] w-10 h-fit flex justify-center">
+              <div className=" rounded border-2 border-green-500 p-[1px] w-10 h-fit flex justify-end">
                 <div className="min-w-3 w-3 min-h-3 h-3 rounded bg-green-500 "></div>
               </div>
             </td>
-            <td className=" px-6">
+            <td className=" px-6 ">
               <div className="flex items-center justify-start gap-1 relative">
-                <button className="bg-custom-purple p-2 rounded-md w-10 h-10">
+                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
                   <img src={copy} alt="" />
                 </button>
-                <button className="bg-custom-purple p-2 rounded-md w-10 h-10">
+                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
                   <img src={eye} alt="" />
                 </button>
-                <button className="bg-custom-purple p-2 rounded-md w-10 h-10">
+                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
                   <img src={delete1} alt="" />
                 </button>
-                <button className=" absolute   bg-custom-tags text-sm -bottom-6 px-1 ">
-                  duplicate vacancy
+                <button className=" absolute   bg-custom-tags text-xs -bottom-7 rounded-[3px] px-2 py-[2px]">
+                  Duplicate vacancy
                 </button>
               </div>
             </td>
           </tr>
-          <tr className="border-b-2  border-gray-200  ">
+          <tr className="  ">
             <td className=" px-6 py-5">3</td>
-            <td className=" px-6">react js developer</td>
+            <td className=" px-6">React js developer</td>
             <td className=" px-6">part-time</td>
             <td className=" px-6">middle</td>
             <td className=" px-6">
@@ -91,19 +91,19 @@ const Jobdetail = () => {
               </div>
             </td>
             <td className=" px-6 ">
-              <div className="flex items-center justify-start gap-1 relative">
-                <button className="bg-custom-purple p-2 rounded-md w-10 h-10">
+              <div className="flex items-center justify-start gap-1 relative ">
+                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
                   <img src={copy} alt="" />
                 </button>
-                <button className="bg-custom-purple p-2 rounded-md w-10 h-10">
+                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
                   {/* <img src={eye} alt="" /> */}
                   <img src={eye} alt="" />
                 </button>
-                <button className="bg-custom-purple p-2 rounded-md w-10 h-10">
+                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
                   <img src={delete1} alt="" />
                 </button>
-                <button className=" absolute   bg-custom-tags text-sm -bottom-6 px-1 ">
-                  view details
+                <button className=" absolute   bg-custom-tags text-xs left-9 -bottom-7  rounded-[3px] px-2 py-[2px]">
+                  View details
                 </button>
               </div>
             </td>

@@ -42,7 +42,7 @@ export const Dropdownprofile = ({
                 <input
                   type="text"
                   placeholder={placeholder1}
-                  className="bg-custom-tags p-3 text-xl font-normal text-custom-placeholder placeholder:text-custom-placeholder w-full rounded-lg outline-none font-kantumruy"
+                  className="bg-custom-tags p-3 text-xl font-normal  placeholder:text-custom-placeholder w-full rounded-lg outline-none font-kantumruy"
                   value={formData[correctvalue1] || ""}
                   onChange={(e) =>
                     updateFormData(correctvalue1, e.target.value)
@@ -63,7 +63,7 @@ export const Dropdownprofile = ({
                   <input
                     type="text"
                     placeholder={placeholder2}
-                    className="bg-custom-tags p-4 font-normal text-xl placeholder:text-custom-placeholder w-full rounded-lg outline-none font-kantumruy "
+                    className="bg-custom-tags p-3 font-normal text-xl placeholder:text-custom-placeholder w-full rounded-lg outline-none font-kantumruy "
                     value={formData[correctvalue2] || ""}
                     onChange={(e) =>
                       updateFormData(correctvalue2, e.target.value)

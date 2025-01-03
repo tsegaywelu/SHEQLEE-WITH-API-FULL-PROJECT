@@ -4,14 +4,16 @@ import Tags from "../basecomponents/Tags";
 import Mybutton from "../basecomponents/Mybutton";
 const Userlanding = () => {
   return (
-    <div className="-translate-y-14 my-4">
+    <div className="-translate-y-2 ">
       <Postedjobs showtitle />
-      <Tags />
+      <div className="my-4">
+        <Tags />
+      </div>
       <Postedjobs />
-      <div className="flex justify-center items-center  ">
+      <div className="flex justify-center items-center  my-3 ">
         <Mybutton
           background={
-            "bg-custom-purple  text-sm md:text-xl lg:text-2xl py-1 md:py-2 lg:py-3 px-5 md:px-10 lg:px-14 rounded-lg  text-white font-semibold font-kantumruy "
+            "bg-custom-purple  text-sm md:text-xl  py-1 md:py-2  px-5 md:px-10 lg:px-14 rounded-lg  text-white font-semibold font-kantumruy "
           }
         >
           {" "}

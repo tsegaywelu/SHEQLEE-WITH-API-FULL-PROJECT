@@ -85,7 +85,7 @@ const Skills = ({
                         background: i < skill.level ? "#000000" : "#A0A0A0",
                         borderRadius: "50%",
                         textAlign: "end",
-                        padding: "5px",
+                        padding: "5px 8px ",
                         color: "white",
                         margin: "16px",
                       }}

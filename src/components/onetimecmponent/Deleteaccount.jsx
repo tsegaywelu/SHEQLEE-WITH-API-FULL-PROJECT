@@ -9,7 +9,7 @@ const Deleteaccount = () => {
         <h2 className=" text-xl md:text-3xl font-medium font-kantumruy ">
           Account deletion
         </h2>
-        <p className="font-kantumruy text-lg">
+        <p className="font-kantumruy text-[17px]">
           Please note that your account will be available for recovery for a
           period of one month after deletion. After that, it will be permanently
           deleted and cannot be recovered.
@@ -19,7 +19,7 @@ const Deleteaccount = () => {
       <div className="relative mt-8 font-kantumruy space-y-5">
         <label
           htmlFor="reason"
-          className="text-sm md:text-xl lg:text-2xl my-3 font-medium"
+          className="text-sm md:text-xl  my-3 font-medium"
         >
           Deletion reason <span className="text-red-600">*</span>
         </label>
@@ -29,7 +29,7 @@ const Deleteaccount = () => {
           rows={8}
           id="reason"
           //   className="bg-custom-tags w-full rounded-xl p-4 text-xl outline-none "
-          className="bg-custom-tags w-full rounded-lg p-4  outline-none text-xl placeholder:font-kantumruy placeholder:text-custom-placeholder resize-none"
+          className="bg-custom-tags w-full rounded-lg p-4  outline-none text-lg placeholder:font-kantumruy placeholder:text-custom-placeholder resize-none"
           placeholder="Why are you deleting your account..."
           onChange={(e) => setdeletionReason(e.target.value)}
         ></textarea>
@@ -55,7 +55,7 @@ const Deleteaccount = () => {
       <div className=" mx-auto my-8">
         <Divider></Divider>
         <span className="block font-kantumruy mt-3 ">
-          <span className="text-red-600">*</span> fields are required{" "}
+          <span className="text-red-600">*</span> fields are required.
         </span>
       </div>
     </div>

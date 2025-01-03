@@ -50,7 +50,7 @@ const Inputs = () => {
                 />
               </div>
             </div>
-            <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
+            <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-5">
               <div className="flex flex-col flex-grow relative ">
                 <Oneinputfor
                   labeltext={"Password"}
@@ -79,8 +79,8 @@ const Inputs = () => {
           </form>
         </div>
         <div className="mx-5 md:mx-16 lg:mx-48 my-3">
-          <p className="text-start  font-kantumruy">
-            leave this empty if you do not change your password{" "}
+          <p className="text-start  font-kantumruy text-xs">
+            Leave this empty if you don't want to change your password.{" "}
           </p>
         </div>
       </div>

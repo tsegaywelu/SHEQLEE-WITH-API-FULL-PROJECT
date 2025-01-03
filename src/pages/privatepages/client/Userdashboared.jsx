@@ -6,6 +6,7 @@ import Mybutton from "../../../components/basecomponents/Mybutton";
 import Dropdownform from "../../../components/basecomponents/Dropdownform";
 import Postedjobs from "../../../components/basecomponents/Postedjobs";
 import Skills from "../../../components/onetimecmponent/Skills";
+import Pagination from "../../../components/basecomponents/Pagination";
 const Userdashboared = () => {
   const [formData, setFormdata] = useState({
     category: "",
@@ -21,7 +22,7 @@ const Userdashboared = () => {
     }));
   };
   return (
-    <div>
+    <div className="">
       <div className="">
         <Location />
         {/* {Object.entries(formData).map(([key, value]) => (
@@ -30,65 +31,74 @@ const Userdashboared = () => {
           </div>
         ))} */}
       </div>
-      <div className="lg:my-10 ">
+      <div className="lg:my-16">
         <Dashboaredtitle
           text={"These are jobs for you based on your skills."}
           heading={"Dashboard"}
           css
         >
           {/* <IoGridOutline size={66} className="text-purple-600" /> */}
-          <img src={dashboared} alt="dashboared svg" width={66} height={66} />
+          <img src={dashboared} alt="dashboared svg" width={48} height={48} />
         </Dashboaredtitle>
       </div>
-      <div className="max-w-4xl mx-auto">
-        <form action="" onSubmit={(e) => e.preventDefault()}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-x-5 lg:gap-y-3 mx-1 md:mx-2 lg:mx-5 text-custom-placeholder ">
-            <div className="relative   ">
-              <Dropdownform
-                options={["Category 1", "Category 2", "Category 3"]}
-                defaultText="Select categories"
-                formData={formData}
-                updateFormData={updateFormData}
-                correctvalue2={"category"}
-              />
-            </div>
-            <div className="relative">
-              <Dropdownform
-                options={["Type 1", "Type 2", "Type 3"]}
-                defaultText="Select type"
-                formData={formData}
-                updateFormData={updateFormData}
-                correctvalue2={"type"}
-              />
-            </div>
-            <div className="relative">
-              <Dropdownform
-                options={["Level 1", "Level 2", "Level 3"]}
-                defaultText="Select level"
-                formData={formData}
-                updateFormData={updateFormData}
-                correctvalue2={"level"}
-              />
-            </div>
-
-            <div className="relative  col-span-2">
-              <Dropdownform
-                options={["Tag 1", "Tag 2", "Tag 3"]}
-                defaultText="Select tags"
-                formData={formData}
-                updateFormData={updateFormData}
-                correctvalue2={"tag"}
-              />
+      <div className="max-w-3xl mx-auto ">
+        <form action="" onSubmit={(e) => e.preventDefault()} className="">
+          <div className="space-y-3">
+            <div className="flex  justify-between gap-5 ">
+              <div className="relative   w-full flex-[1.6] ">
+                <Dropdownform
+                  options={["Category 1", "Category 2", "Category 3"]}
+                  defaultText="All categories"
+                  updateFormData={updateFormData}
+                  formData={formData}
+                  correctvalue2={"category"}
+                />
+              </div>
+              <div className="relative w-full flex-1">
+                <Dropdownform
+                  options={["Type 1", "Type 2", "Type 3"]}
+                  defaultText="All types"
+                  updateFormData={updateFormData}
+                  formData={formData}
+                  correctvalue2={"type"}
+                />
+              </div>
+              <div className="relative w-full flex-1">
+                <Dropdownform
+                  options={["Level 1", "Level 2", "Level 3"]}
+                  defaultText="All levels"
+                  updateFormData={updateFormData}
+                  formData={formData}
+                  correctvalue2={"level"}
+                />
+              </div>
             </div>
 
-            <Mybutton background="bg-custom-purple rounded-lg  text-xl text-white font-semibold  font-kantumruy ">
-              Apply filter
-            </Mybutton>
+            <div className="flex gap-5 ">
+              <div className="relative flex-[2.7] w-full">
+                <div className="relative  col-span-2">
+                  <Dropdownform
+                    options={["Tag 1", "Tag 2", "Tag 3"]}
+                    defaultText="Select tags"
+                    formData={formData}
+                    updateFormData={updateFormData}
+                    correctvalue2={"tag"}
+                  />
+                </div>
+              </div>
+
+              <Mybutton background=" w-full flex-[1] bg-custom-purple rounded-lg  text-xl text-white font-semibold  font-kantumruy ">
+                Apply filter
+              </Mybutton>
+            </div>
           </div>
         </form>
       </div>
       <div className="mt-8">
         <Postedjobs showicon5 />
+      </div>
+      <div className="mx-16">
+        <Pagination totalPages={15} />
       </div>
     </div>
   );

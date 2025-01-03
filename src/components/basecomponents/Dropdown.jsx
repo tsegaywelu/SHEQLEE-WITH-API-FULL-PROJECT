@@ -44,7 +44,7 @@ function Dropdown({
           <div className=" bg-stone-900/60 z-50">
             <div
               className={`absolute  z-40     rounded-b-[10px] shadow-lg bg-white ring-1 ring-black ring-opacity-5 ${
-                showicons ? "right-7 md:w-[172px] mt-2" : "w-44"
+                showicons ? "right-10 md:w-[163px] " : "w-44"
               }`}
             >
               <div className=" font-medium font-kantumruy ">
@@ -64,7 +64,7 @@ function Dropdown({
                         onClick={() => setIsOpen(!isOpen)}
                       >
                         <div
-                          className={`flex  py-2 justify-start gap-x-3  px-5  
+                          className={`flex  py-2 justify-start gap-x-3  px-3  
                             ${
                               pagetype === "even" && index % 2 == 0
                                 ? "border-b-[2px] border-dvider pb-2 "

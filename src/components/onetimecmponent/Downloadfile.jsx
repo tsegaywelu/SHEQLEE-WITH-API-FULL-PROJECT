@@ -37,7 +37,7 @@ const Downloadfile = ({ label, id, fileUrl, filename }) => {
       <div className="flex items-center w-fit flex-wrap border-2 bg-custom-tags border-custom-purple rounded-lg overflow-hidden">
         <span className="font-kantumruy py-1  flex-grow overflow-hidden h-full">
           {filename ? (
-            <div className="px-20 py-1 font-normal font-kantumruy">
+            <div className="px-[45.5px] py-1 font-normal font-kantumruy">
               {truncateFilename(filename) || "You Have No  File Yet!"}
             </div>
           ) : (
@@ -49,7 +49,7 @@ const Downloadfile = ({ label, id, fileUrl, filename }) => {
 
         {/* Download button */}
         <button
-          className="bg-custom-purple px-7 py-[10px] font-kantumruy font-semibold text-white h-full text-lg"
+          className="bg-custom-purple px-10 py-[10px] font-kantumruy font-semibold text-white h-full text-lg"
           onClick={handleDownload}
         >
           Download

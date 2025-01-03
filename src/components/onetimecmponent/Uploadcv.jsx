@@ -41,11 +41,11 @@ const Uploadcv = ({ label, id }) => {
       <div className="flex items-center w-fit flex-wrap border-2 border-custom-purple rounded-lg overflow-hidden ">
         <span className="font-kantumruy  py-1    bg-white flex-grow overflow-hidden  h-full ">
           {filename ? (
-            <div className="px-20 py-1 font-normal font-kantumruy">
+            <div className="px-8 py-1 font-normal font-kantumruy">
               {filename}
             </div>
           ) : (
-            <div className="  flex justify-center items-baseline gap-1  px-28 pt-[17px] pb-[5px] font-normal font-kantumruy ">
+            <div className="  flex justify-center items-baseline gap-1  px-20 pt-[17px] pb-[5px] font-normal font-kantumruy  ">
               <img src={dots} alt="" />
               <img src={dots} alt="" />
               <img src={dots} alt="" />
@@ -53,7 +53,7 @@ const Uploadcv = ({ label, id }) => {
           )}
         </span>
         <button
-          className="bg-custom-purple px-3 py-[10px]    font-kantumruy font-semibold text-white h-full text-lg"
+          className="bg-custom-purple px-3 py-[7px]    font-kantumruy font-semibold text-white h-full text-lg"
           onClick={handleclick}
         >
           Upload CV <span className="font-normal">[.pdf]</span>

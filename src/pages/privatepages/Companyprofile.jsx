@@ -50,8 +50,12 @@ const Companyprofile = () => {
       </div>
 
       {/* // input parts  */}
-      <form action="" onSubmit={(e) => e.preventDefault()}>
-        <div className="flex max-sm:flex-col justify-center items-start  gap-8  max-w-5xl  mx-auto">
+      <form
+        action=""
+        onSubmit={(e) => e.preventDefault()}
+        className="max-w-4xl  mx-auto"
+      >
+        <div className="flex max-sm:flex-col justify-center items-start  gap-8  max-w-4xl  mx-auto">
           <div className="flex flex-col w-2/3 gap-2 relative  ">
             <Oneinputfor
               labeltext={"Company name"}
@@ -80,8 +84,8 @@ const Companyprofile = () => {
           <Sectionprofile profilepic1={profilepic1} buttontext={"Upload"} />
         </div>
         {/* //ritch text part */}
-        <div>
-          <div className=" -translate-y-8 max-w-5xl  mx-auto">
+        <div className="-translate-y-8">
+          <div className="  max-w-5xl  mx-auto">
             <Reatchtext
               showtext={"Description"}
               placeholder={"A brief description about your company..."}
@@ -89,8 +93,8 @@ const Companyprofile = () => {
               onChange={(content) => updateFormData("Description", content)}
             />
           </div>
-          <div className=" -translate-y-10">
-            <div className="flex max-sm:flex-col justify-center items-center  gap-5  max-w-5xl  mx-auto">
+          <div className=" -translate-y-6">
+            <div className="flex max-sm:flex-col justify-center items-center  gap-5  max-w-4xl  mx-auto">
               <div className="flex flex-col w-2/3 gap-2 relative">
                 <Dropdownform
                   options={["Less than 5", "Less than 10", "Less than 50"]}
@@ -113,20 +117,17 @@ const Companyprofile = () => {
                 />
               </div>
             </div>
-            <div className=" mt-14 mx-4 md:mx-12 lg:mx-52">
-              <div className="flex justify-end  ">
-                <Mybutton
-                  background={
-                    "bg-custom-purple font-semibold font-kantumruy  text-custom-white rounded-lg p-1 md:p-2 lg:p-3"
-                  }
-                >
-                  <h1 className="text-2xl">Update profile </h1>
-                </Mybutton>
-              </div>
-            </div>
           </div>
-
-          <div className=" max-w-5xl  mx-auto mb-10">
+          <div className="flex justify-end w-full  mt-10 ">
+            <Mybutton
+              background={
+                "bg-custom-purple font-semibold font-kantumruy  text-custom-white rounded-lg p-1 md:p-2 lg:p-3"
+              }
+            >
+              <h1 className="text-2xl">Update profile </h1>
+            </Mybutton>
+          </div>
+          <div className=" max-w-4xl  mx-auto mb-10">
             <Divider></Divider>
             <span className="block font-kantumruy text-start mt-3 ">
               <span className="text-red-800">*</span> fields are required.{" "}

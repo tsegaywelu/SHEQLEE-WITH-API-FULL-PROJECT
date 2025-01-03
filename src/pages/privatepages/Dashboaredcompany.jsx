@@ -22,7 +22,7 @@ const Dashboardcompany = () => {
           }
           heading={"Dashboard"}
         >
-          <img src={dashboared} alt="dashboared svg" width={66} height={66} />
+          <img src={dashboared} alt="dashboared svg" width={48} height={48} />
         </Dashboaredtitle>
       </div>
       <div className=" flex  flex-col  items-center  gap-5 justify-center my-5 md:my-10 overflow-auto  ">

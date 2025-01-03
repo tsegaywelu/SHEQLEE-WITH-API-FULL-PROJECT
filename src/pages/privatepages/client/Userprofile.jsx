@@ -62,7 +62,11 @@ const Userprofile = () => {
           <img src={profilesvg} alt="company svg" width={66} height={66} />
         </Dashboaredtitle>
       </div>
-      <form action="" onSubmit={(e) => e.preventDefault()}>
+      <form
+        action=""
+        onSubmit={(e) => e.preventDefault()}
+        className="max-w-4xl mx-auto"
+      >
         {/* //inputs part */}
         <div className="flex max-sm:flex-col justify-center items-start  gap-5  max-w-5xl mx-auto ">
           <div className="flex flex-col w-2/3 gap-2 relative  ">
@@ -101,43 +105,43 @@ const Userprofile = () => {
               onChange={(content) => updateFormData("aboutYou", content)}
             />
           </div>
-        </div>
-        <div className="mx-auto  max-w-5xl ">
-          <Skillstable
-            skills={skills}
-            title={"Your skills"}
-            subtitle={
-              " Adding your skills will help us make job suggestions more accurately."
-            }
-            buttons
-            updateFormData={updateFormData}
-            formData={formData}
-          />
-          <Linkstabble
-            mylinks={mylinks}
-            title={"Your profiles"}
-            subtitle={
-              "Adding your links to your profiles make more credible. Profiles could be GitHub, LinkedIn etc."
-            }
-            buttons
-            updateFormData={updateFormData}
-            formData={formData}
-          />
 
-          <Uploadcv
-            label={
-              <div className="font-kantumruy space-y-1">
-                <h1 className="font-medium">
-                  Your CV ( <span className="text-red-600">*</span>.pdf)
-                </h1>
-                <p className="text-sm font-normal">
-                  Adding your CV will help us to know you in details and suggest
-                  you to companies.
-                </p>
-              </div>
-            }
-          />
+          <div className="mx-auto  max-w-5xl -translate-y-8 ">
+            <Skillstable
+              skills={skills}
+              title={"Your skills"}
+              subtitle={
+                " Adding your skills will help us make job suggestions more accurately."
+              }
+              buttons
+              updateFormData={updateFormData}
+              formData={formData}
+            />
+            <Linkstabble
+              mylinks={mylinks}
+              title={"Your profiles"}
+              subtitle={
+                "Adding your links to your profiles make more credible. Profiles could be GitHub, LinkedIn etc."
+              }
+              buttons
+              updateFormData={updateFormData}
+              formData={formData}
+            />
 
+            <Uploadcv
+              label={
+                <div className="font-kantumruy space-y-1">
+                  <h1 className="font-medium">
+                    Your CV ( <span className="text-red-600">*</span>.pdf)
+                  </h1>
+                  <p className="text-sm font-normal">
+                    Adding your CV will help us to know you in details and
+                    suggest you to companies.
+                  </p>
+                </div>
+              }
+            />
+          </div>
           <div className="flex justify-end  mt-10 ">
             <Mybutton
               background={
