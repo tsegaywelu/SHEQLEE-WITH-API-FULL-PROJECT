@@ -22,14 +22,14 @@ const Rightheader = () => {
       {isMenuOpen ? (
         <FaTimes
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="flex-grow-0 text-xl text-red-800 cursor-pointer md:hidden mx-auto"
+          className="flex-grow-0 text-lg text-red-800 cursor-pointer md:hidden mx-auto"
           aria-expanded={isMenuOpen}
           aria-label="Close menu"
         />
       ) : (
         <FaBars
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="flex-grow-0 text-3xl cursor-pointer md:hidden"
+          className="flex-grow-0 text-lg cursor-pointer md:hidden"
           aria-expanded={isMenuOpen}
           aria-label="Toggle menu"
         />
@@ -73,7 +73,7 @@ const Rightheader = () => {
               Clients
             </div>
             {pathname.includes("clients") && (
-              <div className="absolute w-12 h-[6px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-26px] right-[1.5px]"></div>
+              <div className="absolute w-12 h-[6px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-26px] right-[1px]"></div>
             )}
           </Link>
         )}

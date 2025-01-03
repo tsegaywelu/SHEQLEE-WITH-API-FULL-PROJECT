@@ -10,9 +10,9 @@ const Leftheader = () => {
           <img
             src={mysvg}
             alt="Logo loading..."
-            className=" h-[50px] w-[50px]"
+            className=" max-sm:h-[30px] max-sm:w-[30px] h-[50px] w-[50px]"
           />
-          <h1 className="text-sm md:text-2xl font-extrabold flex justify-center items-center font-recolta">
+          <h1 className="max-sm:hidden md:text-2xl font-extrabold flex justify-center items-center font-recolta">
             Sheqlee
           </h1>
         </div>
