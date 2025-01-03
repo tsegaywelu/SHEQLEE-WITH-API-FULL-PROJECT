@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <>
       {/* Main container */}
-      <div className="bg-custom-slate   flex max-sm:flex-row-reverse  max-sm:justify-end justify-between items-center py-1 md:py-2  lg:py-4 px-2 md:px-5 lg:px-10   lg:rounded-lg">
+      <div className="bg-custom-slate   flex max-sm:flex-row-reverse  max-sm:justify-end max-sm:py-4 max-sm:px-5 justify-between items-center py-1 md:py-2  lg:py-4 px-2 md:px-5 lg:px-10   lg:rounded-lg">
         {/* left side part */}
         <Leftheader />
         <Rightheader />
