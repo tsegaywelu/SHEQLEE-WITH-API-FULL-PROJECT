@@ -33,7 +33,7 @@ function Dropdown({
           </span>
 
           {pathname.includes("Categories") && underline && (
-            <div className="absolute w-20 h-[5px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-27px]"></div>
+            <div className="absolute w-20 h-[5px] bg-custom-purple  md:bottom-[-15px] lg:bottom-[-27px]"></div>
           )}
         </button>
       </div>

@@ -36,7 +36,7 @@ const Rightheader = () => {
       )}
       {/* Right section: Navigation and buttons */}
       <div
-        className={`flex-grow-0 flex items-center  gap-5  md:flex md:flex-row   ${
+        className={`flex-grow-0 flex items-center gap-5 lg:gap-7  md:flex md:flex-row   ${
           isMenuOpen ? "flex flex-col gap-2 " : "hidden "
         }`}
       >
@@ -44,7 +44,7 @@ const Rightheader = () => {
           <Link to={"/sheqlee/All jobs"} className=" inline-block relative ">
             All jobs
             {pathname.includes("job") && (
-              <div className="absolute w-[55px] h-[6px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-35px] right-0"></div>
+              <div className="absolute w-[56px] h-[6px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-35px] max-lg:right-1"></div>
             )}
           </Link>
         </div>
@@ -68,12 +68,12 @@ const Rightheader = () => {
         </Link>
         {state === "guest" && (
           <Link to={"/sheqlee/clients"} className="inline-block relative">
-            <div className="mt-1 p-1 md:p-2 lg:pr-5   font-kantumruy font-medium   ">
+            <div className="mt-1    font-kantumruy font-medium   ">
               {/* border-b-4 border-blue-600 lg:pb-10 self-end bg-red-500 */}
               Clients
             </div>
             {pathname.includes("clients") && (
-              <div className="absolute w-14 h-[6px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-26px] left-3"></div>
+              <div className="absolute w-12 h-[6px] bg-custom-purple  md:bottom-[-22px] lg:bottom-[-26px] right-[1.5px]"></div>
             )}
           </Link>
         )}
