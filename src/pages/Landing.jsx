@@ -25,9 +25,9 @@ const Landing = () => {
   const leftsidecontents = () => {
     return (
       <>
-        <div className="md:w-1/2 flex items-center  justify-center flex-col     ">
+        <div className="md:w-1/2 flex flex-col md:items-center  justify-center      ">
           <h1
-            className="font-semibold font-kantumruy text-xl md:text-3xl lg:text-5xl  w-[90%] pl-16 leading-loose"
+            className="font-semibold font-kantumruy text-xl md:text-3xl lg:text-5xl  md:w-[90%] pl-16 leading-loose"
             style={{ lineHeight: "1.09" }}
           >
             Recruit <span className="text-custom-purple">affordable</span>
@@ -70,7 +70,7 @@ const Landing = () => {
   const rightsidecontent = () => {
     return (
       <>
-        <div className="lg:w-1/2 h-auto   py-6 mr-20">
+        <div className="lg:w-1/2 h-auto   md:py-6 md:mr-20">
           {/* <img src={hero} alt="...loading image  " /> this was the alternative image*/}
           <div className=" float-left">
             <Lottie animationData={animationData} loop={true} autoplay={true} />
@@ -88,7 +88,7 @@ const Landing = () => {
           message={" Please register or login as a <br> client to post jobs."}
         />
       )}
-      <div className="flex  flex-col md:flex-row  justify-start mt-16 ">
+      <div className="flex  flex-col-reverse md:flex-row  justify-start  mt-4 md:mt-16 ">
         {/* leftside text */}
         {leftsidecontents()}
 
