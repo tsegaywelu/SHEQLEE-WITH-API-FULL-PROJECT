@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <div>
       {/* Main container */}
-      <div className="bg-custom-slate   flex flex-row-reverse  md:flex-row justify-end py-4 px-4 md:justify-between items-center md:py-2  lg:py-4 md:px-5 lg:px-10   lg:rounded-lg">
+      <div className="bg-custom-slate   flex flex-row-reverse  md:flex-row justify-end py-2 px-4 md:justify-between items-center md:py-2  lg:py-4 md:px-5 lg:px-10   lg:rounded-lg">
         {/* left side part */}
         <div className="font-kantumruy text-sm md:hidden flex justify-end items-center gap-3  w-full ">
           <button className="font-semibold">Log in</button>
