@@ -25,9 +25,9 @@ const Landing = () => {
   const leftsidecontents = () => {
     return (
       <>
-        <div className="md:w-1/2 flex flex-col md:items-center  justify-center      ">
+        <div className="md:w-1/2 flex flex-col items-start md:items-center  justify-center     ">
           <h1
-            className="font-semibold font-kantumruy text-xl md:text-3xl lg:text-5xl  md:w-[90%] pl-16 leading-loose"
+            className="font-semibold font-kantumruy text-2xl md:text-3xl lg:text-5xl  md:w-[90%] pl-4 md:pl-16 leading-loose"
             style={{ lineHeight: "1.09" }}
           >
             Recruit <span className="text-custom-purple">affordable</span>
@@ -38,7 +38,7 @@ const Landing = () => {
             <div>professionals.</div>
           </h1>
 
-          <div className=" lg:my-7 text-sm md:text-xl  w-[90%] pl-16 font-kantumruy  ">
+          <div className="my-4 md:my-7 text-xs md:text-xl w-[85%] md:w-[90%] pl-4 md:pl-16 font-kantumruy  ">
             Web frontend, mobile app, backend, database, full-stack, data
             science, UI/UX & product design, project management, scrum master,
             etc.
@@ -47,7 +47,7 @@ const Landing = () => {
 
           {/* //button component */}
           <div
-            className=" mt-5 md:mt-5 lg:mt-7   w-[90%] pl-16     "
+            className=" mt-5 md:mt-5 lg:mt-7   md:w-[90%] pl-4 md:pl-16     "
             onClick={openmodal}
           >
             <div className=" ">
