@@ -134,7 +134,7 @@ const Postedjobs = ({ showicon5, showtitle }) => {
               return (
                 <Link to={`/sheqlee/all jobs/${jobsall.title}`}>
                   <div
-                    className="mx-1 md:mx-0 bg-custom-slate rounded-[20px] md:pr-2 px-3  pt-5 h-[270px] flex flex-col  justify-between  pb-4  "
+                    className=" pl-[12px]  md:mx-0 bg-custom-slate rounded-[20px] md:pr-2 px-3  pt-5 h-[270px] flex flex-col  justify-between  pb-4  "
                     key={jobsall.title + Math.random()}
                   >
                     <div>
