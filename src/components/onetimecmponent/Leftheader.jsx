@@ -12,7 +12,7 @@ const Leftheader = () => {
             alt="Logo loading..."
             className=" h-[50px] w-[50px]"
           />
-          <h1 className=" max-sm:hidden  md:inline  md:text-2xl font-extrabold flex justify-center items-center font-recolta">
+          <h1 className=" hidden   md:text-2xl font-extrabold md:flex justify-center items-center font-recolta">
             Sheqlee
           </h1>
         </div>
