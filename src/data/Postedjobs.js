@@ -3,7 +3,7 @@ export const Jobs = [
     title: "Web Developer",
     descreiption: "we need react js developer need react js developer  .",
     time: "30min ago",
-    companyname: "kplear masango",
+    companyname: "kplear masango  ",
     work: "full time",
     level: "intermidate",
     salary: "53$ perhour",

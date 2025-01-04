@@ -6,7 +6,7 @@ const Platformstatus = () => {
   const loading = false;
   return (
     <section className="flex flex-col items-center pb-16 pt-7  gap-5 ">
-      <h2 className="text-xl md:text-4xl  mb-6 font-medium font-kantumruy ">
+      <h2 className=" text-[28px] md:text-4xl  mb-6 font-medium font-kantumruy ">
         Platform stats
       </h2>
       {loading ? (
@@ -38,7 +38,7 @@ const Platformstatus = () => {
           </div>
         </div>
       ) : (
-        <div className="flex flex-wrap   w-full justify-around">
+        <div className="flex flex-wrap   w-full justify-around space-y-16 md:space-y-0">
           {/* for hand shake */}
           <div className="flex flex-col items-center text-center">
             <img

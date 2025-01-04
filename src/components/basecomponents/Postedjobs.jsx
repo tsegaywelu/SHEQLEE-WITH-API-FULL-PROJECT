@@ -44,7 +44,7 @@ const Postedjobs = ({ showicon5, showtitle }) => {
         <div className="md:py-1 mx-8 md:mx-16 ">
           {showtitle && (
             <div className="flex justify-between my-8">
-              <h4 className="text-[33px]  font-kantumruy font-medium my-3">
+              <h4 className=" text-[23px] md:text-[33px]  font-kantumruy font-medium my-3">
                 Latest job posts
               </h4>
               <div className="flex justify-center items-center gap-2 relative ">
@@ -112,27 +112,29 @@ const Postedjobs = ({ showicon5, showtitle }) => {
           </div>
         </div>
       ) : (
-        <div className="  md:py-1 mx-8 md:mx-16">
+        <div className="  md:py-1 mx-4 md:mx-16 ">
           {showtitle && (
             <div className="flex justify-between my-8">
-              <h4 className="text-[33px]  font-kantumruy font-medium ">
+              <h4 className="  text-[23px] md:text-[33px]  font-kantumruy font-medium ">
                 Latest job posts{" "}
               </h4>
               <div className="flex justify-center items-center gap-2 relative ">
-                <h3 className="text-sm font-medium">745+ more jobs</h3>
-                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-2"></div>
+                <h3 className="text-xs md:text-sm font-medium">
+                  745+ more jobs
+                </h3>
+                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-0 md:bottom-2"></div>
                 <img src={Rightarrow} alt="" width={8} height={12} />
               </div>
             </div>
           )}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3  lg:gap-x-10 lg:gap-y-9 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-5 lg:gap-x-10   lg:gap-y-9 ">
             {/* ///////////////////// */}
 
             {Jobs.map((jobsall) => {
               return (
                 <Link to={`/sheqlee/all jobs/${jobsall.title}`}>
                   <div
-                    className=" bg-custom-slate rounded-[20px] md:pr-2 px-3  pt-5 h-[270px] flex flex-col  justify-between  pb-4  "
+                    className="mx-1 md:mx-0 bg-custom-slate rounded-[20px] md:pr-2 px-3  pt-5 h-[270px] flex flex-col  justify-between  pb-4  "
                     key={jobsall.title + Math.random()}
                   >
                     <div>
@@ -140,11 +142,11 @@ const Postedjobs = ({ showicon5, showtitle }) => {
                         {showicon5 && (
                           <img src={qualityassurance} width={24} height={24} />
                         )}
-                        <p className="text-[22px] font-medium font-kantumruy">
+                        <p className=" text-[20px] md:text-[22px] font-medium font-kantumruy">
                           {jobsall.title}
                         </p>
                       </div>
-                      <p className="text-base my-6 font-kantumruy  line-clamp-4">
+                      <p className="text-base my-6 font-kantumruy    line-clamp-4">
                         {jobsall.descreiption}
                       </p>
                     </div>

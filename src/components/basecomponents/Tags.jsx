@@ -51,7 +51,7 @@ const Tags = () => {
 
           {actualpath === "sheqlee" && (
             <div className="flex justify-between py-3">
-              <h4 className="text-[33px]  font-kantumruy font-medium">
+              <h4 className="text-[14px] md:text-[33px]  font-kantumruy font-medium">
                 Popular tags
               </h4>
               <div className="flex justify-center items-center gap-2 relative ">
@@ -95,27 +95,27 @@ const Tags = () => {
           {/* actualpath==='sheqleetags' */}
           {actualpath === "sheqlee" && (
             <div className="flex justify-between my-3">
-              <h4 className="text-[33px]  font-kantumruy font-medium pb-2">
+              <h4 className=" text-[23px]    md:text-[33px]  font-kantumruy font-medium pb-2">
                 Popular tags
               </h4>
               <div className="flex justify-center items-center gap-2 relative pb-4">
-                <p className="text-sm font-kantumruy font-medium">
+                <p className=" text-xs md:text-sm font-kantumruy font-medium">
                   73+ more tags{" "}
                 </p>
-                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-5"></div>
+                <div className=" absolute  w-1/2 h-[4px] bg-custom-purple left-0 bottom-3 md:bottom-5"></div>
                 <img src={Rightarrow} alt="" width={8} height={12} />
               </div>
             </div>
           )}
 
           {/* //display the tags  */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-16 gap-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-x-16 gap-y-5 md:gap-y-8">
             {Totaltags.slice(0, 6).map((tag) => {
               return (
                 <Link to={`/sheqlee/${mylink}/${tag.tagname}`}>
                   <div
                     key={tag.id}
-                    className={` px-4 py-3 rounded-xl border-l-[15px] border-l-black ${
+                    className={`mx-3 md:mx-0  px-6 md:px-4 py-3 rounded-[10px] md:rounded-xl border-l-[9px] md:border-l-[15px] border-l-black ${
                       changebackground ? "bg-custom-slate" : "bg-custom-tags"
                     }   `}
                   >
