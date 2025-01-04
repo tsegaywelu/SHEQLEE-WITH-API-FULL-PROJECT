@@ -29,7 +29,7 @@ const Rightheader = () => {
       ) : (
         <FaBars
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="flex-grow-0 text-[10px] cursor-pointer md:hidden"
+          className="flex-grow-0 text-[14px] cursor-pointer md:hidden"
           aria-expanded={isMenuOpen}
           aria-label="Toggle menu"
         />
