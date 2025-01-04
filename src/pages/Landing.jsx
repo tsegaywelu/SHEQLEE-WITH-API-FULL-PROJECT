@@ -27,7 +27,7 @@ const Landing = () => {
       <>
         <div className="md:w-1/2 flex flex-col items-start md:items-center  justify-center     ">
           <h1
-            className="font-semibold font-kantumruy text-2xl md:text-3xl lg:text-5xl  md:w-[90%] pl-4 md:pl-16 leading-loose"
+            className="font-semibold font-kantumruy text-2xl md:text-3xl lg:text-5xl  w-[90%]  md:w-[90%] pl-4 md:pl-16 leading-loose"
             style={{ lineHeight: "1.09" }}
           >
             Recruit <span className="text-custom-purple">affordable</span>
