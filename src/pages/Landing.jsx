@@ -31,14 +31,14 @@ const Landing = () => {
             style={{ lineHeight: "1.09" }}
           >
             Recruit <span className="text-custom-purple">affordable</span>
-            <div>
+            <div className=" inline md:block">
               {" "}
               & <span className="text-custom-purple">skilled </span>Ethiopian
             </div>
             <div>professionals.</div>
           </h1>
 
-          <div className="my-4 md:my-7 text-xs md:text-xl w-[85%] md:w-[90%] pl-4 md:pl-16 font-kantumruy  ">
+          <div className="my-4 md:my-7 text-[13px] md:text-xl w-[90%] md:w-[90%] pl-4 md:pl-16 font-kantumruy  ">
             Web frontend, mobile app, backend, database, full-stack, data
             science, UI/UX & product design, project management, scrum master,
             etc.
