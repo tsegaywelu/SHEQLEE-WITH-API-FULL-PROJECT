@@ -25,9 +25,9 @@ const Landing = () => {
   const leftsidecontents = () => {
     return (
       <>
-        <div className="md:w-1/2 flex flex-col items-start md:items-center  justify-center     ">
+        <div className="md:w-1/2 flex flex-col items-start md:items-center  justify-center my-10 md:my-0    ">
           <h1
-            className="font-semibold font-kantumruy text-2xl md:text-3xl lg:text-5xl  w-[90%]  md:w-[90%] pl-4 md:pl-16 leading-loose"
+            className="font-semibold font-kantumruy text-3xl md:text-3xl lg:text-5xl w-[87%]  md:w-[90%] pl-5 md:pl-16 leading-loose"
             style={{ lineHeight: "1.09" }}
           >
             Recruit <span className="text-custom-purple">affordable</span>
@@ -38,7 +38,7 @@ const Landing = () => {
             <div>professionals.</div>
           </h1>
 
-          <div className="my-4 md:my-7 text-[13px] md:text-xl w-[90%] md:w-[90%] pl-4 md:pl-16 font-kantumruy  ">
+          <div className="mt-6 md:my-7 text-[15px] md:text-xl w-[87%] md:w-[90%] pl-5 md:pl-16 font-kantumruy  ">
             Web frontend, mobile app, backend, database, full-stack, data
             science, UI/UX & product design, project management, scrum master,
             etc.
@@ -47,7 +47,7 @@ const Landing = () => {
 
           {/* //button component */}
           <div
-            className=" mt-5 md:mt-5 lg:mt-7   md:w-[90%] pl-4 md:pl-16     "
+            className="  mt-8 lg:mt-7   md:w-[90%] pl-5 md:pl-16     "
             onClick={openmodal}
           >
             <div className=" ">
@@ -70,9 +70,9 @@ const Landing = () => {
   const rightsidecontent = () => {
     return (
       <>
-        <div className="lg:w-1/2 h-auto   md:py-6 md:mr-20">
+        <div className="md:w-1/2 h-auto  py-4 md:py-6 md:mr-20 ">
           {/* <img src={hero} alt="...loading image  " /> this was the alternative image*/}
-          <div className=" float-left">
+          <div className="  md:float-left px-10 md:px-0">
             <Lottie animationData={animationData} loop={true} autoplay={true} />
           </div>
         </div>
