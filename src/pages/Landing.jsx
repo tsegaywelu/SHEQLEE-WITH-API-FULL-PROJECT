@@ -53,7 +53,7 @@ const Landing = () => {
             <div className=" ">
               <Mybutton
                 background={
-                  "bg-custom-purple  text-sm md:text-xl lg:text-2xl py-1 md:py-2 lg:py-4 px-5 md:px-10 lg:px-16 rounded-[15px] text-white font-semibold font-kantumruy "
+                  "bg-custom-purple  text-lg md:text-xl lg:text-2xl py-2 md:py-4 px-10 md:px-16  rounded-[5px] md:rounded-[15px] text-white font-semibold font-kantumruy "
                 }
               >
                 {" "}
