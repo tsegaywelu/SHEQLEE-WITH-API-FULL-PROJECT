@@ -2,41 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaAngleDown } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
-function Dropdown({
-  categories,
-  dropdowntitle,
-  icons,
-  showicons,
-  chnagelinksurl,
-  underline,
-  pagetype,
-}) {
-  const [isOpen, setIsOpen] = useState(false);
+function Mobilemodal({ categories, icons, showicons, pagetype }) {
+  const [isOpen, setIsOpen] = useState(true);
   const { pathname } = useLocation();
   return (
-    <div className=" inline-block text-center">
+    <div className=" block ">
       {/* Dropdown button */}
-      <div className="relative">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="inline-flex justify-center w-full rounded-md   pr-6 py-2 bg-custom-slate text-base  text-black font-medium font-kantumruy  "
-        >
-          {dropdowntitle}
-          <span>
-            {" "}
-            <FaAngleDown
-              size={10}
-              className={`!fill-black  absolute top-4  right-2 transition duration-700 ${
-                isOpen ? "rotate-180" : "rotate-0"
-              }`}
-            />
-          </span>
-
-          {pathname.includes("Categories") && underline && (
-            <div className="absolute w-20 h-[5px] bg-custom-purple  md:bottom-[-15px] lg:bottom-[-27px]"></div>
-          )}
-        </button>
-      </div>
+      <div className="relative"></div>
 
       {/* Dropdown menu */}
       {isOpen && (
@@ -44,7 +16,7 @@ function Dropdown({
           <div className=" bg-stone-900/60 z-50">
             <div
               className={`absolute  z-40     rounded-b-[10px]  bg-white ring-1 ring-black ring-opacity-5 ${
-                showicons ? "right-10 md:w-[163px] " : "w-44"
+                showicons ? "right-10 md:w-[163px] " : "w-32 mt-3 "
               }`}
             >
               <div className=" font-medium font-kantumruy ">
@@ -99,7 +71,7 @@ function Dropdown({
           </div>
           {/* // now i am doing this */}
           <div
-            className="fixed top-0 left-0 w-full h-full backdrop:blur-lg z-20 bg-black opacity-45"
+            className="fixed top-0 left-0 w-full h-full min-h-screen backdrop:blur-lg z-20 bg-black opacity-45"
             onClick={() => setIsOpen(!isOpen)}
           ></div>
         </div>
@@ -108,4 +80,4 @@ function Dropdown({
   );
 }
 
-export default Dropdown;
+export default Mobilemodal;

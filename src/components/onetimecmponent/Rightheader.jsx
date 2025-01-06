@@ -11,6 +11,7 @@ import settingsvg from "../../assets/direction/settings.svg";
 import logoutsvg from "../../assets/direction/logout.svg";
 import companysvg from "../../assets/direction/company.svg";
 import { useLocation } from "react-router-dom";
+import Mobilemodal from "./Mobilemodal";
 const Rightheader = () => {
   const { pathname } = useLocation();
 
@@ -19,23 +20,20 @@ const Rightheader = () => {
   const state = currentuser ? currentuser.role : "guest";
   return (
     <div className=" p-1 md:p-2 lg:p-3 ">
-      <div>
+      <div className="md:hidden ">
         <FaBars
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="flex-grow-0 text-[13px] cursor-pointer md:hidden"
           aria-expanded={isMenuOpen}
           aria-label="Toggle menu"
         />
-        {/* {isMenuOpen && (
-          <Dropdown
+        {isMenuOpen && (
+          <Mobilemodal
             dropdowntitle={"Muruts Yifter"}
-            categories={["Dashboared", "Account setting ", "Logout"]}
-            icons={[dashboaredsvg, settingsvg, logoutsvg]}
-            showicons
+            categories={["All jobs", "Categories ", "Clients"]}
             chnagelinksurl
-            pagetype={"odd"}
           />
-        )} */}
+        )}
       </div>
 
       {/* Right section: Navigation and buttons */}
