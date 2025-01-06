@@ -28,11 +28,7 @@ function Mobilemodal({ categories, icons, showicons, pagetype }) {
                   >
                     <div className="">
                       <Link
-                        to={
-                          showicons
-                            ? `/sheqlee/${category}`
-                            : `/sheqlee/Categories/${category}`
-                        }
+                        to={`/sheqlee/${category}`}
                         onClick={() => setIsOpen(!isOpen)}
                       >
                         <div
