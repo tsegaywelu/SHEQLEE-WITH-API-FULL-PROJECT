@@ -25,15 +25,15 @@ const Companys = () => {
           subscribers.
         </p>
       </div> */}
-      <div className="mt-7 mb-10">
+      <div className="mt-7 mb-10 ">
         <Dashboaredtitle
           text={
             "List of the companies on Sheqlee with their number of job posts and subscribers."
           }
           heading={"Companies on Sheqlee"}
-          css
+          css={540}
         >
-          <img src={building} width={66} height={66} />
+          <img src={building} width={50} height={50} />
         </Dashboaredtitle>
       </div>
       <Tag />

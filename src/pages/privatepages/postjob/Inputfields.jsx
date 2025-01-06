@@ -60,9 +60,10 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
             </div>
           </div>
           {/* //botto input parts  */}
-          <div className="flex  max-sm:flex-col  gap-8   md:mt-10">
+          <div className="flex  max-sm:flex-col  gap-8   md:mt-5">
             <div className="flex flex-col flex-grow  ">
               <Dropdownform
+                labeltext={"Category"}
                 options={["full time", "part time", "Category 3"]}
                 defaultText="select catagory"
                 warn
@@ -73,6 +74,7 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
             </div>
             <div className="flex flex-col flex-grow  ">
               <Dropdownform
+                labeltext={"Job type"}
                 options={["back-end", "front-end", "full-stack"]}
                 defaultText="select type..."
                 warn
@@ -82,16 +84,11 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
               />
             </div>
           </div>
-          <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
+          <div className="flex  max-sm:flex-col  gap-8   md:mt-5">
             <div className="flex flex-col flex-grow   w-1/2 ">
-              <label
-                // className="text-xl font-bold  m-3"
-                className="text-xl   my-3 font-kantumruy font-medium text-start"
-                htmlFor="companyname"
-              >
-                Skill level <span className="text-red-600 font-normal">*</span>
-              </label>
               <Dropdownform
+                labeltext={"Skill level"}
+                warn
                 options={["Intermidate", "expert", "fullstack"]}
                 defaultText="Add skill level..."
                 updateFormData={updateFormData}
@@ -130,7 +127,7 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
               name="message"
               id="message"
               placeholder="We are looking for a Flutter developer with 2 years experience."
-              rows={5}
+              rows={4}
               // className="bg-slate-200 w-full rounded-lg p-4  outline-none text-2xl m-3 "
               className="bg-custom-tags w-full rounded-lg p-3  outline-none text-xl placeholder:font-kantumruy placeholder:text-custom-placeholder resize-none "
               value={formData.shortdescription}
@@ -138,15 +135,15 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
                 updateFormData("shortdescription", e.target.value)
               }
             ></textarea>
-            <span className="absolute  bottom-14 right-3">0/128</span>
-            <p className="text-start font-kantumruy -translate-y-3">
+            <span className="absolute  bottom-14 right-3 text-sm">0/128</span>
+            <p className=" text-sm text-start font-kantumruy -translate-y-3">
               Who are you looking for? Give us a one-liner description of your
               ideal candidate.
             </p>
           </div>
           {/* //requirements part  */}
 
-          <div className="space-y-10 mt-5 ">
+          <div className="space-y-0 mt-5 ">
             <Reatchtext
               showtext={"Requirements "}
               value={formData.requirements}
@@ -170,7 +167,7 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
               placeholder={"How can professionals apply..."}
             />
           </div>
-          <div className="mt-5 text-start">
+          <div className="mt-3 text-start">
             <Oneinput
               placeholder={"NodeJS, AWS, PostgreSQL"}
               labeltext={"Skills  "}
@@ -202,13 +199,13 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
           <div className="flex items-center gap-3 mt-5">
             <Checkbox />
             <span className="text-sm font-kantumruy">
-              I want my company name to exclude from this vacancy{" "}
+              I want my company name to exclude from this vacancy.{" "}
             </span>
           </div>
           <div className="flex justify-end gap-10 mt-16 ">
             <Mybutton
               background={
-                "border-4 border-custom-purple rounded-lg py-1 md:py-2 px-2 md:px-5 text-2xl font-kantumruy font-medium  "
+                "border-[4px] border-custom-purple rounded-lg  md:py-[9px]  md:px-7 text-2xl font-kantumruy font-medium  "
               }
             >
               Save draft

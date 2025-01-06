@@ -4,9 +4,9 @@ import micro from "../../assets/companysPNG/micro/micro.png";
 import { Link } from "react-router-dom";
 const Qestion = () => {
   return (
-    <div className="  bg-custom-tags flex flex-col text-center md:flex-row justify-center items-center  gap-y-5 gap-x-10 py-5 md:py-10 ">
+    <div className="  bg-custom-tags flex flex-col text-center md:flex-row justify-center items-center  gap-y-5 gap-x-10 py-5 md:py-10  ">
       <img src={micro} height={45} width={45} />
-      <h1 className="font-kantumruy text-2xl font-medium mx-4 md:mx-0">
+      <h1 className="font-kantumruy text-2xl font-medium  ">
         Are you a software developer in Ethiopia?
       </h1>
       <Link to={"/sheqlee/company signup"}>

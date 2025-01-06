@@ -15,8 +15,8 @@ const Footer = () => {
       <footer className="bg-black text-white  pt-8 lg:pt-16 pb-4 ">
         <div className=" mx-auto pl-8 flex flex-col md:flex-row flex-wrap lg:flex-nowrap justify-start gap-8 md:gap-10 px-2  md:px-10 ">
           {/*  Address Section    */}
-          <div className="  order-1 md:order-none   text-center sm:text-left mb-6 sm:mb-0 md:self-start flex-[1.5] mt-4 ">
-            <div className="flex  flex-col items-center justify-center sm:justify-start mb-4 gap-4 ">
+          <div className=" mr-5 order-1 md:order-none   text-center sm:text-left mb-6 sm:mb-0 md:self-start flex-[1.5] mt-4 ">
+            <div className="flex  flex-col items-center justify-center sm:justify-start mb-4 gap-4  ">
               <img
                 src={mysvg}
                 alt="Logo loading..."

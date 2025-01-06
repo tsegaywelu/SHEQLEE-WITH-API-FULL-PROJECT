@@ -19,9 +19,9 @@ const Companydetail = () => {
       <div className="">
         <Location />
       </div>
-      <div className="flex flex-col justify-center items-center gap-y-6">
-        <img src={companylogo} alt="company logo" width={96} height={96} />
-        <div className="flex gap-2 items-center">
+      <div className="flex flex-col justify-center items-center  ">
+        <img src={companylogo} alt="company logo" width={75} height={75} />
+        <div className="flex gap-2 items-center  mb-8">
           <h2 className="font-kantumruy font-semibold text-4xl">
             {theidtodisplay}
           </h2>
@@ -58,13 +58,13 @@ const Companydetail = () => {
       </div>
       <div className="">
         <div className="flex justify-center items-center mt-8">
-          <button className="flex items-center gap-5  px-5 py-3 bg-custom-purple  text-custom-white font-medium font-kantumruy rounded-[10px]  mt-3 text-2xl">
+          <button className="flex items-center gap-5  px-5 py-3 bg-custom-purple  text-custom-white font-medium font-kantumruy rounded-[10px]  mt-4 text-2xl">
             <img src={bell} width={20} height={20} alt="" /> Subscribe to
             company
           </button>
         </div>
         <div className="text-center ">
-          <p className="text-sm md:text-xl text-custom-black font-kantumruy mt-7 gap-4  ">
+          <p className="text-sm md:text-xl text-custom-black font-kantumruy mt-5 gap-4  ">
             Subscribers: <span className="font-semibold">5</span>
           </p>
         </div>

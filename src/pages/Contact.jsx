@@ -40,7 +40,7 @@ const Contact = () => {
               "Please reach out to us if you have any questions or you need our assistance with something."
             }
             heading={"Contact"}
-            css
+            css={540}
           >
             <img src={contact} width={66} height={66} />
           </Dashboaredtitle>

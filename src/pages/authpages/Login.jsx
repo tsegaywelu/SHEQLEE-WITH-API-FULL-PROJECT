@@ -117,7 +117,7 @@ const Login = () => {
             </p>
           </div>
         </div>
-        <Divider>or continue with google</Divider>
+        <Divider>or continue with </Divider>
         <Continuewithgoogle />
       </form>
       <Qestion />

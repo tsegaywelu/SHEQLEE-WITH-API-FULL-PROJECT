@@ -49,7 +49,7 @@ const Employersignup = () => {
         building1={building1}
         profetional={profetional}
         titletext={"Professional Registration"}
-        margintop={"mt-20"}
+        margintop={"mt-16"}
       >
         <h2 className="  rounded-lg pl-16  h-full   w-full     font-kantumruy">
           If you are an employer, please visit{" "}
@@ -72,7 +72,7 @@ const Employersignup = () => {
         }}
       >
         {/* below devide part */}
-        <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
+        <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-5">
           <Oneinput
             iconmyimage={user}
             placeholder={"Abebe Bekila"}
@@ -156,7 +156,7 @@ const Employersignup = () => {
             </p>
           </div>
         </div>
-        <Divider>or continue with google</Divider>
+        <Divider>or continue with </Divider>
         <Continuewithgoogle />
       </form>
       <Qestion />

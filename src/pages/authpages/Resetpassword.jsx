@@ -27,7 +27,7 @@ const Resetpassword = () => {
       </div>
       <form
         action=""
-        className="flex flex-col justify-center  items-center max-w-[600px] mx-auto mb-20  gap-y-5"
+        className="flex flex-col justify-center  items-center max-w-[600px] mx-auto mb-10  gap-y-5"
       >
         <Resetpasswordcomponent
           type={"text"}

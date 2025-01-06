@@ -42,7 +42,7 @@ const Companyprofile = () => {
           text={
             " Provide accurate information about your company to make yourself discoverable."
           }
-          css={"max-w-[550px]"}
+          css={550}
           heading={"Company profile"}
         >
           <img src={building} alt="company svg" width={66} height={66} />
@@ -124,7 +124,7 @@ const Companyprofile = () => {
                 "bg-custom-purple font-semibold font-kantumruy  text-custom-white rounded-lg p-1 md:p-2 lg:p-3"
               }
             >
-              <h1 className="text-2xl">Update profile </h1>
+              <h1 className="text-[22px]">Update profile </h1>
             </Mybutton>
           </div>
           <div className=" max-w-4xl  mx-auto mb-10">

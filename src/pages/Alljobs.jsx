@@ -106,7 +106,7 @@ const Alljobs = () => {
       {/* //display all jobs from postedjobs.jsx   */}
       <Postedjobs showicon5 />
       {/* <Noresult /> */}
-      <div className="mx-16">
+      <div className="mx-16 mt-10">
         <Pagination totalPages={40} />
       </div>
       <div className="mt-10">

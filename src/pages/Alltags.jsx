@@ -24,7 +24,7 @@ const Alltags = () => {
       </div>
       <Tags />
 
-      <div className="mx-16">
+      <div className="mx-16 mb-10">
         <Pagination totalPages={15} />
       </div>
       <Qestion />

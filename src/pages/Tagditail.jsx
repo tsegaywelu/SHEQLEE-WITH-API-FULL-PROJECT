@@ -33,16 +33,16 @@ const Tagdetail = () => {
         <Location />
       </div>
       <div className="">
-        <div className="flex flex-col items-center text-center px-8 font-sans text-black ">
+        <div className="  flex flex-col items-center text-center px-8 font-sans text-black mb-16">
           <div className="w-20 h-20 bg-yellow-400 flex items-end justify-end text-4xl m-3 p-2  font-kantumruy font-bold uppercase">
             {logo}
           </div>
-          <h1 className="text-lg md:text-xl lg:text-4xl text-custom-black font-semibold font-kantumruy mb-2 mt-4 capitalize">
+          <h1 className="text-lg md:text-xl lg:text-4xl text-custom-black font-semibold font-kantumruy mb-2  capitalize">
             {mytitle}
           </h1>
           <p className="text-sm md:text-xl lg:text-2xl text-custom-black font-kantumruy mb-10 mt-1">
             All job posts with the tag{" "}
-            <span className="font-medium ">{mytitle}</span>
+            <span className="font-medium ">{mytitle}</span>.
           </p>
 
           <button
@@ -76,7 +76,7 @@ const Tagdetail = () => {
           </div>
         </div>
         <Postedjobs />
-        <div className="mx-16">
+        <div className="mx-16 my-4">
           <Pagination totalPages={15} />
         </div>
         <Qestion />

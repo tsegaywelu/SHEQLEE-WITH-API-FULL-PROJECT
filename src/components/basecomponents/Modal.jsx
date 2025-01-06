@@ -17,14 +17,14 @@ export const Modal = ({ closewin, message }) => {
           <p className="  mx-auto  md:text-xl font-kantumruy font-medium  ">
             <div
               dangerouslySetInnerHTML={{ __html: message }}
-              className="text-center text-[22 text-[17px]px]"
+              className="text-center text-[22px]"
             />
           </p>
           <div className=" flex justify-center items-center mt-2  w-full gap-5 ">
             <Link to={"/sheqlee/companysignup"}>
               <Mybutton
                 background={
-                  " border-[2px]  text-[17px]border-custom-purple py-[9px] px-6  bg-custom-purple text-white rounded-[10px] font-semibold font-kantumruy"
+                  " border-[2px]  text-[17px] border-custom-purple py-[9px] px-6  bg-custom-purple text-white rounded-[10px] font-semibold font-kantumruy"
                 }
               >
                 Sign Up

@@ -38,9 +38,9 @@ const Platformstatus = () => {
           </div>
         </div>
       ) : (
-        <div className="flex flex-wrap   w-full justify-around space-y-16 md:space-y-0">
+        <div className="flex flex-wrap   w-full justify-evenly space-y-16 md:space-y-0">
           {/* for hand shake */}
-          <div className="flex flex-col items-center text-center">
+          <div className="flex flex-col items-center text-center md:translate-y-2">
             <img
               src={handshake}
               alt="handshke svg"

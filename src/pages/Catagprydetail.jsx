@@ -30,9 +30,9 @@ const Categorydetail = () => {
       <div className=" ">
         <div className="flex flex-col items-center text-center p-8 font-sans text-black">
           <div className="mb-4 text-purple-400">
-            <img src={product} height={84} width={84} />
+            <img src={product} width={66} height={66} />
           </div>
-          <h1 className="text-lg md:text-xl lg:text-4xl text-custom-black font-semibold font-kantumruy mb-2 mt-4">
+          <h1 className="text-lg md:text-xl lg:text-4xl text-custom-black font-semibold font-kantumruy mb-2 mt-3">
             {mytitle}
           </h1>
           <p className="text-sm md:text-xl lg:text-2xl text-custom-black font-kantumruy mb-4 mt-1">
@@ -41,7 +41,7 @@ const Categorydetail = () => {
           </p>
 
           <button
-            className="flex items-center gap-5  px-5 py-3 bg-custom-purple  text-custom-white font-medium font-kantumruy rounded-[10px]  mt-3 text-2xl"
+            className="flex items-center gap-5  px-5 py-3 bg-custom-purple  text-custom-white font-medium font-kantumruy rounded-[10px]  mt-4 text-2xl"
             onClick={openmodal}
           >
             <img src={bell} width={20} height={20} alt="" /> Subscribe to
@@ -72,7 +72,7 @@ const Categorydetail = () => {
           </div>
         </div>
         <Postedjobs />
-        <div className="mx-16">
+        <div className="mx-16 my-4">
           <Pagination totalPages={15} />
         </div>
         <Qestion />

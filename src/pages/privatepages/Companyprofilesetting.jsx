@@ -21,9 +21,9 @@ export const Companyprofilesetting = () => {
         <Dashboaredtitle
           text={" Edit your account setting to make your account  more secure."}
           heading={"Account Setting "}
-          css
+          css={450}
         >
-          <img src={settingicon} alt="" />
+          <img src={settingicon} alt="setting icon" width={66} height={66} />
         </Dashboaredtitle>
       </div>
       {/* // input section  */}

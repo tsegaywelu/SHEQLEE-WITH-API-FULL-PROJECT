@@ -51,12 +51,12 @@ const Userprofile = () => {
           </div>
         ))} */}
       </div>
-      <div className=" flex  flex-col  items-center  gap-5 justify-center my-5 md:my-10 ">
+      <div className=" flex  flex-col  items-center  gap-5 justify-center mb-5 md:mt-16 ">
         <Dashboaredtitle
           text={
             " The more complete your profile, the easier for companies to select you for jobs."
           }
-          css={"max-w-[550px]"}
+          css={550}
           heading={"Edit Profile"}
         >
           <img src={profilesvg} alt="company svg" width={66} height={66} />

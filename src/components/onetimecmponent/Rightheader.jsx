@@ -19,26 +19,28 @@ const Rightheader = () => {
   const state = currentuser ? currentuser.role : "guest";
   return (
     <div className=" p-1 md:p-2 lg:p-3 ">
-      {isMenuOpen ? (
-        <FaTimes
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="flex-grow-0 text-lg text-red-800 cursor-pointer md:hidden mx-auto"
-          aria-expanded={isMenuOpen}
-          aria-label="Close menu"
-        />
-      ) : (
+      <div>
         <FaBars
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="flex-grow-0 text-[13px] cursor-pointer md:hidden"
           aria-expanded={isMenuOpen}
           aria-label="Toggle menu"
         />
-      )}
+        {/* {isMenuOpen && (
+          <Dropdown
+            dropdowntitle={"Muruts Yifter"}
+            categories={["Dashboared", "Account setting ", "Logout"]}
+            icons={[dashboaredsvg, settingsvg, logoutsvg]}
+            showicons
+            chnagelinksurl
+            pagetype={"odd"}
+          />
+        )} */}
+      </div>
+
       {/* Right section: Navigation and buttons */}
       <div
-        className={`flex-grow-0 flex items-center gap-5 lg:gap-7  md:flex md:flex-row   ${
-          isMenuOpen ? "flex flex-col gap-2 " : "hidden "
-        }`}
+        className={` hidden md:flex flex-grow-0 items-center gap-5 lg:gap-7   md:flex-row   `}
       >
         <div className=" mt-1    text-custom-black font-kantumruy font-medium relative ">
           <Link to={"/sheqlee/All jobs"} className=" inline-block relative ">
@@ -93,7 +95,7 @@ const Rightheader = () => {
             </Link>
 
             {/* here rederect user to componay sign up page or user sign up page */}
-            <Link to={"/sheqlee/companysignup"}>
+            <Link to={"/sheqlee/company signup"}>
               <Mybutton
                 background={
                   "bg-custom-purple rounded-[10px] md:px-3 md:p-2 lg:py-2   text-white font-semibold font-kantumruy "
@@ -139,7 +141,7 @@ const Rightheader = () => {
           <div className="flex  max-sm:flex-col justify-center items-center gap-5 ">
             <Link to={"sheqlee/profile"}>
               <Mybutton
-                background={` rounded-[10px] lg:px-3 md:p-2 lg:py-2   text-white font-semibold font-kantumruy
+                background={` rounded-[10px] lg:px-3 md:p-2 lg:py-2 md:mr-2  text-white font-semibold font-kantumruy
                   ${
                     pathname.includes("profile")
                       ? "bg-black"

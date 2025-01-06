@@ -65,7 +65,7 @@ const Jobdetail = () => {
             />
           </Jobicons>
         </div>
-        <div className="space-y-1.5 mt-4">
+        <div className="space-y-1.5 mt-7">
           <button className="bg-custom-purple px-20 py-[10px] rounded-lg text-white font-kantumruy font-semibold text-xl">
             Apply now
           </button>
@@ -108,10 +108,10 @@ const Jobdetail = () => {
         presentations, technical and conceptual web graphics, interactive
         marketing materials, and print materials.
       </div>
-      <div className=" flex  flex-col justify-center items-center mt-10 gap-5 mb-10">
+      <div className=" flex  flex-col justify-center items-center mt-7 gap-3 mb-10">
         <div className="flex justify-center items-center gap-5 mb-5">
-          <div className="bg-black   flex justify-center items-center p-1   rounded-[4px]">
-            <img src={tagsvg} width={16} height={16} className="mr-1" alt="" />
+          <div className="bg-black  w-6 h-6 overflow-hidden  flex justify-center items-center p-1   rounded-[4px]">
+            <img src={tagsvg} width={16} height={16} className="" alt="" />
           </div>
 
           <Jobicons text={"Java"}></Jobicons>
@@ -130,8 +130,8 @@ const Jobdetail = () => {
           </p>
         </div>
 
-        <div className="space-y-2">
-          <p>Share with others</p>
+        <div className="space-y-2 mt-2">
+          <p className="text-sm">Share with others</p>
           <div className="flex gap-4  text-gray-700">
             <FaFacebook
               size={20}

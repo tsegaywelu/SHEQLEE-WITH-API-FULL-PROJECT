@@ -13,7 +13,7 @@ const Dashboardcompany = () => {
       <div>
         <Location />
       </div>
-      <div className="mt-5">
+      <div className="mt-5 ">
         <Dashboaredtitle
           text={
             job
@@ -29,7 +29,7 @@ const Dashboardcompany = () => {
         {job ? (
           <Jobdetail />
         ) : (
-          <div className="my-5 md:my-10">
+          <div className="mt-2 mb-10">
             <Link to={"/sheqlee/vacancy"}>
               <Mybutton
                 background={

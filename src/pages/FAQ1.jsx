@@ -5,6 +5,7 @@ import Location from "../components/basecomponents/Location";
 import question from "../assets/SVG/question.svg";
 import Dashboaredtitle from "../components/onetimecmponent/Dashboaredtitle";
 import Qestion from "../components/basecomponents/Qestion";
+import Pagination from "../components/basecomponents/Pagination";
 const FAQ1 = () => {
   const [activetab, setactivetab] = useState("freelancers");
   const [openquestion, setopenquestion] = useState(0);
@@ -71,7 +72,7 @@ const FAQ1 = () => {
             "The following are some of the most commonly asked questions by our users."
           }
           heading={"FAQ"}
-          css
+          css={500}
         >
           <img src={question} width={66} height={66} />
         </Dashboaredtitle>
@@ -135,6 +136,9 @@ const FAQ1 = () => {
               </div>
             );
           })}
+        </div>
+        <div className="mt-2">
+          <Pagination totalPages={9} />
         </div>
       </div>
       <Qestion />

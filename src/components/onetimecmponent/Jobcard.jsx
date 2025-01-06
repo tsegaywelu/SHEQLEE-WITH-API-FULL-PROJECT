@@ -32,18 +32,18 @@ const Jobdetail = () => {
             </td>
             <td className=" px-6 relative ">
               <div className="flex items-center justify-center gap-1  ">
-                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
+                <button className="bg-custom-purple p-[10px] rounded-md w-8 h-8">
                   {/* <img src={copy} alt="" /> */}
                   <img src={copy} alt="" />
                 </button>
                 <button className="bg-black py-1 px-4 rounded-lg text-white ">
                   Publish
                 </button>
-                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
+                <button className="bg-custom-purple p-[10px] rounded-md w-8 h-8">
                   {/* <MdEdit size={22} /> */}
                   <img src={edit} alt="" />
                 </button>
-                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
+                <button className="bg-custom-purple p-[10px] rounded-md w-8 h-8">
                   {/* <img src={delete1} alt="" /> */}
                   <img src={delete1} alt="" />
                 </button>
@@ -65,13 +65,13 @@ const Jobdetail = () => {
             </td>
             <td className=" px-6 ">
               <div className="flex items-center justify-start gap-1 relative">
-                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
+                <button className="bg-custom-purple p-[10px] rounded-md w-8 h-8">
                   <img src={copy} alt="" />
                 </button>
-                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
+                <button className="bg-custom-purple p-[8px] rounded-md w-8 h-8">
                   <img src={eye} alt="" />
                 </button>
-                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
+                <button className="bg-custom-purple p-[10px] rounded-md w-8 h-8">
                   <img src={delete1} alt="" />
                 </button>
                 <button className=" absolute   bg-custom-tags text-xs -bottom-7 rounded-[3px] px-2 py-[2px]">
@@ -92,14 +92,14 @@ const Jobdetail = () => {
             </td>
             <td className=" px-6 ">
               <div className="flex items-center justify-start gap-1 relative ">
-                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
+                <button className="bg-custom-purple p-[10px] rounded-md w-8 h-8">
                   <img src={copy} alt="" />
                 </button>
-                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
+                <button className="bg-custom-purple p-[8px] rounded-md w-8 h-8">
                   {/* <img src={eye} alt="" /> */}
                   <img src={eye} alt="" />
                 </button>
-                <button className="bg-custom-purple p-2 rounded-md w-8 h-8">
+                <button className="bg-custom-purple p-[10px] rounded-md w-8 h-8">
                   <img src={delete1} alt="" />
                 </button>
                 <button className=" absolute   bg-custom-tags text-xs left-9 -bottom-7  rounded-[3px] px-2 py-[2px]">

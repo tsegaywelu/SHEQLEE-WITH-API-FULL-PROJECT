@@ -20,12 +20,12 @@ const Resetpasswordcomponent = ({
       <div
         className={` ${
           showbutton
-            ? "md:ml-20 pl-5 flex gap-5  mt-20   items-center  w-full"
+            ? "md:ml-20 pl-5 flex gap-5  mt-10   items-center  w-full"
             : "flex gap-5 items-center "
         }`}
       >
         {" "}
-        <img src={padlock} height={40} width={40} />
+        <img src={padlock} height={45} width={45} />
         <h1 className="font-kantumruy font-semibold text-[35px]">{header}</h1>
       </div>
       <div
@@ -55,7 +55,7 @@ const Resetpasswordcomponent = ({
               onChange={(e) => updateFormData(id, e.target.value)}
             />
           </div>
-          <p className="text-sm  font-kantumruy mt-2">{clarify}</p>
+          <p className="text-[13px]  font-kantumruy mt-[7px]">{clarify}</p>
         </div>
 
         {/* //this is inside of the flex so saying any thing will not work or make out of this  */}
@@ -64,7 +64,7 @@ const Resetpasswordcomponent = ({
             <div>
               <Mybutton
                 background={
-                  "bg-custom-purple text-white font-medium font-kantumruy text-2xl rounded-[10px] py-1 md:py-2 lg:py-3  px-4 float-right mt-5 "
+                  "bg-custom-purple text-white font-medium font-kantumruy text-2xl rounded-[10px] py-1 md:py-2 lg:py-3  px-4 float-right mt-8 "
                 }
                 closewindow={code}
               >

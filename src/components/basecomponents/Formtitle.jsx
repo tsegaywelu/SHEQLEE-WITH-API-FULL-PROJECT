@@ -21,9 +21,9 @@ const Formtitle = ({
       {/* header part */}
       {titletext && (
         <div
-          className={`flex  flex-start  max-w-4xl mx-auto text-center gap-7 ${margintop}`}
+          className={`flex   flex-start  items-center max-w-4xl mx-auto text-center gap-7 ${margintop}`}
         >
-          <img src={profetional} width={45} height={45} />
+          <img src={profetional} width={40} height={40} />
           <div>
             {" "}
             <h1 className="text-2xl md:text-4xl text-center font-semibold  font-kantumruy">

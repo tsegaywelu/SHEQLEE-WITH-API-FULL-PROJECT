@@ -4,7 +4,7 @@ const CatagoriesCard = ({ title, jobs, subscribers, children }) => {
   return (
     <div className="flex items-center  bg-custom-slate  rounded-xl     ">
       {/* Icon Section */}
-      <div className="w-20 h-20  bg-black text-white flex items-center justify-center rounded-l-xl mr-4 ">
+      <div className="w-20 h-[88px]  bg-black text-white flex items-center justify-center rounded-l-xl mr-4 ">
         {children}
       </div>
 

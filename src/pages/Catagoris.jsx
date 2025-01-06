@@ -128,17 +128,17 @@ const Categories = () => {
             " number of subscribers."
           }
           heading={"All Categories"}
-          css
+          css={550}
         >
           <img src={categories12} width={90} height={90} />
         </Dashboaredtitle>
       </div>
-      <div className="max-w-[970px] mx-auto my-8 p-6">
+      <div className="max-w-[950px] mx-auto my-8 p-6">
         {/* {the title } */}
 
         {/* Categories Grid */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-5 text-xl p-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-20 gap-y-5 text-xl  ">
           {categories.map((category) => (
             <Link to={`/sheqlee/Categories/${category.title}`}>
               <CatagoriesCard

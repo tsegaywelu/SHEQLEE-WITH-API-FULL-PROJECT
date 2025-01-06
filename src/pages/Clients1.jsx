@@ -16,19 +16,19 @@ const Clients1 = () => {
         <h1 className=" text-xl md:text-5xl font-semibold font-kantumruy ">
           sheqlee for clients{" "}
         </h1>
-        <p className=" max-w-[500px] text-xl   text-center p-1 font-kantumruy ">
+        <p className=" max-w-[550px] text-[22px]   text-center p-1 font-kantumruy ">
           Access a pool of talented,comptent and dedicated experts and
           profetional from Ethiopia.
         </p>
-        <div className="mt-5 md:mt-15 flex gap-10 ">
+        <div className="mt-5 md:mt-15 flex gap-5 ">
           <Link to={"/sheqlee/login"}>
             {" "}
-            <Mybutton background="border-[4px] border-custom-purple rounded-lg py-1 md:py-2 px-2 md:px-4 text-xl font-kantumruy font-medium">
+            <Mybutton background="border-[3.5px] border-custom-purple rounded-lg py-1 md:py-3 px-2 md:px-4 text-xl font-kantumruy font-medium">
               Log in
             </Mybutton>
           </Link>
 
-          <Mybutton background=" bg-custom-purple text-custom-white text-sm md:text-xl lg:text-2xl py-1 md:py-2 lg:py-3 px-5 rounded-lg font-kantumruy font-medium">
+          <Mybutton background=" bg-custom-purple text-custom-white text-sm md:text-xl lg:text-2xl py-1 md:py-2 lg:py-2 px-5 rounded-lg font-kantumruy font-medium">
             {" "}
             Register as an employer
           </Mybutton>

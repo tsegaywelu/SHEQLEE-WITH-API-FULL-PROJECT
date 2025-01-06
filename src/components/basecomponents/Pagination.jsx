@@ -21,7 +21,7 @@ const Pagination = ({ totalPages }) => {
       for (let i = currentPage; i <= currentPage + 8; i++) {
         pages.push(i);
       }
-      pages.push("...");
+      pages.push("•••");
       pages.push(totalPages - 1, totalPages);
       return pages;
     }
@@ -29,17 +29,17 @@ const Pagination = ({ totalPages }) => {
   };
 
   return (
-    <div className="flex items-center justify-between py-16">
+    <div className="flex items-center justify-between py-10">
       <div className="flex items-center justify-center space-x-3 ">
         {getVisiblePages().map((page, index) => (
           <button
             key={index}
             onClick={() => typeof page === "number" && handlePageChange(page)}
-            className={`w-8 h-8   rounded-[10px] text-sm text-center font-medium transition-colors duration-200 ${
+            className={`w-8 h-8   font-kantumruy font-medium rounded-[10px] text-[16px] text-center  transition-colors duration-200 ${
               page === currentPage
                 ? "bg-black text-white"
                 : "bg-custom-tags text-black "
-            }`}
+            } ${page === "•••" && "bg-white"}`}
           >
             {page}
           </button>

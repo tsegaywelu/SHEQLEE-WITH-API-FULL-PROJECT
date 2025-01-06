@@ -31,7 +31,7 @@ const Userdashboared = () => {
           </div>
         ))} */}
       </div>
-      <div className="lg:my-16">
+      <div className="lg:mb-5 mt-16">
         <Dashboaredtitle
           text={"These are jobs for you based on your skills."}
           heading={"Dashboard"}
@@ -94,10 +94,10 @@ const Userdashboared = () => {
           </div>
         </form>
       </div>
-      <div className="mt-8">
+      <div className="mt-16">
         <Postedjobs showicon5 />
       </div>
-      <div className="mx-16">
+      <div className="mx-16 my-5">
         <Pagination totalPages={15} />
       </div>
     </div>

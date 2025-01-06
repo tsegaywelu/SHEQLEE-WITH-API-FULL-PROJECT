@@ -10,10 +10,10 @@ const Userlanding = () => {
         <Tags />
       </div>
       <Postedjobs />
-      <div className="flex justify-center items-center  my-3 ">
+      <div className="flex justify-center items-center  mt-3 mb-6 ">
         <Mybutton
           background={
-            "bg-custom-purple  text-sm md:text-xl  py-1 md:py-2  px-5 md:px-10 lg:px-14 rounded-lg  text-white font-semibold font-kantumruy "
+            "bg-custom-purple  text-sm md:text-xl  py-1 md:py-2  px-5 md:px-10 lg:px-20 rounded-lg  text-white font-semibold font-kantumruy "
           }
         >
           {" "}

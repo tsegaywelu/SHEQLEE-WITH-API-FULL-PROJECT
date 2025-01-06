@@ -67,7 +67,7 @@ const Companysignup = () => {
         className=" max-w-4xl mx-auto "
         onSubmit={(e) => e.preventDefault()}
       >
-        <div className="flex  max-sm:flex-col  gap-8 justify-center  md:my-7">
+        <div className="flex  max-sm:flex-col  gap-8 justify-center  md:my-4 ">
           <Oneinput
             iconmyimage={building1}
             placeholder={"Sheqlee Co. Ltd."}
@@ -200,7 +200,7 @@ const Companysignup = () => {
             </p>
           </div>
         </div>
-        <Divider>or continue with google</Divider>
+        <Divider>or continue with </Divider>
         <Continuewithgoogle />
       </form>
       <Qestion />

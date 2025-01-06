@@ -28,8 +28,8 @@ const Interpasswordcode = () => {
       <div>
         <Location />
       </div>
-      <form action="" className="w-fit mx-auto my-10">
-        <div className="">
+      <form action="" className="w-fit mx-auto my-14">
+        <div className=" space-y-5">
           <Resetpasswordcomponent
             icon={code}
             labeltext={"Enter code"}
@@ -65,11 +65,11 @@ const Interpasswordcode = () => {
               correctvalue={"confirmpassword"}
             />
           </div>
-          <p className="text-sm font-kantumruy py-3">
-            Set a strong password to protect your account.
-          </p>
         </div>
-        <div className="flex justify-end  pr-12 ">
+        <p className="text-[13px] font-kantumruy mt-3">
+          Set a strong password to protect your account.
+        </p>
+        <div className="flex justify-end  pr-12  mt-10">
           <Mybutton
             background={
               "bg-custom-purple text-white text-xl font-semibold  font-kantumruy  rounded-lg py-2 md:py-3 px-5 ml-5 "
