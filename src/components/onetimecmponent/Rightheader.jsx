@@ -30,7 +30,7 @@ const Rightheader = () => {
         {isMenuOpen && (
           <Mobilemodal
             dropdowntitle={"Muruts Yifter"}
-            categories={["All jobs", "Categories ", "Clients"]}
+            categories={["All jobs", "Categories", "Clients"]}
             chnagelinksurl
           />
         )}

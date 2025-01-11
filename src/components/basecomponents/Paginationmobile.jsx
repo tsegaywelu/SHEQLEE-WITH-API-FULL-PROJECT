@@ -9,26 +9,25 @@ const Pagination = ({ totalPages }) => {
     if (page < 1) {
       return setCurrentPage(1);
     }
-    if (page >= 1 && page + 9 <= totalPages) {
+    if (page >= 1 && page + 3 <= totalPages) {
       return setCurrentPage(page);
     }
     if (page <= totalPages) {
-      setCurrentPage(totalPages - 10);
+      setCurrentPage(totalPages - 2);
     }
   };
 
   const getVisiblePages = () => {
     const pages = [];
-    if (totalPages <= 9) {
+    if (totalPages <= 3) {
       for (let i = 1; i <= totalPages; i++) {
         pages.push(i);
       }
     } else {
-      for (let i = currentPage; i <= currentPage + 8; i++) {
+      for (let i = currentPage; i <= currentPage + 2; i++) {
         pages.push(i);
       }
-      pages.push("•••");
-      pages.push(totalPages - 1, totalPages);
+
       return pages;
     }
     return pages;
@@ -49,7 +48,7 @@ const Pagination = ({ totalPages }) => {
             onClick={() => typeof page === "number" && changeonlythecolor(page)}
             className={`w-8 h-8   font-kantumruy font-medium rounded-[10px] text-[16px] text-center  transition-colors duration-200 ${
               page === activepage
-                ? "bg-black text-white"
+                ? "bg-custom-purple text-white"
                 : "bg-custom-tags text-black "
             } ${page === "•••" && "bg-white"}`}
           >
@@ -60,11 +59,11 @@ const Pagination = ({ totalPages }) => {
       <div className="flex items-center justify-center gap-3">
         <button
           onClick={() => {
-            changeonlythecolor(currentPage - 9);
-            handlePageChange(currentPage - 9);
+            changeonlythecolor(currentPage - 3);
+            handlePageChange(currentPage - 3);
           }}
           disabled={currentPage === 1}
-          className="p-2 rounded-[10px] bg-custom-purple disabled:opacity-60"
+          className="p-2 rounded-[10px] bg-custom-purple disabled:opacity-40"
         >
           <img
             src={previouspage}
@@ -75,11 +74,11 @@ const Pagination = ({ totalPages }) => {
         </button>
         <button
           onClick={() => {
-            changeonlythecolor(currentPage + 9);
-            handlePageChange(currentPage + 9);
+            changeonlythecolor(currentPage + 3);
+            handlePageChange(currentPage + 3);
           }}
-          disabled={currentPage + 10 === totalPages}
-          className="p-2 rounded-[10px] bg-custom-purple  disabled:opacity-50"
+          disabled={currentPage + 2 === totalPages}
+          className="p-2 rounded-[10px] bg-custom-purple  disabled:opacity-40"
         >
           <img src={nextpage} alt="Next" className="w-3 h-3" />
         </button>

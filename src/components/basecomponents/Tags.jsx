@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { Totaltags } from "../../data/Tags";
 import Pagination from "./Pagination";
+import Tagsmobile from "./Tagsmobile";
 const emptyRectangles = [{}, {}, {}, {}, {}, {}];
-const Tags = () => {
+const Tags = ({ showmobile }) => {
   const { pathname } = useLocation();
   const actualpath = pathname.replaceAll("/", "");
   let changebackground = false;
@@ -109,7 +110,7 @@ const Tags = () => {
           )}
 
           {/* //display the tags  */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-x-16 gap-y-5 md:gap-y-8">
+          <div className=" hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-x-20 gap-y-5 md:gap-y-8">
             {Totaltags.slice(0, 6).map((tag) => {
               return (
                 <Link to={`/sheqlee/${mylink}/${tag.tagname}`}>
@@ -131,6 +132,7 @@ const Tags = () => {
               );
             })}
           </div>
+          {showmobile && <Tagsmobile />}
         </div>
       )}
     </>

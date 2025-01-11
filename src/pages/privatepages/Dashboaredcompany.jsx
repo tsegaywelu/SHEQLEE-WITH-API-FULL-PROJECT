@@ -17,7 +17,7 @@ const Dashboardcompany = () => {
         <Dashboaredtitle
           text={
             job
-              ? "all the jobs you have posted and are about to post."
+              ? "All the jobs you have posted and are about to post."
               : " You have not posted any jobs yet. Get started by posting a job."
           }
           heading={"Dashboard"}

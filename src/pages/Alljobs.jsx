@@ -8,7 +8,7 @@ import search from "../../src/assets/SVG/search.svg";
 import Noresult from "../components/basecomponents/Noresult";
 import Dropdownform from "../components/basecomponents/Dropdownform";
 import Qestion from "../components/basecomponents/Qestion";
-import Pagination from "../components/basecomponents/Pagination";
+
 const Alljobs = () => {
   const [formData, setFormdata] = useState({
     category: "",
@@ -36,19 +36,21 @@ const Alljobs = () => {
       <div className=" py-3 md:py-6 lg:py-10 my-3 ">
         <div className="max-w-3xl mx-auto ">
           {/* header part */}
-          <h1 className="text-center font-kantumruy font-semibold text-xl md:text-2xl lg:text-4xl mb-3   ">
+          <h1 className="text-center font-kantumruy font-semibold text-2xl md:text-2xl lg:text-4xl mb-3   ">
             All Job Posts
           </h1>
           {/* text part */}
-          <p className="text-center text-sm md:text-xl max-w-xl  mx-auto mb-10 font-kantumruy  ">
-            Browse the latest jobs you can take up right now. Use filters to
-            find the best jobs for your skillset.
+          <p className="text-center text-lg md:text-xl max-w-xl  mx-auto mb-10 font-kantumruy px-10 ">
+            Browse the latest jobs you can take up right now.{" "}
+            <span className=" hidden md:inline">
+              Use filters to find the best jobs for your skillset.
+            </span>
           </p>
           {/* filetr part */}
 
-          <div className="space-y-3">
-            <div className="flex  justify-between gap-5 ">
-              <div className="relative   w-full flex-[1.6] ">
+          <div className="space-y-3 mx-5 ">
+            <div className="flex flex-col md:flex-row justify-between gap-5 ">
+              <div className="relative   w-full flex-[1.2] ">
                 <Dropdownform
                   options={["Category 1", "Category 2", "Category 3"]}
                   defaultText="All categories"
@@ -57,33 +59,35 @@ const Alljobs = () => {
                   correctvalue2={"category"}
                 />
               </div>
-              <div className="relative w-full flex-1">
-                <Dropdownform
-                  options={["Type 1", "Type 2", "Type 3"]}
-                  defaultText="All types"
-                  updateFormData={updateFormData}
-                  formData={formData}
-                  correctvalue2={"type"}
-                />
-              </div>
-              <div className="relative w-full flex-1">
-                <Dropdownform
-                  options={["Level 1", "Level 2", "Level 3"]}
-                  defaultText="All levels"
-                  updateFormData={updateFormData}
-                  formData={formData}
-                  correctvalue2={"level"}
-                />
+              <div className="flex flex-[1.6] gap-5">
+                <div className="relative w-full flex-1">
+                  <Dropdownform
+                    options={["Type 1", "Type 2", "Type 3"]}
+                    defaultText="All types"
+                    updateFormData={updateFormData}
+                    formData={formData}
+                    correctvalue2={"type"}
+                  />
+                </div>
+                <div className="relative w-full flex-1">
+                  <Dropdownform
+                    options={["Level 1", "Level 2", "Level 3"]}
+                    defaultText="All levels"
+                    updateFormData={updateFormData}
+                    formData={formData}
+                    correctvalue2={"level"}
+                  />
+                </div>
               </div>
             </div>
 
-            <div className="flex gap-5 ">
+            <div className="flex flex-col md:flex-row gap-5 ">
               <div className="relative flex-[2.7] w-full">
                 <input
                   // className="bg-custom-tags  placeholder:text-custom-placeholder font-kantumruy p-1  md:p-3 md:pl-12 rounded-[15px] lg:col-span-2    w-full outline-none "
                   type="text"
-                  className="bg-custom-tags   rounded-lg  h-full outline-none p-3  w-full text-xl font-kantumruy placeholder:text-custom-placeholder lg:col-span-2  md:pl-12"
-                  placeholder="Search by programming technology or field..."
+                  className="bg-custom-tags   rounded-lg  h-full outline-none p-3  w-full text-[15.5px]  md:text-xl font-kantumruy placeholder:text-custom-placeholder lg:col-span-2 pl-9 md:pl-12"
+                  placeholder="Search by programming technology..."
                   value={formData.programingName}
                   onChange={(e) =>
                     updateFormData("programingName", e.target.value)
@@ -92,11 +96,11 @@ const Alljobs = () => {
                 <img
                   src={search}
                   alt=""
-                  className="absolute left-4 bottom-3 h-6 w-5 "
+                  className="absolute  left-3  bottom-[15px]  md:left-4 md:bottom-3   w-[13px] h-[13px] md:h-6 md:w-5 "
                 />
               </div>
 
-              <Mybutton background=" w-full flex-[1] bg-custom-purple rounded-lg  text-xl text-white font-semibold  font-kantumruy ">
+              <Mybutton background=" mx-auto  w-[45%] md:flex-[1] md:p-0 p-3 bg-custom-purple rounded-lg  text-[16px] md:text-xl text-white font-semibold  font-kantumruy ">
                 Apply filter
               </Mybutton>
             </div>
@@ -104,11 +108,9 @@ const Alljobs = () => {
         </div>
       </div>
       {/* //display all jobs from postedjobs.jsx   */}
-      <Postedjobs showicon5 />
+      <Postedjobs showicon5 totalPages={36} showpaginatin />
       {/* <Noresult /> */}
-      <div className="mx-16 mt-10">
-        <Pagination totalPages={40} />
-      </div>
+
       <div className="mt-10">
         <Qestion />
       </div>

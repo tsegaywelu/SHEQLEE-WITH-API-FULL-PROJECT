@@ -11,7 +11,16 @@ import { Jobs } from "../../data/Postedjobs";
 // import devops from "../../assets/SVG/devops.svg";
 const emptyRectangles = [{}, {}, {}, {}, {}, {}, {}, {}, {}];
 import { useLocation } from "react-router-dom";
-const Postedjobs = ({ showicon5, showtitle }) => {
+import Postedjobsmobile from "./Postedjobsmobile";
+import Pagination from "../basecomponents/Pagination";
+import Paginationmobile from "../basecomponents/Paginationmobile";
+const Postedjobs = ({
+  showicon5,
+  showtitle,
+  showmobile,
+  showpaginatin,
+  totalPages,
+}) => {
   const { pathname } = useLocation(); //here i want to cut out the text "latest posted jobs " in other pages
   const actualpath = pathname.replaceAll("/", "");
   const [loading, setloading] = useState(false);
@@ -127,14 +136,18 @@ const Postedjobs = ({ showicon5, showtitle }) => {
               </div>
             </div>
           )}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-5 lg:gap-x-10   lg:gap-y-9 ">
+          <div
+            className={` ${
+              showmobile ? "hidden" : " grid"
+            }  md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5  lg:gap-x-8  gap-y-5  lg:gap-y-7 `}
+          >
+            {" "}
             {/* ///////////////////// */}
-
             {Jobs.map((jobsall) => {
               return (
                 <Link to={`/sheqlee/all jobs/${jobsall.title}`}>
                   <div
-                    className=" pl-[12px]  md:mx-0 bg-custom-slate rounded-[20px] md:pr-2 px-3  pt-5 h-[270px] flex flex-col  justify-between  pb-4  "
+                    className=" pl-[12px] md:pl-[16px]   md:mx-0 bg-custom-slate rounded-[20px] md:pr-2 px-3  pt-7 h-[275px] flex flex-col  justify-between  pb-4  "
                     key={jobsall.title + Math.random()}
                   >
                     <div>
@@ -214,6 +227,17 @@ const Postedjobs = ({ showicon5, showtitle }) => {
               );
             })}
           </div>
+          {showmobile && <Postedjobsmobile showicon5 />}
+          {showpaginatin && (
+            <div>
+              <div className=" hidden md:block  mt-10">
+                <Pagination totalPages={totalPages} />
+              </div>
+              <div className=" md:hidden   mt-1">
+                <Paginationmobile totalPages={totalPages} />
+              </div>
+            </div>
+          )}
         </div>
       )}
     </>

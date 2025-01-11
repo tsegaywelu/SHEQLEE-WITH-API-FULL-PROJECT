@@ -130,7 +130,7 @@ const Categories = () => {
           heading={"All Categories"}
           css={550}
         >
-          <img src={categories12} width={90} height={90} />
+          <img src={categories12} width={70} height={70} />
         </Dashboaredtitle>
       </div>
       <div className="max-w-[950px] mx-auto my-8 p-6">

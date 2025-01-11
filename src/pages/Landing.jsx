@@ -27,7 +27,7 @@ const Landing = () => {
       <>
         <div className="md:w-1/2 flex flex-col items-start md:items-center  justify-center my-10 md:my-0    ">
           <h1
-            className="font-semibold font-kantumruy text-3xl md:text-3xl lg:text-5xl w-[87%]  md:w-[90%] pl-5 md:pl-16 leading-loose"
+            className="font-semibold font-kantumruy text-[28px] md:text-3xl lg:text-5xl w-[87%]  md:w-[90%] pl-5 md:pl-16 leading-loose"
             style={{ lineHeight: "1.09" }}
           >
             Recruit <span className="text-custom-purple">affordable</span>
@@ -97,8 +97,8 @@ const Landing = () => {
 
         {/* display tags here  */}
       </div>
-      <Tags />
-      <Postedjobs showicon5 showtitle />
+      <Tags showmobile />
+      <Postedjobs showicon5 showtitle showmobile />
       <div className="mt-7 mb-2">
         <Qestion />
       </div>

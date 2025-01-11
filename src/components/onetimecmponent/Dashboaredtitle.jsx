@@ -4,7 +4,7 @@ const Dashboaredtitle = ({ text, children, heading, css }) => {
     <div className="flex flex-col justify-center items-center gap-2 ">
       {/* {<IoGridOutline size={66} className="text-purple-600" />} */}
       {children}
-      <h2 className="text-xl md:text-4xl font-semibold font-kantumruy mt-3">
+      <h2 className="text-2xl md:text-4xl font-semibold font-kantumruy mt-3">
         {heading}
       </h2>
       <p
