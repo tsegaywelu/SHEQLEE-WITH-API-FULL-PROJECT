@@ -7,15 +7,17 @@ import google from "../../assets/companysPNG/google/google.png";
 
 const Trusted = () => {
   return (
-    <div className="bg-custom-tags  flex  flex-col justify-center items-center py-3 space-y-3 pb-8">
+    <div className="bg-custom-tags  flex  flex-col justify-center items-center py-3 space-y-10 md:space-y-3 pb-8">
       <div>
-        <h2 className="font-kantumruy font-medium text-[50px]">Trusted by</h2>
+        <h2 className="font-kantumruy font-medium text-[26px] md:text-[30px]">
+          Trusted by
+        </h2>
       </div>
-      <div className=" flex justify-center items-center gap-20  ">
-        <img src={google} alt="logs of company" height={50} width={50} />
-        <img src={meta} alt="logs of company" height={50} width={50} />
-        <img src={microsoft} alt="logs of company" height={50} width={50} />
-        <img src={apple} alt="logs of company" height={50} width={50} />
+      <div className=" flex justify-center items-center  gap-10  md:gap-20  ">
+        <img src={google} alt="logs of company" height={40} width={40} />
+        <img src={meta} alt="logs of company" height={40} width={40} />
+        <img src={microsoft} alt="logs of company" height={40} width={40} />
+        <img src={apple} alt="logs of company" height={40} width={40} />
       </div>
     </div>
   );

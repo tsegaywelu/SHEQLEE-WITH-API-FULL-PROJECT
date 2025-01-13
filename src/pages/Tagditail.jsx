@@ -34,25 +34,26 @@ const Tagdetail = () => {
       </div>
       <div className="">
         <div className="  flex flex-col items-center text-center px-8 font-sans text-black mb-16">
-          <div className="w-20 h-20 bg-yellow-400 flex items-end justify-end text-4xl m-3 p-2  font-kantumruy font-bold uppercase">
+          <div className="  h-16 w-16 md:w-20 md:h-20 bg-yellow-400 flex items-end justify-end text-4xl m-3 p-2  font-kantumruy font-bold uppercase">
             {logo}
           </div>
-          <h1 className="text-lg md:text-xl lg:text-4xl text-custom-black font-semibold font-kantumruy mb-2  capitalize">
+          <h1 className="text-2xl lg:text-4xl text-custom-black font-semibold font-kantumruy mb-2  capitalize">
             {mytitle}
           </h1>
-          <p className="text-sm md:text-xl lg:text-2xl text-custom-black font-kantumruy mb-10 mt-1">
+          <p className="text-base lg:text-2xl text-custom-black font-kantumruy mb-5 md:mb-10 mt-1">
             All job posts with the tag{" "}
             <span className="font-medium ">{mytitle}</span>.
           </p>
 
           <button
-            className="flex items-center gap-5  px-5 py-3 bg-custom-purple  text-custom-white font-medium font-kantumruy rounded-[10px]  mt-3 text-2xl"
+            className="flex items-center gap-2 md:gap-5  px-4  py-2 md:py-3 bg-custom-purple  text-custom-white font-medium font-kantumruy rounded-[10px]  md:mt-4 text-xl md:text-[21px]"
             onClick={openmodal}
           >
-            <img src={bell} width={20} height={20} alt="" /> Subscribe to tag
+            <img src={bell} width={18} height={18} alt="" />{" "}
+            <span className="pr-2">Subscribe to tag</span>
           </button>
 
-          <p className="text-sm md:text-2xl text-custom-black font-kantumruy mt-7 gap-4  ">
+          <p className="text-lg md:text-2xl text-custom-black font-kantumruy mt-5 md:mt-7 gap-4  ">
             Subscribers: <span className="font-semibold">842</span>
           </p>
 
@@ -75,10 +76,8 @@ const Tagdetail = () => {
             />
           </div>
         </div>
-        <Postedjobs />
-        <div className="mx-16 my-4">
-          <Pagination totalPages={15} />
-        </div>
+        <Postedjobs totalPages={40} showpaginatin />
+
         <Qestion />
       </div>
     </div>

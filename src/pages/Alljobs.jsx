@@ -33,14 +33,14 @@ const Alljobs = () => {
         ))} */}
       </div>
 
-      <div className=" py-3 md:py-6 lg:py-10 my-3 ">
+      <div className=" py-3 md:py-6 lg:py-10 mt-3  mb-10">
         <div className="max-w-3xl mx-auto ">
           {/* header part */}
           <h1 className="text-center font-kantumruy font-semibold text-2xl md:text-2xl lg:text-4xl mb-3   ">
             All Job Posts
           </h1>
           {/* text part */}
-          <p className="text-center text-lg md:text-xl max-w-xl  mx-auto mb-10 font-kantumruy px-10 ">
+          <p className="text-center text-lg md:text-xl max-w-xl  mx-auto mb-10 font-kantumruy px-10  ">
             Browse the latest jobs you can take up right now.{" "}
             <span className=" hidden md:inline">
               Use filters to find the best jobs for your skillset.
@@ -48,7 +48,7 @@ const Alljobs = () => {
           </p>
           {/* filetr part */}
 
-          <div className="space-y-3 mx-5 ">
+          <div className=" space-y-7 md:space-y-3 mx-5 ">
             <div className="flex flex-col md:flex-row justify-between gap-5 ">
               <div className="relative   w-full flex-[1.2] ">
                 <Dropdownform
@@ -59,7 +59,7 @@ const Alljobs = () => {
                   correctvalue2={"category"}
                 />
               </div>
-              <div className="flex flex-[1.6] gap-5">
+              <div className="flex flex-[1.6] gap-7 md:gap-5">
                 <div className="relative w-full flex-1">
                   <Dropdownform
                     options={["Type 1", "Type 2", "Type 3"]}
@@ -100,7 +100,7 @@ const Alljobs = () => {
                 />
               </div>
 
-              <Mybutton background=" mx-auto  w-[45%] md:flex-[1] md:p-0 p-3 bg-custom-purple rounded-lg  text-[16px] md:text-xl text-white font-semibold  font-kantumruy ">
+              <Mybutton background=" mx-auto  w-[50%] px-5 py-[10px] md:flex-[1] md:p-0  bg-custom-purple rounded-lg  text-[16px] md:text-xl text-white font-semibold  font-kantumruy ">
                 Apply filter
               </Mybutton>
             </div>
@@ -108,7 +108,7 @@ const Alljobs = () => {
         </div>
       </div>
       {/* //display all jobs from postedjobs.jsx   */}
-      <Postedjobs showicon5 totalPages={36} showpaginatin />
+      <Postedjobs showicon5 totalPages={40} showpaginatin />
       {/* <Noresult /> */}
 
       <div className="mt-10">

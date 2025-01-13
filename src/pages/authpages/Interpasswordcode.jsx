@@ -24,64 +24,66 @@ const Interpasswordcode = () => {
     console.table(formData);
   };
   return (
-    <div>
+    <>
       <div>
         <Location />
       </div>
-      <form action="" className="w-fit mx-auto my-14">
-        <div className=" space-y-5">
-          <Resetpasswordcomponent
-            icon={code}
-            labeltext={"Enter code"}
-            placeholder={"123456"}
-            id={"code"}
-            clarify={" Get a reset code from your email and input it above."}
-            header={"Set new password"}
-            formData={formData}
-            updateFormData={updateFormData}
-          />
-
-          <div className="flex  max-sm:flex-col  gap-8 justify-center   md:mt-10  sm:pr-0 md:pr-12">
-            <Oneinput
-              iconmyimage={key}
-              placeholder={"**********"}
-              labeltext={"New Password"}
-              type={"password"}
-              id={"password"}
+      <div className="mx-4">
+        <form action="" className="w-fit mx-auto my-10  md:my-14">
+          <div className=" space-y-5">
+            <Resetpasswordcomponent
+              icon={code}
+              labeltext={"Enter code"}
+              placeholder={"123456"}
+              id={"code"}
+              clarify={" Get a reset code from your email and input it above."}
+              header={"Set new password"}
               formData={formData}
               updateFormData={updateFormData}
-              correctvalue={"newpassword"}
             />
 
-            <Oneinput
-              iconmyimage={key}
-              placeholder={"**********"}
-              labeltext={"Confirm password"}
-              type={"password"}
-              id={"password1"}
-              showeyeicon
-              formData={formData}
-              updateFormData={updateFormData}
-              correctvalue={"confirmpassword"}
-            />
+            <div className="flex  max-sm:flex-col gap-4  md:gap-8 justify-center   md:mt-10  sm:pr-0 md:pr-12">
+              <Oneinput
+                iconmyimage={key}
+                placeholder={"**********"}
+                labeltext={"New Password"}
+                type={"password"}
+                id={"password"}
+                formData={formData}
+                updateFormData={updateFormData}
+                correctvalue={"newpassword"}
+              />
+
+              <Oneinput
+                iconmyimage={key}
+                placeholder={"**********"}
+                labeltext={"Confirm password"}
+                type={"password"}
+                id={"password1"}
+                showeyeicon
+                formData={formData}
+                updateFormData={updateFormData}
+                correctvalue={"confirmpassword"}
+              />
+            </div>
           </div>
-        </div>
-        <p className="text-[13px] font-kantumruy mt-3">
-          Set a strong password to protect your account.
-        </p>
-        <div className="flex justify-end  pr-12  mt-10">
-          <Mybutton
-            background={
-              "bg-custom-purple text-white text-xl font-semibold  font-kantumruy  rounded-lg py-2 md:py-3 px-5 ml-5 "
-            }
-            closewindow={handlevalues}
-          >
-            Reset password
-          </Mybutton>
-        </div>
-      </form>
+          <p className="text-xs md:text-[13px] font-kantumruy mt-3">
+            Set a strong password to protect your account.
+          </p>
+          <div className="flex justify-end  md:pr-12  mt-10">
+            <Mybutton
+              background={
+                "bg-custom-purple text-white text-xl font-semibold  font-kantumruy  rounded-lg py-2 md:py-3 px-5 ml-5 "
+              }
+              closewindow={handlevalues}
+            >
+              Reset password
+            </Mybutton>
+          </div>
+        </form>
+      </div>
       <Qestion />
-    </div>
+    </>
   );
 };
 

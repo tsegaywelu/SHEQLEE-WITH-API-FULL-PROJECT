@@ -125,7 +125,7 @@ const Categories = () => {
         <Dashboaredtitle
           text={
             " Job categories along with their respective number of jobs posted and" +
-            " number of subscribers."
+            " subscribers."
           }
           heading={"All Categories"}
           css={550}
@@ -133,7 +133,7 @@ const Categories = () => {
           <img src={categories12} width={70} height={70} />
         </Dashboaredtitle>
       </div>
-      <div className="max-w-[950px] mx-auto my-8 p-6">
+      <div className="max-w-[950px] mx-auto my-8 px-4 py-2 md:p-6">
         {/* {the title } */}
 
         {/* Categories Grid */}

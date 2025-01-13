@@ -6,6 +6,7 @@ import question from "../assets/SVG/question.svg";
 import Dashboaredtitle from "../components/onetimecmponent/Dashboaredtitle";
 import Qestion from "../components/basecomponents/Qestion";
 import Pagination from "../components/basecomponents/Pagination";
+import Paginationmobile from "../components/basecomponents/Paginationmobile";
 const FAQ1 = () => {
   const [activetab, setactivetab] = useState("freelancers");
   const [openquestion, setopenquestion] = useState(0);
@@ -74,7 +75,7 @@ const FAQ1 = () => {
           heading={"FAQ"}
           css={500}
         >
-          <img src={question} width={66} height={66} />
+          <img src={question} width={60} height={60} />
         </Dashboaredtitle>
 
         {/* //button sections */}
@@ -128,7 +129,7 @@ const FAQ1 = () => {
                   </span>
                 </button>
                 {openquestion === index && (
-                  <div className="p-8 bg-custom-slate text-lg text-custom-black font-kantumruy">
+                  <div className="p-8 bg-custom-slate text-sm md:text-lg text-custom-black font-kantumruy">
                     {" "}
                     {item.answer}
                   </div>
@@ -137,8 +138,13 @@ const FAQ1 = () => {
             );
           })}
         </div>
-        <div className="mt-2">
-          <Pagination totalPages={9} />
+        <div className="">
+          <div className=" hidden md:block  mt-2">
+            <Pagination totalPages={15} />
+          </div>
+          <div className="   md:hidden   mt-2">
+            <Paginationmobile totalPages={15} />
+          </div>
         </div>
       </div>
       <Qestion />

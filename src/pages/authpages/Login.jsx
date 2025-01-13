@@ -52,7 +52,7 @@ const Login = () => {
       </div>
 
       {/* header part */}
-      <div className="flex  flex-start  max-w-4xl mx-auto text-center gap-8 mt-5 md:mt-20">
+      <div className="flex  flex-col items-center  md:flex-row md:flex-start  max-w-4xl mx-auto text-center  gap-4 md:gap-8 mt-5 md:mt-20">
         <img src={enter} width={45} height={45} />
         <div>
           {" "}
@@ -67,7 +67,7 @@ const Login = () => {
         onSubmit={(e) => e.preventDefault()}
       >
         {/* below devide part */}
-        <div className="flex  max-sm:flex-col m-5 gap-8 justify-center md:mt-10">
+        <div className="flex  max-sm:flex-col  m-7 md:m-5  gap-4 md:gap-8 justify-center mt-4 md:mt-10">
           <Oneinput
             iconmyimage={email}
             placeholder={"abebe@gmail.com"}
@@ -77,7 +77,7 @@ const Login = () => {
             formData={formData}
             updateFormData={updateFormData}
             correctvalue={"email"}
-            changetheicon={"p-[18px]"}
+            changetheicon={"p-[15px]"}
           />
           <Oneinput
             iconmyimage={key}
@@ -89,16 +89,20 @@ const Login = () => {
             formData={formData}
             updateFormData={updateFormData}
             correctvalue={"password"}
+            changetheicon={"p-[14px]"}
           />
         </div>
         {/* //checkbox */}
-        <div className="m-4">
+        <div className="m-7 md:m-4">
           <div className="flex gap-4  items-center">
             <Checkbox />
-            <span className="font-kantumruy"> Remember me next time</span>
+            <span className=" text-sm md:text-base font-kantumruy">
+              {" "}
+              Remember me next time
+            </span>
           </div>
           {/* //for the button  */}
-          <div className="text-end mt-10 ">
+          <div className="text-end mt-10 text-sm md:text-base ">
             <p className="font-kantumruy">
               Forget password?
               <Link to={"/sheqlee/reset password"}>
@@ -108,7 +112,7 @@ const Login = () => {
               </Link>
               <Mybutton
                 background={
-                  "bg-custom-purple text-white text-xl font-semibold  font-kantumruy  rounded-lg py-1 md:py-2 lg:py-3 px-6 ml-5"
+                  "bg-custom-purple text-white text-xl font-semibold  font-kantumruy  rounded-lg py-2 lg:py-3 px-6 ml-5"
                 }
                 closewindow={closewindow}
               >

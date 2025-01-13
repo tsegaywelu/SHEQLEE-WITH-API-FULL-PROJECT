@@ -9,19 +9,17 @@ const Formtitle = ({
 }) => {
   return (
     <>
-      <div className="relative  max-w-[620px]  p-6  my-4 md:my-7  bg-custom-slate mx-auto mt-3 rounded-r-[10px] ">
+      <div className="relative  max-w-[620px]   py-3 md:p-6   md:my-7  bg-custom-slate mx-auto mt-7 rounded-r-[10px] ">
         <img
           src={building1}
-          className="bg-black text-white rounded-l-[10px] absolute left-0 top-0  h-full p-6"
-          width={70}
-          height={70}
+          className="bg-black w-[50px] md:w-[70px] text-white rounded-l-[10px] absolute left-0 top-0  h-full p-4 md:p-6"
         />
         {children}
       </div>
       {/* header part */}
       {titletext && (
         <div
-          className={`flex   flex-start  items-center max-w-4xl mx-auto text-center gap-7 ${margintop}`}
+          className={`flex  flex-col md:flex-row  md:flex-start  items-center max-w-4xl mx-auto text-center gap-3 md:gap-7 mt-10  md:${margintop}`}
         >
           <img src={profetional} width={40} height={40} />
           <div>

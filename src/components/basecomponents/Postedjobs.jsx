@@ -9,9 +9,9 @@ import qualityassurance from "../../assets/SVG/qualityassurance.svg";
 import Jobicons from "../onetimecmponent/Jobicons";
 import { Jobs } from "../../data/Postedjobs";
 // import devops from "../../assets/SVG/devops.svg";
+import Postedjobsmobile from "../basecomponents/Postedjobsmobile";
 const emptyRectangles = [{}, {}, {}, {}, {}, {}, {}, {}, {}];
 import { useLocation } from "react-router-dom";
-import Postedjobsmobile from "./Postedjobsmobile";
 import Pagination from "../basecomponents/Pagination";
 import Paginationmobile from "../basecomponents/Paginationmobile";
 const Postedjobs = ({

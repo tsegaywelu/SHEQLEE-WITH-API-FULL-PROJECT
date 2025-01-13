@@ -63,7 +63,7 @@ const Postedjobsmobile = ({ showicon5 }) => {
                     key={jobsall.title + Math.random()}
                   >
                     <div
-                      className=" pl-[16px]  md:mx-0 bg-custom-slate rounded-[20px]  px-2  pt-5 h-[275px] flex flex-col  justify-between  pb-4  "
+                      className=" pl-[14px]  md:mx-0 bg-custom-slate rounded-[20px]  px-2  pt-5 h-[275px] flex flex-col  justify-between  pb-4  "
                       key={jobsall.title + Math.random()}
                     >
                       <div>

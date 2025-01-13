@@ -25,7 +25,7 @@ const Companys = () => {
           subscribers.
         </p>
       </div> */}
-      <div className="mt-7 mb-10 ">
+      <div className="mt-7 mb-5 md:mb-10 mx-4 ">
         <Dashboaredtitle
           text={
             "List of the companies on Sheqlee with their number of job posts and subscribers."
@@ -36,7 +36,7 @@ const Companys = () => {
           <img src={building} width={50} height={50} />
         </Dashboaredtitle>
       </div>
-      <Tag />
+      <Tag totalPages={15} showpagination />
     </div>
   );
 };

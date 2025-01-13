@@ -18,29 +18,33 @@ const Info1 = ({
         {subscribers}
       </span> */}
       <span
-        className={`bg-black text-white text-5xl font-medium font-kantumruy w-[300px]    flex justify-center items-center overflow-hidden p-2 ${rounded}`}
+        className={`bg-black text-white text-2xl  md:text-5xl font-medium font-kantumruy w-[250px] md:w-[300px]    flex justify-center items-center overflow-hidden md:p-2 ${rounded}`}
       >
         {subscribers}
       </span>
       {right && (
-        <span className="bg-custom-slate   py-4  px-6  rounded-r-2xl">
-          <h1 className=" text-xl lg:text-3xl font-medium font-kantumruy pb-2 ">
+        <span className="bg-custom-slate py-2  md:py-4  pl-3 md:px-6  rounded-r-2xl ">
+          <h1 className=" text-[16px]  md:text-xl lg:text-3xl font-medium font-kantumruy pb-[5px] md:pb-2 ">
             {title}
           </h1>
 
-          <p className=" text-lg  font-kantumruy ">{discriptiondetail}</p>
-          <p className="text-lg">{launched}</p>
+          <p className=" text-xs md:text-lg  font-kantumruy ">
+            {discriptiondetail}
+          </p>
+          <p className="text-xs md:text-lg">{launched}</p>
         </span>
       )}
 
       {left && (
-        <span className="bg-custom-slate   py-4  pr-6 pl-12 rounded-l-2xl ">
-          <h1 className=" text-xl lg:text-3xl font-medium font-kantumruy pb-2 ">
+        <span className="bg-custom-slate py-2  md:py-4  px-3 md:pr-6 md:pl-12 rounded-l-2xl ">
+          <h1 className=" text-[16px]  md:text-xl lg:text-3xl font-medium font-kantumruy pb-[5px] md:pb-2">
             {title}
           </h1>
 
-          <p className=" text-lg  font-kantumruy ">{discriptiondetail}</p>
-          <p className="text-lg">{launched}</p>
+          <p className=" text-xs md:text-lg font-kantumruy ">
+            {discriptiondetail}
+          </p>
+          <p className="text-xs md:text-lg">{launched}</p>
         </span>
       )}
     </div>

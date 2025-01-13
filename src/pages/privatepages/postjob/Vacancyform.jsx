@@ -18,6 +18,8 @@ const Vacancyform = () => {
     applyInstructions: "",
     skills: "",
     applyLink: "",
+    display_company_name: "false",
+    publish_status: "",
   });
   const [showPreview, setShowPreview] = useState(false);
 

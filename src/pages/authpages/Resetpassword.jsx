@@ -20,31 +20,33 @@ const Resetpassword = () => {
     console.log(formData.email);
   };
   return (
-    <div>
+    <>
       <div>
         <Location />
         {formData.email}
       </div>
-      <form
-        action=""
-        className="flex flex-col justify-center  items-center max-w-[600px] mx-auto mb-10  gap-y-5"
-      >
-        <Resetpasswordcomponent
-          type={"text"}
-          icon={email}
-          labeltext={"Email"}
-          placeholder={"abebe@gmail.com"}
-          id={"email"}
-          clarify={" You will receive a password reset code in your email."}
-          header={"Reset password"}
-          showbutton
-          formData={formData}
-          updateFormData={updateFormData}
-          code={handlesendcode}
-        />
-      </form>
+      <div className="mx-1 ">
+        <form
+          action=""
+          className="flex flex-col justify-center  items-center max-w-[600px] mx-auto mb-10  gap-y-5 "
+        >
+          <Resetpasswordcomponent
+            type={"text"}
+            icon={email}
+            labeltext={"Email"}
+            placeholder={"abebe@gmail.com"}
+            id={"email"}
+            clarify={" You will receive a password reset code in your email."}
+            header={"Reset password"}
+            showbutton
+            formData={formData}
+            updateFormData={updateFormData}
+            code={handlesendcode}
+          />
+        </form>
+      </div>
       <Qestion />
-    </div>
+    </>
   );
 };
 

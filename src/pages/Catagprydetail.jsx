@@ -27,25 +27,25 @@ const Categorydetail = () => {
       <div className="relative">
         <Location />
       </div>
-      <div className=" ">
+      <div className="  ">
         <div className="flex flex-col items-center text-center p-8 font-sans text-black">
           <div className="mb-4 text-purple-400">
-            <img src={product} width={66} height={66} />
+            <img src={product} width={60} height={60} />
           </div>
-          <h1 className="text-lg md:text-xl lg:text-4xl text-custom-black font-semibold font-kantumruy mb-2 mt-3">
+          <h1 className="text-2xl md:text-xl lg:text-4xl text-custom-black font-semibold font-kantumruy mb-2 mt-3">
             {mytitle}
           </h1>
-          <p className="text-sm md:text-xl lg:text-2xl text-custom-black font-kantumruy mb-4 mt-1">
+          <p className="text-[17px] md:text-2xl text-custom-black font-kantumruy mb-4 mt-1">
             All job posts in the <span className="font-medium">{mytitle}</span>{" "}
             category.
           </p>
 
           <button
-            className="flex items-center gap-5  px-5 py-3 bg-custom-purple  text-custom-white font-medium font-kantumruy rounded-[10px]  mt-4 text-2xl"
+            className="flex items-center gap-2 md:gap-5  px-4  py-2 md:py-3 bg-custom-purple  text-custom-white font-medium font-kantumruy rounded-[10px]  mt-4 text-xl md:text-[21px]"
             onClick={openmodal}
           >
-            <img src={bell} width={20} height={20} alt="" /> Subscribe to
-            category
+            <img src={bell} width={18} height={18} alt="" />
+            <div className="pr-2">Subscribe to category</div>
           </button>
 
           <p className="text-sm md:text-2xl text-custom-black font-kantumruy mt-7 gap-4 ">
@@ -71,10 +71,8 @@ const Categorydetail = () => {
             />
           </div>
         </div>
-        <Postedjobs />
-        <div className="mx-16 my-4">
-          <Pagination totalPages={15} />
-        </div>
+        <Postedjobs totalPages={15} showpaginatin />
+        <div className="mx-16 my-4"></div>
         <Qestion />
       </div>
     </div>

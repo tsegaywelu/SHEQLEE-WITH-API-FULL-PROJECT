@@ -17,7 +17,10 @@ const Oneinput = ({
 }) => {
   return (
     <div className="flex flex-col flex-grow  ">
-      <label className="text-xl   my-3 font-kantumruy font-medium" htmlFor={id}>
+      <label
+        className=" text-lg md:text-xl   my-3 font-kantumruy font-medium"
+        htmlFor={id}
+      >
         {labeltext}{" "}
         {smalltext && <span className="text-sm px-2">{smalltext}</span>}{" "}
         {warn && <span className="text-red-600">*</span>}
@@ -38,7 +41,7 @@ const Oneinput = ({
           type={type}
           className={`bg-custom-tags  rounded-lg ${
             nopaddingleft ? "pl-5" : " pl-16"
-          } h-full outline-none p-[11px] w-full text-xl font-kantumruy placeholder:text-custom-placeholder`}
+          } h-full outline-none p-[11px] w-full text-lg md:text-xl font-kantumruy placeholder:text-custom-placeholder`}
           id={id}
           placeholder={placeholder}
           value={formData[correctvalue] || ""}

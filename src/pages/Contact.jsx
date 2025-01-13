@@ -34,10 +34,10 @@ const Contact = () => {
         {formData.subject}
       </div>
       <div className="max-w-4xl mx-auto ">
-        <div className="mt-5 md:my-10">
+        <div className="mt-5  my-5 md:my-10  mx-4">
           <Dashboaredtitle
             text={
-              "Please reach out to us if you have any questions or you need our assistance with something."
+              "Please reach out to us if you have any questions or you need our assistance."
             }
             heading={"Contact"}
             css={540}
@@ -46,7 +46,7 @@ const Contact = () => {
           </Dashboaredtitle>
 
           {/* inputs section */}
-          <div className="flex  max-sm:flex-col my-5 gap-8 justify-center  md:mt-5">
+          <div className="flex  flex-col md:flex-row my-5 gap-4 md:gap-8 justify-center  md:mt-5">
             <Oneinput
               iconmyimage={idea}
               placeholder={"Regarding Posting a Job"}
@@ -71,7 +71,7 @@ const Contact = () => {
           </div>
 
           {/* //message section  */}
-          <div className=" space-y-3  relative">
+          <div className=" md:space-y-3  relative">
             <label
               className="text-xl  my-3    font-kantumruy font-medium "
               htmlFor="message"
@@ -88,13 +88,13 @@ const Contact = () => {
               value={formData.message}
               onChange={(e) => updateFormData("message", e.target.value)}
             ></textarea>
-            <span className="absolute  right-2 bottom-2 font-kantumruy">
+            <span className="absolute  right-3 bottom-3 font-kantumruy">
               0/512
             </span>
           </div>
-          <div className="flex justify-end  mt-10 ">
+          <div className="flex  justify-center md:justify-end  mt-10 ">
             <Mybutton
-              background="bg-custom-purple p-3 rounded-lg text-white  text-xl font-kantumruy font-medium"
+              background="bg-custom-purple  py-3 px-5 md:p-3 rounded-lg text-white  text-xl font-kantumruy font-medium"
               closewindow={closewindow}
             >
               Send message

@@ -9,7 +9,10 @@ import calendar from "../assets/SVG/calendar.svg";
 import tagsvg from "../assets/SVG/ags.svg";
 import Qestion from "../components/basecomponents/Qestion";
 import { FaFacebook, FaTwitter, FaTelegram, FaLinkedin } from "react-icons/fa";
+import down from "../assets/companysPNG/down/down.png";
+import { useState } from "react";
 const Jobdetail = () => {
+  const [isreadmore, setisreadmore] = useState(false);
   const { theidtodisplay } = useParams();
 
   return (
@@ -27,7 +30,7 @@ const Jobdetail = () => {
           <div className="flex justify-center flex-wrap items-center gap-x-3 gap-y-2 mx-2 ">
             <Jobicons text={"1hr ago"}>
               <img
-                src={companyb}
+                src={calendar}
                 width={14}
                 height={14}
                 className="mr-1"
@@ -77,7 +80,7 @@ const Jobdetail = () => {
           </div>
         </div>
         {/* //body parts */}
-        <div className=" max-w-4xl mx-auto  bg-custom-slate text-start p-10 rounded-[15px]">
+        <div className=" text-sm md:text-base max-w-4xl mx-auto  bg-custom-slate text-start px-3 py-10 md:p-10 rounded-[15px] relative">
           We need one to Designs and maintains prospect websites including
           graphic development, regular site updates, usability reviews and
           traffic reporting. QUALIFICATIONS - Bachelor's degree with major in
@@ -109,6 +112,29 @@ const Jobdetail = () => {
           make a difference in the lives of others. PRIMARY PURPOSE: To design
           and produce presentations, technical and conceptual web graphics,
           interactive marketing materials, and print materials.
+          <p className={` mb-10 ${isreadmore ? "" : "hidden "}`}>
+            {" "}
+            We put our customers at the heart of everything we do, and we do so
+            through a diverse team working together in an honest, inclusive
+            environment. We all commit to creating a safe working environment
+            and are allies to those often underrepresented - including but not
+            limited to members of BIPOC and LGBTQIA+ communities, people with
+            disabilities, and all people who identify as women.
+          </p>
+          <button
+            className="absolute bottom-3 right-3 bg-custom-purple rounded-[5px] text-white p-2 font-kantumruy font-medium"
+            onClick={(e) => setisreadmore(!isreadmore)}
+          >
+            <span className="flex gap-1 text-[13px]">
+              {isreadmore ? <div>Read less</div> : <div>Read more </div>}
+              <div className="w-2.5 h-2.5 ml-[2px] pt-[2px]">
+                <img
+                  src={down}
+                  className={`${isreadmore ? "rotate-180" : "rotate-0"}`}
+                />
+              </div>
+            </span>
+          </button>
         </div>
         <div className=" flex  flex-col justify-center items-center mt-7 gap-3 mb-10">
           <div className="flex justify-center items-center gap-x-4 gap-y-4 mb-10 md:mb-5 flex-wrap  mx-6 ">

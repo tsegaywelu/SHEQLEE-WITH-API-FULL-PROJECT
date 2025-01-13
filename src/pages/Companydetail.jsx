@@ -9,6 +9,7 @@ import bell from "../assets/SVG/bell.svg";
 import down from "../assets/companysPNG/down/down.png";
 import Postedjobs from "../components/basecomponents/Postedjobs";
 import Qestion from "../components/basecomponents/Qestion";
+import { FaFacebook, FaTwitter, FaTelegram, FaLinkedin } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 const Companydetail = () => {
@@ -29,7 +30,7 @@ const Companydetail = () => {
             <img src={verify} alt="verify icon" width={24} height={12} />
           </div>
         </div>
-        <div className="flex gap-6">
+        <div className="flex flex-wrap justify-center gap-3 md:gap-6 mx-6">
           <div className="flex gap-2 items-center justify-center bg-dvider px-2 py-1  rounded-[5px]">
             <div className="w-3 h-3 ">
               <img src={compnylink} alt="" width={24} height={12} />
@@ -57,20 +58,39 @@ const Companydetail = () => {
         </div>
       </div>
       <div className="">
-        <div className="flex justify-center items-center mt-8">
-          <button className="flex items-center gap-5  px-5 py-3 bg-custom-purple  text-custom-white font-medium font-kantumruy rounded-[10px]  mt-4 text-2xl">
-            <img src={bell} width={20} height={20} alt="" /> Subscribe to
-            company
+        <div className="flex justify-center items-center mt-4 md:mt-8">
+          <button className="flex items-center gap-2 md:gap-5 px-4  py-2 md:py-3 bg-custom-purple  text-custom-white font-medium font-kantumruy rounded-[10px]  mt-4  text-xl md:text-[21px]">
+            <img src={bell} width={18} height={18} alt="" />
+            <span className="pr-2">Subscribe to company</span>
           </button>
         </div>
-        <div className="text-center ">
-          <p className="text-sm md:text-xl text-custom-black font-kantumruy mt-5 gap-4  ">
+        <div className="flex flex-col justify-center items-center">
+          <p className="text-lg md:text-[20px] text-custom-black font-kantumruy mt-5  gap-4 ">
             Subscribers: <span className="font-semibold">5</span>
           </p>
+
+          <div className="flex gap-4 mt-2 md:mt-6 text-gray-700">
+            <FaFacebook
+              size={16}
+              className="hover:text-purple-400 cursor-pointer"
+            />
+            <FaTwitter
+              size={16}
+              className="hover:text-purple-400 cursor-pointer"
+            />
+            <FaTelegram
+              size={16}
+              className="hover:text-purple-400 cursor-pointer"
+            />
+            <FaLinkedin
+              size={16}
+              className="hover:text-purple-400 cursor-pointer"
+            />
+          </div>
         </div>
       </div>
-      <div className="bg-custom-slate mx-10 mt-10 p-10 relative">
-        <p className="text-lg  mb-5">
+      <div className="bg-custom-slate  mx-3 md:mx-10 mt-10  px-3 py-6  md:p-10 relative">
+        <p className=" text-sm md:text-lg  mb-5">
           Hotjar is a successful Product Experience Insights company that
           operates on a fully remote basis, with team members spread throughout
           Europe, Africa and the Americas. Our team casts a wide net across many
@@ -88,7 +108,9 @@ const Companydetail = () => {
           LGBTQIA+ communities, people with disabilities, and all people who
           identify as women.
         </p>
-        <p className={`text-lg mb-10 ${isreadmore ? "" : "hidden "}`}>
+        <p
+          className={` text-sm md:text-lg mb-10 ${isreadmore ? "" : "hidden "}`}
+        >
           {" "}
           We put our customers at the heart of everything we do, and we do so
           through a diverse team working together in an honest, inclusive

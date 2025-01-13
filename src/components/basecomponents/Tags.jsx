@@ -5,8 +5,9 @@ import { useLocation } from "react-router-dom";
 import { Totaltags } from "../../data/Tags";
 import Pagination from "./Pagination";
 import Tagsmobile from "./Tagsmobile";
+import Paginationmobile from "./Paginationmobile";
 const emptyRectangles = [{}, {}, {}, {}, {}, {}];
-const Tags = ({ showmobile }) => {
+const Tags = ({ showmobile, showpagination, totalPages }) => {
   const { pathname } = useLocation();
   const actualpath = pathname.replaceAll("/", "");
   let changebackground = false;
@@ -110,20 +111,24 @@ const Tags = ({ showmobile }) => {
           )}
 
           {/* //display the tags  */}
-          <div className=" hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-x-20 gap-y-5 md:gap-y-8">
+          <div
+            className={` ${
+              showmobile ? "hidden" : "grid"
+            } md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-x-20 gap-y-5 md:gap-y-8`}
+          >
             {Totaltags.slice(0, 6).map((tag) => {
               return (
                 <Link to={`/sheqlee/${mylink}/${tag.tagname}`}>
                   <div
                     key={tag.id}
-                    className={`mx-3 md:mx-0  px-6 md:px-4 py-3 rounded-[10px] md:rounded-xl border-l-[9px] md:border-l-[15px] border-l-black ${
+                    className={`mx-3 md:mx-0  px-6 md:px-4 py-[6px] md:py-3 rounded-[10px] md:rounded-xl border-l-[12px] md:border-l-[15px] border-l-black ${
                       changebackground ? "bg-custom-slate" : "bg-custom-tags"
                     }   `}
                   >
-                    <div className="font-kantumruy font-medium text-2xl">
+                    <div className="font-kantumruy font-medium  text-lg md:text-2xl">
                       {tag.tagname}
                     </div>
-                    <div className="font-kantumruy mt-2  text-[17px]  text-custom-placeholder">
+                    <div className="font-kantumruy mt-[5px] md:mt-2  text-[14px] md:text-[17px]  text-custom-placeholder">
                       {tag.numberofjobs} jobs • {tag.numberofsubscribers}{" "}
                       subscribers
                     </div>
@@ -133,6 +138,17 @@ const Tags = ({ showmobile }) => {
             })}
           </div>
           {showmobile && <Tagsmobile />}
+        </div>
+      )}
+
+      {showpagination && (
+        <div className="">
+          <div className=" hidden md:block  mb-10 mx-16">
+            <Pagination totalPages={totalPages} />
+          </div>
+          <div className="  mx-4 md:hidden   mt-1">
+            <Paginationmobile totalPages={totalPages} />
+          </div>
         </div>
       )}
     </>

@@ -19,14 +19,14 @@ function Dropdown({
       <div className="relative">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="inline-flex justify-center w-full rounded-md   pr-6 py-2 bg-custom-slate text-base  text-black font-medium font-kantumruy  "
+          className="inline-flex justify-center w-full rounded-md  pr-4 md:pr-6 py-2 bg-custom-slate  text-sm md:text-base  text-black font-medium font-kantumruy  "
         >
           {dropdowntitle}
           <span>
             {" "}
             <FaAngleDown
               size={10}
-              className={`!fill-black  absolute top-4  right-2 transition duration-700 ${
+              className={`!fill-black  absolute top-4 right-0  md:right-2 transition duration-700 ${
                 isOpen ? "rotate-180" : "rotate-0"
               }`}
             />
@@ -44,7 +44,7 @@ function Dropdown({
           <div className=" bg-stone-900/60 z-50">
             <div
               className={`absolute  z-40     rounded-b-[10px]  bg-white ring-1 ring-black ring-opacity-5 ${
-                showicons ? "right-10 md:w-[163px] " : "w-44"
+                showicons ? " right-3 md:right-10 md:w-[163px] " : "w-44"
               }`}
             >
               <div className=" font-medium font-kantumruy ">
@@ -52,7 +52,7 @@ function Dropdown({
                   <a
                     key={category}
                     href="#"
-                    className="block  text-[13px] text-custom-black text-start hover:bg-gray-100 hover:text-gray-900   "
+                    className="block  text-[11px] md:text-[13px] text-custom-black text-start hover:bg-gray-100 hover:text-gray-900   "
                   >
                     <div className="">
                       <Link

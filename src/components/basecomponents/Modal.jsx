@@ -5,19 +5,19 @@ import { Link } from "react-router-dom";
 import times from "../../assets/direction/times.svg";
 export const Modal = ({ closewin, message }) => {
   return createPortal(
-    <div>
+    <div className="">
       <button
-        className="  fixed right-7 top-6 p-1  text-2xl font-bold  rounded-full text-white z-50  "
+        className="  fixed right-2 md:right-7 top-4 md:top-6 p-1  text-2xl font-bold  rounded-full text-white z-50  "
         onClick={closewin}
       >
-        <img src={times} alt="times icon" width={32} height={32} />
+        <img src={times} alt="times icon" width={24} height={24} />
       </button>
-      <div className="  flex items-center justify-center h-screen w-full fixed mx-auto bg-stone-900/60 z-10 ">
-        <div className=" flex flex-col items-center justify-center pt-10 pb-3 px-16  font-semibold  bg-white rounded-xl shadow-lg gap-y-5 ">
+      <div className="  flex items-center justify-center h-screen w-full fixed mx-auto bg-stone-900/80 z-10 ">
+        <div className=" flex flex-col items-center justify-center  pt-10 pb-3 px-5 md:px-12  font-semibold  bg-white rounded-xl shadow-lg gap-y-5 ">
           <p className="  mx-auto  md:text-xl font-kantumruy font-medium  ">
             <div
               dangerouslySetInnerHTML={{ __html: message }}
-              className="text-center text-[22px]"
+              className="text-center text-[19px] md:text-[22px]"
             />
           </p>
           <div className=" flex justify-center items-center mt-2  w-full gap-5 ">
