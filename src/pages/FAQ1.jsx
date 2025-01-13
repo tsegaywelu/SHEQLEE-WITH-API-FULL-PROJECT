@@ -80,14 +80,14 @@ const FAQ1 = () => {
 
         {/* //button sections */}
         <div className="flex justify-center items-center  my-4 ">
-          <div className="mb-4 bg-custom-tags  font-kantumruy font-medium w-fit m-3  rounded-[10px]">
+          <div className="mb-4 bg-custom-tags  font-kantumruy font-medium w-fit  m-2 md:m-3  rounded-[10px] flex">
             <button
               onClick={(e) => setactivetab("freelancers")}
-              className={`px-10 py-[6px] text-xl font-semibold rounded-[10px] 
+              className={`px-3 md:px-10 py-[6px] text-lg md:text-xl font-medium rounded-[10px] 
         ${
           activetab === "freelancers"
             ? "bg-black text-white m-2"
-            : "bg-custom-tags text-gray-800"
+            : "bg-custom-tags text-custom-black"
         }`}
             >
               Freelancers
@@ -95,10 +95,10 @@ const FAQ1 = () => {
 
             <button
               onClick={() => setactivetab("companies")}
-              className={`px-10 py-[6px] text-xl font-semibold rounded-[10px] ${
+              className={`px-3 md:px-10 py-[6px] text-lg  md:text-xl font-medium rounded-[10px] ${
                 activetab === "companies"
                   ? "bg-black text-white m-2"
-                  : "bg-custom-tags text-gray-800 "
+                  : "bg-custom-tags text-custom-black "
               }`}
             >
               Companies
@@ -111,13 +111,13 @@ const FAQ1 = () => {
         <div className="space-y-4">
           {faqData[activetab].map((item, index) => {
             return (
-              <div key={index} className="border rounded-lg overflow-hidden ">
+              <div key={index} className=" rounded-lg overflow-hidden ">
                 <button
-                  className="w-full px-4 md:px-8 py-3 md:py-6 text-left text-sm md:text-xl bg-custom-tags font-kantumruy flex  items-center justify-between"
+                  className="w-full px-4 md:px-8 py-3 md:py-6 text-left text-[16px] md:text-xl bg-custom-tags font-kantumruy flex  items-center justify-between"
                   onClick={() => togleanswer(index)}
                 >
-                  {item.question}
-                  <span className="w-4 h-4 flex-shrink-0 flex items-center justify-center  rounded-full ">
+                  <div className="mr-4">{item.question}</div>
+                  <span className="w-4 h-4 flex-shrink-0 flex items-center justify-center  rounded-full  ">
                     {openquestion === index ? (
                       <img src={up} className="w-full h-full object-contain" />
                     ) : (

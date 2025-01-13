@@ -48,11 +48,11 @@ const Categorydetail = () => {
             <div className="pr-2">Subscribe to category</div>
           </button>
 
-          <p className="text-sm md:text-2xl text-custom-black font-kantumruy mt-7 gap-4 ">
+          <p className="text-lg md:text-2xl text-custom-black font-kantumruy mt-7 gap-4 ">
             Subscribers: <span className="font-semibold">1,784</span>
           </p>
 
-          <div className="flex gap-4 mt-6 text-gray-700">
+          <div className="flex gap-4 mt-3 md:mt-6 text-gray-700">
             <FaFacebook
               size={20}
               className="hover:text-purple-400 cursor-pointer"

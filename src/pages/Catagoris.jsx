@@ -11,6 +11,7 @@ import python from "../assets/catagorySvgs/python.svg";
 import CatagoriesCard from "../cards/CatagoriesCard";
 import Location from "../components/basecomponents/Location";
 import Qestion from "../components/basecomponents/Qestion";
+import Paginationmobile from "../components/basecomponents/Paginationmobile";
 const categories = [
   { title: "Web Frontend", jobs: 140, subscribers: 2173, icon: websvg, id: 1 },
   {
@@ -151,6 +152,9 @@ const Categories = () => {
               </CatagoriesCard>
             </Link>
           ))}
+        </div>
+        <div className="  mx-2 md:hidden   mt-1">
+          <Paginationmobile totalPages={15} />
         </div>
       </div>
       <Qestion />

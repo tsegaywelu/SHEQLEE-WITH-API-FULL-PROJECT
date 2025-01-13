@@ -57,7 +57,7 @@ const Tagdetail = () => {
             Subscribers: <span className="font-semibold">842</span>
           </p>
 
-          <div className="flex gap-4 mt-6 text-gray-700">
+          <div className="flex gap-4 mt-3 md:mt-6 text-gray-700">
             <FaFacebook
               size={20}
               className="hover:text-purple-400 cursor-pointer"

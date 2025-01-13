@@ -118,8 +118,8 @@ const Footer = () => {
           </div>
 
           {/* Legal Section */}
-          <div className="w-full pb-10 md:pb-0  border-b-2  md:border-none  flex-[1] space-y-2 md:space-y-0  ">
-            <h3 className="pr-[57%] md:pr-0 text-xl  lg:text-2xl font-medium font-kantumruy  lg:mb-4 pb-3 border-b-2 border-white md:mr-10 max-sm:w-fit ">
+          <div className="  mr-5 md:mr-2 pb-10 md:pb-0  border-b-2  md:border-none  flex-[1] space-y-2 md:space-y-0  ">
+            <h3 className="pr-[63%] md:pr-0 text-xl  lg:text-2xl font-medium font-kantumruy  lg:mb-4 pb-3 border-b-2 border-white  md:mr-10 max-sm:w-fit ">
               Legal
             </h3>
             <ul className="space-y-2 md:space-y-0">

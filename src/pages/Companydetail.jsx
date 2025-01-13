@@ -134,7 +134,7 @@ const Companydetail = () => {
           </span>
         </button>
       </div>
-      <div className=" mt-24">
+      <div className=" mt-10 md:mt-24">
         <h2 className="font-kantumruy font-semibold text-center text-3xl my-7">
           Job posts from {theidtodisplay}
         </h2>

@@ -34,7 +34,7 @@ const Contact = () => {
         {formData.subject}
       </div>
       <div className="max-w-4xl mx-auto ">
-        <div className="mt-5  my-5 md:my-10  mx-4">
+        <div className="mt-5  my-5 md:my-10  mx-5 md:mx-2">
           <Dashboaredtitle
             text={
               "Please reach out to us if you have any questions or you need our assistance."
