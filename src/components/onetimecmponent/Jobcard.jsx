@@ -6,31 +6,37 @@ import edit from "../../assets/direction/edit.svg";
 
 const Jobdetail = () => {
   return (
-    <div className="  overflow-hidden w-fit rounded-[15px] pb-[11px]  bg-clip-padding bg-custom-slate">
+    <div className=" mx-4 overflow-hidden w-fit rounded-[15px]  md:pb-[11px]  bg-clip-padding bg-custom-slate mb-10">
       <table className="w-fit mx-auto ">
-        <thead className=" text-sm md:text-2xl bg-custom-tags font-kantumruy  ">
+        <thead className=" text-lg md:text-2xl bg-custom-tags font-kantumruy  ">
           <th className="px-4  text-left  py-7 rounded-tl-lg font-medium ">
             JID
           </th>
           <th className="px-4  text-left font-medium">Title</th>
-          <th className="px-4  text-left font-medium ">Type</th>
-          <th className="px-4  text-left  font-medium">Level</th>
+          <th className="px-4  text-left font-medium hidden md:table-cell ">
+            Type
+          </th>
+          <th className="px-4  text-left  font-medium hidden md:table-cell">
+            Level
+          </th>
           <th className="px-4  text-left font-medium ">Status</th>
-          <th className="px-4  text-left   font-medium">Actions</th>
+          <th className="px-4  text-left   font-medium hidden md:table-cell">
+            Actions
+          </th>
         </thead>
         <tbody className="text-sm md:text-xl lg:text-[22px] bg-custom-slate font-kantumruy ">
           <tr className="border-b-2  border-gray-200  ">
             <td className=" px-6 py-5">1</td>
             <td className=" px-6">Senior Mobile App developer</td>
-            <td className=" px-6">Full-time</td>
-            <td className=" px-6">Senior</td>
+            <td className=" px-6 hidden md:table-cell">Full-time</td>
+            <td className=" px-6 hidden md:table-cell">Senior</td>
             <td className=" px-6">
               {" "}
               <div className=" rounded border-2 border-gray-700 p-[1px] w-10 h-fit flex justify-center">
                 <div className="min-w-3 w-3 min-h-3 h-3 rounded bg-gray-700 "></div>
               </div>
             </td>
-            <td className=" px-6 relative ">
+            <td className=" px-6 relative  hidden md:table-cell">
               <div className="flex items-center justify-center gap-1  ">
                 <button className="bg-custom-purple p-[8px] rounded-md w-8 h-8">
                   {/* <img src={copy} alt="" /> */}
@@ -56,14 +62,14 @@ const Jobdetail = () => {
           <tr className="border-b-2  border-gray-200   ">
             <td className=" px-6 py-5">2</td>
             <td className=" px-6">Phython back-end developer</td>
-            <td className=" px-6">Part time </td>
-            <td className=" px-6">Lead</td>
+            <td className=" px-6 hidden md:table-cell">Part time </td>
+            <td className=" px-6 hidden md:table-cell">Lead</td>
             <td className=" px-6">
               <div className=" rounded border-2 border-green-500 p-[1px] w-10 h-fit flex justify-end">
                 <div className="min-w-3 w-3 min-h-3 h-3 rounded bg-green-500 "></div>
               </div>
             </td>
-            <td className=" px-6 ">
+            <td className=" px-6  hidden md:table-cell">
               <div className="flex items-center justify-start gap-1 relative">
                 <button className="bg-custom-purple p-[10px] rounded-md w-8 h-8">
                   <img src={copy} alt="" />
@@ -83,14 +89,14 @@ const Jobdetail = () => {
           <tr className="  ">
             <td className=" px-6 py-5">3</td>
             <td className=" px-6">React js developer</td>
-            <td className=" px-6">part-time</td>
-            <td className=" px-6">middle</td>
+            <td className=" px-6 hidden md:table-cell">part-time</td>
+            <td className=" px-6 hidden md:table-cell">middle</td>
             <td className=" px-6">
               <div className=" rounded border-2 border-red-700 p-[1px] w-10 h-fit flex justify-start">
                 <div className="min-w-3 w-3 min-h-3 h-3 rounded bg-red-700 "></div>
               </div>
             </td>
-            <td className=" px-6 ">
+            <td className=" px-6 hidden md:table-cell">
               <div className="flex items-center justify-start gap-1 relative ">
                 <button className="bg-custom-purple p-[10px] rounded-md w-8 h-8">
                   <img src={copy} alt="" />

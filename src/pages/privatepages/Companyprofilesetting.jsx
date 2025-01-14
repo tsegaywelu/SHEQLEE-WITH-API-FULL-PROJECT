@@ -17,13 +17,13 @@ export const Companyprofilesetting = () => {
       <div className="">
         <Location />
       </div>
-      <div className=" flex  flex-col  items-center  gap-5 justify-center mt-5 md:mt-10  ">
+      <div className=" flex  flex-col  items-center  gap-5 justify-center mt-10  ">
         <Dashboaredtitle
           text={" Edit your account setting to make your account  more secure."}
           heading={"Account Setting "}
           css={450}
         >
-          <img src={settingicon} alt="setting icon" width={66} height={66} />
+          <img src={settingicon} alt="setting icon" width={60} height={60} />
         </Dashboaredtitle>
       </div>
       {/* // input section  */}

@@ -69,7 +69,7 @@ const Userprofile = () => {
       >
         {/* //inputs part */}
         <div className="flex max-sm:flex-col justify-center items-start  gap-5  max-w-5xl mx-auto ">
-          <div className="flex flex-col w-2/3 gap-2 relative  ">
+          <div className="flex flex-col w-full md:w-2/3 gap-2 relative  ">
             <Oneinputfor
               labeltext={"Full name "}
               warn
@@ -81,7 +81,7 @@ const Userprofile = () => {
               correctvalue={"fullName"}
             />
           </div>
-          <div className="flex flex-col w-2/3 gap-2 relative">
+          <div className="flex flex-col w-full md:w-2/3 gap-2 relative">
             <Oneinputfor
               labeltext={"Title "}
               warn
@@ -97,7 +97,7 @@ const Userprofile = () => {
           <Sectionprofile profilepic1={profilepic1} buttontext={"upload"} />
         </div>
         <div>
-          <div className=" -translate-y-8 max-w-5xl mx-auto">
+          <div className=" mt-8 md:mt-0 md:-translate-y-8 max-w-5xl mx-auto">
             <Reatchtext
               showtext={"Introduce yourself"}
               placeholder={"Say something appealing about yourself..."}

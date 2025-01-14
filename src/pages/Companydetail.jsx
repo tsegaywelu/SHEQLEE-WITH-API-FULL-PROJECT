@@ -20,10 +20,14 @@ const Companydetail = () => {
       <div className="">
         <Location />
       </div>
-      <div className="flex flex-col justify-center items-center  ">
-        <img src={companylogo} alt="company logo" width={75} height={75} />
-        <div className="flex gap-2 items-center  mb-8">
-          <h2 className="font-kantumruy font-semibold text-4xl">
+      <div className="flex flex-col justify-center items-center  max-sm:mt-4 ">
+        <img
+          src={companylogo}
+          alt="company logo"
+          className=" w-[50px] md:w-[70px] h-[50px] md:h-[70px]"
+        />
+        <div className="flex gap-2 items-center mb-6 md:mb-8">
+          <h2 className="font-kantumruy font-semibold text-3xl  md:text-4xl">
             {theidtodisplay}
           </h2>
           <div className="w-4 h-4 ">
@@ -59,8 +63,12 @@ const Companydetail = () => {
       </div>
       <div className="">
         <div className="flex justify-center items-center mt-4 md:mt-8">
-          <button className="flex items-center gap-2 md:gap-5 px-4  py-2 md:py-3 bg-custom-purple  text-custom-white font-medium font-kantumruy rounded-[10px]  mt-4  text-xl md:text-[21px]">
-            <img src={bell} width={18} height={18} alt="" />
+          <button className="flex items-center gap-2 md:gap-5 px-4  py-2 md:py-3 bg-custom-purple  text-custom-white font-medium font-kantumruy rounded-[10px]  mt-4  text-lg md:text-[21px]">
+            <img
+              src={bell}
+              alt=""
+              className="w-[16px] md:w-[25px] h-[17px] md:h-[17px]"
+            />
             <span className="pr-2">Subscribe to company</span>
           </button>
         </div>

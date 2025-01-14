@@ -24,7 +24,7 @@ const Inputs = () => {
         {/* // i have to edit this one now  */}
         <div className=" mx-5 md:mx-16 lg:mx-48 ">
           <form action="" onSubmit={(e) => e.preventDefault()}>
-            <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-10">
+            <div className="flex  max-sm:flex-col  gap-4 md:gap-8 justify-center  mt-10">
               <div className="flex flex-col flex-grow relative ">
                 <Oneinputfor
                   labeltext={"Full name"}
@@ -50,7 +50,7 @@ const Inputs = () => {
                 />
               </div>
             </div>
-            <div className="flex  max-sm:flex-col  gap-8 justify-center  md:mt-5">
+            <div className="flex  max-sm:flex-col  gap-4 md:gap-8 justify-center  mt-4 md:mt-5">
               <div className="flex flex-col flex-grow relative ">
                 <Oneinputfor
                   labeltext={"Password"}
@@ -78,7 +78,7 @@ const Inputs = () => {
             </div>
           </form>
         </div>
-        <div className="mx-5 md:mx-16 lg:mx-48 my-3">
+        <div className="ml-4 mr-4  md:mx-16 lg:mx-48 my-3">
           <p className="text-start  font-kantumruy text-xs">
             Leave this empty if you don't want to change your password.{" "}
           </p>
@@ -89,7 +89,7 @@ const Inputs = () => {
         <div className="flex justify-end  ">
           <Mybutton
             background={
-              "bg-custom-purple font-kantumruy rounded-lg p-1 md:p-2 lg:py-3 lg:px-8 text-2xl font-semibold text-custom-white"
+              "bg-custom-purple font-kantumruy rounded-lg p-2 px-4 lg:py-3 lg:px-8  text-[20px] md:text-2xl font-medium text-custom-white"
             }
           >
             Update setting

@@ -9,17 +9,17 @@ const Deleteaccount = () => {
         <h2 className=" text-xl md:text-3xl font-medium font-kantumruy ">
           Account deletion
         </h2>
-        <p className="font-kantumruy text-[17px]">
+        <p className="font-kantumruy text-[14px] md:text-[17px]">
           Please note that your account will be available for recovery for a
           period of one month after deletion. After that, it will be permanently
           deleted and cannot be recovered.
         </p>
       </div>
       {/* //deletion reason part  */}
-      <div className="relative mt-8 font-kantumruy space-y-5">
+      <div className="relative mt-8 font-kantumruy space-y-2 md:space-y-5">
         <label
           htmlFor="reason"
-          className="text-sm md:text-xl  my-3 font-medium"
+          className="text-lg md:text-xl  my-3 font-medium"
         >
           Deletion reason <span className="text-red-600">*</span>
         </label>
@@ -35,7 +35,7 @@ const Deleteaccount = () => {
         ></textarea>
         <p className="absolute bottom-4 right-2 text-sm">0/128</p>
       </div>
-      <p className=" text-sm font-kantumruy">
+      <p className=" text-xs md:text-sm font-kantumruy">
         Giving us accurate reason for your deletion will help us make Qagnew
         better. We hope to see you back soon. Thank you.
       </p>
@@ -44,7 +44,7 @@ const Deleteaccount = () => {
         <div className="flex justify-end  ">
           <Mybutton
             background={
-              "bg-custom-red rounded-lg p-1 md:p-2 lg:py-3 lg:px-5 text-white font-bold"
+              "bg-custom-red rounded-lg p-2 px-3 lg:py-3 lg:px-5 text-white font-medium"
             }
           >
             <h1 className="text-xl">Delete account</h1>

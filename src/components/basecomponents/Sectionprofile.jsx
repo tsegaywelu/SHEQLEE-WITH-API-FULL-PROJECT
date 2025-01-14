@@ -3,7 +3,7 @@ import React from "react";
 const Sectionprofile = ({ profilepic1, buttontext }) => {
   return (
     <div
-      className={`flex flex-col gap-3 justify-center items-center font-kantumruy  w-40 h-40 ${
+      className={` hidden md:flex flex-col gap-3 justify-center items-center font-kantumruy  w-40 h-40 ${
         buttontext ? "mt-8" : ""
       }`}
     >
