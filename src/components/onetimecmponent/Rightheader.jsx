@@ -85,7 +85,7 @@ const Rightheader = () => {
               to={"/sheqlee/login"}
               className={` ${
                 pathname.includes("login")
-                  ? "bg-black rounded-xl  border-[3px] border-white text-white md:px-4 md:p-2 lg:py-2 font-semibold font-kantumruy"
+                  ? "bg-black rounded-xl  border-x-[3px] border-black  text-white md:px-4  lg:py-2 font-semibold font-kantumruy"
                   : "border-[3px] border-custom-purple rounded-[10px] py-1 md:py-[5px] px-2 md:px-4 text-base font-semibold font-kantumruy "
               } `}
             >
