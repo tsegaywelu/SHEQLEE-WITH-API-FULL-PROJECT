@@ -16,7 +16,7 @@ function Mobilemodal({ categories, icons, showicons, pagetype }) {
           <div className=" bg-stone-900/60 z-50">
             <div
               className={`absolute  z-40     rounded-b-[10px]  bg-white ring-1 ring-black ring-opacity-5 ${
-                showicons ? "right-10 md:w-[163px] " : "w-40 mt-3 "
+                showicons ? "right-10 md:w-[163px] " : "w-36 mt-3 py-1 "
               }`}
             >
               <div className=" font-medium font-kantumruy ">
@@ -32,7 +32,7 @@ function Mobilemodal({ categories, icons, showicons, pagetype }) {
                         onClick={() => setIsOpen(!isOpen)}
                       >
                         <div
-                          className={`flex  py-1 justify-start gap-x-3  px-5  
+                          className={`flex  py-1 justify-start gap-x-3  px-4  
                              
                           `}
                         >
@@ -43,7 +43,7 @@ function Mobilemodal({ categories, icons, showicons, pagetype }) {
                                 {" "}
                                 <FaAngleDown
                                   size={16}
-                                  className={`!fill-black  absolute top-2  right-1 transition duration-700 `}
+                                  className={`!fill-black  absolute top-2  right-0 transition duration-700 `}
                                 />
                               </div>
                             )}

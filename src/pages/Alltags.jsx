@@ -20,7 +20,10 @@ const Alltags = () => {
             heading={"All Tags"}
             css
           >
-            <img src={tag} width={66} height={66} />
+            <img
+              src={tag}
+              className=" w-[45px] h-[45px] md:w-[66px] md:h-[66px]"
+            />
           </Dashboaredtitle>
         </div>
       </div>

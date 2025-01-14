@@ -30,7 +30,7 @@ const Dashboardcompany = () => {
           <Jobdetail />
         ) : (
           <div className="mt-2 mb-10">
-            <p className="md:hidden font-kantumruy ">
+            <p className="md:hidden font-kantumruy text-xs">
               You can only post jobs on desktop.
             </p>
             <Link to={"/sheqlee/vacancy"} className="hidden md:block">

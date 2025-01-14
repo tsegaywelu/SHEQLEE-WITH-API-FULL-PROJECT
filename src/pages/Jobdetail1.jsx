@@ -69,7 +69,7 @@ const Jobdetail = () => {
               />
             </Jobicons>
           </div>
-          <div className="space-y-1.5 mt-7">
+          <div className="space-y-1.5 mt-3 md:mt-7">
             <button className="bg-custom-purple px-10 md:px-20 py-[10px] rounded-lg text-white font-kantumruy font-semibold text-xl">
               Apply now
             </button>
@@ -125,7 +125,7 @@ const Jobdetail = () => {
             className="absolute bottom-3 right-3 bg-custom-purple rounded-[5px] text-white p-2 font-kantumruy font-medium"
             onClick={(e) => setisreadmore(!isreadmore)}
           >
-            <span className="flex gap-1 text-[13px]">
+            <span className="flex gap-3 text-[14px]">
               {isreadmore ? <div>Read less</div> : <div>Read more </div>}
               <div className="w-2.5 h-2.5 ml-[2px] pt-[2px]">
                 <img
@@ -160,22 +160,22 @@ const Jobdetail = () => {
 
           <div className="space-y-2 mt-5 md:mt-2">
             <p className="text-sm">Share with others</p>
-            <div className="flex gap-4  text-gray-700">
+            <div className="flex gap-3  text-gray-700">
               <FaFacebook
-                size={20}
-                className="hover:text-purple-400 cursor-pointer"
+                size={18}
+                className="hover:text-purple-400 cursor-pointer w-[15px]  md:w-[24px]"
               />
               <FaTwitter
-                size={20}
-                className="hover:text-purple-400 cursor-pointer"
+                size={18}
+                className="hover:text-purple-400 cursor-pointer w-[15px] md:w-[24px]"
               />
               <FaTelegram
-                size={20}
-                className="hover:text-purple-400 cursor-pointer"
+                size={18}
+                className="hover:text-purple-400 cursor-pointer w-[15px] md:w-[24px]"
               />
               <FaLinkedin
-                size={20}
-                className="hover:text-purple-400 cursor-pointer"
+                size={18}
+                className="hover:text-purple-400 cursor-pointer w-[15px] md:w-[24px]"
               />
             </div>
           </div>

@@ -26,16 +26,16 @@ const Deleteaccount = () => {
 
         <textarea
           name=""
-          rows={8}
+          rows={10}
           id="reason"
           //   className="bg-custom-tags w-full rounded-xl p-4 text-xl outline-none "
-          className="bg-custom-tags w-full rounded-lg p-4  outline-none text-lg placeholder:font-kantumruy placeholder:text-custom-placeholder resize-none"
+          className="bg-custom-tags w-full rounded-lg p-4  outline-none text-xs placeholder:font-kantumruy placeholder:text-custom-placeholder resize-none"
           placeholder="Why are you deleting your account..."
           onChange={(e) => setdeletionReason(e.target.value)}
         ></textarea>
-        <p className="absolute bottom-4 right-2 text-sm">0/128</p>
+        <p className="absolute bottom-4 right-2 text-xs md:text-sm">0/128</p>
       </div>
-      <p className=" text-xs md:text-sm font-kantumruy">
+      <p className=" text-[9px] md:text-sm font-kantumruy">
         Giving us accurate reason for your deletion will help us make Qagnew
         better. We hope to see you back soon. Thank you.
       </p>
@@ -44,17 +44,17 @@ const Deleteaccount = () => {
         <div className="flex justify-end  ">
           <Mybutton
             background={
-              "bg-custom-red rounded-lg p-2 px-3 lg:py-3 lg:px-5 text-white font-medium"
+              "bg-custom-red rounded-lg p-2  lg:py-3 px-5 text-white font-medium"
             }
           >
-            <h1 className="text-xl">Delete account</h1>
+            <h1 className=" text-lg md:text-xl">Delete account</h1>
           </Mybutton>
         </div>
       </div>
       {/* ///////////// */}
       <div className=" mx-auto my-8">
         <Divider></Divider>
-        <span className="block font-kantumruy mt-3 ">
+        <span className="block font-kantumruy mt-3 text-sm md:text-base ">
           <span className="text-red-600">*</span> fields are required.
         </span>
       </div>

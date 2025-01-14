@@ -73,7 +73,7 @@ const Interpasswordcode = () => {
           <div className="flex justify-end  md:pr-12  mt-10">
             <Mybutton
               background={
-                "bg-custom-purple text-white text-xl font-semibold  font-kantumruy  rounded-lg py-2 md:py-3 px-5 ml-5 "
+                "bg-custom-purple text-white text-lg md:text-xl font-medium  font-kantumruy  rounded-lg py-2 md:py-3 px-5 ml-5 "
               }
               closewindow={handlevalues}
             >

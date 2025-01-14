@@ -45,7 +45,11 @@ const Companyprofile = () => {
           css={550}
           heading={"Company profile"}
         >
-          <img src={building} alt="company svg" width={60} height={60} />
+          <img
+            src={building}
+            alt="company svg"
+            className=" w-[45px] h-[45px] md:w-[50px] md:h-[50px]"
+          />
         </Dashboaredtitle>
       </div>
       <div className="mx-4">
@@ -124,12 +128,12 @@ const Companyprofile = () => {
                   "bg-custom-purple font-medium font-kantumruy  text-custom-white rounded-lg py-2 px-4"
                 }
               >
-                <h1 className="  text-[20px]">Update profile </h1>
+                <h1 className="  text-lg md:text-[20px]">Update profile </h1>
               </Mybutton>
             </div>
             <div className=" max-w-4xl  mx-auto mb-10">
               <Divider></Divider>
-              <span className="block font-kantumruy text-start mt-3 ">
+              <span className="block font-kantumruy text-start mt-3  text-sm md:text-base">
                 <span className="text-red-800">*</span> fields are required.{" "}
               </span>
             </div>

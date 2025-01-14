@@ -90,7 +90,7 @@ const Tags = ({ showmobile, showpagination, totalPages }) => {
       ) : (
         // if the page is loaded
         <div
-          className={` px-2 md:px-5 lg:px-16 py-1 md:py-3 lg:pt-2 lg:pb-7 ${
+          className={` px-2 md:px-5 lg:px-16 py-1 md:py-3 lg:pt-2  lg:pb-7 ${
             changebackground ? "bg-white" : "bg-custom-slate"
           } `}
         >
@@ -146,7 +146,7 @@ const Tags = ({ showmobile, showpagination, totalPages }) => {
           <div className=" hidden md:block  mb-10 mx-16">
             <Pagination totalPages={totalPages} />
           </div>
-          <div className="  mx-4 md:hidden   mt-1">
+          <div className="  mx-5 md:hidden   mt-1">
             <Paginationmobile totalPages={totalPages} />
           </div>
         </div>

@@ -20,11 +20,11 @@ const Companydetail = () => {
       <div className="">
         <Location />
       </div>
-      <div className="flex flex-col justify-center items-center  max-sm:mt-4 ">
+      <div className="flex flex-col justify-center items-center  max-sm:mt-6 ">
         <img
           src={companylogo}
           alt="company logo"
-          className=" w-[50px] md:w-[70px] h-[50px] md:h-[70px]"
+          className=" w-[55px] h-[55px] md:w-[90px]  md:h-[90px]"
         />
         <div className="flex gap-2 items-center mb-6 md:mb-8">
           <h2 className="font-kantumruy font-semibold text-3xl  md:text-4xl">
@@ -143,7 +143,7 @@ const Companydetail = () => {
         </button>
       </div>
       <div className=" mt-10 md:mt-24">
-        <h2 className="font-kantumruy font-semibold text-center text-3xl my-7">
+        <h2 className="font-kantumruy font-semibold text-center text-[22px] md:text-3xl my-7">
           Job posts from {theidtodisplay}
         </h2>
       </div>

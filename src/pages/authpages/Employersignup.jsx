@@ -43,7 +43,7 @@ const Employersignup = () => {
       <div className="">
         <Location />
       </div>
-      <div className="mx-7">
+      <div className=" mx-5 md:mx-7">
         {/*i am  asking  if user is freelancer */}
         <Formtitle
           building1={building1}
@@ -152,7 +152,7 @@ const Employersignup = () => {
                 </div>
                 <Mybutton
                   background={
-                    "bg-custom-purple text-white font-semibold font-kantumruy text-xl rounded-lg py-2 lg:py-3 px-5 md:ml-5 "
+                    "bg-custom-purple text-white font-medium font-kantumruy  text-lg md:text-xl rounded-lg py-2 lg:py-3 px-5 md:ml-5 "
                   }
                   closewindow={closewindow}
                 >

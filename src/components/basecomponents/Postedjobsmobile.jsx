@@ -67,7 +67,7 @@ const Postedjobsmobile = ({ showicon5 }) => {
                       key={jobsall.title + Math.random()}
                     >
                       <div>
-                        <div className=" flex gap-5">
+                        <div className=" flex gap-3">
                           {showicon5 && (
                             <img
                               src={qualityassurance}
@@ -75,7 +75,7 @@ const Postedjobsmobile = ({ showicon5 }) => {
                               height={24}
                             />
                           )}
-                          <p className=" text-[20px] md:text-[22px] font-medium font-kantumruy">
+                          <p className=" text-[20px] md:text-[22px] font-semibold md:font-medium font-kantumruy">
                             {jobsall.title}
                           </p>
                         </div>

@@ -147,15 +147,15 @@ const Postedjobs = ({
               return (
                 <Link to={`/sheqlee/all jobs/${jobsall.title}`}>
                   <div
-                    className=" pl-[12px] md:pl-[16px]   md:mx-0 bg-custom-slate rounded-[20px] md:pr-2 px-3  pt-7 h-[275px] flex flex-col  justify-between  pb-4  "
+                    className=" pl-[12px] md:pl-[16px]   md:mx-0 bg-custom-slate rounded-[20px] md:pr-2 px-3  pt-7 h-[275px]  flex flex-col  justify-between  pb-4  "
                     key={jobsall.title + Math.random()}
                   >
                     <div>
-                      <div className=" flex gap-5">
+                      <div className=" flex  gap-5">
                         {showicon5 && (
                           <img src={qualityassurance} width={24} height={24} />
                         )}
-                        <p className=" text-[20px] md:text-[22px] font-medium font-kantumruy">
+                        <p className=" text-[20px] md:text-[22px] font-semibold md:font-medium font-kantumruy">
                           {jobsall.title}
                         </p>
                       </div>

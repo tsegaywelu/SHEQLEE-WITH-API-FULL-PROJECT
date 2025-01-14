@@ -7,7 +7,7 @@ const Checkbox = () => {
     <div>
       <div
         role="checkbox"
-        className="w-[22px] h-[22px] bg-custom-tags rounded-[3px] cursor-pointer "
+        className=" w-[19px] h-[19px] md:w-[22px] md:h-[22px] bg-custom-tags rounded-[3px] cursor-pointer "
         onClick={(e) => setshowchekmark(!showcheckmark)}
       >
         {showcheckmark && (

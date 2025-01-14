@@ -18,7 +18,7 @@ const Oneinput = ({
   return (
     <div className="flex flex-col flex-grow  ">
       <label
-        className=" text-lg md:text-xl   my-3 font-kantumruy font-medium"
+        className="  md:text-xl   my-3 font-kantumruy font-medium"
         htmlFor={id}
       >
         {labeltext}{" "}
@@ -40,8 +40,8 @@ const Oneinput = ({
         <input
           type={type}
           className={`bg-custom-tags  rounded-lg ${
-            nopaddingleft ? "pl-5" : " pl-16"
-          } h-full outline-none p-[11px] w-full text-lg md:text-xl font-kantumruy placeholder:text-custom-placeholder`}
+            nopaddingleft ? "pl-5" : " pl-16 md:pl-16"
+          } h-full outline-none p-[14px] md:p-[11px] w-full   md:text-xl font-kantumruy placeholder:text-custom-placeholder`}
           id={id}
           placeholder={placeholder}
           value={formData[correctvalue] || ""}

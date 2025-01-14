@@ -30,7 +30,7 @@ const Dropdownform = ({
   return (
     <div className="text-start " onMouseLeave={(e) => setIsOpen(false)}>
       {labeltext && (
-        <label className="text-xl inline-block my-3 font-kantumruy font-medium">
+        <label className=" md:text-xl inline-block my-3 font-kantumruy font-medium">
           {labeltext} {warn && <span className="text-red-600">*</span>}
         </label>
       )}

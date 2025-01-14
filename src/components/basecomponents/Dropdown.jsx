@@ -64,7 +64,7 @@ function Dropdown({
                         onClick={() => setIsOpen(!isOpen)}
                       >
                         <div
-                          className={`flex  py-2 justify-start gap-x-3  px-3  
+                          className={`flex py-[5px] md:py-2 justify-start gap-x-3  px-3  
                             ${
                               pagetype === "even" && index % 2 == 0
                                 ? "border-b-[2px] border-dvider pb-2 "

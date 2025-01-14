@@ -52,11 +52,14 @@ const Login = () => {
       </div>
 
       {/* header part */}
-      <div className="flex  flex-col items-center  md:flex-row md:flex-start  max-w-4xl mx-auto text-center  gap-4 md:gap-8 mt-5 md:mt-20">
-        <img src={enter} width={45} height={45} />
+      <div className="flex  flex-col items-center  md:flex-row md:flex-start  max-w-4xl mx-auto text-center  gap-4 md:gap-12 mt-10 md:mt-20">
+        <img
+          src={enter}
+          className="w-[40px] h-[40px] md:w-[45px] md:h-[45px]"
+        />
         <div>
           {" "}
-          <h1 className="text-xl md:text-4xl text-center font-kantumruy font-semibold">
+          <h1 className="text-[22px] md:text-4xl text-center font-kantumruy font-semibold">
             Login to your account
           </h1>
         </div>
@@ -67,7 +70,7 @@ const Login = () => {
         onSubmit={(e) => e.preventDefault()}
       >
         {/* below devide part */}
-        <div className="flex  max-sm:flex-col  m-7 md:m-5  gap-4 md:gap-8 justify-center mt-4 md:mt-10">
+        <div className="flex  max-sm:flex-col  m-5 md:m-2  gap-4 md:gap-8 justify-center mt-4 md:mt-5">
           <Oneinput
             iconmyimage={email}
             placeholder={"abebe@gmail.com"}
@@ -93,7 +96,7 @@ const Login = () => {
           />
         </div>
         {/* //checkbox */}
-        <div className="m-7 md:m-4">
+        <div className="m-5 md:mt-4 md:m-2">
           <div className="flex gap-4  items-center">
             <Checkbox />
             <span className=" text-sm md:text-base font-kantumruy">
@@ -112,7 +115,7 @@ const Login = () => {
               </Link>
               <Mybutton
                 background={
-                  "bg-custom-purple text-white text-xl font-semibold  font-kantumruy  rounded-lg py-2 lg:py-3 px-6 ml-5"
+                  "bg-custom-purple text-white text-lg  md:text-xl font-medium  font-kantumruy  rounded-lg py-2 lg:py-3 px-6 ml-5"
                 }
                 closewindow={closewindow}
               >

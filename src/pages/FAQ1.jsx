@@ -67,7 +67,7 @@ const FAQ1 = () => {
   return (
     <div>
       <Location />
-      <div className="p-6 max-w-[850px] mx-auto  mt-2   ">
+      <div className="p-4 max-w-[850px] mx-auto  mt-2   ">
         <Dashboaredtitle
           text={
             "The following are some of the most commonly asked questions by our users."
@@ -75,7 +75,10 @@ const FAQ1 = () => {
           heading={"FAQ"}
           css={500}
         >
-          <img src={question} width={60} height={60} />
+          <img
+            src={question}
+            className=" w-[45px] h-[45px] md:w-[50px] md:h-[50px]"
+          />
         </Dashboaredtitle>
 
         {/* //button sections */}
@@ -108,7 +111,7 @@ const FAQ1 = () => {
 
         {/* //questions list  */}
 
-        <div className="space-y-4">
+        <div className="space-y-6">
           {faqData[activetab].map((item, index) => {
             return (
               <div key={index} className=" rounded-lg overflow-hidden ">

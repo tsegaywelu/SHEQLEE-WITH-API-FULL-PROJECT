@@ -54,7 +54,7 @@ const Tagsmobile = ({ tags }) => {
           .fill()
           .map((_, index) => (
             <SwiperSlide key={index}>
-              <div className="grid grid-rows-3 gap-4 mb-20">
+              <div className="grid grid-rows-3 gap-4 mb-16">
                 {Totaltags.slice(index * 3, index * 3 + 3).map((tag, idx) => (
                   <Link to={`/sheqlee/${mylink}/${tag.tagname}`} key={tag.id}>
                     <div
@@ -62,7 +62,7 @@ const Tagsmobile = ({ tags }) => {
                         changebackground ? "bg-custom-slate" : "bg-custom-tags"
                       }`}
                     >
-                      <div className="font-kantumruy font-medium text-2xl">
+                      <div className="font-kantumruy font-semibold md:font-medium text-2xl">
                         {tag.tagname}
                       </div>
                       <div className="font-kantumruy mt-2 text-[17px] text-custom-placeholder">

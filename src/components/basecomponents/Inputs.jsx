@@ -79,7 +79,7 @@ const Inputs = () => {
           </form>
         </div>
         <div className="ml-4 mr-4  md:mx-16 lg:mx-48 my-3">
-          <p className="text-start  font-kantumruy text-xs">
+          <p className="text-start  font-kantumruy text-[11px] md:text-xs">
             Leave this empty if you don't want to change your password.{" "}
           </p>
         </div>
@@ -89,7 +89,7 @@ const Inputs = () => {
         <div className="flex justify-end  ">
           <Mybutton
             background={
-              "bg-custom-purple font-kantumruy rounded-lg p-2 px-4 lg:py-3 lg:px-8  text-[20px] md:text-2xl font-medium text-custom-white"
+              "bg-custom-purple font-kantumruy rounded-lg p-2 px-4 lg:py-3 lg:px-8  text-lg md:text-2xl font-medium text-custom-white"
             }
           >
             Update setting

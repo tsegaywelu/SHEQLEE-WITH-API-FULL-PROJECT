@@ -43,7 +43,7 @@ const Companysignup = () => {
       <div>
         <Location />
       </div>
-      <div className="  mx-7">
+      <div className=" mx-5 md:mx-7">
         <Formtitle
           building1={profetional}
           profetional={building}
@@ -83,7 +83,7 @@ const Companysignup = () => {
 
             <div className="flex flex-col flex-grow  ">
               <label
-                className="text-xl   my-3 font-kantumruy font-medium"
+                className=" md:text-xl    my-3 font-kantumruy font-medium"
                 htmlFor="email"
               >
                 Domain <span className="text-red-700">*</span>
@@ -92,13 +92,13 @@ const Companysignup = () => {
                 {/* <span className="bg-black text-white rounded-l-lg absolute  h-full  ">
                 https://
               </span> */}
-                <span className="bg-black text-white rounded-l-lg text-lg md:text-xl py-2 px-3  font-kantumruy">
+                <span className="bg-black text-white rounded-l-lg  md:text-xl py-2 px-3  font-kantumruy">
                   https://
                 </span>
                 <input
                   type="url"
                   id="url"
-                  className="bg-custom-tags  rounded-r-lg  h-full outline-none p-3 w-full text-xl font-kantumruy placeholder:text-custom-placeholder"
+                  className="bg-custom-tags  rounded-r-lg  h-full outline-none p-3 w-full md:text-xl font-kantumruy placeholder:text-custom-placeholder"
                   placeholder="sheqlee.com "
                   value={formData.domain}
                   onChange={(e) => updateFormData("domain", e.target.value)}
@@ -193,7 +193,7 @@ const Companysignup = () => {
                 </div>
                 <Mybutton
                   background={
-                    "bg-custom-purple text-white font-semibold font-kantumruy text-xl rounded-lg py-2 lg:py-3 px-5 md:ml-5 "
+                    "bg-custom-purple text-white font-medium font-kantumruy text-lg md:text-xl rounded-lg py-2 lg:py-3 px-5 md:ml-5 "
                   }
                   closewindow={closewindow}
                 >

@@ -23,7 +23,11 @@ export const Companyprofilesetting = () => {
           heading={"Account Setting "}
           css={450}
         >
-          <img src={settingicon} alt="setting icon" width={60} height={60} />
+          <img
+            src={settingicon}
+            alt="setting icon"
+            className="w-[45px] h-[45px] md:w-[50px] md:h-[50px]"
+          />
         </Dashboaredtitle>
       </div>
       {/* // input section  */}

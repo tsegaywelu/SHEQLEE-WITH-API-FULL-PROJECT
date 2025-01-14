@@ -5,8 +5,8 @@ import company from "../../assets/SVG/company.svg";
 const Platformstatus = () => {
   const loading = false;
   return (
-    <section className="flex flex-col items-center pb-16 pt-7  gap-5 ">
-      <h2 className=" text-[28px] md:text-4xl  mb-6 font-medium font-kantumruy ">
+    <section className="flex flex-col items-center pb-32 md:pb-16 pt-7  gap-5 ">
+      <h2 className=" text-[27px] md:text-4xl  mb-6 font-medium font-kantumruy ">
         Platform stats
       </h2>
       {loading ? (

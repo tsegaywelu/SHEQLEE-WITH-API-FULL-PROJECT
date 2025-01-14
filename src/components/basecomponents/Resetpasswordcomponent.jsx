@@ -25,7 +25,10 @@ const Resetpasswordcomponent = ({
         }`}
       >
         {" "}
-        <img src={padlock} height={45} width={45} />
+        <img
+          src={padlock}
+          className="w-[45px] h-[45px] md:w-[50px] md:h-[50px]"
+        />
         <h1 className="font-kantumruy font-semibold  text-[24px] md:text-[35px]">
           {header}
         </h1>
@@ -39,7 +42,7 @@ const Resetpasswordcomponent = ({
       >
         <label
           htmlFor="email"
-          className="font-kantumruy font-medium text-lg md:text-xl"
+          className="font-kantumruy font-medium  md:text-xl "
         >
           {labeltext}
         </label>
@@ -53,7 +56,7 @@ const Resetpasswordcomponent = ({
 
             <input
               type={type}
-              className="bg-custom-tags  rounded-lg pl-16 h-full outline-none p-3 w-full text-lg md:text-xl font-kantumruy placeholder:text-custom-placeholder"
+              className="bg-custom-tags  rounded-lg pl-16 h-full outline-none p-3 w-full  md:text-xl font-kantumruy placeholder:text-custom-placeholder"
               id={id}
               placeholder={placeholder}
               value={formData[id] || ""}
@@ -71,7 +74,7 @@ const Resetpasswordcomponent = ({
             <div>
               <Mybutton
                 background={
-                  "bg-custom-purple text-white font-medium font-kantumruy text-xl  md:text-2xl rounded-[10px] py-2 lg:py-3  px-4 float-right mt-8 "
+                  "bg-custom-purple text-white font-medium font-kantumruy text-lg md:text-xl   rounded-[10px] py-2 lg:py-3  px-6 md:px-4 float-right mt-8 "
                 }
                 closewindow={code}
               >
