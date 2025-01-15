@@ -27,6 +27,27 @@ const Jobdetail = () => {
       level: "Middle",
       status: "inactive",
     },
+    {
+      jobid: "5",
+      title: "Senior mobile app developer",
+      jobtype: "Full-time",
+      level: "Senior",
+      status: "draft",
+    },
+    {
+      jobid: "4",
+      title: "Python backend developer",
+      jobtype: "Part-time",
+      level: "Lead",
+      status: "active",
+    },
+    {
+      jobid: "6",
+      title: "ReactJS developer",
+      jobtype: "Part-time",
+      level: "Middle",
+      status: "inactive",
+    },
   ]);
   const changestatus = (jobid) => {
     setJobs((prevJobs) =>
