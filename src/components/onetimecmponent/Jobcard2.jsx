@@ -67,34 +67,48 @@ const Jobdetail = () => {
     );
   };
   return (
-    <div className=" mx-4 overflow-hidden w-fit rounded-[15px]  md:pb-[11px]  bg-clip-padding bg-custom-slate mb-10">
-      <table className="w-fit mx-auto ">
+    <div className="   md:mx-4 overflow-hidden w-[95%] md:w-[90%] rounded-[15px]  md:pb-[11px]  bg-clip-padding bg-custom-slate  mb-10">
+      <table className="w-[100%] mx-auto ">
         <thead className=" text-lg md:text-2xl bg-custom-tags font-kantumruy  ">
-          <th className="px-4  text-left  py-7 rounded-tl-lg font-medium ">
+          <th className=" px-1 md:px-4  text-left  py-7 rounded-tl-lg font-medium ">
             JID
           </th>
-          <th className="px-4  text-left font-medium">Title</th>
-          <th className="px-4  text-left font-medium hidden md:table-cell ">
+          <th className="px-2 md:px-4  text-left font-medium">Title</th>
+          <th className="md:px-4  text-left font-medium hidden md:table-cell ">
             Type
           </th>
-          <th className="px-4  text-left  font-medium hidden md:table-cell">
+          <th className="md:px-4  text-left  font-medium hidden md:table-cell">
             Level
           </th>
-          <th className="px-4  text-left font-medium ">Status</th>
-          <th className="px-4  text-left   font-medium hidden md:table-cell">
+          <th className="md:px-4  text-left font-medium ">Status</th>
+          <th className="md:px-4  text-left   font-medium hidden md:table-cell md:w-[25%]">
             Actions
           </th>
         </thead>
         <tbody className="text-sm md:text-xl lg:text-[22px] bg-custom-slate font-kantumruy ">
-          {jobs.map((job) => (
-            <tr className="border-b-2  border-gray-200  ">
-              <td className=" px-6 py-5">{job.jobid}</td>
-              <td className=" px-6">{job.title}</td>
-              <td className=" px-6 hidden md:table-cell">{job.jobtype}</td>
-              <td className=" px-6 hidden md:table-cell">{job.level}</td>
+          {jobs.map((job, index) => (
+            <tr
+              className={`  ${
+                index + 1 < jobs.length && "border-b-2  border-gray-200"
+              }`}
+            >
+              <td className=" px-3 md:px-6 py-5">{job.jobid} </td>
+              <td className=" px-3 md:px-6   ">
+                {" "}
+                {job.jobtype}{" "}
+                <span className="text-yellow-500 text-4xl rounded-full">.</span>{" "}
+                {job.level}
+                <td className=" ">{job.title}</td>
+              </td>
+              <td className=" px-3 md:px-6 hidden md:table-cell">
+                {job.jobtype}
+              </td>
+              <td className=" px-3 md:px-6 hidden md:table-cell">
+                {job.level}
+              </td>
 
               {/* //if job sttus is draft */}
-              <td className=" px-6">
+              <td className=" px-3 md:px-6">
                 {" "}
                 <div
                   className={`rounded border-2   p-[1px] w-10 h-fit flex ${
