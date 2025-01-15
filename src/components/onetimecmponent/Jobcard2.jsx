@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import eye from "../../assets/direction/eye1.svg";
 import copy from "../../assets/direction/copy.svg";
 import delete1 from "../../assets/direction/delete.svg";
 import edit from "../../assets/direction/edit.svg";
 
 const Jobdetail = () => {
-  const jobs = [
+  const [jobs, setJobs] = useState([
     {
       jobid: "1",
       title: "Senior mobile app developer",
@@ -27,9 +27,24 @@ const Jobdetail = () => {
       level: "Middle",
       status: "inactive",
     },
-  ];
-
-  //so now i want to replace the below hardcoded with the above code
+  ]);
+  const changestatus = (jobid) => {
+    setJobs((prevJobs) =>
+      prevJobs.map((job) =>
+        job.jobid === jobid
+          ? {
+              ...job,
+              status:
+                job.status === "active"
+                  ? "inactive"
+                  : job.status === "inactive"
+                  ? "draft"
+                  : "active",
+            }
+          : job
+      )
+    );
+  };
   return (
     <div className=" mx-4 overflow-hidden w-fit rounded-[15px]  md:pb-[11px]  bg-clip-padding bg-custom-slate mb-10">
       <table className="w-fit mx-auto ">
@@ -60,9 +75,6 @@ const Jobdetail = () => {
               {/* //if job sttus is draft */}
               <td className=" px-6">
                 {" "}
-                {/* help me here gpt if {job.status}  is active then border-green-500 and justify-end  */}
-                {/* help me here gpt if {job.status}  is inactive then border-red-700 and justify-start  */}
-                {/* help me here gpt if {job.status}  is draft then border-gray-700 and justify-center */}
                 <div
                   className={`rounded border-2   p-[1px] w-10 h-fit flex ${
                     job.status === "active"
@@ -73,10 +85,8 @@ const Jobdetail = () => {
                       ? "border-gray-700 justify-center"
                       : ""
                   }`}
+                  onClick={(e) => changestatus(job.jobid)}
                 >
-                  {/* help me here gpt if {job.status}  is active then bg-green-500  */}
-                  {/* help me here gpt if {job.status}  is inactive then bg-red-700  */}
-                  {/* help me here gpt if {job.status}  is draft then bg-gray-700  */}
                   <div
                     className={`min-w-3 w-3 min-h-3 h-3 rounded ${
                       job.status === "active"
@@ -95,18 +105,18 @@ const Jobdetail = () => {
                   <div className="flex items-center justify-center gap-1  ">
                     <button className="bg-custom-purple p-[8px] rounded-md w-8 h-8">
                       {/* <img src={copy} alt="" /> */}
-                      <img src={copy} alt="" />
+                      <img src={copy} alt="copy" />
                     </button>
                     <button className="bg-black py-1 px-4 rounded-lg text-white  ">
                       Publish
                     </button>
                     <button className="bg-custom-purple p-[8px] rounded-md w-8 h-8">
                       {/* <MdEdit size={22} /> */}
-                      <img src={edit} alt="" />
+                      <img src={edit} alt="edit" />
                     </button>
                     <button className="bg-custom-purple p-[8px] rounded-md w-8 h-8">
                       {/* <img src={delete1} alt="" /> */}
-                      <img src={delete1} alt="" />
+                      <img src={delete1} alt="delete" />
                     </button>
                     <button className=" absolute   bg-custom-tags text-xs -bottom-2 right-0  rounded-[3px] px-2 py-[2px]">
                       Delete draft
@@ -117,14 +127,17 @@ const Jobdetail = () => {
                 <td className=" px-6 hidden md:table-cell">
                   <div className="flex items-center justify-start gap-1 relative ">
                     <button className="bg-custom-purple p-[10px] rounded-md w-8 h-8">
-                      <img src={copy} alt="" />
+                      <img src={copy} alt="copy icon " />
                     </button>
                     <button className="bg-custom-purple p-[8px] rounded-md w-8 h-8">
                       {/* <img src={eye} alt="" /> */}
-                      <img src={eye} alt="" />
+                      <img src={eye} alt="show icon " />
                     </button>
-                    <button className="bg-custom-purple p-[10px] rounded-md w-8 h-8">
-                      <img src={delete1} alt="" />
+                    <button
+                      className="bg-custom-purple p-[10px] rounded-md w-8 h-8 "
+                      title="delete"
+                    >
+                      <img src={delete1} alt="delete icon" />
                     </button>
                     <button
                       className={`absolute   bg-custom-tags text-xs  -bottom-7  rounded-[3px] px-2 py-[2px] ${
