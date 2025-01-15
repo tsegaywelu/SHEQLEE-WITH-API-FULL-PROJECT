@@ -66,6 +66,10 @@ const Jobdetail = () => {
       )
     );
   };
+  const getActionText = (status) => {
+    switch (status) {
+    }
+  };
   return (
     <div className="   md:mx-4 overflow-hidden w-[95%] md:w-[90%] rounded-[15px]  md:pb-[11px]  bg-clip-padding bg-custom-slate  mb-10">
       <table className="w-[100%] mx-auto ">
@@ -88,21 +92,24 @@ const Jobdetail = () => {
         <tbody className="text-sm md:text-xl lg:text-[22px] bg-custom-slate font-kantumruy ">
           {jobs.map((job, index) => (
             <tr
+              key={job.jobid}
               className={`  ${
                 index + 1 < jobs.length && "border-b-2  border-gray-200"
               }`}
             >
               <td className=" px-3 md:px-6 py-5">{job.jobid} </td>
               <td className=" px-3 md:px-6   ">
-                {job.title}
-                <td className="hidden">
-                  {" "}
-                  {job.jobtype}{" "}
-                  <span className="text-yellow-500 text-4xl rounded-full">
-                    .
-                  </span>{" "}
-                  {job.level}
-                </td>
+                <span className="flex flex-col gap-0 p-0">
+                  <span className="max-sm:translate-y-4">{job.title}</span>
+                  <span className=" md:hidden">
+                    {" "}
+                    {job.jobtype}{" "}
+                    <span className="text-yellow-500 text-4xl rounded-full">
+                      .
+                    </span>{" "}
+                    {job.level}
+                  </span>
+                </span>
               </td>
               <td className=" px-3 md:px-6 hidden md:table-cell">
                 {job.jobtype}
@@ -157,6 +164,9 @@ const Jobdetail = () => {
                       {/* <img src={delete1} alt="" /> */}
                       <img src={delete1} alt="delete" />
                     </button>
+                    {/* //but here they are dfault text but when mouse enters to the
+                    icon the blow text must be cahnged to duplicat draft ,
+                    draft, edit drfat */}
                     <button className=" absolute   bg-custom-tags text-xs -bottom-2 right-0  rounded-[3px] px-2 py-[2px]">
                       Delete draft
                     </button>
@@ -183,7 +193,12 @@ const Jobdetail = () => {
                         job.status == "inactive" && "left-9"
                       }`}
                     >
-                      View details
+                      {/* //but here they are dfault text but when mouse enters to
+                      the icon the blow text must be cahnged to duplicat vacancy
+                      , view vacancy, edit vancancy */}
+                      {job.status === "inactive"
+                        ? " View details"
+                        : "Duplicate vacancy"}
                     </button>
                   </div>
                 </td>
