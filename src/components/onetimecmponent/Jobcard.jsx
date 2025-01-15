@@ -5,6 +5,31 @@ import delete1 from "../../assets/direction/delete.svg";
 import edit from "../../assets/direction/edit.svg";
 
 const Jobdetail = () => {
+  const jobs = [
+    {
+      jobid: "1",
+      title: "Senior mobile app developer",
+      jobtype: "Full-time",
+      level: "Senior",
+      status: "draft",
+    },
+    {
+      jobid: "2",
+      title: "Python backend developer",
+      jobtype: "Part-time",
+      level: "Lead",
+      status: "active",
+    },
+    {
+      jobid: "3",
+      title: "ReactJS developer",
+      jobtype: "Part-time",
+      level: "Middle",
+      status: "inactive",
+    },
+  ];
+
+  //so now i want to replace the below hardcoded with the above code
   return (
     <div className=" mx-4 overflow-hidden w-fit rounded-[15px]  md:pb-[11px]  bg-clip-padding bg-custom-slate mb-10">
       <table className="w-fit mx-auto ">
@@ -30,6 +55,8 @@ const Jobdetail = () => {
             <td className=" px-6">Senior Mobile App developer</td>
             <td className=" px-6 hidden md:table-cell">Full-time</td>
             <td className=" px-6 hidden md:table-cell">Senior</td>
+
+            {/* //if job sttus is draft */}
             <td className=" px-6">
               {" "}
               <div className=" rounded border-2 border-gray-700 p-[1px] w-10 h-fit flex justify-center">
@@ -64,6 +91,8 @@ const Jobdetail = () => {
             <td className=" px-6">Phython back-end developer</td>
             <td className=" px-6 hidden md:table-cell">Part time </td>
             <td className=" px-6 hidden md:table-cell">Lead</td>
+
+            {/* //if job sttus is active */}
             <td className=" px-6">
               <div className=" rounded border-2 border-green-500 p-[1px] w-10 h-fit flex justify-end">
                 <div className="min-w-3 w-3 min-h-3 h-3 rounded bg-green-500 "></div>
@@ -91,6 +120,7 @@ const Jobdetail = () => {
             <td className=" px-6">React js developer</td>
             <td className=" px-6 hidden md:table-cell">part-time</td>
             <td className=" px-6 hidden md:table-cell">middle</td>
+            {/* //if job sttus is inacive */}
             <td className=" px-6">
               <div className=" rounded border-2 border-red-700 p-[1px] w-10 h-fit flex justify-start">
                 <div className="min-w-3 w-3 min-h-3 h-3 rounded bg-red-700 "></div>

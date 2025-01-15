@@ -4,7 +4,7 @@ import Mybutton from "../../components/basecomponents/Mybutton";
 import { Link } from "react-router-dom";
 import { IoGridOutline } from "react-icons/io5";
 import Dashboaredtitle from "../../components/onetimecmponent/Dashboaredtitle";
-import Jobdetail from "../../components/onetimecmponent/Jobcard";
+import Jobdetail from "../../components/onetimecmponent/Jobcard2";
 import dashboared from "../../assets/direction/dashboard.svg";
 const Dashboardcompany = () => {
   const job = true;
