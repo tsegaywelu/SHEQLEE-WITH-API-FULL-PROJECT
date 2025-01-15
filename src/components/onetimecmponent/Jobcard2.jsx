@@ -97,7 +97,9 @@ const Jobdetail = () => {
                 index + 1 < jobs.length && "border-b-2  border-gray-200"
               }`}
             >
-              <td className=" px-3 md:px-6 py-5">{job.jobid} </td>
+              <td className=" px-3 md:px-6 py-5 max-sm:-translate-y-1">
+                {job.jobid}{" "}
+              </td>
               <td className=" px-3 md:px-6   ">
                 <span className="flex flex-col gap-0 p-0">
                   <span className="max-sm:translate-y-4">{job.title}</span>

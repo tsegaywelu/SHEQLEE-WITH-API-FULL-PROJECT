@@ -19,7 +19,7 @@ function Dropdown({
       <div className="relative">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="inline-flex justify-center w-full rounded-md  pr-4 md:pr-6 py-2 bg-custom-slate  text-sm md:text-base  text-black font-medium font-kantumruy  "
+          className="inline-flex justify-center w-full rounded-md  pr-4 md:pr-6 py-2   text-sm md:text-base  text-black font-medium font-kantumruy  "
         >
           {dropdowntitle}
           <span>
@@ -43,7 +43,7 @@ function Dropdown({
         <div>
           <div className=" bg-stone-900/60 z-50">
             <div
-              className={`absolute  z-40     rounded-b-[10px]  bg-white ring-1 ring-black ring-opacity-5 ${
+              className={`absolute  z-40     rounded-b-[10px] overflow-hidden bg-white ring-1 ring-black ring-opacity-5 ${
                 showicons ? " right-3 md:right-10 md:w-[163px] " : "w-44"
               }`}
             >

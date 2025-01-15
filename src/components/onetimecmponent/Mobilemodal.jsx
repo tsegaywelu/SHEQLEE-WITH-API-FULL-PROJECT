@@ -15,8 +15,8 @@ function Mobilemodal({ categories, icons, showicons, pagetype }) {
         <div>
           <div className=" bg-stone-900/60 z-50">
             <div
-              className={`absolute  z-40     rounded-b-[10px]  bg-white ring-1 ring-black ring-opacity-5 ${
-                showicons ? "right-10 md:w-[163px] " : "w-36 mt-3 py-1 "
+              className={`absolute  z-40     rounded-b-[10px] overflow-hidden  bg-red-500 ring-1 ring-black ring-opacity-5 ${
+                showicons ? "right-10 md:w-[163px] " : "w-36 mt-3  "
               }`}
             >
               <div className=" font-medium font-kantumruy ">
@@ -24,7 +24,7 @@ function Mobilemodal({ categories, icons, showicons, pagetype }) {
                   <a
                     key={category}
                     href="#"
-                    className="block  text-[18px] text-custom-black text-start hover:bg-gray-100 hover:text-gray-900   "
+                    className="block  text-[18px] py-[1px] text-custom-black text-start hover:bg-gray-100 hover:text-gray-900   "
                   >
                     <div className="">
                       <Link
