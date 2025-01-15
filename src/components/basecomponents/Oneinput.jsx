@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import eye from "../../assets/direction/eye.svg";
 const Oneinput = ({
   smalltext,
@@ -15,6 +15,11 @@ const Oneinput = ({
   nopaddingleft,
   changetheicon,
 }) => {
+  const [inputtype, setinputtype] = useState(type);
+  const toggleInputType = () => {
+    setinputtype((prevType) => (prevType === "password" ? "text" : "password")); // Toggle between "password" and "text"
+  };
+
   return (
     <div className="flex flex-col flex-grow  ">
       <label
@@ -38,7 +43,7 @@ const Oneinput = ({
           </div>
         )}
         <input
-          type={type}
+          type={inputtype}
           className={`bg-custom-tags  rounded-lg ${
             nopaddingleft ? "pl-5" : " pl-16 md:pl-16"
           } h-full outline-none p-[14px] md:p-[11px] w-full   md:text-xl font-kantumruy placeholder:text-custom-placeholder`}
@@ -48,7 +53,10 @@ const Oneinput = ({
           onChange={(e) => updateFormData(correctvalue, e.target.value)}
         />
         {showeyeicon && (
-          <div className=" absolute right-4 bottom-5 ">
+          <div
+            className=" absolute right-4 bottom-5  "
+            onClick={(e) => toggleInputType()}
+          >
             <img src={eye} alt="" width={16} height={16} />
           </div>
         )}
