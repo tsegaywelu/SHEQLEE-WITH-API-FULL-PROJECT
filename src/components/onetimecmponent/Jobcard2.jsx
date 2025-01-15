@@ -94,11 +94,15 @@ const Jobdetail = () => {
             >
               <td className=" px-3 md:px-6 py-5">{job.jobid} </td>
               <td className=" px-3 md:px-6   ">
-                {" "}
-                {job.jobtype}{" "}
-                <span className="text-yellow-500 text-4xl rounded-full">.</span>{" "}
-                {job.level}
-                <td className=" ">{job.title}</td>
+                {job.title}
+                <td className="hidden">
+                  {" "}
+                  {job.jobtype}{" "}
+                  <span className="text-yellow-500 text-4xl rounded-full">
+                    .
+                  </span>{" "}
+                  {job.level}
+                </td>
               </td>
               <td className=" px-3 md:px-6 hidden md:table-cell">
                 {job.jobtype}
