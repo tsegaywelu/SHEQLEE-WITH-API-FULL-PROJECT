@@ -66,10 +66,11 @@ const Jobdetail = () => {
       )
     );
   };
-  const getActionText = (status) => {
-    switch (status) {
-    }
+  const [hoveredIcon, setHoveredIcon] = useState({ jobid: null, text: "" });
+  const handleHover = (jobid, text) => {
+    setHoveredIcon({ jobid, text });
   };
+
   return (
     <div className="   md:mx-4 overflow-hidden w-[95%] md:w-[90%] rounded-[15px]  md:pb-[11px]  bg-clip-padding bg-custom-slate  mb-10">
       <table className="w-[100%] mx-auto ">
@@ -85,7 +86,7 @@ const Jobdetail = () => {
             Level
           </th>
           <th className="md:px-4  text-left font-medium ">Status</th>
-          <th className="md:px-4  text-left   font-medium hidden md:table-cell md:w-[25%]">
+          <th className="md:px-4  text-left   font-medium hidden md:table-cell md:w-[23%]">
             Actions
           </th>
         </thead>
@@ -151,42 +152,86 @@ const Jobdetail = () => {
               {job.status === "draft" ? (
                 <td className=" px-6 relative  hidden md:table-cell">
                   <div className="flex items-center justify-center gap-1  ">
-                    <button className="bg-custom-purple p-[8px] rounded-md w-8 h-8">
+                    <button
+                      className="bg-custom-purple p-[8px] rounded-md w-8 h-8"
+                      onMouseEnter={() =>
+                        handleHover(job.jobid, "Duplicate draft")
+                      }
+                      onMouseLeave={() =>
+                        handleHover(job.jobid, "Delete draft")
+                      }
+                    >
                       {/* <img src={copy} alt="" /> */}
                       <img src={copy} alt="copy" />
                     </button>
-                    <button className="bg-black py-1 px-4 rounded-lg text-white  ">
+                    <button
+                      className="bg-black py-1 px-4 rounded-lg text-white  "
+                      onMouseEnter={() =>
+                        handleHover(job.jobid, "Publish draft")
+                      }
+                      onMouseLeave={() =>
+                        handleHover(job.jobid, "Delete draft")
+                      }
+                    >
                       Publish
                     </button>
-                    <button className="bg-custom-purple p-[8px] rounded-md w-8 h-8">
+                    <button
+                      className="bg-custom-purple p-[9px] rounded-md w-8 h-8"
+                      onMouseEnter={() => handleHover(job.jobid, "Edit draft")}
+                      onMouseLeave={() =>
+                        handleHover(job.jobid, "Delete draft")
+                      }
+                    >
                       {/* <MdEdit size={22} /> */}
                       <img src={edit} alt="edit" />
                     </button>
-                    <button className="bg-custom-purple p-[8px] rounded-md w-8 h-8">
+                    <button
+                      className="bg-custom-purple p-[9px] rounded-md w-8 h-8
+                    "
+                      onMouseEnter={() =>
+                        handleHover(job.jobid, "Delete draft")
+                      }
+                      onMouseLeave={() =>
+                        handleHover(job.jobid, "Delete draft")
+                      }
+                    >
                       {/* <img src={delete1} alt="" /> */}
                       <img src={delete1} alt="delete" />
                     </button>
-                    {/* //but here they are dfault text but when mouse enters to the
-                    icon the blow text must be cahnged to duplicat draft ,
-                    draft, edit drfat */}
                     <button className=" absolute   bg-custom-tags text-xs -bottom-2 right-0  rounded-[3px] px-2 py-[2px]">
-                      Delete draft
+                      {hoveredIcon.jobid === job.jobid ? (
+                        <p>{hoveredIcon.text}</p>
+                      ) : (
+                        "Delete draft"
+                      )}
                     </button>
                   </div>
                 </td>
               ) : (
                 <td className=" px-6 hidden md:table-cell">
                   <div className="flex items-center justify-start gap-1 relative ">
-                    <button className="bg-custom-purple p-[10px] rounded-md w-8 h-8">
+                    <button
+                      className="bg-custom-purple p-[8px] rounded-md w-8 h-8"
+                      onMouseEnter={() =>
+                        handleHover(job.jobid, "Duplicate vacancy")
+                      }
+                    >
                       <img src={copy} alt="copy icon " />
                     </button>
-                    <button className="bg-custom-purple p-[8px] rounded-md w-8 h-8">
+                    <button
+                      className="bg-custom-purple p-[8px] rounded-md w-8 h-8"
+                      onMouseEnter={() =>
+                        handleHover(job.jobid, "Show vacancy")
+                      }
+                    >
                       {/* <img src={eye} alt="" /> */}
                       <img src={eye} alt="show icon " />
                     </button>
                     <button
-                      className="bg-custom-purple p-[10px] rounded-md w-8 h-8 "
-                      title="delete"
+                      className="bg-custom-purple p-[9px] rounded-md w-8 h-8 "
+                      onMouseEnter={() =>
+                        handleHover(job.jobid, "Delete vacancy")
+                      }
                     >
                       <img src={delete1} alt="delete icon" />
                     </button>
@@ -195,12 +240,13 @@ const Jobdetail = () => {
                         job.status == "inactive" && "left-9"
                       }`}
                     >
-                      {/* //but here they are dfault text but when mouse enters to
-                      the icon the blow text must be cahnged to duplicat vacancy
-                      , view vacancy, edit vancancy */}
-                      {job.status === "inactive"
-                        ? " View details"
-                        : "Duplicate vacancy"}
+                      {hoveredIcon.jobid === job.jobid ? (
+                        <p>{hoveredIcon.text}</p>
+                      ) : job.status === "inactive" ? (
+                        " View details"
+                      ) : (
+                        "Duplicate vacancy"
+                      )}
                     </button>
                   </div>
                 </td>
