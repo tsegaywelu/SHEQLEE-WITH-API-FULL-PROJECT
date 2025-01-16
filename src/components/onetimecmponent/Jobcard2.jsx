@@ -74,8 +74,8 @@ const Jobdetail = () => {
   return (
     <div className="   md:mx-4 overflow-hidden w-[95%] md:w-[90%] rounded-[15px]  md:pb-[11px]  bg-clip-padding bg-custom-slate  mb-10">
       <table className="w-[100%] mx-auto ">
-        <thead className=" text-lg md:text-2xl bg-custom-tags font-kantumruy  ">
-          <th className=" px-1 md:px-4  text-left  py-7 rounded-tl-lg font-medium ">
+        <thead className=" text-[16px] md:text-2xl bg-custom-tags font-kantumruy  ">
+          <th className=" px-3 md:px-4  text-left  py-7 rounded-tl-lg font-medium ">
             JID
           </th>
           <th className="px-2 md:px-4  text-left font-medium">Title</th>

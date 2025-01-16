@@ -51,6 +51,12 @@ button svg {
 .ql-container {
   font-size: 18px !important;
 }
+@media (max-width: 768px) {
+  /* Styles for smaller devices */
+  .ql-container {
+    font-size: 14px !important;
+  }
+}
 
 .ql-toolbar .ql-bold svg,
 .ql-toolbar .ql-italic svg,
