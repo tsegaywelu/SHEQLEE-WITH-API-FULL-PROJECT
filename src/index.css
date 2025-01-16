@@ -15,8 +15,8 @@
 
 .ql-toolbar {
   /* this is the header part */
-  background-color: #444;
-  /* background-color: whitesmoke; */
+  /* background-color: #444; */
+  background-color: whitesmoke;
   border-radius: 14px 14px 0 0;
   text-align: left;
 }
@@ -39,7 +39,7 @@
 } */
 
 button svg {
-  stroke: white !important;
+  /* stroke: white !important; */
   /* this is working only to line through and scripts   */
 }
 .ql-formats {
@@ -49,7 +49,7 @@ button svg {
   /* this is working */
 }
 .ql-container {
-  font-size: 14px !important;
+  font-size: 18px !important;
 }
 
 .ql-toolbar .ql-bold svg,

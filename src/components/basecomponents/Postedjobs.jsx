@@ -159,7 +159,7 @@ const Postedjobs = ({
                           {jobsall.title}
                         </p>
                       </div>
-                      <p className="text-base my-6 font-kantumruy    line-clamp-4">
+                      <p className="text-base my-6 font-kantumruy    line-clamp-4 xl:line-clamp-2">
                         {jobsall.descreiption}
                       </p>
                     </div>

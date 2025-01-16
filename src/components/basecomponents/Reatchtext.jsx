@@ -5,7 +5,7 @@ import "react-quill/dist/quill.snow.css";
 const RichText = ({ showtext, value, onChange, warn, placeholder }) => {
   return (
     <div>
-      <h2 className="  md:text-2xl text-start font-kantumruy font-medium">
+      <h2 className="   md:text-xl text-start font-kantumruy font-medium">
         {showtext} {warn && <span className="text-red-700">*</span>}
       </h2>
       <div>

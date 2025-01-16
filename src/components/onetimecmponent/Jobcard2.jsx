@@ -221,7 +221,7 @@ const Jobdetail = () => {
                     <button
                       className="bg-custom-purple p-[8px] rounded-md w-8 h-8"
                       onMouseEnter={() =>
-                        handleHover(job.jobid, "Show vacancy")
+                        handleHover(job.jobid, "View details")
                       }
                     >
                       {/* <img src={eye} alt="" /> */}
