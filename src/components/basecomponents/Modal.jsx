@@ -16,7 +16,7 @@ export const Modal = ({ closewin, message }) => {
           className=" w-[22px] h-[22px] md:w-[27px] md:h-[27px]"
         />
       </button>
-      <div className="  flex items-center justify-center h-screen w-full fixed mx-auto bg-stone-900/80 z-10 ">
+      <div className="  flex items-center justify-center h-screen w-full fixed mx-auto bg-stone-900/50 z-10 ">
         <div className=" flex flex-col items-center justify-center  pt-10 pb-3 px-5 md:px-12  font-semibold  bg-white rounded-xl shadow-lg gap-y-5 mx-2 md:mx-0">
           <p className="  mx-auto  md:text-xl font-kantumruy font-medium  ">
             <div
