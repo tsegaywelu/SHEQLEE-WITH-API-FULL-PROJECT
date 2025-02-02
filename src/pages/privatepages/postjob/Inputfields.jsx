@@ -118,7 +118,7 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
           </div>
           <div className=" mb-4 relative text-start space-y-5 mt-10">
             <label
-              className="text-xl  my-3    font-kantumruy font-medium "
+              className="text-xl  my-1    font-kantumruy font-medium "
               htmlFor="message"
             >
               Short description <span className="text-red-700">*</span>
@@ -127,7 +127,7 @@ const Inputfields = ({ formData, updateFormData, onPreview }) => {
               name="message"
               id="message"
               placeholder="We are looking for a Flutter developer with 2 years experience."
-              rows={4}
+              rows={6}
               // className="bg-slate-200 w-full rounded-lg p-4  outline-none text-2xl m-3 "
               className="bg-custom-tags w-full rounded-lg p-3  outline-none text-xl placeholder:font-kantumruy placeholder:text-custom-placeholder resize-none "
               value={formData.shortdescription}
